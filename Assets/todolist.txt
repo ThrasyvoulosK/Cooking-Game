@@ -29,6 +29,18 @@ after a food layer is created, animate it flying away
 
 use z axis instead of order-in-layer
 
+food-ingredient-spawning should choose less random ingredients
+-generate a random float between 0 and 1
+--eg if it is within 0-0.10, choose the first object etc
+--if we don't need one ingredient at all we should zero its appearance value
+--we should keep these values on a list
+---and always check if their sum is equal to One
+
+speed issues should be handled globally
+-make a speed script
+-different users should be able to use different speeds
+--eg slower and faster
+
 
 Gameplay Issues:
 
@@ -51,7 +63,6 @@ object pooling?
 
 
 Bugs:
-
 
 
 Other Concerns:
