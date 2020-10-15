@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7614441490835172750
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8702345266193629268, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629268, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.08018869
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629268, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5304986
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629268, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 8702345266193629269, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629269, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629270, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_Name
+      value: Ham
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.4686894
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702345266193629291, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1fbf2fd7b83f554b939f5f1c8a01df9, type: 3}

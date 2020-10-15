@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 46ff383ac87c0904ca4cd774e54f0121
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - theFurnace: {instanceID: 0}
+  - theSpawning: {instanceID: 0}
+  - theChangeScene: {instanceID: 0}
+  - theFoodLayer: {instanceID: 0}
+  - theMoney: {instanceID: 0}
+  - spr: {fileID: 21300000, guid: 7563a2c54d564d449b73c0051b32d334, type: 3}
+  - foodlayerclone: {fileID: 473448676399329564, guid: 57d94982323d1e74bafcf8d9144fa098, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,62 @@
+Cooking Game
+
+
+Add/Edit:
+
+THE FURNACE IS THE TOAST-MAKER!
+-in subsequent foods?
+
+objects shrinking in size when clicked
+
+functionality for layer
+-different number of ingredients shape?
+--eg compare recipe of one with recipe of four
+
+layer
+-0 is the first ingredient 
+--change it when we have the correct one
+-1 is the next etc
+-reset when all of it is correct
+
+function that assigns correct sprites to (flying) ingredients
+
+function to reset images to null, if their ingredient number exceeds our new recipe's
+
+instantiate food layer instead of just leaving it
+change its sprites when interacted with
+after a food layer is created, animate it flying away
+-copy behaviour from ingredient flying
+
+use z axis instead of order-in-layer
+
+
+Gameplay Issues:
+
+losing money?
+
+skill measuring
+
+speed changing
+
+
+Performance Issues:
+
+
+handle collisions on furnace
+-currently double updates happen from both the furnace and the ingredients
+
+for loop in recipe-check-list update
+
+object pooling?
+
+
+Bugs:
+
+
+
+Other Concerns:
+
+add recipes
+-according to the doc
+
+Clean Code
