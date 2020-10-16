@@ -5,12 +5,14 @@ using UnityEngine;
 public class SpawningFoodLayerScript : MonoBehaviour
 {
 
-    bool spawnfoodlayerallowed = false;
+    public bool spawnfoodlayerallowed = false;
 
     public GameObject foodlayer;
 
     public float timetodestroy=3f;
     public bool timeron=false;
+
+    public Transform spawnpoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,12 @@ public class SpawningFoodLayerScript : MonoBehaviour
     public void spawnfoodlayer()
     {
         if (spawnfoodlayerallowed)
-            Instantiate(foodlayer);
+        {
+            //Instantiate(foodlayer, gameObject.transform.position, Quaternion.identity);
+            //Instantiate(foodlayer);
+            Instantiate(foodlayer, spawnpoint.position,Quaternion.identity);
+
+        }
         spawnfoodlayerallowed = false;
         Debug.Log("spawnfoodlayer");
     }

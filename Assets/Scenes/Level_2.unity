@@ -464,7 +464,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf1adba855d2ed4ca73820d9ecbbd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnfoodlayerallowed: 0
   foodlayer: {fileID: 473448676399329564, guid: 57d94982323d1e74bafcf8d9144fa098, type: 3}
+  timetodestroy: 3
+  timeron: 0
+  spawnpoint: {fileID: 797088021}
 --- !u!4 &797088021
 Transform:
   m_ObjectHideFlags: 0
@@ -473,7 +477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797088019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.83, y: -0.41589493, z: -47.809017}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -973,6 +977,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5314863079734572377, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572379, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: m_Name
       value: Furnace
@@ -1074,9 +1082,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Food
       objectReference: {fileID: 0}
+    - target: {fileID: 473448676399329564, guid: 57d94982323d1e74bafcf8d9144fa098, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3761173442901066068, guid: 57d94982323d1e74bafcf8d9144fa098, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.79
+      value: -14
       objectReference: {fileID: 0}
     - target: {fileID: 3761173442901066068, guid: 57d94982323d1e74bafcf8d9144fa098, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1117,6 +1129,14 @@ PrefabInstance:
     - target: {fileID: 3761173442901066068, guid: 57d94982323d1e74bafcf8d9144fa098, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968801516929416588, guid: 57d94982323d1e74bafcf8d9144fa098, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991559268602165935, guid: 57d94982323d1e74bafcf8d9144fa098, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57d94982323d1e74bafcf8d9144fa098, type: 3}

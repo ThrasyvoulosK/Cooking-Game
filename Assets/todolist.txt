@@ -12,21 +12,6 @@ functionality for layer
 -different number of ingredients shape?
 --eg compare recipe of one with recipe of four
 
-layer
--0 is the first ingredient 
---change it when we have the correct one
--1 is the next etc
--reset when all of it is correct
-
-function that assigns correct sprites to (flying) ingredients
-
-function to reset images to null, if their ingredient number exceeds our new recipe's
-
-instantiate food layer instead of just leaving it
-change its sprites when interacted with
-after a food layer is created, animate it flying away
--copy behaviour from ingredient flying
-
 use z axis instead of order-in-layer
 
 food-ingredient-spawning should choose less random ingredients
@@ -40,6 +25,15 @@ speed issues should be handled globally
 -make a speed script
 -different users should be able to use different speeds
 --eg slower and faster
+
+differentiate (graphically) between different recipes
+-eg toasts and sandwiches etc
+-graphics during "flight"?
+
+remove "permanent" layered-food
+-replace it with a prefab like we did with ingredients
+-currently it is needed as an instance of a gameobject to be instantiated by our script
+merge the two scripts it uses to avoid confusion
 
 
 Gameplay Issues:

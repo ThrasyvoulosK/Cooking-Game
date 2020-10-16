@@ -35,7 +35,7 @@ public class FoodLayersScript : MonoBehaviour
         target = GameObject.Find("Furnace");
     }
 
-    bool change = false;
+    public bool change = false;
     // Update is called once per frame
     void Update()
     {
@@ -56,6 +56,21 @@ public class FoodLayersScript : MonoBehaviour
         }*/
 
         //MoveFoodLayer();
+        if (change == true)
+        {
+            //rename our object so that it doesn't interfere with other similar objects' functionality
+            //very buggy in updayte! 
+            if (gameObject.name.EndsWith("(Clone)"))
+                gameObject.name = gameObject.name.Substring(0, gameObject.name.Length - 7);//remove (clone) from string
+            transform.Translate(Vector2.right * Time.deltaTime * 4);
+            theSPF.spawnfoodlayer();
+            if (gameObject.transform.position.x > 11)
+            {
+                Destroy(gameObject);
+                change = false;
+                //theSPF.spawnfoodlayer();
+            }
+        }
             
     }
 

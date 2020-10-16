@@ -18,12 +18,16 @@ public class IngredientScript : MonoBehaviour
     public SpawningScript theSpawning;
     public ChangeSceneScript theChangeScene;
     public FoodLayersScript theFoodLayer;
+    public SpawningFoodLayerScript theSPF;
+    public GameObject foodlayergameobject=null;
     public MoneyScript theMoney;
 
     public Sprite spr;
 
     GameObject target;
     Vector2 directiontotarget;
+
+    public GameObject foodlayerclone;
 
     void Start()
     {
@@ -40,14 +44,22 @@ public class IngredientScript : MonoBehaviour
         theChangeScene = GameObject.Find("Canvas").GetComponent<ChangeSceneScript>();
 
         theFoodLayer = GameObject.Find("Food").GetComponent<FoodLayersScript>();
+        //theFoodLayer = foodlayergameobject.GetComponent<FoodLayersScript>();
+        //theFoodLayer = GameObject.Find("SpawningPoint").GetComponent<SpawningScript>().GetComponent<GameObject>(0).GetComponent<FoodLayersScript>();
+        //theFoodLayer = GameObject.Find("SpawningFoodLayer").GetComponent<GameObject>().GetComponent<FoodLayersScript>();
+        //theFoodLayer = GameObject.Find("SpawningFoodLayer").GetComponent<GameObject>().GetComponent<FoodLayersScript>();
+
         //theFoodLayer = GameObject.Find("SpawningFoodLayer").GetComponent<FoodLayersScript>();
+        //theFoodLayer.theSPF = theFoodLayer.GetComponent<SpawningFoodLayerScript>();
+        //theSPF = theFoodLayer.GetComponent<SpawningFoodLayerScript>();
+        //theSPF = GameObject.Find("SpawningFoodLayer").GetComponent<FoodLayersScript>().GetComponent<SpawningFoodLayerScript>();
 
         theMoney = GameObject.Find("Money").GetComponent<MoneyScript>();
 
-        //spr = GameObject.Find("IngredientScript").GetComponent<spr>();
-        //spr = GameObject.Find("IngredientScript").GetComponent<SpriteRenderer>().sprite;//
-        //spr=Resources.Load
-        
+        theFoodLayer.theSPF.spawnfoodlayer();//
+        //theSPF.spawnfoodlayer();//
+        //theFoodLayer.theSPF.Instantiate(theFoodLayer.theSPF.foodlayer, theFoodLayer.theSPF.spawnpoint.position, Quaternion.identity);
+        foodlayerclone = GameObject.Find("FoodLayer(Clone)");
     }
     // Update is called once per frame
     void Update()
@@ -74,27 +86,21 @@ public class IngredientScript : MonoBehaviour
 
     //this list will be used in order to convert
     List<Recipe_SO> sorec = null;
-    public GameObject foodlayerclone;
+    //public GameObject foodlayerclone;
     public void OnMouseDown()
     {
         
+        //create a layered-food if we don't already have one
         if((foodlayerclone = GameObject.Find("FoodLayer(Clone)"))==false)
         {
             Debug.Log("foodlayerclone is false");
             theFoodLayer.theSPF.spawnfoodlayer();
             foodlayerclone = GameObject.Find("FoodLayer(Clone)");
 
-            //Destroy(foodlayerclone);
-            //foodlayerclone.GetComponent<FoodLayersScript>().renderers[0].sprite= theFoodLayer.SpriteHandler(gameObject.name);
-            //foodlayerclone.GetComponent<FoodLayersScript>().theSPF.destroyfoodlayer();
+            Debug.Log("foodlayerclone: "+foodlayerclone);
         }
 
-
-
         //Debug.Log("onmousedown");
-
-        //replacing previous functionality
-        //WORK IN PROGRESS!
 
         //rename our object so that it is usable within recipes
         gameObject.name = gameObject.name.Substring(0, gameObject.name.Length - 7);//remove (clone) from string
@@ -126,12 +132,8 @@ public class IngredientScript : MonoBehaviour
                 theFurnace.usable_number_of_ingredients[i]--;
 
 
-                theFoodLayer.renderers[i].sprite = theFoodLayer.SpriteHandler(gameObject.name);
-
-                //foodlayerclone.renderers[i].sprite = theFoodLayer.SpriteHandler(gameObject.name);
-                //foodlayerclone.GetComponent < SpriteRenderer >().sprite = theFoodLayer.SpriteHandler(gameObject.name);
+                //theFoodLayer.renderers[i].sprite = theFoodLayer.SpriteHandler(gameObject.name);
                 foodlayerclone.GetComponent<FoodLayersScript>().renderers[i].sprite = theFoodLayer.SpriteHandler(gameObject.name);
-                //foodlayerclone.GetComponent<FoodLayersScript>().renderers[i].sprite = null;
 
 
                 ingredientisonthelist = true;
@@ -194,38 +196,21 @@ public class IngredientScript : MonoBehaviour
 
                         //remove "it" member of list-of-next-recipes
                         theFurnace.next_recipe.RemoveAt(it);
-
-                        /*Destroy(foodlayerclone);
-                        theFoodLayer.theSPF.spawnfoodlayer();
-                        foodlayerclone = GameObject.Find("FoodLayer(Clone)");*/
-                        //foodlayerclone.transform.position =Vector2(transform.position.x,transform.position.y) +Vector2(5,5);
-                        //foodlayerclone.GetComponent<FoodLayersScript>().renderers[0].sprite = theFoodLayer.SpriteHandler(gameObject.name);
-
-
+                                                
                     }
 
                     //Debug.Log("curent recipes first ingredient" + theFurnace.recipe.neededIngr[0]);
 
                     //???change the next recipe???
                     //Debug.Log("next recipe length " + theFurnace.next_recipe.Count);
-
-                    //Destroy(foodlayerclone);//
                 }
 
                 //now that wehave chosen our new recipe, we should gather the ingredients
                 theFurnace.usable_number_of_ingredients.Clear();
 
-                //theFoodLayer.theSPF.destroyfoodlayer();
-                //foodlayerclone.GetComponent<FoodLayersScript>().theSPF.destroyfoodlayer();
-                //Destroy(foodlayerclone);
-                //theFoodLayer.
-                /*foodlayerclone.GetComponent<FoodLayersScript>().renderers[0].sprite = null;
-                foodlayerclone.GetComponent<FoodLayersScript>().renderers[1].sprite = null;
-                foodlayerclone.GetComponent<FoodLayersScript>().renderers[2].sprite = null;
-                foodlayerclone.GetComponent<FoodLayersScript>().renderers[3].sprite = null;
-                foodlayerclone.GetComponent<FoodLayersScript>().renderers[4].sprite = null;*/
-                /*foodlayerclone.GetComponent<FoodLayersScript>().theSPF.destroyfoodlayer();*/
-                //foodlayerclone.GetComponent<FoodLayersScript>().theSPF.timeron = true;
+                //allow for a new order to be placed as well
+                foodlayerclone.GetComponent<FoodLayersScript>().change = true;
+                foodlayerclone.GetComponent<FoodLayersScript>().theSPF.spawnfoodlayerallowed = true;
 
                 //Debug.Log("next recipe");
                 foreach (int j in theFurnace.recipe.numbOfIng)
