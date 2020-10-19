@@ -12,7 +12,7 @@ functionality for layer
 -different number of ingredients shape?
 --eg compare recipe of one with recipe of four
 
-use z axis instead of order-in-layer
+use z axis instead of order-in-layer?
 
 food-ingredient-spawning should choose less random ingredients
 -generate a random float between 0 and 1
@@ -28,40 +28,26 @@ speed issues should be handled globally
 
 differentiate (graphically) between different recipes
 -eg toasts and sandwiches etc
--graphics during "flight"?
-
-remove "permanent" layered-food
--replace it with a prefab like we did with ingredients
--currently it is needed as an instance of a gameobject to be instantiated by our script
-merge the two scripts it uses to avoid confusion
 
 
 Gameplay Issues:
-
-losing money?
-
-skill measuring
-
-speed changing
+-losing money?
+-skill measuring
+-speed changing
 
 
 Performance Issues:
-
-
-handle collisions on furnace
--currently double updates happen from both the furnace and the ingredients
-
-for loop in recipe-check-list update
-
-object pooling?
+-handle collisions on furnace
+--currently double updates happen from both the furnace and the ingredients
+-for loop in recipe-check-list update
+-object pooling?
 
 
 Bugs:
 
 
 Other Concerns:
-
-add recipes
--according to the doc
+-add recipes
+--according to the doc
 
 Clean Code

@@ -140,6 +140,22 @@ public class FoodLayersScript : MonoBehaviour
             ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[12];
             return ingredientsprite;
         }
+        else if (ingredientname == "Toast_Bread")
+        {
+            ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[4];
+            return ingredientsprite;
+        }
+        else if (ingredientname == "Sandwich_Bread_Down")
+        {
+            ingredientsprite = Resources.LoadAll<Sprite>("canteen_sandwich-02")[11];
+            return ingredientsprite;
+        }
+        else if (ingredientname == "Sandwich_Bread_Top")
+        {
+            ingredientsprite = Resources.LoadAll<Sprite>("canteen_sandwich-02")[10];
+            return ingredientsprite;
+        }
+
 
         return null;
     }

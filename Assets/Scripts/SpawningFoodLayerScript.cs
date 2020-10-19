@@ -39,7 +39,7 @@ public class SpawningFoodLayerScript : MonoBehaviour
 
         }
         spawnfoodlayerallowed = false;
-        Debug.Log("spawnfoodlayer");
+        //Debug.Log("spawnfoodlayer");
     }
 
     public void destroyfoodlayer()

@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: b39b597fd3fa9bf4b97f64582711ffa5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2644223866235901926
+    second: canteen_sandwich-02_0
+  - first:
+      213: 7793114286448554915
+    second: canteen_sandwich-02_1
+  - first:
+      213: -2317172404743623249
+    second: canteen_sandwich-02_2
+  - first:
+      213: -3347196486790043813
+    second: canteen_sandwich-02_3
+  - first:
+      213: 7301452368598144576
+    second: canteen_sandwich-02_4
+  - first:
+      213: -3694116572737732397
+    second: canteen_sandwich-02_5
+  - first:
+      213: -6879971837445779024
+    second: canteen_sandwich-02_6
+  - first:
+      213: -6328149276367635194
+    second: canteen_sandwich-02_7
+  - first:
+      213: -103833731163539546
+    second: canteen_sandwich-02_8
+  - first:
+      213: 2345222239054703290
+    second: canteen_sandwich-02_9
+  - first:
+      213: -4666594163000024810
+    second: canteen_sandwich-02_10
+  - first:
+      213: -5718548311370212454
+    second: canteen_sandwich-02_11
+  - first:
+      213: -8161503926238515985
+    second: canteen_sandwich-02_12
+  - first:
+      213: -5044462051708577863
+    second: canteen_sandwich-02_13
+  - first:
+      213: 6795080098137956420
+    second: canteen_sandwich-02_14
+  - first:
+      213: 6604497511579977392
+    second: canteen_sandwich-02_15
+  - first:
+      213: 7165022346314501269
+    second: canteen_sandwich-02_16
+  - first:
+      213: -884315242955372229
+    second: canteen_sandwich-02_17
+  - first:
+      213: -913569899736772905
+    second: canteen_sandwich-02_18
+  - first:
+      213: -8209493743397234753
+    second: canteen_sandwich-02_19
+  - first:
+      213: -393077866477028774
+    second: canteen_sandwich-02_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +104,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +136,441 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: canteen_sandwich-02_0
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 890
+        width: 182
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1826624764dd4bd0800000000000000
+      internalID: -2644223866235901926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_1
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 894
+        width: 182
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3b9c16724b62c60800000000000000
+      internalID: 7793114286448554915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_2
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 901
+        width: 182
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad2beb89ffb7dfd0800000000000000
+      internalID: -2317172404743623249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_3
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 911
+        width: 182
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57a17b878e5c81d0800000000000000
+      internalID: -3347196486790043813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_4
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 920
+        width: 182
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0461ab69e38f35560800000000000000
+      internalID: 7301452368598144576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_5
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 741
+        width: 182
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d08513ac8cdbbcc0800000000000000
+      internalID: -3694116572737732397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_6
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 749
+        width: 183
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b15a54c01e6580a0800000000000000
+      internalID: -6879971837445779024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_7
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 753
+        width: 182
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d3678d2c5ed28a0800000000000000
+      internalID: -6328149276367635194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_8
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 762
+        width: 189
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a73b4a85cb1f8ef0800000000000000
+      internalID: -103833731163539546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_9
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 777
+        width: 182
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abaa33e6337eb8020800000000000000
+      internalID: 2345222239054703290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_10
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 588
+        width: 181
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 611e87b555dec3fb0800000000000000
+      internalID: -4666594163000024810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_11
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 518
+        width: 181
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b5ed5eb92a3a0b0800000000000000
+      internalID: -5718548311370212454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_12
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 524
+        width: 159
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fece89bab638cbe80800000000000000
+      internalID: -8161503926238515985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_13
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 525
+        width: 177
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7d8fc9d787ef9b0800000000000000
+      internalID: -5044462051708577863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_15
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 524
+        width: 174
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b60da1ae73e7ab50800000000000000
+      internalID: 6604497511579977392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_16
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 515
+        width: 174
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ccfcfacd54f6360800000000000000
+      internalID: 7165022346314501269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_17
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 106
+        width: 397
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b398e2ac8f74ab3f0800000000000000
+      internalID: -884315242955372229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 106
+        width: 396
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de43b834095253f0800000000000000
+      internalID: -913569899736772905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_19
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 106
+        width: 396
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb71407afe4021e80800000000000000
+      internalID: -8209493743397234753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_sandwich-02_20
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 106
+        width: 397
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a719753c18b8af0800000000000000
+      internalID: -393077866477028774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
