@@ -3,13 +3,6 @@ Cooking Game
 
 Add/Edit:
 
-THE FURNACE IS THE TOAST-MAKER!
--in subsequent foods?
-
-objects shrinking in size when clicked
-
-
-use z axis instead of order-in-layer?
 
 food-ingredient-spawning should choose less random ingredients
 -generate a random float between 0 and 1
@@ -23,28 +16,12 @@ speed issues should be handled globally
 -different users should be able to use different speeds
 --eg slower and faster
 
-differentiate (graphically) between different recipes
--eg toasts and sandwiches etc
-make new/change sprite handling functions
--one for recipe bases
--one for recipe aboves
--the current one should be able to handle between toast and sandwich ingredients
---can be kept as-is. it is used for 'flying' ingredients
----No, it can't. Different graphics should be shown for different recipes
-
-allow for a delay between recipes
--eg click a button to proceed
---should be invisible and unclickable,unless a recipe gets finished
---should not allow any new recipe to appear, unless clicked
----a while loop?
--if on, gameplay should not be allowed
---ingredients should be allowed to move, but not clickable?
---we shouldn't have an active recipe on
-put all of the next-recipe code in a large 'if-paused' statement
+delay button between recipes
+-invisible?
 
 change recipe-check-list to an image-based one, instead of text-based
+-similar to layered-food, arrange sprites in positions
 
-the base of the recipe (eg the bottom bread of the toast/sandwich) should be depicted before clicking on anything
 
 
 Gameplay Issues:
@@ -64,7 +41,20 @@ Bugs:
 
 
 Other Concerns:
+
 -add recipes
 --according to the doc
+
+ingredients should be added to the recipe when they collide with the layer/furnace?
+-it was like this before. during the ingredient's flight multiple objects could be clicked
+
+THE FURNACE IS THE TOAST-MAKER!
+-in subsequent foods?
+
+use z axis instead of order-in-layer?
+
+objects shrinking in size when clicked?
+
+treadmill animation is buggy
 
 Clean Code

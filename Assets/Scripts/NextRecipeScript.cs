@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NextRecipeScript : MonoBehaviour
 {
    public bool gamepause=true;
+    public Button button=null;
 
     public void allow_next_recipe()
     {
@@ -12,14 +14,14 @@ public class NextRecipeScript : MonoBehaviour
 
         if (gamepause)
         {
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
             gamepause = false;
 
             //enabled = true;
         }
         else
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             gamepause = true;
 
             //enabled = false;
@@ -31,12 +33,23 @@ public class NextRecipeScript : MonoBehaviour
 
     void Start()
     {
-        gamepause = true;
+        //gamepause = true;
+        gamepause = false;
+
+        button = GameObject.Find("NextRecipeButton").GetComponent<Button>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (gamepause)
+        {
+            button.interactable = true;
+        }
+        else
+        {
+            button.interactable = false;
+        }
 
     }
 }

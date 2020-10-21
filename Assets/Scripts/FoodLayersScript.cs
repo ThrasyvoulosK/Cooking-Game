@@ -16,6 +16,8 @@ public class FoodLayersScript : MonoBehaviour
 
     public SpawningFoodLayerScript theSPF;
 
+    public NextRecipeScript theNextRecipe;
+
     GameObject target;
 
     // Start is called before the first frame update
@@ -33,27 +35,22 @@ public class FoodLayersScript : MonoBehaviour
         theSPF = GameObject.Find("SpawningFoodLayer").GetComponent<SpawningFoodLayerScript>();
 
         target = GameObject.Find("Furnace");
+
+        //load a base graphic
+        //renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
+
+        theNextRecipe = GameObject.Find("NextRecipeButton").GetComponent<NextRecipeScript>();
+
     }
 
     public bool change = false;
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (change == false)
-        {
-            renderers[0].sprite = oldsprite;
-            renderers[1].sprite = oldsprite;
-            renderers[2].sprite = oldsprite;
-
-        }            
-        else
-        {
-            renderers[0].sprite = newsprite;
-            renderers[1].sprite = newsprite;
-            renderers[2].sprite = newsprite;
-
-        }*/
+       // if (theNextRecipe.gamepause)
+        //    renderers[3].sprite = null;//renderer.enabled = false;
+        //else
+            //renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);//renderer.enabled = true;
 
         //MoveFoodLayer();
         if (change == true)
@@ -71,7 +68,11 @@ public class FoodLayersScript : MonoBehaviour
                 //theSPF.spawnfoodlayer();
             }
         }
-            
+        else if (theNextRecipe.gamepause)
+            renderers[3].sprite = null;
+        else
+            renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
+
     }
 
     public void changesprite()
@@ -116,6 +117,7 @@ public class FoodLayersScript : MonoBehaviour
 
     }
 
+    //choose and load a sprite directly by its name
     public Sprite SpriteHandler(string ingredientname)
     {
         Sprite ingredientsprite;
@@ -160,6 +162,7 @@ public class FoodLayersScript : MonoBehaviour
         return null;
     }
 
+    //choose a sprite for the bottom part of the recipe
     public Sprite SpriteLayerBase(string recipename)
     {
         if (recipename.StartsWith("Sandwich"))
@@ -172,23 +175,76 @@ public class FoodLayersScript : MonoBehaviour
         }
     }
 
-    public Sprite SpriteLayerTop(string recipename,SpriteRenderer[] renderers)
+    //choose a sprite for the top layer of the recipe
+    //useful for recipes with few ingredients,
+    // that would otherwise leave lots of space empty between them
+    public List<SpriteRenderer> SpriteLayerTop(string recipename, List<SpriteRenderer> renderers)
     {
         foreach (SpriteRenderer rendr in renderers)
         {
             if (rendr.sprite == null)
             {
-                if (theFurnace.recipe.name.StartsWith("Sandwich"))
+                if (recipename.StartsWith("Sandwich"))
                 {
                     rendr.sprite = SpriteHandler("Sandwich_Bread_Top");
-                    return rendr.sprite;
+                    //break;
+                    //return rendr.sprite;
+                    return renderers;
                 }
-                else if (theFurnace.recipe.name.StartsWith("Toast"))
+                else if (recipename.StartsWith("Toast"))
                 {
-                    rendr.sprite =SpriteHandler("Toast_Bread");
-                    return rendr.sprite;
+                    rendr.sprite = SpriteHandler("Toast_Bread");
+                    //break;
+                    //return rendr.sprite;
+                    return renderers;
                 }
             }
+        }
+        return null;
+    }
+
+    //choose ingredient sprites based on recipes
+    public Sprite SpriteChooseIngredient(string recipename,string ingredientname)
+    {
+        if (recipename.StartsWith("Sandwich"))
+        {
+            if (ingredientname == "Cheese")
+            {
+                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[13];
+            }
+            else if (ingredientname == "Ham")
+            {
+                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[14];
+            }
+            else if (ingredientname == "Lettuce")
+            {
+                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[15];
+            }
+            else if (ingredientname == "Tomato")
+            {
+                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[12];
+            }
+
+        }
+        else if (recipename.StartsWith("Toast"))
+        {
+            if (ingredientname == "Cheese")
+            {
+                return  Resources.LoadAll<Sprite>("canteen_toast-01")[9];
+            }
+            else if (ingredientname == "Ham")
+            {
+                return Resources.LoadAll<Sprite>("canteen_toast-01")[10];
+            }
+            else if (ingredientname == "Lettuce")
+            {
+                return Resources.LoadAll<Sprite>("canteen_toast-01")[11];
+            }
+            else if (ingredientname == "Tomato")
+            {
+                return Resources.LoadAll<Sprite>("canteen_toast-01")[12];
+            }
+
         }
         return null;
     }

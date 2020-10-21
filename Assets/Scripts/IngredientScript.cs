@@ -85,6 +85,10 @@ public class IngredientScript : MonoBehaviour
     {
         //Debug.Log("onmousedown");
 
+        //do not allow clicking if the game is paused/disabled
+        if (theNextRecipe.gamepause)
+            return;
+
         //create a layered-food if we don't already have one
         if ((foodlayerclone = GameObject.Find("FoodLayer(Clone)"))==false)
         {
@@ -92,16 +96,15 @@ public class IngredientScript : MonoBehaviour
             theSPF.spawnfoodlayer();
             foodlayerclone = GameObject.Find("FoodLayer(Clone)");
 
-            //theFoodLayer = GameObject.Find("Food").GetComponent<FoodLayersScript>();
-
             Debug.Log("foodlayerclone: "+foodlayerclone);
         }
         theFoodLayer = GameObject.Find("FoodLayer(Clone)").GetComponent<FoodLayersScript>();
 
         //get the correct base-sprite
-        foodlayerclone.GetComponent<FoodLayersScript>().renderers[3].sprite = theFoodLayer.SpriteLayerBase(theFurnace.recipe.name);
+        //foodlayerclone.GetComponent<FoodLayersScript>().renderers[3].sprite = theFoodLayer.SpriteLayerBase(theFurnace.recipe.name);
 
-        theNextRecipe.gamepause = true;
+        //theNextRecipe.gamepause = true;
+        theNextRecipe.gamepause = false;
 
         //rename our object so that it is usable within recipes
         gameObject.name = gameObject.name.Substring(0, gameObject.name.Length - 7);//remove (clone) from string
@@ -132,12 +135,14 @@ public class IngredientScript : MonoBehaviour
                 //assign to the correct number
                 theFurnace.usable_number_of_ingredients[i]--;
 
-                foodlayerclone.GetComponent<FoodLayersScript>().renderers[i].sprite = theFoodLayer.SpriteHandler(gameObject.name);
+                //foodlayerclone.GetComponent<FoodLayersScript>().renderers[i].sprite = theFoodLayer.SpriteHandler(gameObject.name);
+                foodlayerclone.GetComponent<FoodLayersScript>().renderers[i].sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
 
                 ingredientisonthelist = true;
                 target = GameObject.Find("Furnace");
                 //since we have our target, we should change our sprite to something more convenient
-                gameObject.GetComponent<SpriteRenderer>().sprite= theFoodLayer.SpriteHandler(gameObject.name);
+                //gameObject.GetComponent<SpriteRenderer>().sprite= theFoodLayer.SpriteHandler(gameObject.name);
+                gameObject.GetComponent<SpriteRenderer>().sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
                 break;
             }
             i++;
@@ -166,32 +171,15 @@ public class IngredientScript : MonoBehaviour
 
                 //allow for a pause between recipes//
                 //wait for the button to be pressed
-                //theNextRecipe.isclickable = true;
-                Time.timeScale = 0;
+                theNextRecipe.gamepause = true;
+                //Time.timeScale = 0;
 
 
                 //add money
                 theMoney.money = theMoney.money+2f;
 
-                //add the upper bun
-                foreach (SpriteRenderer rendr in foodlayerclone.GetComponent<FoodLayersScript>().renderers)
-                {
-                    if (rendr.sprite == null)
-                    {
-                        if (theFurnace.recipe.name.StartsWith("Sandwich"))
-                        {
-                            rendr.sprite = theFoodLayer.SpriteHandler("Sandwich_Bread_Top");
-                            break;
-                        }
-                        else if (theFurnace.recipe.name.StartsWith("Toast"))
-                        {
-                            rendr.sprite = theFoodLayer.SpriteHandler("Toast_Bread");
-                            break;
-                        }
-                    }
-                }
-
-                //theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);
+                //add the upper bun graphically
+                theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);
 
 
                 //reset currentrecipe list
