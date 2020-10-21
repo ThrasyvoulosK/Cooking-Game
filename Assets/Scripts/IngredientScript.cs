@@ -21,6 +21,7 @@ public class IngredientScript : MonoBehaviour
     public SpawningFoodLayerScript theSPF;
     public GameObject foodlayergameobject=null;
     public MoneyScript theMoney;
+    public NextRecipeScript theNextRecipe;
 
     public Sprite spr;
 
@@ -51,6 +52,8 @@ public class IngredientScript : MonoBehaviour
         theSPF.spawnfoodlayer();//
 
         foodlayerclone = GameObject.Find("FoodLayer(Clone)");
+
+        theNextRecipe = GameObject.Find("NextRecipeButton").GetComponent<NextRecipeScript>();
     }
     // Update is called once per frame
     void Update()
@@ -95,16 +98,10 @@ public class IngredientScript : MonoBehaviour
         }
         theFoodLayer = GameObject.Find("FoodLayer(Clone)").GetComponent<FoodLayersScript>();
 
-        if (theFurnace.recipe.name.StartsWith("Sandwich"))
-        {
-            Debug.Log("sandwich");
-            foodlayerclone.GetComponent<FoodLayersScript>().renderers[3].sprite = theFoodLayer.SpriteHandler("Sandwich_Bread_Down");
-        }
-        else
-        {
-            Debug.Log("toast");
-            foodlayerclone.GetComponent<FoodLayersScript>().renderers[3].sprite = theFoodLayer.SpriteHandler("Toast_Bread");
-        }
+        //get the correct base-sprite
+        foodlayerclone.GetComponent<FoodLayersScript>().renderers[3].sprite = theFoodLayer.SpriteLayerBase(theFurnace.recipe.name);
+
+        theNextRecipe.gamepause = true;
 
         //rename our object so that it is usable within recipes
         gameObject.name = gameObject.name.Substring(0, gameObject.name.Length - 7);//remove (clone) from string
@@ -135,21 +132,7 @@ public class IngredientScript : MonoBehaviour
                 //assign to the correct number
                 theFurnace.usable_number_of_ingredients[i]--;
 
-
-                //theFoodLayer.renderers[i].sprite = theFoodLayer.SpriteHandler(gameObject.name);
-                if (theFurnace.recipe.name.StartsWith("Sandwich"))
-                {
-                    Debug.Log("sandwich");
-                    //foodlayerclone.GetComponent<FoodLayersScript>().renderers[4].sprite = theFoodLayer.SpriteHandler("Sandwich_Bread_Down");
-                }
-                else
-                {
-                    //foodlayerclone.GetComponent<FoodLayersScript>().renderers[4].sprite = theFoodLayer.SpriteHandler("Toast_Bread");
-                    Debug.Log("toast");
-                }
                 foodlayerclone.GetComponent<FoodLayersScript>().renderers[i].sprite = theFoodLayer.SpriteHandler(gameObject.name);
-                //foodlayerclone.GetComponent<FoodLayersScript>().renderers[i].sprite = theFoodLayer.SpriteHandler(gameObject.name);
-
 
                 ingredientisonthelist = true;
                 target = GameObject.Find("Furnace");
@@ -180,28 +163,43 @@ public class IngredientScript : MonoBehaviour
             {
                 Debug.Log("recipe ready!");
 
+
+                //allow for a pause between recipes//
+                //wait for the button to be pressed
+                //theNextRecipe.isclickable = true;
+                Time.timeScale = 0;
+
+
                 //add money
                 theMoney.money = theMoney.money+2f;
 
                 //add the upper bun
-                //foodlayerclone.GetComponent<FoodLayersScript>().renderers[3].sprite= theFoodLayer.SpriteHandler("Toast_Bread");
-                //foodlayerclone.GetComponent<FoodLayersScript>().renderers[4].sprite= theFoodLayer.SpriteHandler("Toast_Bread");
-                if (theFurnace.recipe.name.StartsWith("Sandwich"))
+                foreach (SpriteRenderer rendr in foodlayerclone.GetComponent<FoodLayersScript>().renderers)
                 {
-                    Debug.Log("sandwich");
-                    foodlayerclone.GetComponent<FoodLayersScript>().renderers[4].sprite = theFoodLayer.SpriteHandler("Sandwich_Bread_Top");
-                    //foodlayerclone.GetComponent<FoodLayersScript>().renderers[3].sprite = theFoodLayer.SpriteHandler("Sandwich_Bread_Down");
+                    if (rendr.sprite == null)
+                    {
+                        if (theFurnace.recipe.name.StartsWith("Sandwich"))
+                        {
+                            rendr.sprite = theFoodLayer.SpriteHandler("Sandwich_Bread_Top");
+                            break;
+                        }
+                        else if (theFurnace.recipe.name.StartsWith("Toast"))
+                        {
+                            rendr.sprite = theFoodLayer.SpriteHandler("Toast_Bread");
+                            break;
+                        }
+                    }
                 }
-                else
-                {
-                    foodlayerclone.GetComponent<FoodLayersScript>().renderers[4].sprite = theFoodLayer.SpriteHandler("Toast_Bread");
-                    //foodlayerclone.GetComponent<FoodLayersScript>().renderers[3].sprite = theFoodLayer.SpriteHandler("Toast_Bread");
-                    Debug.Log("toast");
-                }
+
+                //theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);
 
 
                 //reset currentrecipe list
                 theFurnace.current_recipe.Clear();
+
+                
+
+
 
                 //prepare for the next recipe or end the level
                 if (theFurnace.next_recipe!=null)
@@ -219,6 +217,12 @@ public class IngredientScript : MonoBehaviour
                     // and replace our current recipe with its fields
                     
                     it = Random.Range(0, theFurnace.next_recipe.Count);
+
+                    //
+                    /*if(Time.timeScale==0)
+                    {
+                        theFurnace.recipe = null;
+                    }*/
 
                     //replace all our current-recipe's values with the ones from next-recipe
                     if (theFurnace.next_recipe.Count > 0)
@@ -241,6 +245,8 @@ public class IngredientScript : MonoBehaviour
 
                 //now that wehave chosen our new recipe, we should gather the ingredients
                 theFurnace.usable_number_of_ingredients.Clear();
+
+                
 
                 //allow for a new order to be placed as well
                 foodlayerclone.GetComponent<FoodLayersScript>().change = true;

@@ -23,19 +23,20 @@ public class RecipeCheckScript : MonoBehaviour
     void Update()
     {
         recipenote.text = null;
-        recipenote.text = "Make me:\n";
-        if(furnscript.recipe.nameofrecipe!=null)
-            recipenote.text = "Make me "+ furnscript.recipe.nameofrecipe +"\n\n";
-        for (int i = 0; i < furnscript.recipe.neededIngr.Count; i++)
-        {
-            //if we already have all of this ingredient we don't need to show it
-            if(furnscript.usable_number_of_ingredients[i]>0)
-                recipenote.text +=" - "+ furnscript.usable_number_of_ingredients[i].ToString() +" "+ furnscript.recipe.neededIngr[i] + "\n";
-            //Debug.Log(furnscript.recipe.neededIngr.Count);
-            //Debug.Log(furnscript.usable_number_of_ingredients.Count);
-            
-
-        }
+        /*if (Time.timeScale != 0)
+        {*/
+            recipenote.text = "Make me:\n";
+            if (furnscript.recipe.nameofrecipe != null)
+                recipenote.text = "Make me " + furnscript.recipe.nameofrecipe + "\n\n";
+            for (int i = 0; i < furnscript.recipe.neededIngr.Count; i++)
+            {
+                //if we already have all of this ingredient we don't need to show it
+                if (furnscript.usable_number_of_ingredients[i] > 0)
+                    recipenote.text += " - " + furnscript.usable_number_of_ingredients[i].ToString() + " " + furnscript.recipe.neededIngr[i] + "\n";
+                //Debug.Log(furnscript.recipe.neededIngr.Count);
+                //Debug.Log(furnscript.usable_number_of_ingredients.Count);
+            }
+        /*}*/
 
     }
 }

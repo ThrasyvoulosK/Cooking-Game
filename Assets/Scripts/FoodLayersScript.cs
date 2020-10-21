@@ -160,6 +160,39 @@ public class FoodLayersScript : MonoBehaviour
         return null;
     }
 
+    public Sprite SpriteLayerBase(string recipename)
+    {
+        if (recipename.StartsWith("Sandwich"))
+        {
+            return SpriteHandler("Sandwich_Bread_Down");
+        }
+        else
+        {
+            return SpriteHandler("Toast_Bread");
+        }
+    }
+
+    public Sprite SpriteLayerTop(string recipename,SpriteRenderer[] renderers)
+    {
+        foreach (SpriteRenderer rendr in renderers)
+        {
+            if (rendr.sprite == null)
+            {
+                if (theFurnace.recipe.name.StartsWith("Sandwich"))
+                {
+                    rendr.sprite = SpriteHandler("Sandwich_Bread_Top");
+                    return rendr.sprite;
+                }
+                else if (theFurnace.recipe.name.StartsWith("Toast"))
+                {
+                    rendr.sprite =SpriteHandler("Toast_Bread");
+                    return rendr.sprite;
+                }
+            }
+        }
+        return null;
+    }
+
     Vector2 directiontotarget;
     /*
     void MoveFoodLayer()
