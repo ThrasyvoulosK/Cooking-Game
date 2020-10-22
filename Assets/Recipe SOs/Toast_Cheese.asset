@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Toast_Cheese
   m_EditorClassIdentifier: 
   nameofrecipe: a Cheese Toast
-  recipeSprite: {fileID: 2348259381674886770, guid: 5e8a17782ef052247a02de1bbbf02268, type: 3}
+  recipeSprite: {fileID: -2406693585038723564, guid: 5e8a17782ef052247a02de1bbbf02268, type: 3}
   neededIngr:
   - Cheese
   numbOfIng: 01000000

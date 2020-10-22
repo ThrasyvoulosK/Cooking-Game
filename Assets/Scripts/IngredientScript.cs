@@ -238,6 +238,7 @@ public class IngredientScript : MonoBehaviour
 
                 //allow for a new order to be placed as well
                 foodlayerclone.GetComponent<FoodLayersScript>().change = true;
+                foodlayerclone.transform.position = new Vector2(0, 1);
                 //foodlayerclone.GetComponent<FoodLayersScript>().theSPF.spawnfoodlayerallowed = true;//
                 theSPF.spawnfoodlayerallowed = true;//
 

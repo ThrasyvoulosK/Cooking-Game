@@ -59,9 +59,10 @@ public class FoodLayersScript : MonoBehaviour
             //very buggy in updayte! 
             if (gameObject.name.EndsWith("(Clone)"))
                 gameObject.name = gameObject.name.Substring(0, gameObject.name.Length - 7);//remove (clone) from string
+            //transform.position = new Vector2(0,1);
             transform.Translate(Vector2.right * Time.deltaTime * 4);
             theSPF.spawnfoodlayer();
-            if (gameObject.transform.position.x > 11)
+            if (gameObject.transform.position.x > 4)
             {
                 Destroy(gameObject);
                 change = false;
@@ -124,37 +125,37 @@ public class FoodLayersScript : MonoBehaviour
         if(ingredientname=="Cheese")
         {
             //ingredientsprite= Resources.LoadAll<Sprite>("canteen_toast-01").Single(s => s.name == "toast_cheese");
-            ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[9];
+            ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[15];
             return ingredientsprite;
         }
         else if (ingredientname == "Ham")
         {
-            ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[10];
+            ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[16];
             return ingredientsprite;
         }
         else if (ingredientname == "Lettuce")
         {
-            ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[11];
+            ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[17];
             return ingredientsprite;
         }
         else if (ingredientname == "Tomato")
         {
-            ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[12];
+            ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[14];
             return ingredientsprite;
         }
         else if (ingredientname == "Toast_Bread")
         {
-            ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[4];
+            ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[13];
             return ingredientsprite;
         }
         else if (ingredientname == "Sandwich_Bread_Down")
         {
-            ingredientsprite = Resources.LoadAll<Sprite>("canteen_sandwich-02")[11];
+            ingredientsprite = Resources.LoadAll<Sprite>("canteen_sandwich-02")[16];
             return ingredientsprite;
         }
         else if (ingredientname == "Sandwich_Bread_Top")
         {
-            ingredientsprite = Resources.LoadAll<Sprite>("canteen_sandwich-02")[10];
+            ingredientsprite = Resources.LoadAll<Sprite>("canteen_sandwich-02")[13];
             return ingredientsprite;
         }
 
@@ -210,11 +211,11 @@ public class FoodLayersScript : MonoBehaviour
         {
             if (ingredientname == "Cheese")
             {
-                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[13];
+                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[17];
             }
             else if (ingredientname == "Ham")
             {
-                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[14];
+                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[18];
             }
             else if (ingredientname == "Lettuce")
             {
@@ -222,7 +223,7 @@ public class FoodLayersScript : MonoBehaviour
             }
             else if (ingredientname == "Tomato")
             {
-                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[12];
+                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[14];
             }
 
         }
@@ -230,19 +231,19 @@ public class FoodLayersScript : MonoBehaviour
         {
             if (ingredientname == "Cheese")
             {
-                return  Resources.LoadAll<Sprite>("canteen_toast-01")[9];
+                return  Resources.LoadAll<Sprite>("canteen_toast-01")[15];
             }
             else if (ingredientname == "Ham")
             {
-                return Resources.LoadAll<Sprite>("canteen_toast-01")[10];
+                return Resources.LoadAll<Sprite>("canteen_toast-01")[16];
             }
             else if (ingredientname == "Lettuce")
             {
-                return Resources.LoadAll<Sprite>("canteen_toast-01")[11];
+                return Resources.LoadAll<Sprite>("canteen_toast-01")[17];
             }
             else if (ingredientname == "Tomato")
             {
-                return Resources.LoadAll<Sprite>("canteen_toast-01")[12];
+                return Resources.LoadAll<Sprite>("canteen_toast-01")[14];
             }
 
         }
