@@ -19,8 +19,9 @@ speed issues should be handled globally
 delay button between recipes
 -invisible?
 
-change recipe-check-list to an image-based one, instead of text-based
--similar to layered-food, arrange sprites in positions
+instead of a (text-based) recipe description, put a pre-made sprite
+
+add new recipes
 
 
 

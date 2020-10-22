@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sandwich_Cheese_Ham_Tomato
   m_EditorClassIdentifier: 
   nameofrecipe: a Cheese, Ham and Tomato Sandwich
-  recipeSprite: {fileID: 0}
+  recipeSprite: {fileID: 7793114286448554915, guid: b39b597fd3fa9bf4b97f64582711ffa5, type: 3}
   neededIngr:
   - Cheese
   - Ham

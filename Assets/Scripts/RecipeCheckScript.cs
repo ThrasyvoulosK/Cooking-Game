@@ -14,6 +14,9 @@ public class RecipeCheckScript : MonoBehaviour
     public FoodLayersScript theFoodLayer;
 
     public List<SpriteRenderer> spriteRenderers = new List<SpriteRenderer>();
+    public List<Image> images = new List<Image>();
+    public Image recipeimage;// = new Image();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,15 +34,16 @@ public class RecipeCheckScript : MonoBehaviour
     void Update()
     {
         theFoodLayer = GameObject.Find("FoodLayer(Clone)").GetComponent<FoodLayersScript>();
-        //spriteRenderers[0].sprite= theFoodLayer.SpriteChooseIngredient("Toast", "Cheese");
-        //spriteRenderers[0].sprite= theFoodLayer.SpriteChooseIngredient("Toast", "Cheese");
+
         if(theFoodLayer!=null)
         {
-            //spriteRenderers[0].sprite = theFoodLayer.SpriteChooseIngredient("Toast", "Cheese");
-            gameObject.GetComponent<RecipeCheckScript>().spriteRenderers[0].sprite = theFoodLayer.SpriteChooseIngredient("Toast", "Cheese");
-            gameObject.GetComponent<RecipeCheckScript>().spriteRenderers[1].sprite = theFoodLayer.SpriteChooseIngredient("Toast", "Cheese");
-            gameObject.GetComponent<RecipeCheckScript>().spriteRenderers[2].sprite = theFoodLayer.SpriteChooseIngredient("Toast", "Cheese");
-            gameObject.GetComponent<RecipeCheckScript>().spriteRenderers[3].sprite = theFoodLayer.SpriteChooseIngredient("Toast", "Cheese");
+            gameObject.GetComponent<RecipeCheckScript>().recipeimage.enabled = false;
+
+            gameObject.GetComponent<RecipeCheckScript>().images[0].enabled = false;
+            gameObject.GetComponent<RecipeCheckScript>().images[1].enabled = false;
+            gameObject.GetComponent<RecipeCheckScript>().images[2].enabled = false;
+            gameObject.GetComponent<RecipeCheckScript>().images[3].enabled = false;
+
         }
 
         recipenote.text = null;
@@ -47,14 +51,27 @@ public class RecipeCheckScript : MonoBehaviour
         //show the recipe only if we haven't paused/disabled the game
         if (theNextRecipe.gamepause==false)
         {
-            recipenote.text = "Make me:\n";
+            //text version of below
+            /*recipenote.text = "Make me:\n";
             if (furnscript.recipe.nameofrecipe != null)
-                recipenote.text = "Make me " + furnscript.recipe.nameofrecipe + "\n\n";
+                recipenote.text = "Make me " + furnscript.recipe.nameofrecipe + "\n\n";*/
+
+            //the recipe we want to make, depicted
+            gameObject.GetComponent<RecipeCheckScript>().recipeimage.enabled = true;
+            gameObject.GetComponent<RecipeCheckScript>().recipeimage.sprite = furnscript.recipe.recipeSprite;
+
             for (int i = 0; i < furnscript.recipe.neededIngr.Count; i++)
             {
                 //if we already have all of this ingredient we don't need to show it
                 if (furnscript.usable_number_of_ingredients[i] > 0)
-                    recipenote.text += " - " + furnscript.usable_number_of_ingredients[i].ToString() + " " + furnscript.recipe.neededIngr[i] + "\n";
+                {
+                    //text version
+                    //recipenote.text += " - " + furnscript.usable_number_of_ingredients[i].ToString() + " " + furnscript.recipe.neededIngr[i] + "\n";
+
+                    //image version
+                    gameObject.GetComponent<RecipeCheckScript>().images[i].enabled = true;
+                    gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = theFoodLayer.SpriteChooseIngredient(furnscript.recipe.name, furnscript.recipe.neededIngr[i]);
+                }
                 //Debug.Log(furnscript.recipe.neededIngr.Count);
                 //Debug.Log(furnscript.usable_number_of_ingredients.Count);
             }
