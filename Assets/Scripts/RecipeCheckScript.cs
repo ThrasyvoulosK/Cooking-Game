@@ -16,6 +16,7 @@ public class RecipeCheckScript : MonoBehaviour
     public List<SpriteRenderer> spriteRenderers = new List<SpriteRenderer>();
     public List<Image> images = new List<Image>();
     public Image recipeimage;// = new Image();
+    public Image speechbubble;
 
     // Start is called before the first frame update
     void Start()

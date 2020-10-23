@@ -19,11 +19,33 @@ speed issues should be handled globally
 delay button between recipes
 -invisible?
 
-instead of a (text-based) recipe description, put a pre-made sprite
-
 add new recipes
+--according to the doc
 
+objects shrinking in size when clicked?
 
+treadmill animation
+-fix loop
+--fit image to screen-size
+
+fix ui (check with layout images examples)
+-speech bubble
+--appear only when recipe is asked
+---trigger only after the pause-between-recipes
+---replace with thanks-bubble message
+-recipe-check-list 
+--positions
+--background canvas image?
+--stretched images?
+-split counter image?(canvas&cashmachine&cuttingboard?)
+-display money on cash-machine
+-build positions?
+
+ingredients should be added to the recipe when they collide with the layer/furnace?
+-it was like this before. during the ingredient's flight multiple objects could be clicked
+-make the sandwich wait for the collision to trigger
+--when it does, depict the ingredient
+--when to recipe is ready this way,
 
 Gameplay Issues:
 -losing money?
@@ -43,19 +65,13 @@ Bugs:
 
 Other Concerns:
 
--add recipes
---according to the doc
 
-ingredients should be added to the recipe when they collide with the layer/furnace?
--it was like this before. during the ingredient's flight multiple objects could be clicked
 
 THE FURNACE IS THE TOAST-MAKER!
 -in subsequent foods?
 
 use z axis instead of order-in-layer?
 
-objects shrinking in size when clicked?
 
-treadmill animation is buggy
 
 Clean Code

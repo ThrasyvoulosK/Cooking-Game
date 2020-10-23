@@ -80,6 +80,7 @@ public class IngredientScript : MonoBehaviour
 
     //this list will be used in order to convert
     List<Recipe_SO> sorec = null;
+    public int inum = 0;
     //public GameObject foodlayerclone;
     public void OnMouseDown()
     {
@@ -136,12 +137,11 @@ public class IngredientScript : MonoBehaviour
                 theFurnace.usable_number_of_ingredients[i]--;
 
                 //foodlayerclone.GetComponent<FoodLayersScript>().renderers[i].sprite = theFoodLayer.SpriteHandler(gameObject.name);
-                foodlayerclone.GetComponent<FoodLayersScript>().renderers[i].sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
-
+                ///foodlayerclone.GetComponent<FoodLayersScript>().renderers[i].sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
+                inum = i;
                 ingredientisonthelist = true;
                 target = GameObject.Find("Furnace");
                 //since we have our target, we should change our sprite to something more convenient
-                //gameObject.GetComponent<SpriteRenderer>().sprite= theFoodLayer.SpriteHandler(gameObject.name);
                 gameObject.GetComponent<SpriteRenderer>().sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
                 break;
             }
@@ -179,7 +179,7 @@ public class IngredientScript : MonoBehaviour
                 theMoney.money = theMoney.money+2f;
 
                 //add the upper bun graphically
-                theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);
+                //theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);
 
 
                 //reset currentrecipe list
@@ -238,7 +238,7 @@ public class IngredientScript : MonoBehaviour
 
                 //allow for a new order to be placed as well
                 foodlayerclone.GetComponent<FoodLayersScript>().change = true;
-                foodlayerclone.transform.position = new Vector2(0, 1);
+                ///foodlayerclone.transform.position = new Vector2(0, 1);
                 //foodlayerclone.GetComponent<FoodLayersScript>().theSPF.spawnfoodlayerallowed = true;//
                 theSPF.spawnfoodlayerallowed = true;//
 
@@ -274,7 +274,7 @@ public class IngredientScript : MonoBehaviour
         if(target!=null)
         {
             directiontotarget = (target.transform.position - transform.position).normalized;
-            GetComponent<Rigidbody2D>().velocity = new Vector2(directiontotarget.x *  8, directiontotarget.y *  8);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(directiontotarget.x *  8*2, directiontotarget.y *  8*2);
         }
     }
 
@@ -284,6 +284,13 @@ public class IngredientScript : MonoBehaviour
     {
         if(collision.name=="Furnace")
         {
+            foodlayerclone.GetComponent<FoodLayersScript>().renderers[inum].sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
+            inum = 0;
+            //add the upper bun graphically
+            if(theNextRecipe.gamepause)
+                theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);
+
+
             Destroy(gameObject);
         }
         //Debug.Log("collision of " + gameObject.name+" with "+collision.name);

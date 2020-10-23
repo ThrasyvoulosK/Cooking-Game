@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6055c507492e90246a990ba159192779, type: 3}
-  m_Name: Sandwich_Cheese_Tomato 1
+  m_Name: Toast_Cheese_Ham
   m_EditorClassIdentifier: 
-  nameofrecipe: a Cheese and Tomato Sandwich
-  recipeSprite: {fileID: -4666594163000024810, guid: b39b597fd3fa9bf4b97f64582711ffa5, type: 3}
+  nameofrecipe: 
+  recipeSprite: {fileID: -1227228861717700092, guid: 5e8a17782ef052247a02de1bbbf02268, type: 3}
   neededIngr:
   - Cheese
-  - Tomato
+  - Ham
   numbOfIng: 0100000001000000
   layeredingredients: []
