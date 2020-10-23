@@ -16,36 +16,34 @@ speed issues should be handled globally
 -different users should be able to use different speeds
 --eg slower and faster
 
-delay button between recipes
--invisible?
 
 add new recipes
---according to the doc
-
-objects shrinking in size when clicked?
+-level 3
+-level 4
 
 treadmill animation
 -fix loop
 --fit image to screen-size
 
 fix ui (check with layout images examples)
+replace with  new graphics
 -speech bubble
 --appear only when recipe is asked
 ---trigger only after the pause-between-recipes
 ---replace with thanks-bubble message
 -recipe-check-list 
---positions
---background canvas image?
 --stretched images?
--split counter image?(canvas&cashmachine&cuttingboard?)
+--change to "ticked" graphics when done instead of deleting them
+---use checkingredient(?) == 'zero'
+---(their (empty) images stay on position even when "deleted")
 -display money on cash-machine
 -build positions?
 
-ingredients should be added to the recipe when they collide with the layer/furnace?
--it was like this before. during the ingredient's flight multiple objects could be clicked
--make the sandwich wait for the collision to trigger
---when it does, depict the ingredient
---when to recipe is ready this way,
+recipes just fly above the plate when done
+-put a customer with a collision similar to the furnace
+--it will work just like the flying-ingredients before
+
+
 
 Gameplay Issues:
 -losing money?
@@ -54,8 +52,6 @@ Gameplay Issues:
 
 
 Performance Issues:
--handle collisions on furnace
---currently double updates happen from both the furnace and the ingredients
 -for loop in recipe-check-list update
 -object pooling?
 
@@ -66,6 +62,12 @@ Bugs:
 Other Concerns:
 
 
+split counter image?(canvas&cashmachine&cuttingboard?)
+
+objects shrinking in size when clicked?
+
+delay button between recipes
+-invisible?
 
 THE FURNACE IS THE TOAST-MAKER!
 -in subsequent foods?

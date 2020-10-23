@@ -147,7 +147,7 @@ public class IngredientScript : MonoBehaviour
             }
             i++;
         }
-
+        /*
         i = 0;
 
         //Debug.Log("before second loop");
@@ -206,12 +206,6 @@ public class IngredientScript : MonoBehaviour
                     
                     it = Random.Range(0, theFurnace.next_recipe.Count);
 
-                    //
-                    /*if(Time.timeScale==0)
-                    {
-                        theFurnace.recipe = null;
-                    }*/
-
                     //replace all our current-recipe's values with the ones from next-recipe
                     if (theFurnace.next_recipe.Count > 0)
                     {
@@ -253,6 +247,7 @@ public class IngredientScript : MonoBehaviour
 
             }
         }
+        */
         //destroy only if it is on the list
         if (ingredientisonthelist == false)
         {
@@ -285,11 +280,107 @@ public class IngredientScript : MonoBehaviour
         if(collision.name=="Furnace")
         {
             foodlayerclone.GetComponent<FoodLayersScript>().renderers[inum].sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
-            inum = 0;
+            inum = 0;/*
             //add the upper bun graphically
             if(theNextRecipe.gamepause)
-                theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);
+                theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);*/
 
+
+            int i = 0;
+
+            //Debug.Log("before second loop");
+            foreach (int correctingr in theFurnace.usable_number_of_ingredients)
+            {
+
+                int it = 0;
+
+                //Debug.Log("within second loop");
+                //continue if we have at least one correct ingredient in our recipe
+                if (correctingr <= 0)
+                {
+                    //Debug.Log("fully completed ingredient"+theFurnace.recipe.neededIngr[correctingr]);
+                    i++;
+                }
+                //if we have all the correct ingredients in our recipe, decide what to do next
+                if (i == theFurnace.recipe.neededIngr.Count)
+                {
+                    Debug.Log("recipe ready!");
+
+
+                    //allow for a pause between recipes//
+                    //wait for the button to be pressed
+                    theNextRecipe.gamepause = true;
+                    //Time.timeScale = 0;
+
+
+                    //add money
+                    theMoney.money = theMoney.money + 2f;
+
+                    //add the upper bun graphically
+                    theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);
+
+
+                    //reset currentrecipe list
+                    theFurnace.current_recipe.Clear();
+
+                    //prepare for the next recipe or end the level
+                    if (theFurnace.next_recipe != null)
+                    {
+                        //don't search if there aren't any recipes left
+                        // and change the level, since this is the Winning Condition!
+                        if (theFurnace.next_recipe.Count == 0)
+                        {
+                            //Debug.Log("no more recipes");
+                            theChangeScene.change_scene();
+                        }
+
+                        //otherwise,
+                        //search for a non-null recipe in the nextrecipes lists
+                        // and replace our current recipe with its fields
+
+                        it = Random.Range(0, theFurnace.next_recipe.Count);
+
+                        //replace all our current-recipe's values with the ones from next-recipe
+                        if (theFurnace.next_recipe.Count > 0)
+                        {
+                            theFurnace.recipe = theFurnace.next_recipe[it];
+                            theFurnace.recipe.numbOfIng = theFurnace.next_recipe[it].numbOfIng;//
+                            theFurnace.recipe.neededIngr = theFurnace.next_recipe[it].neededIngr;//
+                            theFurnace.recipe = theFurnace.next_recipe[it];
+
+                            //remove "it" member of list-of-next-recipes
+                            theFurnace.next_recipe.RemoveAt(it);
+
+                        }
+
+                        //Debug.Log("curent recipes first ingredient" + theFurnace.recipe.neededIngr[0]);
+
+                        //???change the next recipe???
+                        //Debug.Log("next recipe length " + theFurnace.next_recipe.Count);
+                    }
+
+                    //now that wehave chosen our new recipe, we should gather the ingredients
+                    theFurnace.usable_number_of_ingredients.Clear();
+
+
+
+                    //allow for a new order to be placed as well
+                    foodlayerclone.GetComponent<FoodLayersScript>().change = true;
+                    foodlayerclone.transform.position = new Vector2(0, 1);
+
+                    theSPF.spawnfoodlayerallowed = true;//
+
+                    //Debug.Log("next recipe");
+                    foreach (int j in theFurnace.recipe.numbOfIng)
+                    {
+                        theFurnace.usable_number_of_ingredients.Add(j);
+                        //break;
+                    }
+                    //
+                    break;
+
+                }
+            }
 
             Destroy(gameObject);
         }

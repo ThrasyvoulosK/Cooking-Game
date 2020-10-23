@@ -71,7 +71,8 @@ public class RecipeCheckScript : MonoBehaviour
 
                     //image version
                     gameObject.GetComponent<RecipeCheckScript>().images[i].enabled = true;
-                    gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = theFoodLayer.SpriteChooseIngredient(furnscript.recipe.name, furnscript.recipe.neededIngr[i]);
+                    //gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = theFoodLayer.SpriteChooseIngredient(furnscript.recipe.name, furnscript.recipe.neededIngr[i]);
+                    gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i]);
                 }
                 //Debug.Log(furnscript.recipe.neededIngr.Count);
                 //Debug.Log(furnscript.usable_number_of_ingredients.Count);
@@ -79,5 +80,19 @@ public class RecipeCheckScript : MonoBehaviour
         }
         
 
+    }
+    //decide on which sprite to show, based on our needs
+    //also take into account that some objects get checked out
+    public Sprite RecipeIngredientCheckListSprite(string ingredientname)
+    {
+        if(ingredientname=="Cheese")
+            return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[1];
+        else if (ingredientname == "Ham")
+            return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[4];
+        else if (ingredientname == "Lettuce")
+            return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[5];
+        else if (ingredientname == "Tomato")
+            return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[0];
+        return null;
     }
 }
