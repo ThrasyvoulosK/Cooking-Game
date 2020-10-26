@@ -11,11 +11,9 @@ food-ingredient-spawning should choose less random ingredients
 --we should keep these values on a list
 ---and always check if their sum is equal to One
 
-speed issues should be handled globally
--make a speed script
--different users should be able to use different speeds
---eg slower and faster
-
+speed issues:
+-spawning speed
+-leaving food and customer speed
 
 add new recipes
 -level 3
@@ -26,17 +24,15 @@ treadmill animation
 --fit image to screen-size
 
 fix ui (check with layout images examples)
-replace with  new graphics
--speech bubble
---appear only when recipe is asked
----trigger only after the pause-between-recipes
----replace with thanks-bubble message
+-customer
+--synchronise with speech bubbles
+--move/disappear when they get their food
 -recipe-check-list 
 --stretched images?
 --ticked images
 ---change only when the ingredient reaches the "plate"
--display money on cash-machine
 -build positions?
+-size of recipe being constructed vs recipe on thought bubble
 
 recipes just fly above the plate when done
 -put a customer with a collision similar to the furnace
@@ -53,6 +49,7 @@ Gameplay Issues:
 Performance Issues:
 -for loop in recipe-check-list update
 -object pooling?
+-Resources Folder
 
 
 Bugs:

@@ -63,7 +63,7 @@ public class IngredientScript : MonoBehaviour
         //keep moving
         if (gameObject.name.Contains("Clone"))
         {
-            transform.Translate(Vector2.right * Time.deltaTime*2);
+            transform.Translate(Vector2.right * Time.deltaTime*theSpawning.gamespeed);
             if (gameObject.transform.position.x >11)
             {
                 Destroy(gameObject);
@@ -169,7 +169,7 @@ public class IngredientScript : MonoBehaviour
         if(target!=null)
         {
             directiontotarget = (target.transform.position - transform.position).normalized;
-            GetComponent<Rigidbody2D>().velocity = new Vector2(directiontotarget.x *  8*2, directiontotarget.y *  8*2);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(directiontotarget.x *  8*theSpawning.gamespeed, directiontotarget.y *  8*theSpawning.gamespeed);
         }
     }
 

@@ -6,19 +6,22 @@ public class SpawningScript : MonoBehaviour
 {
     public bool spawnallowed = true;//
 
-    public GameObject[] ingredients;
+    //public GameObject[] ingredients;
+    public List<GameObject> ingredients = new List<GameObject>();
 
     public Transform[] spawnpoints;
+
+    public float gamespeed = 2;
 
     // Start is called before the first frame update
     void Start()
     {
         //spawnallowed = false;//
         if(spawnallowed==true)
-            InvokeRepeating("SpawnIngredient", 0, 2);//
+            InvokeRepeating("SpawnIngredient", 0, 1*gamespeed);//
         //InvokeRepeating("SpawnIngredient", 0, 0.1f);//
         //spawnallowed = false;
-        Debug.Log("spwnallowed " + spawnallowed);
+        //Debug.Log("spwnallowed " + spawnallowed);
         
     }
     /*
@@ -34,7 +37,8 @@ public class SpawningScript : MonoBehaviour
         int randomingredient;
         if(spawnallowed)
         {
-            randomingredient = Random.Range(0, ingredients.Length);
+            //randomingredient = Random.Range(0, ingredients.Length);
+            randomingredient = Random.Range(0, ingredients.Count);
             //Instantiate(ingredients[1],spawnpoints[0].position,Quaternion.identity);
             Instantiate(ingredients[randomingredient], spawnpoints[0].position, Quaternion.identity);
 

@@ -20,7 +20,8 @@ public class MoneyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moneytext.text = "Money: "+money+" $";
+        //moneytext.text = "Money: "+money+" €";
+        moneytext.text =money+" €";
 
         
     }

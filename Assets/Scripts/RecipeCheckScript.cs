@@ -16,7 +16,7 @@ public class RecipeCheckScript : MonoBehaviour
     public List<SpriteRenderer> spriteRenderers = new List<SpriteRenderer>();
     public List<Image> images = new List<Image>();
     public Image recipeimage;// = new Image();
-    public Image speechbubble;
+    public SpriteRenderer speechbubble;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,9 @@ public class RecipeCheckScript : MonoBehaviour
         theNextRecipe = GameObject.Find("NextRecipeButton").GetComponent<NextRecipeScript>();
 
         //theFoodLayer = GameObject.Find("FoodLayer(Clone)").GetComponent<FoodLayersScript>();
+
+        speechbubble = GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>();
+        //speechbubble.e
 
     }
 
@@ -44,6 +47,11 @@ public class RecipeCheckScript : MonoBehaviour
             gameObject.GetComponent<RecipeCheckScript>().images[1].enabled = false;
             gameObject.GetComponent<RecipeCheckScript>().images[2].enabled = false;
             gameObject.GetComponent<RecipeCheckScript>().images[3].enabled = false;
+
+            speechbubble = GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>();
+            //speechbubble = null;
+            //speechbubble.enabled = false;
+            speechbubble.enabled = true;
 
         }
 
@@ -71,13 +79,23 @@ public class RecipeCheckScript : MonoBehaviour
 
                     //image version
                     gameObject.GetComponent<RecipeCheckScript>().images[i].enabled = true;
-                    //gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = theFoodLayer.SpriteChooseIngredient(furnscript.recipe.name, furnscript.recipe.neededIngr[i]);
-                    gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i],furnscript.usable_number_of_ingredients[i]);
+
+                speechbubble.enabled = true;
+                speechbubble.sprite= Resources.LoadAll<Sprite>("Copy of canteen_things")[1];
+                //speechbubble = null;
+                //gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = theFoodLayer.SpriteChooseIngredient(furnscript.recipe.name, furnscript.recipe.neededIngr[i]);
+                gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i],furnscript.usable_number_of_ingredients[i]);
                     //gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i],furnscript.current_number_of_ingredients[i]);
                 ///}
                 //Debug.Log(furnscript.recipe.neededIngr.Count);
                 //Debug.Log(furnscript.usable_number_of_ingredients.Count);
             }
+        }
+        else
+        {
+            //speechbubble = null;
+            //speechbubble.enabled = false;
+            speechbubble.sprite = Resources.LoadAll<Sprite>("canteen_ευχαριστω bubble")[0];
         }
         
 
