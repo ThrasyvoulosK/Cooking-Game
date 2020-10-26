@@ -33,9 +33,8 @@ replace with  new graphics
 ---replace with thanks-bubble message
 -recipe-check-list 
 --stretched images?
---change to "ticked" graphics when done instead of deleting them
----use checkingredient(?) == 'zero'
----(their (empty) images stay on position even when "deleted")
+--ticked images
+---change only when the ingredient reaches the "plate"
 -display money on cash-machine
 -build positions?
 

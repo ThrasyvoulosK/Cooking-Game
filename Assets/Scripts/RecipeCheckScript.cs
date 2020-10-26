@@ -64,16 +64,17 @@ public class RecipeCheckScript : MonoBehaviour
             for (int i = 0; i < furnscript.recipe.neededIngr.Count; i++)
             {
                 //if we already have all of this ingredient we don't need to show it
-                if (furnscript.usable_number_of_ingredients[i] > 0)
-                {
+                ///if (furnscript.usable_number_of_ingredients[i] > 0)
+                ///{
                     //text version
                     //recipenote.text += " - " + furnscript.usable_number_of_ingredients[i].ToString() + " " + furnscript.recipe.neededIngr[i] + "\n";
 
                     //image version
                     gameObject.GetComponent<RecipeCheckScript>().images[i].enabled = true;
                     //gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = theFoodLayer.SpriteChooseIngredient(furnscript.recipe.name, furnscript.recipe.neededIngr[i]);
-                    gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i]);
-                }
+                    gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i],furnscript.usable_number_of_ingredients[i]);
+                    //gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i],furnscript.current_number_of_ingredients[i]);
+                ///}
                 //Debug.Log(furnscript.recipe.neededIngr.Count);
                 //Debug.Log(furnscript.usable_number_of_ingredients.Count);
             }
@@ -83,16 +84,36 @@ public class RecipeCheckScript : MonoBehaviour
     }
     //decide on which sprite to show, based on our needs
     //also take into account that some objects get checked out
-    public Sprite RecipeIngredientCheckListSprite(string ingredientname)
+    public Sprite RecipeIngredientCheckListSprite(string ingredientname,int numberofingredientsleft)
     {
-        if(ingredientname=="Cheese")
-            return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[1];
+        if (ingredientname == "Cheese")
+        {
+            if(numberofingredientsleft>0)
+                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[1];
+            else
+                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[3];
+        }
         else if (ingredientname == "Ham")
-            return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[4];
+        {
+            if (numberofingredientsleft > 0)
+                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[4];
+            else
+                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[6];
+        }
         else if (ingredientname == "Lettuce")
-            return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[5];
+        {
+            if (numberofingredientsleft > 0)
+                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[5];
+            else
+                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[7];
+        }
         else if (ingredientname == "Tomato")
-            return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[0];
+        {
+            if (numberofingredientsleft > 0)
+                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[0];
+            else
+                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[2];
+        }
         return null;
     }
 }
