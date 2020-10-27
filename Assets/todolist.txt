@@ -20,25 +20,25 @@ add new recipes
 -level 4
 
 treadmill animation
--fix loop
 --fit image to screen-size
 
 fix ui (check with layout images examples)
--customer
---synchronise with speech bubbles
---move/disappear when they get their food
 -recipe-check-list 
 --stretched images?
 --ticked images
 ---change only when the ingredient reaches the "plate"
 -build positions?
--size of recipe being constructed vs recipe on thought bubble
+-size/position of recipe being constructed vs recipe on thought bubble
 
-recipes just fly above the plate when done
--put a customer with a collision similar to the furnace
---it will work just like the flying-ingredients before
+recipes fly 
+-animate them going towards the bubble
+-customer
+--disappear when they get their food
+---along with bubble
 
-
+recipenextbutton
+-invisible?
+-change its functionality to when foods/customers/bubbles disappear from the screen
 
 Gameplay Issues:
 -losing money?
@@ -62,14 +62,10 @@ split counter image?(canvas&cashmachine&cuttingboard?)
 
 objects shrinking in size when clicked?
 
-delay button between recipes
--invisible?
-
 THE FURNACE IS THE TOAST-MAKER!
 -in subsequent foods?
 
 use z axis instead of order-in-layer?
-
 
 
 Clean Code

@@ -21,7 +21,7 @@ public class MoneyScript : MonoBehaviour
     void Update()
     {
         //moneytext.text = "Money: "+money+" €";
-        moneytext.text =money+" €";
+        moneytext.text =money+" ";
 
         
     }

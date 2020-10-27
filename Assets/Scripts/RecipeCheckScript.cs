@@ -32,6 +32,7 @@ public class RecipeCheckScript : MonoBehaviour
         speechbubble = GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>();
         //speechbubble.e
 
+        //theFoodLayer = GameObject.Find("FoodLayer(Clone)").GetComponent<FoodLayersScript>();
     }
 
     // Update is called once per frame

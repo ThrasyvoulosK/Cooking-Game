@@ -36,6 +36,7 @@ public class SpawningFoodLayerScript : MonoBehaviour
             //Instantiate(foodlayer, gameObject.transform.position, Quaternion.identity);
             //Instantiate(foodlayer);
             Instantiate(foodlayer, spawnpoint.position,Quaternion.identity);
+            //foodlayer.transform.localScale = foodlayer.transform.localScale * 2;
 
         }
         spawnfoodlayerallowed = false;

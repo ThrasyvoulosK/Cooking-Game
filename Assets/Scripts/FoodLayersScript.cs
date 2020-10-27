@@ -19,6 +19,7 @@ public class FoodLayersScript : MonoBehaviour
     public NextRecipeScript theNextRecipe;
 
     GameObject target;
+    GameObject movetoward;
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +36,15 @@ public class FoodLayersScript : MonoBehaviour
         theSPF = GameObject.Find("SpawningFoodLayer").GetComponent<SpawningFoodLayerScript>();
 
         target = GameObject.Find("Furnace");
+        movetoward = GameObject.Find("SpeechBubble");
 
         //load a base graphic
         //renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
 
         theNextRecipe = GameObject.Find("NextRecipeButton").GetComponent<NextRecipeScript>();
+
+        //gameObject.transform.localScale *=2;
+        gameObject.transform.localScale = new Vector3(1.5f,1.5f,1.5f);
 
     }
 
@@ -56,17 +61,42 @@ public class FoodLayersScript : MonoBehaviour
         if (change == true)
         {
             //rename our object so that it doesn't interfere with other similar objects' functionality
-            //very buggy in updayte! 
             if (gameObject.name.EndsWith("(Clone)"))
                 gameObject.name = gameObject.name.Substring(0, gameObject.name.Length - 7);//remove (clone) from string
-            //transform.position = new Vector2(0,1);
-            transform.Translate(Vector2.right * Time.deltaTime * 4);
+
+            /*Destroy(gameObject);
+            change = false;*/
+
+            //transform.Translate(Vector2.right * Time.deltaTime * 4);
+            //directiontotarget = (movetoward.transform.position - transform.position).normalized;
+            //GetComponent<Rigidbody2D>().velocity = new Vector2(directiontotarget.x * 8 * theSpawning.gamespeed, directiontotarget.y * 8 * theSpawning.gamespeed);
+            //transform.Translate(directiontotarget.x * 1, directiontotarget.y * 1);
+            //transform.position = Vector2.MoveTowards(transform.position,directiontotarget,Time.deltaTime*01);
+            transform.position = Vector2.MoveTowards(transform.position,movetoward.transform.position,Time.deltaTime*04);
+            //gameObject.GetComponent<SpriteRenderer>().color.a = 0;
+            ///gameObject.GetComponent<SpriteRenderer>().color =new  Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, -1f);
+            //Color.a = 0f;
+            //renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, 0f);
+            /*foreach(SpriteRenderer renderer in gameObject.GetComponent<FoodLayersScript>().renderers)
+            {
+                //renderer.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, -0.0001f*Time.deltaTime);
+                //renderer.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, renderer.material.color.a - 1f*Time.deltaTime);
+                //renderer.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, renderer.material.color.a - 0.9f*Time.deltaTime);
+                renderer.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, renderer.material.color.a*0.1f);
+            }*/
+            
             theSPF.spawnfoodlayer();
-            if (gameObject.transform.position.x > 4)
+            /*if (gameObject.transform.position.x > 4)
             {
                 Destroy(gameObject);
                 change = false;
                 //theSPF.spawnfoodlayer();
+            }*/
+            if (gameObject.transform.position ==movetoward.transform.position)
+            {
+                /*renderer.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, 1f);*/
+                Destroy(gameObject);
+                change = false;
             }
         }
         else if (theNextRecipe.gamepause)
@@ -83,7 +113,7 @@ public class FoodLayersScript : MonoBehaviour
         renderer.sprite = newsprite;
 
         //renderer.transform.position.Set(10, 10, 0);
-        transform.position = new Vector2(transform.position.x+0,transform.position.y+1);
+        transform.position = new Vector2(transform.position.x+0,transform.position.y+2);
 
         //Sprite nextsprite = Instantiate(newsprite,Vector2(0,  1),transform.position(0,0));
     }

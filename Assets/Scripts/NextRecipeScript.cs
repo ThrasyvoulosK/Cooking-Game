@@ -8,6 +8,7 @@ public class NextRecipeScript : MonoBehaviour
    public bool gamepause=true;
     public Button button=null;
 
+    public CustomerScript theCustomer;
     public void allow_next_recipe()
     {
         Debug.Log("nextrecipescript");
@@ -25,6 +26,11 @@ public class NextRecipeScript : MonoBehaviour
             gamepause = true;
 
             //enabled = false;
+
+            /*theCustomer.customercurrentspriterenderer = GameObject.Find("Customer").GetComponent<SpriteRenderer>();
+            theCustomer.customerandom = Random.Range(0, theCustomer.customerspritelist.Count);
+            theCustomer.customercurrentspriterenderer.sprite = theCustomer.customerspritelist[theCustomer.customerandom];
+            */
         }
 
         //isclickable = false;
@@ -37,6 +43,8 @@ public class NextRecipeScript : MonoBehaviour
         gamepause = false;
 
         button = GameObject.Find("NextRecipeButton").GetComponent<Button>();
+
+        theCustomer = GameObject.Find("Customer").GetComponent<CustomerScript>();
     }
 
     // Update is called once per frame
