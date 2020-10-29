@@ -803,7 +803,6 @@ MonoBehaviour:
   ingredients:
   - {fileID: 3555500861215330897, guid: fd2891efcab6d894c993ad972e91a275, type: 3}
   - {fileID: 2740246263342394054, guid: a468d310bc022444d85c147d5bfea106, type: 3}
-  - {fileID: 4391675842522330170, guid: 5e15497866a43b54b845c24b7ab859ab, type: 3}
   spawnpoints:
   - {fileID: 489495051}
   gamespeed: 2
@@ -2686,7 +2685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.size
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: recipe
@@ -2703,23 +2702,23 @@ PrefabInstance:
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 9964d66c034e552469b45070f62ca5f5, type: 2}
+      objectReference: {fileID: 11400000, guid: 121a83e8d413f114cafe03fa79176917, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: eee76fc01e46f5246a8b294e936f0d7c, type: 2}
+      objectReference: {fileID: 11400000, guid: f955be212e57e4544b13fb76a299af63, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: decbf1045a0f1f9408d6d4683a2e50c6, type: 2}
+      objectReference: {fileID: 11400000, guid: f955be212e57e4544b13fb76a299af63, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 88857acabca8ef748b12eddd9ad2988b, type: 2}
+      objectReference: {fileID: 11400000, guid: 121a83e8d413f114cafe03fa79176917, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: c60a658f953d9b6419dd9cbbaed5c9f8, type: 2}
+      objectReference: {fileID: 11400000, guid: 121a83e8d413f114cafe03fa79176917, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[6]
       value: 

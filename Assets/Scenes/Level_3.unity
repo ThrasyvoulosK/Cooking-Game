@@ -804,6 +804,7 @@ MonoBehaviour:
   - {fileID: 3555500861215330897, guid: fd2891efcab6d894c993ad972e91a275, type: 3}
   - {fileID: 2740246263342394054, guid: a468d310bc022444d85c147d5bfea106, type: 3}
   - {fileID: 4391675842522330170, guid: 5e15497866a43b54b845c24b7ab859ab, type: 3}
+  - {fileID: 4444269678779388149, guid: 92b49ed462fc68547a1563cf5257f134, type: 3}
   spawnpoints:
   - {fileID: 489495051}
   gamespeed: 2
@@ -2686,7 +2687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.size
-      value: 12
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: recipe
@@ -2742,6 +2743,62 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: eee76fc01e46f5246a8b294e936f0d7c, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: b709afd348bd55040b98d4a041c4806f, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0956e6765e37bb14bba5e723a728e9f8, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: 88fc1ac713d974a48aaf06251ae649e3, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: e7b9115e6e452eb488e98227c3f7205f, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[15]
+      value: 
+      objectReference: {fileID: 11400000, guid: 79b4bfc7fff090b409590d0847058d4b, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: 30b77826fe64c3e46a8cd2a6be4ca87b, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: 47dd400097dfa874bb69d5dfe36ad95e, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: b709afd348bd55040b98d4a041c4806f, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[19]
+      value: 
+      objectReference: {fileID: 11400000, guid: b709afd348bd55040b98d4a041c4806f, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[20]
+      value: 
+      objectReference: {fileID: 11400000, guid: b709afd348bd55040b98d4a041c4806f, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[21]
+      value: 
+      objectReference: {fileID: 11400000, guid: b709afd348bd55040b98d4a041c4806f, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[22]
+      value: 
+      objectReference: {fileID: 11400000, guid: b709afd348bd55040b98d4a041c4806f, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[23]
+      value: 
+      objectReference: {fileID: 11400000, guid: b709afd348bd55040b98d4a041c4806f, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[24]
+      value: 
+      objectReference: {fileID: 11400000, guid: b709afd348bd55040b98d4a041c4806f, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[25]
       value: 
       objectReference: {fileID: 11400000, guid: b709afd348bd55040b98d4a041c4806f, type: 2}
     - target: {fileID: 5314863079734572382, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}

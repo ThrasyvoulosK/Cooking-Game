@@ -28,17 +28,13 @@ fix ui (check with layout images examples)
 --ticked images
 ---change only when the ingredient reaches the "plate"
 -build positions?
--size/position of recipe being constructed vs recipe on thought bubble
-
-recipes fly 
--animate them going towards the bubble
--customer
---disappear when they get their food
----along with bubble
+-text on cash register
+--pixelated on larger resolutions
 
 recipenextbutton
 -invisible?
 -change its functionality to when foods/customers/bubbles disappear from the screen
+
 
 Gameplay Issues:
 -losing money?
@@ -53,6 +49,9 @@ Performance Issues:
 
 
 Bugs:
+-the bottom piece of bread wouldn't show on a series of playthroughs
+--it didn't happen on later playthroughs without changing anything...
+---Fixed with layers' change?
 
 
 Other Concerns:
@@ -66,6 +65,8 @@ THE FURNACE IS THE TOAST-MAKER!
 -in subsequent foods?
 
 use z axis instead of order-in-layer?
+
+let the ingredients continue moving on the treadmill when clicked, but invsible?
 
 
 Clean Code

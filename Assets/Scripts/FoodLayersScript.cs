@@ -52,10 +52,10 @@ public class FoodLayersScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // if (theNextRecipe.gamepause)
+        // if (theNextRecipe.gamepause)
         //    renderers[3].sprite = null;//renderer.enabled = false;
         //else
-            //renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);//renderer.enabled = true;
+        //renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);//renderer.enabled = true;
 
         //MoveFoodLayer();
         if (change == true)
@@ -64,45 +64,46 @@ public class FoodLayersScript : MonoBehaviour
             if (gameObject.name.EndsWith("(Clone)"))
                 gameObject.name = gameObject.name.Substring(0, gameObject.name.Length - 7);//remove (clone) from string
 
-            /*Destroy(gameObject);
-            change = false;*/
 
-            //transform.Translate(Vector2.right * Time.deltaTime * 4);
-            //directiontotarget = (movetoward.transform.position - transform.position).normalized;
-            //GetComponent<Rigidbody2D>().velocity = new Vector2(directiontotarget.x * 8 * theSpawning.gamespeed, directiontotarget.y * 8 * theSpawning.gamespeed);
-            //transform.Translate(directiontotarget.x * 1, directiontotarget.y * 1);
-            //transform.position = Vector2.MoveTowards(transform.position,directiontotarget,Time.deltaTime*01);
-            transform.position = Vector2.MoveTowards(transform.position,movetoward.transform.position,Time.deltaTime*04);
-            //gameObject.GetComponent<SpriteRenderer>().color.a = 0;
-            ///gameObject.GetComponent<SpriteRenderer>().color =new  Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, -1f);
-            //Color.a = 0f;
-            //renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, 0f);
-            /*foreach(SpriteRenderer renderer in gameObject.GetComponent<FoodLayersScript>().renderers)
+            transform.position = Vector2.MoveTowards(transform.position, movetoward.transform.position, Time.deltaTime * 03);
+
+            /*foreach (SpriteRenderer renderer in gameObject.GetComponent<FoodLayersScript>().renderers)
             {
-                //renderer.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, -0.0001f*Time.deltaTime);
-                //renderer.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, renderer.material.color.a - 1f*Time.deltaTime);
-                //renderer.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, renderer.material.color.a - 0.9f*Time.deltaTime);
-                renderer.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, renderer.material.color.a*0.1f);
-            }*/
-            
+                renderer.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, renderer.material.color.a * 0.1f);
+            }
+            */
+            //StartCoroutine("Fade");
+
             theSPF.spawnfoodlayer();
-            /*if (gameObject.transform.position.x > 4)
+
+            //if (gameObject.transform.position ==movetoward.transform.position)&&(gameObject.transform.position == movetoward.transform.position)
+            if ((gameObject.transform.position.x == movetoward.transform.position.x) && (gameObject.transform.position.y == movetoward.transform.position.y))
             {
-                Destroy(gameObject);
-                change = false;
-                //theSPF.spawnfoodlayer();
-            }*/
-            if (gameObject.transform.position ==movetoward.transform.position)
-            {
-                /*renderer.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, 1f);*/
-                Destroy(gameObject);
+                //       transform.localScale = new Vector3(3f, 3f, 3f);
+                //StartCoroutine("Fade");
+                /*foreach (SpriteRenderer renderer in gameObject.GetComponent<FoodLayersScript>().renderers)
+                    StartCoroutine("Scale");
+                StartCoroutine("Scale");*/
+                StartCoroutine("ScaleO");
+                //Destroy(gameObject);
                 change = false;
             }
         }
         else if (theNextRecipe.gamepause)
-            renderers[3].sprite = null;
+         //if (theNextRecipe.gamepause)
+        {
+            //Debug.Log("rendred null");
+            //renderers[3].sprite = null;
+            if (gameObject.name.EndsWith("(Clone)"))
+                renderers[3].sprite = null;
+        }
         else
-            renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
+        {
+            //Debug.Log("spriterenderedfully");
+            //renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
+            if (gameObject.name.EndsWith("(Clone)"))
+                renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
+        }
 
     }
 
@@ -297,5 +298,42 @@ public class FoodLayersScript : MonoBehaviour
         }
     }
     */
+
+    IEnumerator Fade()
+    {
+        for (float ft = 1f; ft >= 0; ft -= 0.1f)
+        {
+            Color c = renderer.material.color;
+            c.a = ft;
+            renderer.material.color = c;
+            yield return new WaitForSeconds(.1f);
+        }
+    }
+
+    IEnumerator ScaleO()
+    {
+        Debug.Log("coroutinescale");
+        for (float ft = 1f; ft <= 2f; ft += 0.1f)
+        {
+            gameObject.transform.localScale = new Vector3(+ft, +ft, +ft);
+            //gameObject.transform.localScale += new Vector3(+ft, +ft, +ft);
+            //gameObject.transform.localScale += new Vector3(3f, 3f, 3f);
+            yield return new WaitForSeconds(.025f);
+        }
+
+        for (float ft = 2f; ft >= 0; ft -= 0.1f)
+        {
+            gameObject.transform.localScale = new Vector3(+ft, +ft, +ft);
+            //gameObject.transform.localScale += new Vector3(+ft, +ft, +ft);
+            //gameObject.transform.localScale += new Vector3(3f, 3f, 3f);
+            yield return new WaitForSeconds(.025f);
+        }
+
+
+        CustomerScript.Instance.tesrFunction();
+
+
+        Destroy(gameObject);
+    }
 
 }
