@@ -11,7 +11,8 @@ public class SpawningScript : MonoBehaviour
 
     public Transform[] spawnpoints;
 
-    public float gamespeed = 2;
+    public float gamespeed = 2f;
+    //public float gamespeed = 4f;
 
     // Start is called before the first frame update
     void Start()

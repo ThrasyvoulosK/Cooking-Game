@@ -9,6 +9,16 @@ public class NextRecipeScript : MonoBehaviour
     public Button button=null;
 
     public CustomerScript theCustomer;
+
+    public static NextRecipeScript Instance;
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
     public void allow_next_recipe()
     {
         Debug.Log("nextrecipescript");

@@ -44,10 +44,17 @@ public class RecipeCheckScript : MonoBehaviour
         {
             gameObject.GetComponent<RecipeCheckScript>().recipeimage.enabled = false;
 
-            gameObject.GetComponent<RecipeCheckScript>().images[0].enabled = false;
+            /*gameObject.GetComponent<RecipeCheckScript>().images[0].enabled = false;
+            gameObject.GetComponent<RecipeCheckScript>().images[0].preserveAspect = true;
             gameObject.GetComponent<RecipeCheckScript>().images[1].enabled = false;
             gameObject.GetComponent<RecipeCheckScript>().images[2].enabled = false;
-            gameObject.GetComponent<RecipeCheckScript>().images[3].enabled = false;
+            gameObject.GetComponent<RecipeCheckScript>().images[3].enabled = false;*/
+
+            foreach(Image imagei in gameObject.GetComponent<RecipeCheckScript>().images)
+            {
+                imagei.enabled = false;
+                imagei.preserveAspect = true;
+            }
 
             speechbubble = GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>();
             //speechbubble = null;
@@ -55,6 +62,7 @@ public class RecipeCheckScript : MonoBehaviour
             speechbubble.enabled = true;
 
         }
+
 
         recipenote.text = null;
         
@@ -82,7 +90,7 @@ public class RecipeCheckScript : MonoBehaviour
                     gameObject.GetComponent<RecipeCheckScript>().images[i].enabled = true;
 
                 speechbubble.enabled = true;
-                speechbubble.sprite= Resources.LoadAll<Sprite>("Copy of canteen_things")[1];
+                speechbubble.sprite= Resources.LoadAll<Sprite>("canteen_things")[1];
                 //speechbubble = null;
                 //gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = theFoodLayer.SpriteChooseIngredient(furnscript.recipe.name, furnscript.recipe.neededIngr[i]);
                 gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i],furnscript.usable_number_of_ingredients[i]);

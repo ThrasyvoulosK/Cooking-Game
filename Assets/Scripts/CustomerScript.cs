@@ -60,14 +60,10 @@ public class CustomerScript : MonoBehaviour
         }
         else
         {
-            StopAllCoroutines();
+            //StopAllCoroutines();
             Color32 newColor = new Color32(255, 255, 255, 255);
             gameObject.GetComponent<SpriteRenderer>().color = newColor;
             GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>().color = newColor;
-            //gameObject.GetComponent<SpriteRenderer>().color = new Color(gameObject.GetComponent<SpriteRenderer>().material.color.r, gameObject.GetComponent<SpriteRenderer>().material.color.g, gameObject.GetComponent<SpriteRenderer>().material.color.b, gameObject.GetComponent<SpriteRenderer>().material.color.a + 1f);
-            //Color c = gameObject.GetComponent<SpriteRenderer>().material.color;
-            //c.a = 1f;
-            //GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>().color = new Color(gameObject.GetComponent<SpriteRenderer>().material.color.r, gameObject.GetComponent<SpriteRenderer>().material.color.g, gameObject.GetComponent<SpriteRenderer>().material.color.b, 1f);
             
             customerisdone = false;
             customercurrentspriterenderer.sprite = customerspritelist[customerandom];
@@ -98,5 +94,6 @@ public class CustomerScript : MonoBehaviour
         }
 
         Debug.Log("coroutinefade");
+        theNextRecipe.gamepause = false;
     }
 }

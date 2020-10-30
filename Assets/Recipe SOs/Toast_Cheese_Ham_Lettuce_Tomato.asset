@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6055c507492e90246a990ba159192779, type: 3}
-  m_Name: Sandwich_Cheese_Lettuce_Tomato
+  m_Name: Toast_Cheese_Ham_Lettuce_Tomato
   m_EditorClassIdentifier: 
-  nameofrecipe: a Cheese, Lettuce and Tomato Sandwich
-  recipeSprite: {fileID: -6879971837445779024, guid: b39b597fd3fa9bf4b97f64582711ffa5, type: 3}
+  nameofrecipe: 
+  recipeSprite: {fileID: -1906809343604354146, guid: 5e8a17782ef052247a02de1bbbf02268, type: 3}
   neededIngr:
   - Cheese
+  - Ham
   - Lettuce
   - Tomato
-  numbOfIng: 010000000100000001000000
+  numbOfIng: 01000000010000000100000001000000
   layeredingredients: []

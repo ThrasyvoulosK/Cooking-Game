@@ -5,35 +5,24 @@ Add/Edit:
 
 
 food-ingredient-spawning should choose less random ingredients
+-in later levels?
 -generate a random float between 0 and 1
 --eg if it is within 0-0.10, choose the first object etc
 --if we don't need one ingredient at all we should zero its appearance value
 --we should keep these values on a list
 ---and always check if their sum is equal to One
 
-speed issues:
--spawning speed
--leaving food and customer speed
-
-add new recipes
--level 3
--level 4
-
 treadmill animation
---fit image to screen-size
+-fix looping graphic
 
 fix ui (check with layout images examples)
 -recipe-check-list 
---stretched images?
 --ticked images
 ---change only when the ingredient reaches the "plate"
--build positions?
 -text on cash register
 --pixelated on larger resolutions
 
-recipenextbutton
--invisible?
--change its functionality to when foods/customers/bubbles disappear from the screen
+synchronise all levels with current ui positions etc.
 
 
 Gameplay Issues:
@@ -67,6 +56,19 @@ THE FURNACE IS THE TOAST-MAKER!
 use z axis instead of order-in-layer?
 
 let the ingredients continue moving on the treadmill when clicked, but invsible?
+
+speed issues:
+-spawning speed
+-leaving food and customer speed
+
+add new recipes
+-level 4?
+--coffee?
+
+recipenextbutton
+-reappear?
+
+change font of cash register to sth more appropriate, eg calculator?
 
 
 Clean Code

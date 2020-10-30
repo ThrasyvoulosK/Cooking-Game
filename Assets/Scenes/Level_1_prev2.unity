@@ -804,7 +804,7 @@ MonoBehaviour:
   - {fileID: 3555500861215330897, guid: fd2891efcab6d894c993ad972e91a275, type: 3}
   - {fileID: 2740246263342394054, guid: a468d310bc022444d85c147d5bfea106, type: 3}
   spawnpoints:
-  - {fileID: 489495051}
+  - {fileID: 0}
   gamespeed: 2
 --- !u!1 &519420028
 GameObject:
@@ -2087,14 +2087,14 @@ RectTransform:
   m_GameObject: {fileID: 1518115337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1625293373}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 904.2, y: 260}
+  m_AnchoredPosition: {x: 904.2, y: 284.22}
   m_SizeDelta: {x: 114.16113, y: 17.105171}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1518115339
@@ -2119,16 +2119,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 140
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 140
+    m_MaxSize: 40
     m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Money
 --- !u!222 &1518115340

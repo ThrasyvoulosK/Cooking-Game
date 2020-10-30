@@ -95,14 +95,14 @@ public class FoodLayersScript : MonoBehaviour
             //Debug.Log("rendred null");
             //renderers[3].sprite = null;
             if (gameObject.name.EndsWith("(Clone)"))
-                renderers[3].sprite = null;
+                renderers[4].sprite = null;
         }
         else
         {
             //Debug.Log("spriterenderedfully");
             //renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
             if (gameObject.name.EndsWith("(Clone)"))
-                renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
+                renderers[4].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
         }
 
     }
@@ -313,6 +313,7 @@ public class FoodLayersScript : MonoBehaviour
     IEnumerator ScaleO()
     {
         Debug.Log("coroutinescale");
+        theNextRecipe.gamepause = true;//
         for (float ft = 1f; ft <= 2f; ft += 0.1f)
         {
             gameObject.transform.localScale = new Vector3(+ft, +ft, +ft);
@@ -329,11 +330,15 @@ public class FoodLayersScript : MonoBehaviour
             yield return new WaitForSeconds(.025f);
         }
 
-
+        //theNextRecipe.gamepause = true;//
         CustomerScript.Instance.tesrFunction();
+
+        //theNextRecipe.gamepause = true;//
+        //
 
 
         Destroy(gameObject);
+        //theNextRecipe.gamepause = false;//
     }
 
 }
