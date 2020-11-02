@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sandwich_Cheese
   m_EditorClassIdentifier: 
   nameofrecipe: a Cheese Sandwich
-  recipeSprite: {fileID: -3347196486790043813, guid: b39b597fd3fa9bf4b97f64582711ffa5, type: 3}
+  recipeSprite: {fileID: -3347196486790043813, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
   neededIngr:
   - Cheese
   numbOfIng: 01000000

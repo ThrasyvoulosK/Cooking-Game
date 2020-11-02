@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sandwich_Ham_Lettuce
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: -103833731163539546, guid: b39b597fd3fa9bf4b97f64582711ffa5, type: 3}
+  recipeSprite: {fileID: -103833731163539546, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
   neededIngr:
   - Ham
   - Lettuce

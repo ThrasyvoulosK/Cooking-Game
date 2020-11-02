@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Toast_Cheese_Ham_Lettuce
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: 2364041031089764857, guid: 5e8a17782ef052247a02de1bbbf02268, type: 3}
+  recipeSprite: {fileID: -8217071480304799308, guid: bef5d5b047393754dac72319747544d6, type: 3}
   neededIngr:
   - Cheese
   - Ham

@@ -36,6 +36,8 @@ public class SpawningFoodLayerScript : MonoBehaviour
             //Instantiate(foodlayer, gameObject.transform.position, Quaternion.identity);
             //Instantiate(foodlayer);
             Instantiate(foodlayer, spawnpoint.position,Quaternion.identity);
+            //foodlayer.name = "FoodLayer(Clone)";
+            //GameObject.Find("FoodLayer_alt(Clone)").name = "FoodLayer";
             //foodlayer.transform.localScale = foodlayer.transform.localScale * 2;
 
         }

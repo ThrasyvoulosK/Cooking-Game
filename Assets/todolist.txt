@@ -19,13 +19,12 @@ fix ui (check with layout images examples)
 -recipe-check-list 
 --ticked images
 ---change only when the ingredient reaches the "plate"
--text on cash register
---pixelated on larger resolutions
 
-winning
--when we complete a number of recipes
--not so abruptly
+coffee recipes appearance
+-all ingredients on the same height?
 
+text labels on treadmill ingredients
+-not ui text?
 
 Gameplay Issues:
 -losing money?
@@ -40,9 +39,8 @@ Performance Issues:
 
 
 Bugs:
--the bottom piece of bread wouldn't show on a series of playthroughs
---it didn't happen on later playthroughs without changing anything...
----Fixed with layers' change?
+error message when starting
+-appears only once, doesn't reappear
 
 
 Other Concerns:

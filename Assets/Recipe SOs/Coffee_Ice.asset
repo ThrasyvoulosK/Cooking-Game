@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6055c507492e90246a990ba159192779, type: 3}
-  m_Name: Sandwich_Cheese_Lettuce
+  m_Name: Coffee_Ice
   m_EditorClassIdentifier: 
-  nameofrecipe: a Cheese and Lettuce Sandwich
-  recipeSprite: {fileID: 2345222239054703290, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  nameofrecipe: 
+  recipeSprite: {fileID: 6229701782866403873, guid: 953a7871f94251c41815715ef944c4e3, type: 3}
   neededIngr:
-  - Cheese
-  - Lettuce
+  - Coffee
+  - Ice
   numbOfIng: 0100000001000000
   layeredingredients: []

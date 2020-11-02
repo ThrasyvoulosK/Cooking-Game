@@ -51,6 +51,8 @@ public class FoodLayersScript : MonoBehaviour
         theChangeScene = GameObject.Find("Canvas").GetComponent<ChangeSceneScript>();
         theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
 
+        gameObject.name = "FoodLayer(Clone)";
+
     }
 
     public bool change = false;
@@ -181,17 +183,29 @@ public class FoodLayersScript : MonoBehaviour
         }
         else if (ingredientname == "Toast_Bread")
         {
-            ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[13];
+            ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[13];
             return ingredientsprite;
         }
         else if (ingredientname == "Sandwich_Bread_Down")
         {
-            ingredientsprite = Resources.LoadAll<Sprite>("canteen_sandwich-02")[16];
+            ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[16];
             return ingredientsprite;
         }
         else if (ingredientname == "Sandwich_Bread_Top")
         {
-            ingredientsprite = Resources.LoadAll<Sprite>("canteen_sandwich-02")[13];
+            ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[13];
+            return ingredientsprite;
+        }
+        else if (ingredientname == "Coffee_Down")
+        {
+            //ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[8];
+            ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[12];
+            return ingredientsprite;
+        }
+        else if (ingredientname == "Coffee_Up")
+        {
+            //ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[12];
+            ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[8];
             return ingredientsprite;
         }
 
@@ -206,10 +220,15 @@ public class FoodLayersScript : MonoBehaviour
         {
             return SpriteHandler("Sandwich_Bread_Down");
         }
-        else
+        else if (recipename.StartsWith("Toast"))
         {
             return SpriteHandler("Toast_Bread");
         }
+        else if (recipename.StartsWith("Coffee"))
+        {
+            return SpriteHandler("Coffee_Down");
+        }
+        return null;
     }
 
     //choose a sprite for the top layer of the recipe
@@ -224,17 +243,19 @@ public class FoodLayersScript : MonoBehaviour
                 if (recipename.StartsWith("Sandwich"))
                 {
                     rendr.sprite = SpriteHandler("Sandwich_Bread_Top");
-                    //break;
-                    //return rendr.sprite;
                     return renderers;
                 }
                 else if (recipename.StartsWith("Toast"))
                 {
                     rendr.sprite = SpriteHandler("Toast_Bread");
-                    //break;
-                    //return rendr.sprite;
                     return renderers;
                 }
+                else if (recipename.StartsWith("Coffee"))
+                {
+                    rendr.sprite = SpriteHandler("Coffee_Up");
+                    return renderers;
+                }
+
             }
         }
         return null;
@@ -247,19 +268,19 @@ public class FoodLayersScript : MonoBehaviour
         {
             if (ingredientname == "Cheese")
             {
-                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[17];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[17];
             }
             else if (ingredientname == "Ham")
             {
-                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[18];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[18];
             }
             else if (ingredientname == "Lettuce")
             {
-                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[15];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[15];
             }
             else if (ingredientname == "Tomato")
             {
-                return Resources.LoadAll<Sprite>("canteen_sandwich-02")[14];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[14];
             }
 
         }
@@ -267,19 +288,34 @@ public class FoodLayersScript : MonoBehaviour
         {
             if (ingredientname == "Cheese")
             {
-                return  Resources.LoadAll<Sprite>("canteen_toast-01")[15];
+                return  Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[15];
             }
             else if (ingredientname == "Ham")
             {
-                return Resources.LoadAll<Sprite>("canteen_toast-01")[16];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[16];
             }
             else if (ingredientname == "Lettuce")
             {
-                return Resources.LoadAll<Sprite>("canteen_toast-01")[17];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[17];
             }
             else if (ingredientname == "Tomato")
             {
-                return Resources.LoadAll<Sprite>("canteen_toast-01")[14];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[14];
+            }
+        }
+        else if (recipename.StartsWith("Coffee"))
+        {
+            if (ingredientname == "Coffee")
+            {
+                return  Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[10];
+            }
+            else if (ingredientname == "Ice")
+            {
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[11];
+            }
+            else if (ingredientname == "Milk")
+            {
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[9];
             }
 
         }
@@ -287,22 +323,7 @@ public class FoodLayersScript : MonoBehaviour
     }
 
     Vector2 directiontotarget;
-    /*
-    void MoveFoodLayer()
-    {
-        if (target != null)
-        {
-            directiontotarget = (target.transform.position - transform.position).normalized;
-            //GetComponent<Rigidbody2D>().velocity = new Vector2(directiontotarget.x * 8, directiontotarget.y * 8);
-            //transform.position = new Vector2(directiontotarget.x * 8, directiontotarget.y * 8);
-            //transform.position = new Vector2(transform.position.x+directiontotarget.x * 8, transform.position.y+directiontotarget.y * 8);
 
-            float newpos = Mathf.Repeat(Time.time * 1f, 20);
-            transform.position = Vector2.right * newpos;
-            ///transform.position = new Vector2(directiontotarget.x * 1, directiontotarget.y * 1);
-        }
-    }
-    */
 
     IEnumerator Fade()
     {
@@ -336,19 +357,15 @@ public class FoodLayersScript : MonoBehaviour
             yield return new WaitForSeconds(.025f);
         }
 
-        
-
+        //theNextRecipe.gamepause = true;//
         CustomerScript.Instance.tesrFunction();
-        
-        
+
         //winning condition
         if (theFurnace.numberofcompletedrecipes == theFurnace.numberofrecipesinlevel)
             theChangeScene.change_scene();
-        
+
 
         Destroy(gameObject);
-
-       
         //theNextRecipe.gamepause = false;//
     }
 

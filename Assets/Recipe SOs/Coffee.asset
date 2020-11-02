@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Coffee
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: 0}
+  recipeSprite: {fileID: -6247662096163486558, guid: 953a7871f94251c41815715ef944c4e3, type: 3}
   neededIngr:
-  - 
-  numbOfIng: 00000000
+  - Coffee
+  numbOfIng: 01000000
   layeredingredients: []

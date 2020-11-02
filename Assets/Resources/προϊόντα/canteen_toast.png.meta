@@ -1,7 +1,73 @@
 fileFormatVersion: 2
 guid: 32d0dc35e0d33ef479e6253602623431
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4204722003022814322
+    second: canteen_toast_0
+  - first:
+      213: -2074977441169228663
+    second: canteen_toast_1
+  - first:
+      213: -6617692697313749793
+    second: canteen_toast_2
+  - first:
+      213: 2209810544846629441
+    second: canteen_toast_3
+  - first:
+      213: 2366596313207072898
+    second: canteen_toast_4
+  - first:
+      213: -2264061055369578189
+    second: canteen_toast_5
+  - first:
+      213: 3390952434122733498
+    second: canteen_toast_6
+  - first:
+      213: -6655120558142590371
+    second: canteen_toast_7
+  - first:
+      213: -7535284499353892450
+    second: canteen_toast_8
+  - first:
+      213: -8174323344083633142
+    second: canteen_toast_9
+  - first:
+      213: -3805488704455433121
+    second: canteen_toast_10
+  - first:
+      213: 3633783030033167480
+    second: canteen_toast_11
+  - first:
+      213: 7363226463812114757
+    second: canteen_toast_12
+  - first:
+      213: 1139684158501103625
+    second: canteen_toast_13
+  - first:
+      213: 5453467309482313606
+    second: canteen_toast_14
+  - first:
+      213: 5281418553687965501
+    second: canteen_toast_15
+  - first:
+      213: 7648806017316378989
+    second: canteen_toast_16
+  - first:
+      213: 4991200063336677871
+    second: canteen_toast_17
+  - first:
+      213: -6049953636279923756
+    second: canteen_toast_18
+  - first:
+      213: 7948622965304955002
+    second: canteen_toast_19
+  - first:
+      213: -8669623253615443665
+    second: canteen_toast_20
+  - first:
+      213: 7656081942206964761
+    second: canteen_toast_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +107,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +139,495 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: canteen_toast_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 927
+        width: 124
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c9179526c2a5a30800000000000000
+      internalID: 4204722003022814322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_1
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 927
+        width: 124
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cb82ec2033433e0800000000000000
+      internalID: -2074977441169228663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_2
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 933
+        width: 124
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4dae7cd8b3924a0800000000000000
+      internalID: -6617692697313749793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_3
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 923
+        width: 123
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14aee728bf2daae10800000000000000
+      internalID: 2209810544846629441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_4
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 927
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288e47fdec6d7d020800000000000000
+      internalID: 2366596313207072898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_5
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 930
+        width: 122
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33976e437707490e0800000000000000
+      internalID: -2264061055369578189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_6
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 781
+        width: 124
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7b126d5451f0f20800000000000000
+      internalID: 3390952434122733498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_7
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 786
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52f28adc1344a3a0800000000000000
+      internalID: -6655120558142590371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_8
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 790
+        width: 124
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e990186ebaa4d6790800000000000000
+      internalID: -7535284499353892450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_9
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 790
+        width: 124
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c36bc5a38fe8e80800000000000000
+      internalID: -8174323344083633142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_10
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 785
+        width: 124
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f542c268f20303bc0800000000000000
+      internalID: -3805488704455433121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_11
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 796
+        width: 123
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87438f7c96acd6230800000000000000
+      internalID: 3633783030033167480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_12
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 792
+        width: 124
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549d640f47f6f2660800000000000000
+      internalID: 7363226463812114757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_13
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 525
+        width: 166
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908299f24b8f0df00800000000000000
+      internalID: 1139684158501103625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_14
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 525
+        width: 180
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68706efcf9b9eab40800000000000000
+      internalID: 5453467309482313606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_15
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 536
+        width: 153
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f7ab2413e5b4940800000000000000
+      internalID: 5281418553687965501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_16
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 536
+        width: 133
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6953023c84062a60800000000000000
+      internalID: 7648806017316378989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_17
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 521
+        width: 135
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1071a530e444540800000000000000
+      internalID: 4991200063336677871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_18
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 93
+        width: 397
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dbc3f9c83f3a0ca0800000000000000
+      internalID: -6049953636279923756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_19
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 93
+        width: 396
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70938c297e2f4e60800000000000000
+      internalID: 7948622965304955002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_20
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 93
+        width: 396
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2109cf959f4fa780800000000000000
+      internalID: -8669623253615443665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_toast_21
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 93
+        width: 397
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 914678876fddf3a60800000000000000
+      internalID: 7656081942206964761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

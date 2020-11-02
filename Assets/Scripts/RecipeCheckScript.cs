@@ -39,16 +39,11 @@ public class RecipeCheckScript : MonoBehaviour
     void Update()
     {
         theFoodLayer = GameObject.Find("FoodLayer(Clone)").GetComponent<FoodLayersScript>();
+        //theFoodLayer = GameObject.Find("FoodLayer_alt(Clone)").GetComponent<FoodLayersScript>();
 
         if(theFoodLayer!=null)
         {
             gameObject.GetComponent<RecipeCheckScript>().recipeimage.enabled = false;
-
-            /*gameObject.GetComponent<RecipeCheckScript>().images[0].enabled = false;
-            gameObject.GetComponent<RecipeCheckScript>().images[0].preserveAspect = true;
-            gameObject.GetComponent<RecipeCheckScript>().images[1].enabled = false;
-            gameObject.GetComponent<RecipeCheckScript>().images[2].enabled = false;
-            gameObject.GetComponent<RecipeCheckScript>().images[3].enabled = false;*/
 
             foreach(Image imagei in gameObject.GetComponent<RecipeCheckScript>().images)
             {
@@ -116,30 +111,51 @@ public class RecipeCheckScript : MonoBehaviour
         if (ingredientname == "Cheese")
         {
             if(numberofingredientsleft>0)
-                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[1];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[1];
             else
-                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[3];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[3];
         }
         else if (ingredientname == "Ham")
         {
             if (numberofingredientsleft > 0)
-                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[4];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[4];
             else
-                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[6];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[6];
         }
         else if (ingredientname == "Lettuce")
         {
             if (numberofingredientsleft > 0)
-                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[5];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[5];
             else
-                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[7];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[7];
         }
         else if (ingredientname == "Tomato")
         {
             if (numberofingredientsleft > 0)
-                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[0];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[0];
             else
-                return Resources.LoadAll<Sprite>("canteen_υλικα πινακα copy")[2];
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[2];
+        }
+        else if (ingredientname == "Coffee")
+        {
+            if (numberofingredientsleft > 0)
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[8];
+            else
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[10];
+        }
+        else if (ingredientname == "Ice")
+        {
+            if (numberofingredientsleft > 0)
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[9];
+            else
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[11];
+        }
+        else if (ingredientname == "Milk")
+        {
+            if (numberofingredientsleft > 0)
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[12];
+            else
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[13];
         }
         return null;
     }

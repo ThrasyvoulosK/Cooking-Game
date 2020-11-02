@@ -1,7 +1,148 @@
 fileFormatVersion: 2
 guid: 953a7871f94251c41815715ef944c4e3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2119139912820835825
+    second: canteen_coffee_0
+  - first:
+      213: -493642381568467875
+    second: canteen_coffee_1
+  - first:
+      213: 6229701782866403873
+    second: canteen_coffee_2
+  - first:
+      213: -6247662096163486558
+    second: canteen_coffee_3
+  - first:
+      213: 8960688932751671202
+    second: canteen_coffee_4
+  - first:
+      213: 1958110749746138416
+    second: canteen_coffee_5
+  - first:
+      213: 7844034062080851033
+    second: canteen_coffee_6
+  - first:
+      213: 1927118473753838753
+    second: canteen_coffee_7
+  - first:
+      213: 624969542792469203
+    second: canteen_coffee_8
+  - first:
+      213: -3593591942800912598
+    second: canteen_coffee_9
+  - first:
+      213: -3870539383662094241
+    second: canteen_coffee_10
+  - first:
+      213: -8628449932453961819
+    second: canteen_coffee_11
+  - first:
+      213: -8636767980194424624
+    second: canteen_coffee_12
+  - first:
+      213: 1074188661497061155
+    second: canteen_coffee_13
+  - first:
+      213: 960906319185817816
+    second: canteen_coffee_14
+  - first:
+      213: -2115566313649041134
+    second: canteen_coffee_15
+  - first:
+      213: 3769693054669588309
+    second: canteen_coffee_16
+  - first:
+      213: 544401571576188565
+    second: canteen_coffee_17
+  - first:
+      213: -1007708663635395656
+    second: canteen_coffee_18
+  - first:
+      213: -7244309109408620188
+    second: canteen_coffee_19
+  - first:
+      213: 8713321277617021298
+    second: canteen_coffee_20
+  - first:
+      213: 4855316223601307975
+    second: canteen_coffee_21
+  - first:
+      213: -483608405785350679
+    second: canteen_coffee_22
+  - first:
+      213: 2056771535841315778
+    second: canteen_coffee_23
+  - first:
+      213: 2139749584175800503
+    second: canteen_coffee_24
+  - first:
+      213: -1390172902901046553
+    second: canteen_coffee_25
+  - first:
+      213: 6779231128354698482
+    second: canteen_coffee_26
+  - first:
+      213: -4555256741962304843
+    second: canteen_coffee_27
+  - first:
+      213: 2098682671718511380
+    second: canteen_coffee_28
+  - first:
+      213: 8073394376606447718
+    second: canteen_coffee_29
+  - first:
+      213: 6116015147122244710
+    second: canteen_coffee_30
+  - first:
+      213: -4332197976232280394
+    second: canteen_coffee_31
+  - first:
+      213: 5707700066565146241
+    second: canteen_coffee_32
+  - first:
+      213: -5280382921394175483
+    second: canteen_coffee_33
+  - first:
+      213: 819465825313092297
+    second: canteen_coffee_34
+  - first:
+      213: 6148478185473020751
+    second: canteen_coffee_35
+  - first:
+      213: 518599089388949048
+    second: canteen_coffee_36
+  - first:
+      213: 6420906410274686354
+    second: canteen_coffee_37
+  - first:
+      213: -7025790698454197395
+    second: canteen_coffee_38
+  - first:
+      213: -7164903015606843743
+    second: canteen_coffee_39
+  - first:
+      213: 1222428437914192223
+    second: canteen_coffee_40
+  - first:
+      213: -8584748100523335948
+    second: canteen_coffee_41
+  - first:
+      213: -1025247360411690988
+    second: canteen_coffee_42
+  - first:
+      213: 3914790908201494805
+    second: canteen_coffee_43
+  - first:
+      213: 6083012307372997412
+    second: canteen_coffee_44
+  - first:
+      213: 729199004960376872
+    second: canteen_coffee_45
+  - first:
+      213: -8743275282641531465
+    second: canteen_coffee_46
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +182,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +214,369 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: canteen_coffee_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 855
+        width: 109
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a36fa1a7d4792e0800000000000000
+      internalID: -2119139912820835825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_1
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 852
+        width: 109
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c98809eda3629f0800000000000000
+      internalID: -493642381568467875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_2
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 851
+        width: 112
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122ae50e3c8547650800000000000000
+      internalID: 6229701782866403873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_3
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 854
+        width: 109
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4c081dc68db49a0800000000000000
+      internalID: -6247662096163486558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_4
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 852
+        width: 109
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2afff6bcb13ca5c70800000000000000
+      internalID: 8960688932751671202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_5
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 848
+        width: 109
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d0e753a5b9c2b10800000000000000
+      internalID: 1958110749746138416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_6
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 847
+        width: 110
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cb4648b6b9bdc60800000000000000
+      internalID: 7844034062080851033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_7
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 843
+        width: 109
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4c034aa008eba10800000000000000
+      internalID: 1927118473753838753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_38
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 458
+        width: 133
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bd46085906f7e90800000000000000
+      internalID: -7025790698454197395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_39
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 481
+        width: 120
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a601a82ba6219c90800000000000000
+      internalID: -7164903015606843743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_40
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 503
+        width: 113
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5906350030f6f010800000000000000
+      internalID: 1222428437914192223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_41
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 492
+        width: 92
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fed8162619dcd880800000000000000
+      internalID: -8584748100523335948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_42
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 468
+        width: 133
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41811cb25f695c1f0800000000000000
+      internalID: -1025247360411690988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_43
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 73
+        width: 313
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519674de691245630800000000000000
+      internalID: 3914790908201494805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_44
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 82
+        width: 316
+        height: 297
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42bfb41e6733b6450800000000000000
+      internalID: 6083012307372997412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_coffee_45
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 85
+        width: 313
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8284b3da1a2ae1a00800000000000000
+      internalID: 729199004960376872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

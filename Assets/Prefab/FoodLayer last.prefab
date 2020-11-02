@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 49514063256507819, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4581405331824000264, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_SortingOrder
@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581405331824000265, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4581405332098717960, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_SortingOrder
@@ -41,11 +41,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6134045226954373674, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6462741326094534876, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_Name
-      value: FoodLayer
+      value: FoodLayer_alt
       objectReference: {fileID: 0}
     - target: {fileID: 6462741326094534876, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_IsActive
@@ -97,11 +97,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8605275944002979022, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8676283873398021872, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}

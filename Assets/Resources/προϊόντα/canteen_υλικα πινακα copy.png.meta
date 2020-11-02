@@ -1,7 +1,63 @@
 fileFormatVersion: 2
 guid: 4d15fc316aaaccc488eddbdb0af5697c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6368748999240724451
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_0"
+  - first:
+      213: 6378968796148327222
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_1"
+  - first:
+      213: 7072974703079940629
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_2"
+  - first:
+      213: 2776381210233470512
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_3"
+  - first:
+      213: -7676156013131187476
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_4"
+  - first:
+      213: -7560852705142689384
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_5"
+  - first:
+      213: -7783239041065803168
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_6"
+  - first:
+      213: 9210880643123090412
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_7"
+  - first:
+      213: 7417118778470454865
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_8"
+  - first:
+      213: -7429089302982465071
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_9"
+  - first:
+      213: -88852968119292581
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_10"
+  - first:
+      213: 8184427667725584343
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_11"
+  - first:
+      213: 1276606500337319488
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_12"
+  - first:
+      213: 4629924120359330876
+    second: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+      copy_13"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +97,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +129,341 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_0"
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1434
+        width: 159
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10d1ac3788ad97a0800000000000000
+      internalID: -6368748999240724451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_1"
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1437
+        width: 165
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633e8b7a256a68850800000000000000
+      internalID: 6378968796148327222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_2"
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1235
+        width: 160
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 512676aa401482260800000000000000
+      internalID: 7072974703079940629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_3"
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1243
+        width: 166
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ef8053000b78620800000000000000
+      internalID: 2776381210233470512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_4"
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1005
+        width: 202
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea36dca6c0d87590800000000000000
+      internalID: -7676156013131187476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_5"
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 995
+        width: 186
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8913be61684721790800000000000000
+      internalID: -7560852705142689384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_6"
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 806
+        width: 202
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062225b54516cf390800000000000000
+      internalID: -7783239041065803168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_7"
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 801
+        width: 186
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce39fd1c42f93df70800000000000000
+      internalID: 9210880643123090412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_8"
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 594
+        width: 188
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1565c9f3b36eee660800000000000000
+      internalID: 7417118778470454865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_9"
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 586
+        width: 153
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d96313d3a296e890800000000000000
+      internalID: -7429089302982465071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_10"
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 389
+        width: 188
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5da20e32b454cef0800000000000000
+      internalID: -88852968119292581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_11"
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 387
+        width: 153
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d789a0d99de49170800000000000000
+      internalID: 8184427667725584343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_12"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 104
+        width: 128
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e7f8a29da67b110800000000000000
+      internalID: 1276606500337319488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_\u03C5\u03BB\u03B9\u03BA\u03B1 \u03C0\u03B9\u03BD\u03B1\u03BA\u03B1
+        copy_13"
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 100
+        width: 135
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34e703057bc04040800000000000000
+      internalID: 4629924120359330876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
