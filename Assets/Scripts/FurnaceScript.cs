@@ -17,6 +17,9 @@ public class FurnaceScript : MonoBehaviour
 
     public List<int> usable_number_of_ingredients = new List<int>();
 
+    public int numberofrecipesinlevel;
+    public int numberofcompletedrecipes = 0;
+
     public NextRecipeScript theNextRecipe;
     // Start is called before the first frame update
     void Start()

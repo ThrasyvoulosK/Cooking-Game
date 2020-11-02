@@ -18,6 +18,8 @@ public class FoodLayersScript : MonoBehaviour
 
     public NextRecipeScript theNextRecipe;
 
+    public ChangeSceneScript theChangeScene;
+
     GameObject target;
     GameObject movetoward;
 
@@ -45,6 +47,9 @@ public class FoodLayersScript : MonoBehaviour
 
         //gameObject.transform.localScale *=2;
         gameObject.transform.localScale = new Vector3(1.5f,1.5f,1.5f);
+
+        theChangeScene = GameObject.Find("Canvas").GetComponent<ChangeSceneScript>();
+        theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
 
     }
 
@@ -313,6 +318,7 @@ public class FoodLayersScript : MonoBehaviour
     IEnumerator ScaleO()
     {
         Debug.Log("coroutinescale");
+        theFurnace.numberofcompletedrecipes += 1;
         theNextRecipe.gamepause = true;//
         for (float ft = 1f; ft <= 2f; ft += 0.1f)
         {
@@ -330,14 +336,19 @@ public class FoodLayersScript : MonoBehaviour
             yield return new WaitForSeconds(.025f);
         }
 
-        //theNextRecipe.gamepause = true;//
+        
+
         CustomerScript.Instance.tesrFunction();
-
-        //theNextRecipe.gamepause = true;//
-        //
-
+        
+        
+        //winning condition
+        if (theFurnace.numberofcompletedrecipes == theFurnace.numberofrecipesinlevel)
+            theChangeScene.change_scene();
+        
 
         Destroy(gameObject);
+
+       
         //theNextRecipe.gamepause = false;//
     }
 

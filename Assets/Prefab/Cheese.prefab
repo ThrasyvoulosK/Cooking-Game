@@ -133,6 +133,7 @@ MonoBehaviour:
   theNextRecipe: {fileID: 0}
   spr: {fileID: 0}
   foodlayerclone: {fileID: 0}
+  inum: 0
 --- !u!50 &3555500861215330926
 Rigidbody2D:
   serializedVersion: 4

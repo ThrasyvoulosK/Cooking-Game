@@ -22,7 +22,9 @@ fix ui (check with layout images examples)
 -text on cash register
 --pixelated on larger resolutions
 
-synchronise all levels with current ui positions etc.
+winning
+-when we complete a number of recipes
+-not so abruptly
 
 
 Gameplay Issues:
@@ -45,6 +47,7 @@ Bugs:
 
 Other Concerns:
 
+synchronise all levels with current ui positions etc.
 
 split counter image?(canvas&cashmachine&cuttingboard?)
 
