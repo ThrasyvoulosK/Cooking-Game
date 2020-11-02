@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameofrecipe: 
   recipeSprite: {fileID: 0}
-  neededIngr: []
-  numbOfIng: 
+  neededIngr:
+  - 
+  numbOfIng: 00000000
   layeredingredients: []
