@@ -30,6 +30,11 @@ github
 
 android
 
+two lists to avoid complete randomness(for customers)
+-similar to ingredients?
+--(buggy) update gets called more than once, and it causes some anomalies instead
+
+
 Gameplay Issues:
 -losing money?
 -skill measuring

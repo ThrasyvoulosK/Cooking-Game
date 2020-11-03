@@ -7,6 +7,7 @@ public class CustomerScript : MonoBehaviour
     public SpriteRenderer customercurrentspriterenderer;
     //spawn random sprites from a given list
     public List<Sprite> customerspritelist = new List<Sprite>();
+    public List<Sprite> customerspritelistcurrent = new List<Sprite>();
     //check when they need to disappear and get new ones if they do
     bool customerisdone=false;
     //the place where the customers appear initially, before leaving
@@ -41,7 +42,9 @@ public class CustomerScript : MonoBehaviour
         customerisdone = false;
 
         theNextRecipe = GameObject.Find("NextRecipeButton").GetComponent<NextRecipeScript>();
-        
+
+        foreach (Sprite cust in customerspritelist)
+            customerspritelistcurrent.Add(cust);
     }
 
     // Update is called once per frame
@@ -51,12 +54,20 @@ public class CustomerScript : MonoBehaviour
         if (theNextRecipe.gamepause)
         {
             customerisdone = true;
-            /*gameObject.GetComponent<SpriteRenderer>().color = gameObject.GetComponent<SpriteRenderer>().color = new Color(gameObject.GetComponent<SpriteRenderer>().material.color.r, gameObject.GetComponent<SpriteRenderer>().material.color.g, gameObject.GetComponent<SpriteRenderer>().material.color.b, gameObject.GetComponent<SpriteRenderer>().material.color.a * 0.1f);
 
-            GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>().color=new Color(gameObject.GetComponent<SpriteRenderer>().material.color.r, gameObject.GetComponent<SpriteRenderer>().material.color.g, gameObject.GetComponent<SpriteRenderer>().material.color.b, gameObject.GetComponent<SpriteRenderer>().material.color.a * 0.1f);//
-            */
-
+            customercurrentspriterenderer.enabled = false;
             customerandom = Random.Range(0, customerspritelist.Count);
+           /*if (customerspritelistcurrent.Count <= 0)
+            {
+                foreach (Sprite cust in customerspritelist)
+                    customerspritelistcurrent.Add(cust);
+            }
+            customerandom = Random.Range(0, customerspritelistcurrent.Count);*/
+
+            //customerspritelistcurrent.RemoveAt(customerandom);
+            customercurrentspriterenderer.enabled = true;
+
+            //Debug.Log("thenextrecipegamepause");
         }
         else
         {
@@ -64,10 +75,13 @@ public class CustomerScript : MonoBehaviour
             Color32 newColor = new Color32(255, 255, 255, 255);
             gameObject.GetComponent<SpriteRenderer>().color = newColor;
             GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>().color = newColor;
-            
+
+            /*customercurrentspriterenderer.sprite = customerspritelistcurrent[customerandom];
+            if (customerisdone)
+                customerspritelistcurrent.RemoveAt(customerandom);*/
             customerisdone = false;
             customercurrentspriterenderer.sprite = customerspritelist[customerandom];
-
+            //Debug.Log("thenextrecipegamepausefalse");
         }
     }
 

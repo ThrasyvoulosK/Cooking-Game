@@ -8,6 +8,7 @@ public class SpawningScript : MonoBehaviour
 
     //public GameObject[] ingredients;
     public List<GameObject> ingredients = new List<GameObject>();
+    public List<GameObject> ingredients_current = new List<GameObject>();
 
     public Transform[] spawnpoints;
 
@@ -17,13 +18,12 @@ public class SpawningScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //ingredients_current = ingredients;
+        foreach (GameObject ingr in ingredients)
+            ingredients_current.Add(ingr);
         //spawnallowed = false;//
-        if(spawnallowed==true)
-            InvokeRepeating("SpawnIngredient", 0, 1*gamespeed);//
-        //InvokeRepeating("SpawnIngredient", 0, 0.1f);//
-        //spawnallowed = false;
-        //Debug.Log("spwnallowed " + spawnallowed);
-        
+        if (spawnallowed==true)
+            InvokeRepeating("SpawnIngredient", 0, 1*gamespeed);        
     }
     /*
     // Update is called once per frame
@@ -38,10 +38,20 @@ public class SpawningScript : MonoBehaviour
         int randomingredient;
         if(spawnallowed)
         {
-            //randomingredient = Random.Range(0, ingredients.Length);
-            randomingredient = Random.Range(0, ingredients.Count);
-            //Instantiate(ingredients[1],spawnpoints[0].position,Quaternion.identity);
-            Instantiate(ingredients[randomingredient], spawnpoints[0].position, Quaternion.identity);
+            if (ingredients_current.Count <= 1)
+            {
+                //ingredients_current = ingredients;
+                foreach (GameObject ingr in ingredients)
+                    ingredients_current.Add(ingr);
+            }
+
+            //randomingredient = Random.Range(0, ingredients.Count);
+            randomingredient = Random.Range(0, ingredients_current.Count);
+            //Instantiate(ingredients[randomingredient], spawnpoints[0].position, Quaternion.identity);
+            Instantiate(ingredients_current[randomingredient], spawnpoints[0].position, Quaternion.identity);
+            ingredients_current.RemoveAt(randomingredient);
+
+            
 
             //spawnallowed = false; //allow always
             //allow again when destroyed in ingredeient script
