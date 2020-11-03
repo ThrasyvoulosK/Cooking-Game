@@ -26,6 +26,10 @@ coffee recipes appearance
 text labels on treadmill ingredients
 -not ui text?
 
+github
+
+android
+
 Gameplay Issues:
 -losing money?
 -skill measuring
@@ -64,7 +68,6 @@ speed issues:
 
 add new recipes
 -level 4?
---coffee?
 
 recipenextbutton
 -reappear?
