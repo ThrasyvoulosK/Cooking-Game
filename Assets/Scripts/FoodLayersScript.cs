@@ -198,15 +198,16 @@ public class FoodLayersScript : MonoBehaviour
         }
         else if (ingredientname == "Coffee_Down")
         {
-            //ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[8];
-            ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[12];
+            ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[8];
+            //ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[12];
             return ingredientsprite;
         }
         else if (ingredientname == "Coffee_Up")
         {
-            //ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[12];
-            ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[8];
-            return ingredientsprite;
+            /*ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[12];
+            //ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[8];
+            return ingredientsprite;*/
+            return null;
         }
 
 

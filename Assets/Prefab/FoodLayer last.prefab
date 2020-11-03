@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 4478057912365482863, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478057912365482863, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4581405331824000264, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_SortingOrder
       value: 8
@@ -23,6 +31,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4581405332098717960, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581405332098717960, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4581405332216451280, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_SortingOrder
       value: 7
@@ -30,6 +46,10 @@ PrefabInstance:
     - target: {fileID: 4581405332384008916, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_SortingOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581405332384008916, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4581405332384008917, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_LocalPosition.y
@@ -39,13 +59,21 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4581405332713598419, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581405332713598419, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6134045226954373674, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6462741326094534876, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_Name
-      value: FoodLayer_alt
+      value: FoodLayer last
       objectReference: {fileID: 0}
     - target: {fileID: 6462741326094534876, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
       propertyPath: m_IsActive

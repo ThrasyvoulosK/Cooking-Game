@@ -936,6 +936,7 @@ MonoBehaviour:
   - {fileID: 3555500861215330897, guid: be290c78dece69442a5e3086278a2a36, type: 3}
   - {fileID: 3555500861215330897, guid: 5f294f8efcd4eae4998c3031757b3424, type: 3}
   - {fileID: 3555500861215330897, guid: 870308f9b9b8bca42903631ed4c72c3f, type: 3}
+  ingredients_current: []
   spawnpoints:
   - {fileID: 489495051}
   gamespeed: 2
@@ -975,7 +976,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -992,7 +993,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.92
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1253,7 +1254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnfoodlayerallowed: 0
-  foodlayer: {fileID: 7425508566532978226, guid: 1627c0ddc06af4a4690c56c284953ddc, type: 3}
+  foodlayer: {fileID: 6462741326094534876, guid: 61b6b64b2fe7ecf469f2d718aeed81ad, type: 3}
   timetodestroy: 3
   timeron: 0
   spawnpoint: {fileID: 797088021}
@@ -1374,6 +1375,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2545a1cf5b1f7b94d8946e96176859d7, type: 3}
   - {fileID: 21300000, guid: 391e7b8ddf949ce4397d94171fb1b6da, type: 3}
   - {fileID: 21300000, guid: b7d91c5623c1b194bb0c536a36386502, type: 3}
+  customerspritelistcurrent: []
   customerinitialposition: []
   theNextRecipe: {fileID: 0}
   customerandom: 0

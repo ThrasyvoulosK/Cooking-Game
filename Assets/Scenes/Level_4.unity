@@ -805,6 +805,9 @@ MonoBehaviour:
   - {fileID: 2740246263342394054, guid: a468d310bc022444d85c147d5bfea106, type: 3}
   - {fileID: 4391675842522330170, guid: 5e15497866a43b54b845c24b7ab859ab, type: 3}
   - {fileID: 4444269678779388149, guid: 92b49ed462fc68547a1563cf5257f134, type: 3}
+  - {fileID: 3555500861215330897, guid: 5f294f8efcd4eae4998c3031757b3424, type: 3}
+  - {fileID: 3555500861215330897, guid: 870308f9b9b8bca42903631ed4c72c3f, type: 3}
+  - {fileID: 3555500861215330897, guid: be290c78dece69442a5e3086278a2a36, type: 3}
   ingredients_current: []
   spawnpoints:
   - {fileID: 489495051}
@@ -820,6 +823,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -835,6 +839,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e74e7258f054a428004c5ce12feb24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -845,7 +861,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2997,7 +3013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.size
-      value: 26
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: recipe
@@ -3111,6 +3127,22 @@ PrefabInstance:
       propertyPath: next_recipe.Array.data[25]
       value: 
       objectReference: {fileID: 11400000, guid: eef7f64d2fa5ae5419d9b9e004981d5b, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[26]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1204e8d52e3b54c45a7e81938983ede6, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[27]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c73733126573b45b78b46d8085a7f9, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[28]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e51a4a4c37435e438548a7c59879625, type: 2}
+    - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
+      propertyPath: next_recipe.Array.data[29]
+      value: 
+      objectReference: {fileID: 11400000, guid: 634a93810e596eb45882c4755ec8b394, type: 2}
     - target: {fileID: 5314863079734572382, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.185

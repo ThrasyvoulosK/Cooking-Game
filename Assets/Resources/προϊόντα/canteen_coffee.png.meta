@@ -417,8 +417,8 @@ TextureImporter:
         y: 458
         width: 133
         height: 228
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24038242}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -435,11 +435,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 541
-        y: 481
+        y: 461
         width: 120
-        height: 199
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 219
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -456,11 +456,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 861
-        y: 503
+        y: 501
         width: 113
-        height: 138
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 140
+      alignment: 9
+      pivot: {x: 0.5, y: 0.44}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -480,8 +480,8 @@ TextureImporter:
         y: 492
         width: 92
         height: 159
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -497,7 +497,7 @@ TextureImporter:
       name: canteen_coffee_42
       rect:
         serializedVersion: 2
-        x: 1458
+        x: 1460
         y: 468
         width: 133
         height: 208

@@ -3,15 +3,6 @@ Cooking Game
 
 Add/Edit:
 
-
-food-ingredient-spawning should choose less random ingredients
--in later levels?
--generate a random float between 0 and 1
---eg if it is within 0-0.10, choose the first object etc
---if we don't need one ingredient at all we should zero its appearance value
---we should keep these values on a list
----and always check if their sum is equal to One
-
 treadmill animation
 -fix looping graphic
 
@@ -20,15 +11,13 @@ fix ui (check with layout images examples)
 --ticked images
 ---change only when the ingredient reaches the "plate"
 
-coffee recipes appearance
--all ingredients on the same height?
-
 text labels on treadmill ingredients
 -not ui text?
 
 github
 
-android
+android?
+cameras and ratios
 
 two lists to avoid complete randomness(for customers)
 -similar to ingredients?
@@ -65,14 +54,13 @@ THE FURNACE IS THE TOAST-MAKER!
 
 use z axis instead of order-in-layer?
 
-let the ingredients continue moving on the treadmill when clicked, but invsible?
+//let the ingredients continue moving on the treadmill when clicked, but invsible?
 
 speed issues:
 -spawning speed
 -leaving food and customer speed
 
 add new recipes
--level 4?
 
 recipenextbutton
 -reappear?
