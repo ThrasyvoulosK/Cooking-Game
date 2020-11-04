@@ -14,8 +14,6 @@ fix ui (check with layout images examples)
 text labels on treadmill ingredients
 -not ui text?
 
-github
-
 android?
 cameras and ratios
 
@@ -54,13 +52,11 @@ THE FURNACE IS THE TOAST-MAKER!
 
 use z axis instead of order-in-layer?
 
-//let the ingredients continue moving on the treadmill when clicked, but invsible?
+//let the ingredients continue moving on the treadmill when clicked, but transparent with 'ticked' graphics
 
 speed issues:
 -spawning speed
 -leaving food and customer speed
-
-add new recipes
 
 recipenextbutton
 -reappear?

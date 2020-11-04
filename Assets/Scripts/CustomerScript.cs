@@ -56,7 +56,8 @@ public class CustomerScript : MonoBehaviour
             customerisdone = true;
 
             customercurrentspriterenderer.enabled = false;
-            customerandom = Random.Range(0, customerspritelist.Count);
+            //customerandom = Random.Range(0, customerspritelist.Count);
+
            /*if (customerspritelistcurrent.Count <= 0)
             {
                 foreach (Sprite cust in customerspritelist)
@@ -67,10 +68,18 @@ public class CustomerScript : MonoBehaviour
             //customerspritelistcurrent.RemoveAt(customerandom);
             customercurrentspriterenderer.enabled = true;
 
+            //customerspritelistcurrent.RemoveAt(customerandom);
+
             //Debug.Log("thenextrecipegamepause");
+            allowspritetochange = true;
         }
         else
         {
+            if (allowspritetochange)
+                customerchangesprite();
+            //customercurrentspriterenderer.sprite = customerspritelist[customerandom];
+            //customercurrentspriterenderer.sprite = customerspritelistcurrent[customerandom];
+
             //StopAllCoroutines();
             Color32 newColor = new Color32(255, 255, 255, 255);
             gameObject.GetComponent<SpriteRenderer>().color = newColor;
@@ -80,14 +89,36 @@ public class CustomerScript : MonoBehaviour
             if (customerisdone)
                 customerspritelistcurrent.RemoveAt(customerandom);*/
             customerisdone = false;
-            customercurrentspriterenderer.sprite = customerspritelist[customerandom];
+            //customercurrentspriterenderer.sprite = customerspritelist[customerandom];
             //Debug.Log("thenextrecipegamepausefalse");
         }
     }
 
-    public Sprite customerchangesprite()
+    //call the following function only once during the update
+    public bool allowspritetochange = false;
+    public void customerchangesprite()
     {
-        return null;
+        //
+        Debug.Log("customerchangesprite");
+
+        customercurrentspriterenderer.sprite = null;
+        customerspritelistcurrent.RemoveAt(customerandom);
+
+        customerandom = Random.Range(0, customerspritelistcurrent.Count);
+
+        if (customerspritelistcurrent.Count <= 0)
+        {
+            foreach (Sprite cust in customerspritelist)
+                customerspritelistcurrent.Add(cust);
+        }
+        //customerandom = Random.Range(0, customerspritelistcurrent.Count);
+        customercurrentspriterenderer.sprite = customerspritelistcurrent[customerandom];
+        //customercurrentspriterenderer.sprite = customerspritelist[customerandom];
+
+        //customerspritelistcurrent.RemoveAt(customerandom);
+
+        allowspritetochange = false;
+        //return null;
     }
 
     public void tesrFunction()

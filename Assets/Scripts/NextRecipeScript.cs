@@ -21,17 +21,20 @@ public class NextRecipeScript : MonoBehaviour
 
     public void allow_next_recipe()
     {
-        Debug.Log("nextrecipescript");
-
         if (gamepause)
         {
+            Debug.Log("nextrecipescriptgamepause true");
             //Time.timeScale = 1;
+            //theCustomer.allowspritetochange = true;
             gamepause = false;
 
             //enabled = true;
+            
         }
         else
         {
+            Debug.Log("nextrecipescriptgamepause false");
+            //theCustomer.allowspritetochange = true;
             //Time.timeScale = 0;
             gamepause = true;
 
@@ -41,6 +44,7 @@ public class NextRecipeScript : MonoBehaviour
             theCustomer.customerandom = Random.Range(0, theCustomer.customerspritelist.Count);
             theCustomer.customercurrentspriterenderer.sprite = theCustomer.customerspritelist[theCustomer.customerandom];
             */
+            
         }
 
         //isclickable = false;
