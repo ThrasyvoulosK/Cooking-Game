@@ -141,8 +141,14 @@ public class IngredientScript : MonoBehaviour
                 inum = i;
                 ingredientisonthelist = true;
                 target = GameObject.Find("Furnace");
+                
+                //also, clone it as a transparent-ticked object
+                Instantiate(gameObject).name="gamobject(Clone)";//
+
                 //since we have our target, we should change our sprite to something more convenient
                 gameObject.GetComponent<SpriteRenderer>().sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
+
+                
                 break;
             }
             i++;

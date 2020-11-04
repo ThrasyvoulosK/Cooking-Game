@@ -17,14 +17,14 @@ text labels on treadmill ingredients
 android?
 cameras and ratios
 
-two lists to avoid complete randomness(for customers)
--similar to ingredients?
---(buggy) update gets called more than once, and it causes some anomalies instead
+Missing Graphics after Crash?
 
-Missing Graphics after Crash!
--sandwich orders
--toast orders
-
+let the ingredients continue moving on the treadmill when clicked, but transparent with 'ticked' graphics
+when we click on an ingredient
+-clone it
+--let the clone continue moving
+--chnage its graphic
+-the original continues with previous functionality
 
 Gameplay Issues:
 -losing money?
@@ -56,7 +56,7 @@ THE FURNACE IS THE TOAST-MAKER!
 
 use z axis instead of order-in-layer?
 
-//let the ingredients continue moving on the treadmill when clicked, but transparent with 'ticked' graphics
+
 
 speed issues:
 -spawning speed
