@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/well_done_1.unity
     guid: 183ce9ee17871b04a8b7a74ab2ae3d1a
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Level_2.unity
-    guid: 45d26ff62dcb201429b4905525d615ee
+    guid: 3ae14e7371cce9e44a0c44d98e576e6a
   - enabled: 1
     path: Assets/Scenes/well_done_2.unity
     guid: ee2bf3ad1e1f1e9498ef9825b3cd0316

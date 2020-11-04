@@ -14,6 +14,12 @@ TextureImporter:
   - first:
       213: -8886447958398171853
     second: canteen_imantas_1
+  - first:
+      213: 6852990003250045462
+    second: canteen_imantas_2
+  - first:
+      213: -9075551354278404305
+    second: canteen_imantas_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,9 +111,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 567
+        y: 590
         width: 2144
-        height: 346
+        height: 323
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,10 +131,10 @@ TextureImporter:
       name: canteen_imantas_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 108
-        width: 2144
-        height: 187
+        x: 1039
+        y: 345
+        width: 225
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +142,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3358eac0aaefca480800000000000000
-      internalID: -8886447958398171853
+      spriteID: b851272919f999440800000000000000
+      internalID: 4943157513591854475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_imantas_2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 124
+        width: 2137
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f9b6ba02a2d0280800000000000000
+      internalID: -9075551354278404305
       vertices: []
       indices: 
       edges: []

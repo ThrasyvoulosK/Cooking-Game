@@ -21,6 +21,10 @@ two lists to avoid complete randomness(for customers)
 -similar to ingredients?
 --(buggy) update gets called more than once, and it causes some anomalies instead
 
+Missing Graphics after Crash!
+-sandwich orders
+-toast orders
+
 
 Gameplay Issues:
 -losing money?
