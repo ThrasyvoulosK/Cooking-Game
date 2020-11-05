@@ -141,9 +141,10 @@ public class IngredientScript : MonoBehaviour
                 inum = i;
                 ingredientisonthelist = true;
                 target = GameObject.Find("Furnace");
-                
+
                 //also, clone it as a transparent-ticked object
-                Instantiate(gameObject).name="gamobject(Clone)";//
+                string formrname = gameObject.name;
+                invisivise2(formrname,gameObject);// Instantiate(gameObject).name="gamobject(Clone)";//
 
                 //since we have our target, we should change our sprite to something more convenient
                 gameObject.GetComponent<SpriteRenderer>().sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
@@ -296,5 +297,60 @@ public class IngredientScript : MonoBehaviour
             Destroy(gameObject);
         }
         //Debug.Log("collision of " + gameObject.name+" with "+collision.name);
+    }
+
+    //duplicate an ingredient object
+    /*void invisivise(string formername)
+    {
+        //Instantiate(gameObject).name = "gamobject(Clone)";
+        //Instantiate(gameObject).GetComponent<SpriteRenderer>().sprite = null;
+        invisivise2(formername);
+        //invisivise2(Instantiate(gameObject).name);
+    }*/
+    //choose an appropriate sprite
+    void invisivise2(string formername,GameObject ingredient)
+    {
+        //ingredient.GetComponent<SpriteRenderer>().sprite = null;
+        Debug.Log("resourcesize: " + Resources.LoadAll<Sprite>("προϊόντα/canteen_checked").Length);
+
+        GameObject fingredient = Instantiate(ingredient);
+        fingredient.name = "ingredient(Clone)";
+
+        if (formername.StartsWith("Cheese"))
+        {
+            fingredient.GetComponent<SpriteRenderer>().sprite= Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[1];
+            //ingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("canteen_checked _1")[0];
+        }
+        else if (formername.StartsWith("Tomato"))
+        {
+            fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[0];
+        }
+        else if (formername.StartsWith("Ham"))
+        {
+            fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[2];
+        }
+        else if (formername.StartsWith("Lettuce"))
+        {
+            fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[3];
+        }
+        else if (formername.StartsWith("Milk"))
+        {
+            fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[4];
+        }
+        else if (formername.StartsWith("Coffee"))
+        {
+            fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[5];
+        }
+        else if (formername.StartsWith("Ice"))
+        {
+            fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[6];
+        }
+        else
+        {
+            Debug.Log("falsename");
+        }
+        //Instantiate(ingredient).name = "none(Clone)";
+        
+
     }
 }

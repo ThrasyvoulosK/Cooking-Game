@@ -23,6 +23,27 @@ TextureImporter:
   - first:
       213: 8516986618291921241
     second: canteen_checked _6
+  - first:
+      213: -1727201496156949031
+    second: canteen_checked_0
+  - first:
+      213: -3045983104507909450
+    second: canteen_checked_1
+  - first:
+      213: 7144951644404983893
+    second: canteen_checked_2
+  - first:
+      213: -7115098072291753366
+    second: canteen_checked_3
+  - first:
+      213: 405800947500884490
+    second: canteen_checked_4
+  - first:
+      213: 8316594371883854802
+    second: canteen_checked_5
+  - first:
+      213: -948160558202004570
+    second: canteen_checked_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,7 +143,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: canteen_checked _0
+      name: canteen_checked_0
       rect:
         serializedVersion: 2
         x: 135
@@ -136,14 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40ea99aa562578e80800000000000000
-      internalID: -8176476001860473340
+      spriteID: 9d5ba0ee36fb708e0800000000000000
+      internalID: -1727201496156949031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: canteen_checked _1
+      name: canteen_checked_1
       rect:
         serializedVersion: 2
         x: 547
@@ -157,14 +178,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20bc47ce8940ec5a0800000000000000
-      internalID: -6499252157400429822
+      spriteID: 6bae6f7318e7ab5d0800000000000000
+      internalID: -3045983104507909450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: canteen_checked _2
+      name: canteen_checked_2
       rect:
         serializedVersion: 2
         x: 958
@@ -178,14 +199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1aec1e7b519ea200800000000000000
-      internalID: 193251656167385631
+      spriteID: 5582a1e3aa7f72360800000000000000
+      internalID: 7144951644404983893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: canteen_checked _3
+      name: canteen_checked_3
       rect:
         serializedVersion: 2
         x: 1369
@@ -199,14 +220,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 475368b162ea1dd60800000000000000
-      internalID: 7913297498960442740
+      spriteID: a62cbfa2008124d90800000000000000
+      internalID: -7115098072291753366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: canteen_checked _4
+      name: canteen_checked_4
       rect:
         serializedVersion: 2
         x: 288
@@ -220,14 +241,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74a93f18722c649f0800000000000000
-      internalID: -484486434956010937
+      spriteID: a02ae4dcfc1b1a500800000000000000
+      internalID: 405800947500884490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: canteen_checked _5
+      name: canteen_checked_5
       rect:
         serializedVersion: 2
         x: 818
@@ -241,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5442bbc147eee15d0800000000000000
-      internalID: -3089770111863937979
+      spriteID: 2db662d948a7a6370800000000000000
+      internalID: 8316594371883854802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: canteen_checked _6
+      name: canteen_checked_6
       rect:
         serializedVersion: 2
         x: 1351
@@ -262,8 +283,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 951ab04543a623670800000000000000
-      internalID: 8516986618291921241
+      spriteID: 6ab5552fef477d2f0800000000000000
+      internalID: -948160558202004570
       vertices: []
       indices: 
       edges: []

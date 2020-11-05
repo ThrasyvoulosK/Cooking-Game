@@ -23,6 +23,10 @@ public class FoodLayersScript : MonoBehaviour
     GameObject target;
     GameObject movetoward;
 
+    
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -269,19 +273,23 @@ public class FoodLayersScript : MonoBehaviour
         {
             if (ingredientname == "Cheese")
             {
-                return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[17];
+                //return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[17];
+                return GameMasterScript.Instance.spriteslayers["Sandwich_Cheese"];
             }
             else if (ingredientname == "Ham")
             {
-                return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[18];
+                //return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[18];
+                return GameMasterScript.Instance.spriteslayers["Sandwich_Ham"];
             }
             else if (ingredientname == "Lettuce")
             {
-                return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[15];
+                //return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[15];
+                return GameMasterScript.Instance.spriteslayers["Sandwich_Lettuce"];
             }
             else if (ingredientname == "Tomato")
             {
-                return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[14];
+                return GameMasterScript.Instance.spriteslayers["Sandwich_Tomato"];
+                //return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[14];
             }
 
         }
@@ -289,34 +297,41 @@ public class FoodLayersScript : MonoBehaviour
         {
             if (ingredientname == "Cheese")
             {
-                return  Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[15];
+                //return  Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[15];
+                return GameMasterScript.Instance.spriteslayers["Toast_Cheese"];
             }
             else if (ingredientname == "Ham")
             {
-                return Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[16];
+                //return Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[16];
+                return GameMasterScript.Instance.spriteslayers["Toast_Ham"];
             }
             else if (ingredientname == "Lettuce")
             {
-                return Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[17];
+                //return Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[17];
+                return GameMasterScript.Instance.spriteslayers["Toast_Lettuce"];
             }
             else if (ingredientname == "Tomato")
             {
-                return Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[14];
+                //return Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[14];
+                return GameMasterScript.Instance.spriteslayers["Toast_Tomato"];
             }
         }
         else if (recipename.StartsWith("Coffee"))
         {
             if (ingredientname == "Coffee")
             {
-                return  Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[10];
+                //return  Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[10];
+                return GameMasterScript.Instance.spriteslayers["Coffee"];
             }
             else if (ingredientname == "Ice")
             {
-                return Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[11];
+                //return Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[11];
+                return GameMasterScript.Instance.spriteslayers["Ice"];
             }
             else if (ingredientname == "Milk")
             {
-                return Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[9];
+                //return Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[9];
+                return GameMasterScript.Instance.spriteslayers["Milk"];
             }
 
         }

@@ -14,22 +14,20 @@ fix ui (check with layout images examples)
 text labels on treadmill ingredients
 -not ui text?
 
-android?
+replace board with ui emlement
+-change counter sprite
+
+Make Build For Android
 cameras and ratios
+-change size and height,lenth
 
-Missing Graphics after Crash?
-
-let the ingredients continue moving on the treadmill when clicked, but transparent with 'ticked' graphics
-when we click on an ingredient
--clone it
---let the clone continue moving
---chnage its graphic
--the original continues with previous functionality
+Replace all sprites with the ones in the dictionary of gamemaster!
 
 Gameplay Issues:
 -losing money?
 -skill measuring
 -speed changing
+-how do we know how many recipes we need?
 
 
 Performance Issues:
@@ -44,6 +42,8 @@ error message when starting
 
 
 Other Concerns:
+
+Missing Graphics after Crash?
 
 synchronise all levels with current ui positions etc.
 

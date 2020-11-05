@@ -578,7 +578,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332970649}
-  - component: {fileID: 332970650}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -600,48 +599,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &332970650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332970648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 742036a19ee999842b5664619a4dd8ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 6795080098137956420, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
-  - {fileID: -8209493743397234753, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
-  - {fileID: -393077866477028774, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
-  - {fileID: -884315242955372229, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
-  - {fileID: -913569899736772905, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
-  - {fileID: -5044462051708577863, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
-  - {fileID: -2257703242698487362, guid: bef5d5b047393754dac72319747544d6, type: 3}
-  - {fileID: -7140087995865160524, guid: bef5d5b047393754dac72319747544d6, type: 3}
-  - {fileID: 8263195158465498870, guid: bef5d5b047393754dac72319747544d6, type: 3}
-  - {fileID: 3087734001931203600, guid: bef5d5b047393754dac72319747544d6, type: 3}
-  - {fileID: -3173214758604753708, guid: bef5d5b047393754dac72319747544d6, type: 3}
-  - {fileID: 1222428437914192223, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
-  - {fileID: -8584748100523335948, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
-  - {fileID: -7164903015606843743, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
-  spritesnames:
-  - Sandwich_Tomato
-  - Sandwich_Cheese
-  - Sandwich_Ham
-  - Sandwich_Lettuce
-  - Sandwich_Base
-  - Sandwich_Top
-  - Toast_Tomato
-  - Toast_Cheese
-  - Toast_Ham
-  - Toast_Lettuce
-  - Toast_Bread
-  - Coffee
-  - Ice
-  - Milk
 --- !u!1 &384308902
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,11 +803,6 @@ MonoBehaviour:
   ingredients:
   - {fileID: 3555500861215330897, guid: fd2891efcab6d894c993ad972e91a275, type: 3}
   - {fileID: 2740246263342394054, guid: a468d310bc022444d85c147d5bfea106, type: 3}
-  - {fileID: 4391675842522330170, guid: 5e15497866a43b54b845c24b7ab859ab, type: 3}
-  - {fileID: 4444269678779388149, guid: 92b49ed462fc68547a1563cf5257f134, type: 3}
-  - {fileID: 3555500861215330897, guid: 5f294f8efcd4eae4998c3031757b3424, type: 3}
-  - {fileID: 3555500861215330897, guid: 870308f9b9b8bca42903631ed4c72c3f, type: 3}
-  - {fileID: 3555500861215330897, guid: be290c78dece69442a5e3086278a2a36, type: 3}
   ingredients_current: []
   spawnpoints:
   - {fileID: 489495051}
@@ -3132,7 +3084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.size
-      value: 30
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: recipe
@@ -3149,23 +3101,23 @@ PrefabInstance:
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 9964d66c034e552469b45070f62ca5f5, type: 2}
+      objectReference: {fileID: 11400000, guid: 121a83e8d413f114cafe03fa79176917, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: eee76fc01e46f5246a8b294e936f0d7c, type: 2}
+      objectReference: {fileID: 11400000, guid: f955be212e57e4544b13fb76a299af63, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: decbf1045a0f1f9408d6d4683a2e50c6, type: 2}
+      objectReference: {fileID: 11400000, guid: f955be212e57e4544b13fb76a299af63, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 88857acabca8ef748b12eddd9ad2988b, type: 2}
+      objectReference: {fileID: 11400000, guid: 121a83e8d413f114cafe03fa79176917, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: c60a658f953d9b6419dd9cbbaed5c9f8, type: 2}
+      objectReference: {fileID: 11400000, guid: 121a83e8d413f114cafe03fa79176917, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[6]
       value: 
@@ -3264,7 +3216,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 634a93810e596eb45882c4755ec8b394, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: numberofrecipesinlevel
-      value: 24
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572382, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: m_LocalPosition.x
