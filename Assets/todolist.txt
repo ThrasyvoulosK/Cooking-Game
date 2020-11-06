@@ -3,25 +3,21 @@ Cooking Game
 
 Add/Edit:
 
-treadmill animation
--fix looping graphic
-
 fix ui (check with layout images examples)
 -recipe-check-list 
 --ticked images
 ---change only when the ingredient reaches the "plate"
 
 text labels on treadmill ingredients
--not ui text?
+-texts as sprites
 
-replace board with ui emlement
 -change counter sprite
 
-Make Build For Android
-cameras and ratios
--change size and height,lenth
+screen resolution issues:
+-too much gets cut in higher resolutions?
 
 Replace all sprites with the ones in the dictionary of gamemaster!
+
 
 Gameplay Issues:
 -losing money?
@@ -34,6 +30,7 @@ Performance Issues:
 -for loop in recipe-check-list update
 -object pooling?
 -Resources Folder
+--fixing with dictionary
 
 
 Bugs:
@@ -43,18 +40,14 @@ error message when starting
 
 Other Concerns:
 
-Missing Graphics after Crash?
-
-synchronise all levels with current ui positions etc.
-
 split counter image?(canvas&cashmachine&cuttingboard?)
 
-objects shrinking in size when clicked?
+//objects shrinking in size when clicked?
 
-THE FURNACE IS THE TOAST-MAKER!
--in subsequent foods?
+//THE FURNACE IS THE TOAST-MAKER!
+//-merge?
 
-use z axis instead of order-in-layer?
+//use z axis instead of order-in-layer?
 
 
 

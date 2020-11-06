@@ -578,6 +578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332970649}
+  - component: {fileID: 332970650}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -599,6 +600,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &332970650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332970648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742036a19ee999842b5664619a4dd8ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 6795080098137956420, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -8209493743397234753, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -393077866477028774, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -884315242955372229, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -913569899736772905, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -5044462051708577863, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -2257703242698487362, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: -7140087995865160524, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: 8263195158465498870, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: 3087734001931203600, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: -3173214758604753708, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: 1222428437914192223, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
+  - {fileID: -8584748100523335948, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
+  - {fileID: -7164903015606843743, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
+  spritesnames:
+  - Sandwich_Tomato
+  - Sandwich_Cheese
+  - Sandwich_Ham
+  - Sandwich_Lettuce
+  - Sandwich_Base
+  - Sandwich_Top
+  - Toast_Tomato
+  - Toast_Cheese
+  - Toast_Ham
+  - Toast_Lettuce
+  - Toast_Bread
+  - Coffee
+  - Ice
+  - Milk
 --- !u!1 &384308902
 GameObject:
   m_ObjectHideFlags: 0
