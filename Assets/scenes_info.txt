@@ -1,0 +1,85 @@
+//a brief description of the game's scenes
+
+menus and interludes
+
+-selection_scene
+It's just a button that changes to the next scene.
+In this case, it just goes to the fist level of the game, "Leve_1_new"(currently).
+
+-well_done 1 to 3
+These scenes serve as interludes between levels, by giving a message of victory to the player and allowing them to proceed to
+the next level whenever they want.
+Their functionality and setup is the same as the "selection_scene".
+
+-WinScreen
+It provides the player with a victorious message after completing the last stage of the game.
+Its functionality is the same as above.
+
+cooking scenes (Level_ 1 to 4)
+//Level1_new, Level2_new, Level3_new and Level_4
+Being the main part of the game, in these scenes the player attempts to satisfy the demands of a finite number of customers 
+ in each level by preparing them their preffered foods and drinks. Whenever that happens, a well_done scene is called, 
+ congratulating the player and allowing them to continue on the next level.
+The setup and functionality is the same on all such scenes, currently, however, each scene handles different ingredients, 
+ different recipes and different numbers of recipes needing to be completed
+
+ the following is a list of Game Objects within such a scene, including their functionality and how they affect the game
+ (inactive or unneeded objects have been omitted)
+
+ -Main Camera
+ Includes CameraScript
+
+ -SpawningPoint
+ Its transform position is where treadmill ingredients get spawn.
+ Within the editor we specify its list of ingredients and the speed of the game.
+
+ -Furnace
+ Located in the center of the screen, its collider is used as a target for clicked ingredients. When they indeed collide, the 
+  ingredients get destroyed, and the foodlayer shows the appropriate layer eg a tomato ingredient now shows as a tomato would look 
+  inside a sandwich.
+Includes FurnaceScript.
+
+ -Canvas
+ All the UI elements are in here. Their shapes and sizes may change according to the CameraScript.
+ --recipe board
+ includes the following children
+ ---Board
+ It's just the rectangular canvas board graphic.
+ ---Image (0) to 3
+ The Graphics of the checklist. They show when we need them for a recipe and get ticked when we no longer need them.
+ Their functionality is restricted on the current recipe only.
+ ---RecImage
+ This is the image of the complete recipe that a customer wants and appears within their thought bubble.
+ --Money
+ It's just a number(text) that shows on the cash register.
+ --NextRecipeButton
+ It used to be a button, but now it is not, with its functionality replaced from scripts.
+ --QuitButton
+ Self explanatory, it also allows the player to exit the game by pressing 'esc'.
+
+ -EventSystem?
+
+ -Treadmill_Anim
+This is the treadmill animation. It consists of two sprites that get animated changing positions to appear as if they are looping
+ interchangeably, just like a treadmill would. It doesn't interfere with anything else on the game.
+
+ -GameMaster
+ Includes the dictionary that assigns sprites to strings.
+
+ -SpawningFoodLayer
+ It is responsible for the food-layer's position, as well as for loading its prefab.
+
+ -BackgroundObjects
+ These objects are mainly just graphics, except where noted. Keep in mind their order in layer, as its important how they show.
+ --Wall
+ --Customer
+ Includes CustomerScript.
+ Also includes SpeechBubble, that changes to a 'thank you' message when done.
+ --Outside
+ The view beyond the canteen eg behind the customer.
+ --Tent
+ --Counter
+ Includes a small green 'screen' object that shows in front of the cash register, so that the 'money text' appears better on it instead
+ of its current sprite
+ ---Paper Towels
+ 

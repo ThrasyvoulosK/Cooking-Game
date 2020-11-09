@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*FurnaceScript initialises the list of available recipes for the current scene*/
+/*its public lists are frequently used by other scripts, such as the IngredientScript*/
 public class FurnaceScript : MonoBehaviour
 {
     

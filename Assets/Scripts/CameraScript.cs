@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*Find the screeen's resolution and change its ui elements' positions accordingly*/
 public class CameraScript : MonoBehaviour
 {
 

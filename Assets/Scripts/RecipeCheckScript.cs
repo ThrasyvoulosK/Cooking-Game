@@ -4,7 +4,7 @@ using UnityEngine;
 //
 using UnityEngine.UI;
 
-//this script handles the text display
+/*RecipeCheckScipt handles the appearance of the objects on the recipe-board, on the top-left corner of the screen*/
 public class RecipeCheckScript : MonoBehaviour
 {
     public Text recipenote;

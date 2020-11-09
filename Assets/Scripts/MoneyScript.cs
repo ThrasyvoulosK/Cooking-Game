@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
-
 using UnityEngine.UI;
 
+/*MoneyScript is mainly called for displaying the amount of money on the screen (on top of the cash register of the game)*/
+/*currently, money can only be added and only from the IngredientScript*/
 public class MoneyScript : MonoBehaviour
 {
     public Text moneytext;

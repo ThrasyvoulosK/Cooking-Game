@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*CustomerScript deals with the appearance (and disappearance) of the customers.*/
+/*A customer is basically a sprite that changes after their demands are satisfied*/
+/*Functions to ensure randomness of appearance and fading from view are included*/
 public class CustomerScript : MonoBehaviour
 {
     public SpriteRenderer customercurrentspriterenderer;

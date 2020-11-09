@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*NextRecipeScript is called when we need to prevent a new recipe from appearing, as well as allow the next one to do so*/
+/*it previously used to be a button, that is currently disabled, with its functionality replaced from within the other scripts*/
 public class NextRecipeScript : MonoBehaviour
 {
-   public bool gamepause=true;
+    public bool gamepause=true;
     public Button button=null;
 
     public CustomerScript theCustomer;

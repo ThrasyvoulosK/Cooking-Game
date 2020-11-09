@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*SpawningScript deals with the spawning of ingredients*/
+/*Note: spawning gets called once at start with an InvokeRepeating function; changing things during runtime doesn't affect it*/
+/*includes a global speed variable that is used throughout the game 
+ and also some functionality for preventing the same ingredients from spawning again and again*/
 public class SpawningScript : MonoBehaviour
 {
     public bool spawnallowed = true;//

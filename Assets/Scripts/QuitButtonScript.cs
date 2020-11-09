@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*QuitButtonScript quits the game*/
+/* either through its button on the top-right, or by pressing the 'escape' button anytime*/
 public class QuitButtonScript : MonoBehaviour
 {
     public void QuitGame()

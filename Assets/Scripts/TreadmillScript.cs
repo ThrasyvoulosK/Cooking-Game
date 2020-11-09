@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*- deprecated due to being handled by animations defined within the game's scenes-*/
+/*the TreadmillScript handles the movement of the tradmill sprites*/
 public class TreadmillScript : MonoBehaviour
 {
     float scrollspeed = 2f;

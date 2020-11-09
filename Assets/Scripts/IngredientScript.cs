@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 //using System.Diagnostics;
 using UnityEngine;
+
+/*VERY IMPORTANT SCRIPT*/
+/*IngredientScript handles everything about the ingredients after their spawning, including their movement and their fitting within recipes */
+/*Among other things, it interacts with most other scripts, including the FoodLayerScipt by choosing the correct layered sprite, the FurnaceScript by deciding what to do when a recipe is finished and the MoneyScript by changing our current amount of money*/
+/*Also includes an 'invisible' sprite function*/
 public class IngredientScript : MonoBehaviour
 {
    
@@ -11,8 +16,8 @@ public class IngredientScript : MonoBehaviour
     //current mouse position coordinates
     Vector2 mouseposition;
 
-    float initialmousepositionX;
-    float initialmousepositionY;
+    /*float initialmousepositionX;
+    float initialmousepositionY;*/
 
     public FurnaceScript theFurnace;
     public SpawningScript theSpawning;
@@ -79,7 +84,8 @@ public class IngredientScript : MonoBehaviour
     //bool mousealreadyclicked = false;
 
     //this list will be used in order to convert
-    List<Recipe_SO> sorec = null;
+    //List<Recipe_SO> sorec = null;
+
     public int inum = 0;
     //public GameObject foodlayerclone;
     public void OnMouseDown()

@@ -7,17 +7,27 @@ fix ui (check with layout images examples)
 -recipe-check-list 
 --ticked images
 ---change only when the ingredient reaches the "plate"
+----too late?
 
 text labels on treadmill ingredients
 -texts as sprites
 
--change counter sprite
+-change counter sprite?
 
 screen resolution issues:
 -too much gets cut in higher resolutions?
 
 Replace all sprites with the ones in the dictionary of gamemaster!
 
+fix scenes so that updating them all becomes less of a hussle
+-make them prefabs?
+
+add necessary descriptions for the game's functionality
+-describe functions and their parts where necessary
+-make a readme file?(scenes_info.txt?)
+remove unnecessary code
+-remove commented code
+-remove functions that don't get used
 
 Gameplay Issues:
 -losing money?
@@ -48,7 +58,6 @@ split counter image?(canvas&cashmachine&cuttingboard?)
 //-merge?
 
 //use z axis instead of order-in-layer?
-
 
 
 speed issues:

@@ -4,6 +4,8 @@ using UnityEngine;
 //
 using UnityEngine.SceneManagement;
 
+/*ChangeSceneScript changes our current scene to the next one, based on the build settings*/
+/*it is called only when a level is won, or when a button  that explicitly says so is clicked*/
 public class ChangeSceneScript : MonoBehaviour
 {
 

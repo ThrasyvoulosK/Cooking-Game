@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*SpawningFoodLayerScript is responsible for creating a new layered-recipe (in the middle of the screen) when allowed to do so*/
 public class SpawningFoodLayerScript : MonoBehaviour
 {
 

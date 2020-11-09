@@ -5,6 +5,9 @@ using System.Security.Cryptography;
 //using System.Diagnostics;
 using UnityEngine;
 
+/*FoodLayersScript deals with the appearance of the layered food that is under construction in the middle of the screen.
+  It also deals with its movement, scaling and disappearance routines*/
+/*sprite-handling functions for the base-of-the-recipe-graphic and its middle and top ingredients are included*/
 public class FoodLayersScript : MonoBehaviour
 {
     public SpriteRenderer renderer;
