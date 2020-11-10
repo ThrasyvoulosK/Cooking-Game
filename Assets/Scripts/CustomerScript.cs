@@ -58,21 +58,6 @@ public class CustomerScript : MonoBehaviour
         {
             customerisdone = true;
 
-            customercurrentspriterenderer.enabled = false;
-            //customerandom = Random.Range(0, customerspritelist.Count);
-
-           /*if (customerspritelistcurrent.Count <= 0)
-            {
-                foreach (Sprite cust in customerspritelist)
-                    customerspritelistcurrent.Add(cust);
-            }
-            customerandom = Random.Range(0, customerspritelistcurrent.Count);*/
-
-            //customerspritelistcurrent.RemoveAt(customerandom);
-            customercurrentspriterenderer.enabled = true;
-
-            //customerspritelistcurrent.RemoveAt(customerandom);
-
             //Debug.Log("thenextrecipegamepause");
             allowspritetochange = true;
         }
@@ -80,29 +65,23 @@ public class CustomerScript : MonoBehaviour
         {
             if (allowspritetochange)
                 customerchangesprite();
-            //customercurrentspriterenderer.sprite = customerspritelist[customerandom];
-            //customercurrentspriterenderer.sprite = customerspritelistcurrent[customerandom];
 
             //StopAllCoroutines();
             Color32 newColor = new Color32(255, 255, 255, 255);
             gameObject.GetComponent<SpriteRenderer>().color = newColor;
             GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>().color = newColor;
 
-            /*customercurrentspriterenderer.sprite = customerspritelistcurrent[customerandom];
-            if (customerisdone)
-                customerspritelistcurrent.RemoveAt(customerandom);*/
             customerisdone = false;
-            //customercurrentspriterenderer.sprite = customerspritelist[customerandom];
             //Debug.Log("thenextrecipegamepausefalse");
         }
     }
 
     //call the following function only once during the update
+    // to change the sprite randomly, but not repeatedly
     public bool allowspritetochange = false;
     public void customerchangesprite()
     {
-        //
-        Debug.Log("customerchangesprite");
+        //Debug.Log("customerchangesprite");
 
         customercurrentspriterenderer.sprite = null;
         customerspritelistcurrent.RemoveAt(customerandom);
@@ -114,21 +93,20 @@ public class CustomerScript : MonoBehaviour
             foreach (Sprite cust in customerspritelist)
                 customerspritelistcurrent.Add(cust);
         }
-        //customerandom = Random.Range(0, customerspritelistcurrent.Count);
-        customercurrentspriterenderer.sprite = customerspritelistcurrent[customerandom];
-        //customercurrentspriterenderer.sprite = customerspritelist[customerandom];
 
-        //customerspritelistcurrent.RemoveAt(customerandom);
+        customercurrentspriterenderer.sprite = customerspritelistcurrent[customerandom];
 
         allowspritetochange = false;
-        //return null;
     }
 
+    //this function calls the coroutine below
     public void tesrFunction()
     {
         StartCoroutine("FadeO");
     }
 
+    //make the customer and the speechbubble's sprites gradually transparent, 
+    // before the next game phase
     IEnumerator FadeO()
     {
        
@@ -141,7 +119,7 @@ public class CustomerScript : MonoBehaviour
             yield return new WaitForSeconds(.025f);
         }
 
-        Debug.Log("coroutinefade");
+        //Debug.Log("coroutinefade");
         theNextRecipe.gamepause = false;
     }
 }

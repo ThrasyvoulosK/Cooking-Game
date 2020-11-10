@@ -22,12 +22,22 @@ Replace all sprites with the ones in the dictionary of gamemaster!
 fix scenes so that updating them all becomes less of a hussle
 -make them prefabs?
 
-add necessary descriptions for the game's functionality
--describe functions and their parts where necessary
--make a readme file?(scenes_info.txt?)
-remove unnecessary code
--remove commented code
--remove functions that don't get used
+Add Functionality for Different Languages
+-Determined by :
+--'text'(sprites actually) labels on treadmill ingredients
+--'thank you' messages
+--speech???
+
+saved game functionality?
+
+Transactions between levels
+
+Sounds???
+
+possibilities?
+
+ticked ingredients positions seem to change slightly from their un-ticked counterparts
+-change their 'center' accordingly?
 
 Gameplay Issues:
 -losing money?
@@ -46,6 +56,13 @@ Performance Issues:
 Bugs:
 error message when starting
 -appears only once, doesn't reappear
+--fixed with null checks?
+spawning ingredients repeat a little?
+-fixed with(<1) instead of (<=1)?
+levelselect/changescene (both starting scene and interludes)
+-functionality intact?
+-debug logs give strange numbers during runtime (eg scene 101, 201, etc)
+--moves to the next scene, though...
 
 
 Other Concerns:
@@ -59,7 +76,6 @@ split counter image?(canvas&cashmachine&cuttingboard?)
 
 //use z axis instead of order-in-layer?
 
-
 speed issues:
 -spawning speed
 -leaving food and customer speed
@@ -69,5 +85,10 @@ recipenextbutton
 
 change font of cash register to sth more appropriate, eg calculator?
 
-
 Clean Code
+add necessary descriptions for the game's functionality
+-describe functions and their parts where necessary
+-make a readme file?(scenes_info.txt?)
+remove unnecessary code
+-remove commented code
+-remove functions that don't get used

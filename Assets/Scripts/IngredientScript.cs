@@ -49,8 +49,6 @@ public class IngredientScript : MonoBehaviour
 
         theChangeScene = GameObject.Find("Canvas").GetComponent<ChangeSceneScript>();
 
-        //theFoodLayer = GameObject.Find("Food").GetComponent<FoodLayersScript>();//
-
         theMoney = GameObject.Find("Money").GetComponent<MoneyScript>();
 
         theSPF = GameObject.Find("SpawningFoodLayer").GetComponent<SpawningFoodLayerScript>();
@@ -65,7 +63,7 @@ public class IngredientScript : MonoBehaviour
     {
         
         
-        //keep moving
+        //keep moving until the edge if no interaction happens
         if (gameObject.name.Contains("Clone"))
         {
             transform.Translate(Vector2.right * Time.deltaTime*theSpawning.gamespeed);
@@ -81,13 +79,7 @@ public class IngredientScript : MonoBehaviour
 
     bool notnullrecipeexists;
 
-    //bool mousealreadyclicked = false;
-
-    //this list will be used in order to convert
-    //List<Recipe_SO> sorec = null;
-
     public int inum = 0;
-    //public GameObject foodlayerclone;
     public void OnMouseDown()
     {
         //Debug.Log("onmousedown");
@@ -142,8 +134,6 @@ public class IngredientScript : MonoBehaviour
                 //assign to the correct number
                 theFurnace.usable_number_of_ingredients[i]--;
 
-                //foodlayerclone.GetComponent<FoodLayersScript>().renderers[i].sprite = theFoodLayer.SpriteHandler(gameObject.name);
-                ///foodlayerclone.GetComponent<FoodLayersScript>().renderers[i].sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
                 inum = i;
                 ingredientisonthelist = true;
                 target = GameObject.Find("Furnace");
@@ -177,6 +167,7 @@ public class IngredientScript : MonoBehaviour
 
     }
 
+    //move towards the target (when clicked correctly)
     void MoveIngredient()
     {
         if(target!=null)
@@ -186,18 +177,13 @@ public class IngredientScript : MonoBehaviour
         }
     }
 
-
-    //public List<bool> ingredientcompleted=new List<bool>();
+    //handle the collision with the Furnace object
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.name=="Furnace")
         {
             foodlayerclone.GetComponent<FoodLayersScript>().renderers[inum].sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
-            inum = 0;/*
-            //add the upper bun graphically
-            if(theNextRecipe.gamepause)
-                theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);*/
-
+            inum = 0;
 
             int i = 0;
 
@@ -229,7 +215,6 @@ public class IngredientScript : MonoBehaviour
                     //wait for the button to be pressed
                     theNextRecipe.gamepause = true;
                     //Time.timeScale = 0;
-
 
                     //add money
                     theMoney.money = theMoney.money + 2f;
@@ -280,8 +265,6 @@ public class IngredientScript : MonoBehaviour
                     //now that wehave chosen our new recipe, we should gather the ingredients
                     theFurnace.usable_number_of_ingredients.Clear();
 
-
-
                     //allow for a new order to be placed as well
                     foodlayerclone.GetComponent<FoodLayersScript>().change = true;
                     foodlayerclone.transform.position = new Vector2(0, 1);
@@ -306,18 +289,11 @@ public class IngredientScript : MonoBehaviour
     }
 
     //duplicate an ingredient object
-    /*void invisivise(string formername)
-    {
-        //Instantiate(gameObject).name = "gamobject(Clone)";
-        //Instantiate(gameObject).GetComponent<SpriteRenderer>().sprite = null;
-        invisivise2(formername);
-        //invisivise2(Instantiate(gameObject).name);
-    }*/
-    //choose an appropriate sprite
+    // and choose an appropriate sprite for it
     void invisivise2(string formername,GameObject ingredient)
     {
         //ingredient.GetComponent<SpriteRenderer>().sprite = null;
-        Debug.Log("resourcesize: " + Resources.LoadAll<Sprite>("προϊόντα/canteen_checked").Length);
+        //Debug.Log("resourcesize: " + Resources.LoadAll<Sprite>("προϊόντα/canteen_checked").Length);
 
         GameObject fingredient = Instantiate(ingredient);
         fingredient.name = "ingredient(Clone)";

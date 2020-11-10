@@ -27,22 +27,20 @@ public class RecipeCheckScript : MonoBehaviour
 
         theNextRecipe = GameObject.Find("NextRecipeButton").GetComponent<NextRecipeScript>();
 
-        //theFoodLayer = GameObject.Find("FoodLayer(Clone)").GetComponent<FoodLayersScript>();
-
         speechbubble = GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>();
-        //speechbubble.e
-
-        //theFoodLayer = GameObject.Find("FoodLayer(Clone)").GetComponent<FoodLayersScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        theFoodLayer = GameObject.Find("FoodLayer(Clone)").GetComponent<FoodLayersScript>();
-        //theFoodLayer = GameObject.Find("FoodLayer_alt(Clone)").GetComponent<FoodLayersScript>();
-
-        if(theFoodLayer!=null)
+        theFoodLayer = null;
+        //theFoodLayer = GameObject.Find("FoodLayer(Clone)").GetComponent<FoodLayersScript>();
+        if ( GameObject.Find("FoodLayer(Clone)") == null)
+            return;
+        else //if(theFoodLayer!=null)
         {
+            theFoodLayer = GameObject.Find("FoodLayer(Clone)").GetComponent<FoodLayersScript>();
+
             gameObject.GetComponent<RecipeCheckScript>().recipeimage.enabled = false;
 
             foreach(Image imagei in gameObject.GetComponent<RecipeCheckScript>().images)
@@ -52,8 +50,6 @@ public class RecipeCheckScript : MonoBehaviour
             }
 
             speechbubble = GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>();
-            //speechbubble = null;
-            //speechbubble.enabled = false;
             speechbubble.enabled = true;
 
         }
@@ -64,33 +60,21 @@ public class RecipeCheckScript : MonoBehaviour
         //show the recipe only if we haven't paused/disabled the game
         if (theNextRecipe.gamepause==false)
         {
-            //text version of below
-            /*recipenote.text = "Make me:\n";
-            if (furnscript.recipe.nameofrecipe != null)
-                recipenote.text = "Make me " + furnscript.recipe.nameofrecipe + "\n\n";*/
-
             //the recipe we want to make, depicted
             gameObject.GetComponent<RecipeCheckScript>().recipeimage.enabled = true;
             gameObject.GetComponent<RecipeCheckScript>().recipeimage.sprite = furnscript.recipe.recipeSprite;
 
             for (int i = 0; i < furnscript.recipe.neededIngr.Count; i++)
             {
-                //if we already have all of this ingredient we don't need to show it
-                ///if (furnscript.usable_number_of_ingredients[i] > 0)
-                ///{
-                    //text version
-                    //recipenote.text += " - " + furnscript.usable_number_of_ingredients[i].ToString() + " " + furnscript.recipe.neededIngr[i] + "\n";
-
-                    //image version
-                    gameObject.GetComponent<RecipeCheckScript>().images[i].enabled = true;
+                //if we already have all of this ingredient we don't need to show it anymore
+                //image version
+                gameObject.GetComponent<RecipeCheckScript>().images[i].enabled = true;
 
                 speechbubble.enabled = true;
                 speechbubble.sprite= Resources.LoadAll<Sprite>("canteen_things")[1];
-                //speechbubble = null;
-                //gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = theFoodLayer.SpriteChooseIngredient(furnscript.recipe.name, furnscript.recipe.neededIngr[i]);
+
                 gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i],furnscript.usable_number_of_ingredients[i]);
-                    //gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i],furnscript.current_number_of_ingredients[i]);
-                ///}
+                    
                 //Debug.Log(furnscript.recipe.neededIngr.Count);
                 //Debug.Log(furnscript.usable_number_of_ingredients.Count);
             }

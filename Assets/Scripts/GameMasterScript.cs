@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*Initialise a sprite-string dictionary that stores the game's graphics*/
+/*This dictionary is defined inside the editor*/
 public class GameMasterScript : MonoBehaviour
 {
     public Dictionary<string, Sprite> spriteslayers = new Dictionary<string, Sprite>();

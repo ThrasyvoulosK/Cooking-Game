@@ -26,21 +26,10 @@ public class FoodLayersScript : MonoBehaviour
     GameObject target;
     GameObject movetoward;
 
-    
-
-
-
     // Start is called before the first frame update
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
-        //oldsprite = null;
-        //oldsprite = Resources.Load<Sprite>("Triangle");
-        //newsprite = Resources.Load<Sprite>("Square");//Resourses.
-
-        //renderer.sprite = oldsprite;
-
-        //renderers[0].sprite
 
         theSPF = GameObject.Find("SpawningFoodLayer").GetComponent<SpawningFoodLayerScript>();
 
@@ -52,7 +41,6 @@ public class FoodLayersScript : MonoBehaviour
 
         theNextRecipe = GameObject.Find("NextRecipeButton").GetComponent<NextRecipeScript>();
 
-        //gameObject.transform.localScale *=2;
         gameObject.transform.localScale = new Vector3(1.5f,1.5f,1.5f);
 
         theChangeScene = GameObject.Find("Canvas").GetComponent<ChangeSceneScript>();
@@ -66,12 +54,12 @@ public class FoodLayersScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (theNextRecipe.gamepause)
-        //    renderers[3].sprite = null;//renderer.enabled = false;
-        //else
-        //renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);//renderer.enabled = true;
 
         //MoveFoodLayer();
+
+        //the "change " boolean variable is called when a recipe is finished,
+        // in order to allow our current foodlayer to disappear
+        // and a new one to take its place
         if (change == true)
         {
             //rename our object so that it doesn't interfere with other similar objects' functionality
@@ -81,89 +69,37 @@ public class FoodLayersScript : MonoBehaviour
 
             transform.position = Vector2.MoveTowards(transform.position, movetoward.transform.position, Time.deltaTime * 03);
 
-            /*foreach (SpriteRenderer renderer in gameObject.GetComponent<FoodLayersScript>().renderers)
-            {
-                renderer.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, renderer.material.color.a * 0.1f);
-            }
-            */
+            
             //StartCoroutine("Fade");
 
             theSPF.spawnfoodlayer();
 
-            //if (gameObject.transform.position ==movetoward.transform.position)&&(gameObject.transform.position == movetoward.transform.position)
+            
             if ((gameObject.transform.position.x == movetoward.transform.position.x) && (gameObject.transform.position.y == movetoward.transform.position.y))
             {
-                //       transform.localScale = new Vector3(3f, 3f, 3f);
-                //StartCoroutine("Fade");
-                /*foreach (SpriteRenderer renderer in gameObject.GetComponent<FoodLayersScript>().renderers)
-                    StartCoroutine("Scale");
-                StartCoroutine("Scale");*/
                 StartCoroutine("ScaleO");
                 //Destroy(gameObject);
                 change = false;
             }
         }
-        else if (theNextRecipe.gamepause)
-         //if (theNextRecipe.gamepause)
+        else if (theNextRecipe.gamepause)// do not show anything if we aren't prepared to handle the next customer!
         {
             //Debug.Log("rendred null");
-            //renderers[3].sprite = null;
             if (gameObject.name.EndsWith("(Clone)"))
                 renderers[4].sprite = null;
         }
         else
         {
             //Debug.Log("spriterenderedfully");
-            //renderers[3].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
             if (gameObject.name.EndsWith("(Clone)"))
                 renderers[4].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
         }
 
     }
 
-    public void changesprite()
-    {
-        change = true;
-        Debug.Log("changesprite");
-        renderer.sprite = newsprite;
-
-        //renderer.transform.position.Set(10, 10, 0);
-        transform.position = new Vector2(transform.position.x+0,transform.position.y+2);
-
-        //Sprite nextsprite = Instantiate(newsprite,Vector2(0,  1),transform.position(0,0));
-    }
-
-
-    public void AddIngredient(Sprite sprite) {
-        change = true;
-        renderers[0].sprite = sprite;
-
-        renderers[1].sprite = sprite;
-
-        renderers[2].sprite = sprite;
-
-       // newsprite = sprite;
-        Debug.Log("addingredient");
-
-        othersprite = sprite;
-
-    }
-
-    public void ResetIngredient(Sprite sprite)
-    {
-        change = false;
-        renderers[0].sprite = sprite;
-
-        renderers[1].sprite = sprite;
-
-        renderers[2].sprite = sprite;
-
-        // newsprite = sprite;
-        Debug.Log("resetingredient");
-
-    }
-
     //choose and load a sprite directly by its name
+    // this functions includes sprites for all parts of the foodlayer,
+    // including base ingredients, middle ingredients and ending ingredients
     public Sprite SpriteHandler(string ingredientname)
     {
         Sprite ingredientsprite;
@@ -343,7 +279,7 @@ public class FoodLayersScript : MonoBehaviour
 
     Vector2 directiontotarget;
 
-
+    /*
     IEnumerator Fade()
     {
         for (float ft = 1f; ft >= 0; ft -= 0.1f)
@@ -354,25 +290,24 @@ public class FoodLayersScript : MonoBehaviour
             yield return new WaitForSeconds(.1f);
         }
     }
+    */
 
+    //a scaling and "de-scaling" coroutine that also calls the transparency coroutine
+    // also checks if we have won the level
     IEnumerator ScaleO()
     {
-        Debug.Log("coroutinescale");
+        //Debug.Log("coroutinescale");
         theFurnace.numberofcompletedrecipes += 1;
         theNextRecipe.gamepause = true;//
         for (float ft = 1f; ft <= 2f; ft += 0.1f)
         {
             gameObject.transform.localScale = new Vector3(+ft, +ft, +ft);
-            //gameObject.transform.localScale += new Vector3(+ft, +ft, +ft);
-            //gameObject.transform.localScale += new Vector3(3f, 3f, 3f);
             yield return new WaitForSeconds(.025f);
         }
 
         for (float ft = 2f; ft >= 0; ft -= 0.1f)
         {
             gameObject.transform.localScale = new Vector3(+ft, +ft, +ft);
-            //gameObject.transform.localScale += new Vector3(+ft, +ft, +ft);
-            //gameObject.transform.localScale += new Vector3(3f, 3f, 3f);
             yield return new WaitForSeconds(.025f);
         }
 

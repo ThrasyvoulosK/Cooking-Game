@@ -42,16 +42,13 @@ public class SpawningScript : MonoBehaviour
         int randomingredient;
         if(spawnallowed)
         {
-            if (ingredients_current.Count <= 1)
+            if (ingredients_current.Count < 1)
             {
-                //ingredients_current = ingredients;
                 foreach (GameObject ingr in ingredients)
                     ingredients_current.Add(ingr);
             }
 
-            //randomingredient = Random.Range(0, ingredients.Count);
             randomingredient = Random.Range(0, ingredients_current.Count);
-            //Instantiate(ingredients[randomingredient], spawnpoints[0].position, Quaternion.identity);
             Instantiate(ingredients_current[randomingredient], spawnpoints[0].position, Quaternion.identity);
             ingredients_current.RemoveAt(randomingredient);
 

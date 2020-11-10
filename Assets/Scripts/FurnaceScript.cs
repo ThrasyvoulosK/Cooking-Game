@@ -26,16 +26,13 @@ public class FurnaceScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //theNextRecipe = GameObject.Find("NextRecipeButton").GetComponent<NextRecipeScript>();
-        //theNextRecipe.gamepause = true;
-        //Time.timeScale = 0;
 
-        //recipe.
+        //choose a random recipe to begin with
         int ran = Random.Range(0, next_recipe.Count);
         recipe = next_recipe[ran];
         next_recipe.RemoveAt(ran);
-        //
 
+        // add its ingredients
         foreach(int i in recipe.numbOfIng)
         {
             usable_number_of_ingredients.Add(i);

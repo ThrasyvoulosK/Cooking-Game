@@ -24,8 +24,7 @@ public class SpawningFoodLayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timekeeper();
-        //destroyfoodlayer();
+        //timekeeper();
         
     }
 
@@ -34,36 +33,15 @@ public class SpawningFoodLayerScript : MonoBehaviour
     {
         if (spawnfoodlayerallowed)
         {
-            //Instantiate(foodlayer, gameObject.transform.position, Quaternion.identity);
-            //Instantiate(foodlayer);
             Instantiate(foodlayer, spawnpoint.position,Quaternion.identity);
-            //foodlayer.name = "FoodLayer(Clone)";
-            //GameObject.Find("FoodLayer_alt(Clone)").name = "FoodLayer";
-            //foodlayer.transform.localScale = foodlayer.transform.localScale * 2;
-
         }
         spawnfoodlayerallowed = false;
         //Debug.Log("spawnfoodlayer");
     }
-
+    /*
     public void destroyfoodlayer()
     {
         timeron = true;
-
-        /*while(timetodestroy>0)
-        {
-            //pass
-        }*/
-
-        /*if(timeron==false)
-        {*/
-            /*Instantiate(foodlayer).GetComponent<FoodLayersScript>().renderers[0].sprite = null;
-            Instantiate(foodlayer).GetComponent<FoodLayersScript>().renderers[1].sprite = null;
-            Instantiate(foodlayer).GetComponent<FoodLayersScript>().renderers[2].sprite = null;
-            Instantiate(foodlayer).GetComponent<FoodLayersScript>().renderers[3].sprite = null;
-            Instantiate(foodlayer).GetComponent<FoodLayersScript>().renderers[4].sprite = null;*/
-
-            //Destroy(Instantiate(foodlayer).GetComponent<FoodLayersScript>().renderers[0]);
 
 
             foreach(SpriteRenderer sr in Instantiate(foodlayer).GetComponent<FoodLayersScript>().renderers)
@@ -73,11 +51,11 @@ public class SpawningFoodLayerScript : MonoBehaviour
             
             Destroy(Instantiate(foodlayer));
             spawnfoodlayerallowed = true;
-            Debug.Log("destroyfoodlayer");
-        /*}*/
+            //Debug.Log("destroyfoodlayer");
         
     }
-
+    */
+    /*
     public void timekeeper()
     {
         if (timeron)
@@ -109,6 +87,6 @@ public class SpawningFoodLayerScript : MonoBehaviour
             }
         }
     }
-
+    */
 
 }

@@ -15,17 +15,19 @@ public class ChangeSceneScript : MonoBehaviour
         SceneManager.LoadScene(nameofscene);
 
     }*/
+    public int level_id;//
+    //public List<Scene> scenes = new List<Scene>();
+    void Start()
+    {
+        /*foreach (Scene scen in scenes)
+            scenes.Add(scen);
+        Debug.Log("amount of scenes" + scenes.Count);*/
+    }
     public void change_scene()
     {
-        Debug.Log("change scene");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
-
-    }
-
-    public void change_sceneplus2()
-    {
-        Debug.Log("change scene");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        Debug.Log("change sceneto: "+ SceneManager.GetActiveScene().buildIndex + level_id * 2 + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +level_id*2+1);
 
     }
 
