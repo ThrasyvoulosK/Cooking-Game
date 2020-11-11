@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 //using System.Diagnostics;
 using UnityEngine;
 
@@ -144,8 +145,10 @@ public class IngredientScript : MonoBehaviour
 
                 //since we have our target, we should change our sprite to something more convenient
                 gameObject.GetComponent<SpriteRenderer>().sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
+                //disable text labels as well
+                gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
 
-                
+
                 break;
             }
             i++;
@@ -297,6 +300,12 @@ public class IngredientScript : MonoBehaviour
 
         GameObject fingredient = Instantiate(ingredient);
         fingredient.name = "ingredient(Clone)";
+
+        //disable text labels
+        //fingredient.GetComponentInChildren<MeshRenderer>().enabled = false;
+        //gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+        //fingredient.GetComponentInChildren<TextMeshPro>().enabled = false;
+        fingredient.GetComponent<SpriteRenderer>().sortingOrder = 7;
 
         if (formername.StartsWith("Cheese"))
         {

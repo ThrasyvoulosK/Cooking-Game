@@ -9,9 +9,6 @@ fix ui (check with layout images examples)
 ---change only when the ingredient reaches the "plate"
 ----too late?
 
-text labels on treadmill ingredients
--texts as sprites
-
 -change counter sprite?
 
 screen resolution issues:
@@ -22,22 +19,34 @@ Replace all sprites with the ones in the dictionary of gamemaster!
 fix scenes so that updating them all becomes less of a hussle
 -make them prefabs?
 
-Add Functionality for Different Languages
--Determined by :
---'text'(sprites actually) labels on treadmill ingredients
---'thank you' messages
---speech???
-
 saved game functionality?
 
 Transactions between levels
 
 Sounds???
+-for negative and affirmative actions
 
 possibilities?
 
 ticked ingredients positions seem to change slightly from their un-ticked counterparts
 -change their 'center' accordingly?
+
+ingredient text label issues:
+-text appears above 'ticked' sprites
+
+main menu (selection screen and)
+-appearance according to the guide
+-functionality according to the guide
+
+speechbubble "thank-you" message needs to change
+
+ticked ingredients
+-start again
+--change transparency?
+---add 'tick' on top of them?
+or
+-keep as-is, move transparent object in front of text?
+--parent object layer=7
 
 Gameplay Issues:
 -losing money?
@@ -45,6 +54,12 @@ Gameplay Issues:
 -speed changing
 -how do we know how many recipes we need?
 
+Add Functionality for Different Languages
+-Determined by :
+--'text'-labels on treadmill ingredients
+--'thank you' messages
+--speech???
+--UI items?
 
 Performance Issues:
 -for loop in recipe-check-list update
@@ -54,15 +69,12 @@ Performance Issues:
 
 
 Bugs:
-error message when starting
--appears only once, doesn't reappear
---fixed with null checks?
-spawning ingredients repeat a little?
--fixed with(<1) instead of (<=1)?
 levelselect/changescene (both starting scene and interludes)
 -functionality intact?
--debug logs give strange numbers during runtime (eg scene 101, 201, etc)
---moves to the next scene, though...
+--debug logs give strange numbers during runtime (eg scene 101, 201, etc)
+---moves to the next scene, though...
+ingredient text label disappears a little before the object itself exits the screen
+-not now?
 
 
 Other Concerns:
