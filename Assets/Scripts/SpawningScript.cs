@@ -59,10 +59,9 @@ public class SpawningScript : MonoBehaviour
             ingredients_current.RemoveAt(randomingredient);
 
             spingredient.name = spingredient.name.Substring(0, spingredient.name.Length - 7);//remove (clone)
-            //Debug.Log(spingredient.name);
-            //Debug.Log(theGameMaster.languagehandler[spingredient.name]);
             spingredient.GetComponentInChildren<TextMeshPro>().SetText(theGameMaster.languagehandler[spingredient.name]);
             spingredient.name += "(Clone)";
+
             //spawnallowed = false; //allow always
             //allow again when destroyed in ingredeient script
 

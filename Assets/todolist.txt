@@ -19,34 +19,21 @@ Replace all sprites with the ones in the dictionary of gamemaster!
 fix scenes so that updating them all becomes less of a hussle
 -make them prefabs?
 
-saved game functionality?
-
-Transactions between levels
-
-Sounds???
--for negative and affirmative actions
-
-possibilities?
-
 ticked ingredients positions seem to change slightly from their un-ticked counterparts
 -change their 'center' accordingly?
 
-ingredient text label issues:
--text appears above 'ticked' sprites
+transactions
+-no-money?
+-level1:  counter
+-level2:  tent
+-level3: paper towels
+-level4: change wall colour betwenn 2-3 colours
+three choices
+-on click, change the next stage's object
+--change stage
+-(keep sprite of choice somewhere, don't delete on new scene)
+-(keep name of selected object, so that we'll know what to change eg wall, counter, paper towels etc)
 
-main menu (selection screen and)
--appearance according to the guide
--functionality according to the guide
-
-speechbubble "thank-you" message needs to change
-
-ticked ingredients
--start again
---change transparency?
----add 'tick' on top of them?
-or
--keep as-is, move transparent object in front of text?
---parent object layer=7
 
 Gameplay Issues:
 -losing money?
@@ -59,7 +46,16 @@ Add Functionality for Different Languages
 --'text'-labels on treadmill ingredients
 --'thank you' messages
 --speech???
---UI items?
+--UI items (menus)?
+
+saved game functionality?
+
+Transactions between levels
+
+Sounds???
+-for negative and affirmative actions
+
+possibilities?
 
 Performance Issues:
 -for loop in recipe-check-list update
@@ -73,9 +69,19 @@ levelselect/changescene (both starting scene and interludes)
 -functionality intact?
 --debug logs give strange numbers during runtime (eg scene 101, 201, etc)
 ---moves to the next scene, though...
+
 ingredient text label disappears a little before the object itself exits the screen
 -not now?
+-now yes? randomly? RAM issue?
 
+android screen should only be allowed on 'landscape' screen-orientations
+-test?
+
+milkcoffeeicerecipe lacks milk on recipe list?
+-no?
+
+Early clicking on a treadmill (eg before it fully appears on screen) ingredient keeps its text
+-solved?
 
 Other Concerns:
 
@@ -91,9 +97,6 @@ split counter image?(canvas&cashmachine&cuttingboard?)
 speed issues:
 -spawning speed
 -leaving food and customer speed
-
-recipenextbutton
--reappear?
 
 change font of cash register to sth more appropriate, eg calculator?
 

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*Initialise a sprite-string dictionary that stores the game's graphics*/
 /*This dictionary is defined inside the editor*/
@@ -29,6 +31,7 @@ public class GameMasterScript : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("current language is: " + language_current);
         //Instance = this;
         if (Instance == null)
         {
@@ -39,6 +42,16 @@ public class GameMasterScript : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (language_current == "English")
+        {
+            Debug.Log("yes, language is english!");
+            GameObject speechbubble = null;
+            if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
+                speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
+        }
+        else
+            Debug.Log("current language is: " + language_current);
+
         DontDestroyOnLoad(this);//
     }
     // Start is called before the first frame update
@@ -47,13 +60,18 @@ public class GameMasterScript : MonoBehaviour
         InitialiseDictionary();
 
         //
-        changelanguage_gr();//
+        changelanguage_en();//
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (language_current == "English")
+        {
+            GameObject speechbubble = null;
+            if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
+                speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
+        }
     }
     private void InitialiseDictionary()
     {
@@ -66,8 +84,15 @@ public class GameMasterScript : MonoBehaviour
     public void changelanguage_en()
     {
         language_current = "English";
+        Debug.Log("current language is: " + language_current);
         words_current = words_en;
         InitialiseLanguage();
+
+        GameObject speechbubble = null;
+        if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
+            //speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
+            speechbubble.GetComponentInChildren<TextMeshPro>().SetText("Thank You!");// = "Thank You!";
+
     }
 
     public void changelanguage_gr()
@@ -75,6 +100,23 @@ public class GameMasterScript : MonoBehaviour
         language_current = "Greek";
         words_current = words_gr;
         InitialiseLanguage();
+
+        GameObject[] menuitems = new GameObject[3];
+        menuitems[0] = GameObject.Find("Text");
+        menuitems[1] = GameObject.Find("LanguagesButton");
+        menuitems[2] = GameObject.Find("LevelsButton");
+        foreach (GameObject men in menuitems)
+        {
+            if (men == null)
+                break;
+            else
+            {
+                menuitems[0].GetComponentInChildren<Text>().text = "Ας Μαγειρέψουμε!";
+                menuitems[1].GetComponentInChildren<Text>().text = "Γλώσσες";
+                menuitems[2].GetComponentInChildren<Text>().text = "Επίπεδα";
+            }
+        }
+
     }
     private void InitialiseLanguage()
     {

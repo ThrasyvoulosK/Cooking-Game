@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 //
 using UnityEngine.UI;
@@ -72,6 +73,7 @@ public class RecipeCheckScript : MonoBehaviour
 
                 speechbubble.enabled = true;
                 speechbubble.sprite= Resources.LoadAll<Sprite>("canteen_things")[1];
+                speechbubble.GetComponentInChildren<TextMeshPro>().enabled = false;
 
                 gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i],furnscript.usable_number_of_ingredients[i]);
                     
@@ -83,7 +85,8 @@ public class RecipeCheckScript : MonoBehaviour
         {
             //speechbubble = null;
             //speechbubble.enabled = false;
-            speechbubble.sprite = Resources.LoadAll<Sprite>("canteen_ευχαριστω bubble")[0];
+            speechbubble.sprite = Resources.LoadAll<Sprite>("canteen _ευχαριστω bubble copy")[0];
+            speechbubble.GetComponentInChildren<TextMeshPro>().enabled = true;
         }
         
 

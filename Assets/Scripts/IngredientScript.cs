@@ -146,7 +146,8 @@ public class IngredientScript : MonoBehaviour
                 //since we have our target, we should change our sprite to something more convenient
                 gameObject.GetComponent<SpriteRenderer>().sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
                 //disable text labels as well
-                gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+                //gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+                gameObject.GetComponentInChildren<TextMeshPro>().enabled = false;
 
 
                 break;

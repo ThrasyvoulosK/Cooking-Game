@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 /*CustomerScript deals with the appearance (and disappearance) of the customers.*/
@@ -68,8 +69,10 @@ public class CustomerScript : MonoBehaviour
 
             //StopAllCoroutines();
             Color32 newColor = new Color32(255, 255, 255, 255);
+            Color32 newColor2 = new Color32(0, 0, 0, 255);
             gameObject.GetComponent<SpriteRenderer>().color = newColor;
             GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>().color = newColor;
+            GameObject.Find("SpeechBubble").GetComponentInChildren<TextMeshPro>().color = newColor2;
 
             customerisdone = false;
             //Debug.Log("thenextrecipegamepausefalse");
@@ -113,9 +116,12 @@ public class CustomerScript : MonoBehaviour
         for (float ft = 1f; ft > 0f; ft -= 0.1f)
         {
             Color c = gameObject.GetComponent<SpriteRenderer>().color;
+            Color c2 = GameObject.Find("SpeechBubble").GetComponentInChildren<TextMeshPro>().color;
             c.a = ft;
+            c2.a = ft;
             gameObject.GetComponent<SpriteRenderer>().color = c;
             GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>().color = c;
+            GameObject.Find("SpeechBubble").GetComponentInChildren<TextMeshPro>().color =c2;
             yield return new WaitForSeconds(.025f);
         }
 
