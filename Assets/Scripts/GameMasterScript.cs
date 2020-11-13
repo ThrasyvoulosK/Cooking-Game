@@ -93,11 +93,12 @@ public class GameMasterScript : MonoBehaviour
             //tents and walls are on the same scene as the counter (so we can change them)
             //GameObject.Find("Τent").GetComponent<SpriteRenderer>().sprite = boughtables["Tent"];
             GameObject.Find("Wall").GetComponent<SpriteRenderer>().sprite = boughtables["Wall"];
+            GameObject.Find("Tent").GetComponent<SpriteRenderer>().sprite = boughtables["Tent"];
         }
-        if (GameObject.Find("Tent") != null)
+        /*if (GameObject.Find("Tent") != null)
             GameObject.Find("Tent").GetComponent<SpriteRenderer>().sprite = boughtables["Tent"];
         else
-            Debug.Log("no tent");
+            Debug.Log("no tent");*/
     }
     private void InitialiseDictionary()
     {

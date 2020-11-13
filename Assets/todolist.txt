@@ -63,10 +63,6 @@ Performance Issues:
 
 
 Bugs:
-levelselect/changescene (both starting scene and interludes)
--functionality intact?
---debug logs give strange numbers during runtime (eg scene 101, 201, etc)
----moves to the next scene, though...
 
 ingredient text label disappears a little before the object itself exits the screen
 -not now?
@@ -75,11 +71,11 @@ ingredient text label disappears a little before the object itself exits the scr
 android screen should only be allowed on 'landscape' screen-orientations
 -test?
 
-milkcoffeeicerecipe lacks milk on recipe list?
--no?
+Builds are buggy: (different between build and editor play)
+-Language on main menu Title doesn't change!
+-it seems to choose only blue tents when we click elsewhere
 
-Early clicking on a treadmill (eg before it fully appears on screen) ingredient keeps its text
--solved?
+Language options don't change back when clicked
 
 Other Concerns:
 
