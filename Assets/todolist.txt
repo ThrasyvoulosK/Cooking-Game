@@ -50,8 +50,6 @@ Add Functionality for Different Languages
 
 saved game functionality?
 
-Transactions between levels
-
 Sounds???
 -for negative and affirmative actions
 

@@ -1255,6 +1255,14 @@ MonoBehaviour:
   - ICE
   - MILK
   words_current: []
+  boughtablesprites:
+  - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
+  - {fileID: 21300000, guid: c25e1d9bbbbb56d42bc4339242d67eb8, type: 3}
+  - {fileID: 21300000, guid: fa090ca1abb7e1c46a38b07f9197bb8b, type: 3}
+  boughtablesnames:
+  - Counter
+  - Tent
+  - Wall
 --- !u!4 &957027913
 Transform:
   m_ObjectHideFlags: 0

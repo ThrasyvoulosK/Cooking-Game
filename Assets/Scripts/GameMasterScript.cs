@@ -29,6 +29,14 @@ public class GameMasterScript : MonoBehaviour
     public  List<string> words_current;
     public Dictionary<string, string> languagehandler = new Dictionary<string, string>();
 
+    //transactions
+    //assign current sprites on screen gameobjects
+    public Dictionary<string, Sprite> boughtables = new Dictionary<string, Sprite>();
+    [SerializeField]
+    private Sprite[] boughtablesprites;
+    [SerializeField]
+    private string[] boughtablesnames;
+
     void Awake()
     {
         Debug.Log("current language is: " + language_current);
@@ -42,6 +50,7 @@ public class GameMasterScript : MonoBehaviour
             Destroy(gameObject);
         }
 
+        /*
         if (language_current == "English")
         {
             Debug.Log("yes, language is english!");
@@ -51,6 +60,7 @@ public class GameMasterScript : MonoBehaviour
         }
         else
             Debug.Log("current language is: " + language_current);
+        */
 
         DontDestroyOnLoad(this);//
     }
@@ -59,7 +69,10 @@ public class GameMasterScript : MonoBehaviour
     {
         InitialiseDictionary();
 
-        //
+        InitialiseBoughtables();
+
+        //initialise English as the default language
+        //the player can change language from the main menu
         changelanguage_en();//
     }
 
@@ -72,6 +85,19 @@ public class GameMasterScript : MonoBehaviour
             if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
                 speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
         }
+
+        GameObject cnt = GameObject.Find("Counter");
+        if(cnt!=null)
+        {
+            cnt.GetComponent<SpriteRenderer>().sprite = boughtables["Counter"];
+            //tents and walls are on the same scene as the counter (so we can change them)
+            //GameObject.Find("Τent").GetComponent<SpriteRenderer>().sprite = boughtables["Tent"];
+            GameObject.Find("Wall").GetComponent<SpriteRenderer>().sprite = boughtables["Wall"];
+        }
+        if (GameObject.Find("Tent") != null)
+            GameObject.Find("Tent").GetComponent<SpriteRenderer>().sprite = boughtables["Tent"];
+        else
+            Debug.Log("no tent");
     }
     private void InitialiseDictionary()
     {
@@ -126,6 +152,14 @@ public class GameMasterScript : MonoBehaviour
         for (int i = 0; i < words_en_base.Count; i++)
         {
             languagehandler.Add(words_en_base[i], words_current[i]);
+        }
+    }
+
+    private void InitialiseBoughtables()
+    {
+        for (int i = 0; i < boughtablesprites.Length; i++)
+        {
+            boughtables.Add(boughtablesnames[i], boughtablesprites[i]);
         }
     }
 }
