@@ -1251,6 +1251,9 @@ MonoBehaviour:
   - Coffee
   - Ice
   - Milk
+  - Let's Cook!
+  - Language
+  - Levels
   words_gr:
   - "\u03A4\u03A5\u03A1\u0399"
   - "\u0396\u0391\u039C\u03A0\u039F\u039D"
@@ -1259,6 +1262,9 @@ MonoBehaviour:
   - "\u039A\u0391\u03A6\u0395\u03A3"
   - "\u03A0\u0391\u0393\u039F\u03A3"
   - "\u0393\u0391\u039B\u0391"
+  - "\u0391\u03C2 \u039C\u03B1\u03B3\u03B5\u03B9\u03C1\u03AD\u03C8\u03BF\u03C5\u03BC\u03B5!"
+  - "\u0393\u03BB\u03CE\u03C3\u03C3\u03B1"
+  - "\u0395\u03C0\u03AF\u03C0\u03B5\u03B4\u03B1"
   words_en:
   - CHEESE
   - HAM
@@ -1267,6 +1273,9 @@ MonoBehaviour:
   - COFFEE
   - ICE
   - MILK
+  - Let's Cook!
+  - Language
+  - Levels
   words_current: []
   boughtablesprites:
   - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
@@ -1276,6 +1285,7 @@ MonoBehaviour:
   - Counter
   - Tent
   - Wall
+  theFurnace: {fileID: 0}
 --- !u!4 &957027913
 Transform:
   m_ObjectHideFlags: 0
@@ -2815,7 +2825,7 @@ GameObject:
   - component: {fileID: 1964517807}
   - component: {fileID: 1964517806}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

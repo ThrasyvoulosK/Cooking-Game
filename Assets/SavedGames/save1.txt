@@ -1,0 +1,5 @@
+<Save>
+  <Money>4</Money>
+  <Scene>1</Scene>
+  <CompletedRecipes>2</CompletedRecipes>
+</Save>

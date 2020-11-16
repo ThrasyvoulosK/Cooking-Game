@@ -3,14 +3,6 @@ Cooking Game
 
 Add/Edit:
 
-fix ui (check with layout images examples)
--recipe-check-list 
---ticked images
----change only when the ingredient reaches the "plate"
-----too late?
-
--change counter sprite?
-
 screen resolution issues:
 -too much gets cut in higher resolutions?
 
@@ -22,20 +14,26 @@ fix scenes so that updating them all becomes less of a hussle
 ticked ingredients positions seem to change slightly from their un-ticked counterparts
 -change their 'center' accordingly?
 
-transactions
--no-money?
--level1:  counter
--level2:  tent
--level3: paper towels
--level4: change wall colour betwenn 2-3 colours
-three choices
--on click, change the next stage's object
---change stage
--(keep sprite of choice somewhere, don't delete on new scene)
--(keep name of selected object, so that we'll know what to change eg wall, counter, paper towels etc)
+Cheat Mode!
+-don't forget to disable
 
+transactions
+//-level1:  counter
+//-level2:  tent
+-level3: paper towels
+//-level4: change wall colour betwenn 2-3 colours
+
+saved game functionality: what to keep:
+-level
+-current graphics
+--boughtables
+--scenery(for later levels)
+-money
+-recipes played?
+-number of recipes completed
 
 Gameplay Issues:
+-using money?
 -losing money?
 -skill measuring
 -speed changing
@@ -48,7 +46,7 @@ Add Functionality for Different Languages
 --speech???
 --UI items (menus)?
 
-saved game functionality?
+
 
 Sounds???
 -for negative and affirmative actions
@@ -65,6 +63,7 @@ Performance Issues:
 Bugs:
 
 ingredient text label disappears a little before the object itself exits the screen
+(this has happened both on build and editor)
 -not now?
 -now yes? randomly? RAM issue?
 
@@ -73,11 +72,14 @@ android screen should only be allowed on 'landscape' screen-orientations
 
 Builds are buggy: (different between build and editor play)
 -Language on main menu Title doesn't change!
--it seems to choose only blue tents when we click elsewhere
 
-Language options don't change back when clicked
+camerascript errors
 
 Other Concerns:
+
+//ticked images
+//-change only when the ingredient reaches the "plate"
+//--too late?
 
 split counter image?(canvas&cashmachine&cuttingboard?)
 

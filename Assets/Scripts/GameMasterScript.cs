@@ -4,6 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+using System.Xml;
+using UnityEngine.SceneManagement;
+
 /*Initialise a sprite-string dictionary that stores the game's graphics*/
 /*This dictionary is defined inside the editor*/
 public class GameMasterScript : MonoBehaviour
@@ -20,10 +23,10 @@ public class GameMasterScript : MonoBehaviour
     [SerializeField]
     public  string language_current;
 
-    public List<string> words_en_base = new List<string>() { "Cheese", "Ham", "Lettuce", "Tomato", "Coffee", "Ice", "Milk" };
+    public List<string> words_en_base = new List<string>() { "Cheese", "Ham", "Lettuce", "Tomato", "Coffee", "Ice", "Milk","Let's Cook!","Language","Levels" };
 
-    public List<string> words_gr = new List<string>() { "ΤΥΡΙ","ΖΑΜΠΟΝ","ΜΑΡΟΥΛΙ","ΝΤΟΜΑΤΑ","ΚΑΦΕΣ","ΠΑΓΟΣ","ΓΑΛΑ" };
-    public List<string> words_en = new List<string>() { "CHEESE","HAM","LETTUCE","TOMATO","COFFEE","ICE","MILK" };
+    public List<string> words_gr = new List<string>() { "ΤΥΡΙ","ΖΑΜΠΟΝ","ΜΑΡΟΥΛΙ","ΝΤΟΜΑΤΑ","ΚΑΦΕΣ","ΠΑΓΟΣ","ΓΑΛΑ","Ας Μαγειρέψουμε","Γλώσσα","Επίπεδα" };
+    public List<string> words_en = new List<string>() { "CHEESE","HAM","LETTUCE","TOMATO","COFFEE","ICE","MILK", "Let's Cook!", "Language", "Levels" };
 
     [SerializeField]
     public  List<string> words_current;
@@ -36,6 +39,8 @@ public class GameMasterScript : MonoBehaviour
     private Sprite[] boughtablesprites;
     [SerializeField]
     private string[] boughtablesnames;
+
+    public FurnaceScript theFurnace;
 
     void Awake()
     {
@@ -91,14 +96,25 @@ public class GameMasterScript : MonoBehaviour
         {
             cnt.GetComponent<SpriteRenderer>().sprite = boughtables["Counter"];
             //tents and walls are on the same scene as the counter (so we can change them)
-            //GameObject.Find("Τent").GetComponent<SpriteRenderer>().sprite = boughtables["Tent"];
             GameObject.Find("Wall").GetComponent<SpriteRenderer>().sprite = boughtables["Wall"];
             GameObject.Find("Tent").GetComponent<SpriteRenderer>().sprite = boughtables["Tent"];
         }
-        /*if (GameObject.Find("Tent") != null)
-            GameObject.Find("Tent").GetComponent<SpriteRenderer>().sprite = boughtables["Tent"];
-        else
-            Debug.Log("no tent");*/
+
+        //cheat mode!
+        
+        /*theFurnace = null;
+        if(GameObject.Find("Furnace")!=null)
+        {
+            theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
+            theFurnace.numberofrecipesinlevel = 1;
+        }*/
+        
+
+        if (Input.GetKeyDown("s"))
+            SaveGame();
+        if (Input.GetKeyDown("l"))
+            LoadGame();
+
     }
     private void InitialiseDictionary()
     {
@@ -120,6 +136,8 @@ public class GameMasterScript : MonoBehaviour
             //speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
             speechbubble.GetComponentInChildren<TextMeshPro>().SetText("Thank You!");// = "Thank You!";
 
+        
+
     }
 
     public void changelanguage_gr()
@@ -127,22 +145,6 @@ public class GameMasterScript : MonoBehaviour
         language_current = "Greek";
         words_current = words_gr;
         InitialiseLanguage();
-
-        GameObject[] menuitems = new GameObject[3];
-        menuitems[0] = GameObject.Find("Text");
-        menuitems[1] = GameObject.Find("LanguagesButton");
-        menuitems[2] = GameObject.Find("LevelsButton");
-        foreach (GameObject men in menuitems)
-        {
-            if (men == null)
-                break;
-            else
-            {
-                menuitems[0].GetComponentInChildren<Text>().text = "Ας Μαγειρέψουμε!";
-                menuitems[1].GetComponentInChildren<Text>().text = "Γλώσσες";
-                menuitems[2].GetComponentInChildren<Text>().text = "Επίπεδα";
-            }
-        }
 
     }
     private void InitialiseLanguage()
@@ -153,6 +155,26 @@ public class GameMasterScript : MonoBehaviour
         for (int i = 0; i < words_en_base.Count; i++)
         {
             languagehandler.Add(words_en_base[i], words_current[i]);
+            //Debug.Log("added to dictionary: " + words_en_base[i]);
+        }
+        //Debug.Log("sizeof base: " + words_en_base.Count + " Sizeof curr: " + words_current.Count);
+        //Debug.Log(languagehandler["LetsCook!"]);
+        //Debug.Log(languagehandler["Cheese"]);
+        //Change menu items as well
+        GameObject[] menuitems = new GameObject[3];
+        menuitems[0] = GameObject.Find("TitleText");
+        menuitems[1] = GameObject.Find("LanguagesButton");
+        menuitems[2] = GameObject.Find("LevelsButton");
+        foreach (GameObject men in menuitems)
+        {
+            if (men == null)
+                break;
+            else
+            {
+                menuitems[0].GetComponentInChildren<Text>().text = languagehandler["Let's Cook!"];
+                menuitems[1].GetComponentInChildren<Text>().text = languagehandler["Language"];
+                menuitems[2].GetComponentInChildren<Text>().text = languagehandler["Levels"];
+            }
         }
     }
 
@@ -163,4 +185,74 @@ public class GameMasterScript : MonoBehaviour
             boughtables.Add(boughtablesnames[i], boughtablesprites[i]);
         }
     }
+
+    public void SaveGame()
+    {
+        SaveXML();
+    }
+
+    
+
+    private void SaveXML()
+    {
+        Save save = new Save();
+
+        save.scenenum = SceneManager.GetActiveScene().buildIndex;
+        save.money = (int)GameObject.Find("Money").GetComponent<MoneyScript>().money;
+        //save.completedrecipes = theFurnace.numberofcompletedrecipes;
+        save.completedrecipes = GameObject.Find("Furnace").GetComponent<FurnaceScript>().numberofcompletedrecipes;
+
+        XmlDocument xmlDocument = new XmlDocument();
+
+        XmlElement root = xmlDocument.CreateElement("Save");
+
+        XmlElement xmoney = xmlDocument.CreateElement("Money");
+        xmoney.InnerText = save.money.ToString();
+        root.AppendChild(xmoney);
+
+        XmlElement xscene = xmlDocument.CreateElement("Scene");
+        xscene.InnerText = save.scenenum.ToString();
+        root.AppendChild(xscene);
+
+        XmlElement xrec = xmlDocument.CreateElement("CompletedRecipes");
+        xrec.InnerText = save.completedrecipes.ToString();
+        root.AppendChild(xrec);
+
+        xmlDocument.AppendChild(root);
+
+        xmlDocument.Save(Application.dataPath + "/SavedGames/save1.txt");//
+    }
+
+    public void LoadGame()
+    {
+        LoadXML();
+    }
+
+    private void LoadXML()
+    {
+        Save save = new Save();
+        XmlDocument xmlDocument = new XmlDocument();
+        xmlDocument.Load(Application.dataPath + "/SavedGames/save1.txt");//
+
+        XmlNodeList xmoney = xmlDocument.GetElementsByTagName("Money");
+        save.money = int.Parse(xmoney[0].InnerText);
+        XmlNodeList xscene = xmlDocument.GetElementsByTagName("Scene");
+        save.scenenum = int.Parse(xscene[0].InnerText);
+        XmlNodeList xrec = xmlDocument.GetElementsByTagName("CompletedRecipes");
+        save.completedrecipes = int.Parse(xrec[0].InnerText);
+
+        //SceneManager.LoadScene(save.scenenum);//
+        GameObject.Find("Money").GetComponent<MoneyScript>().money = (float)save.money;
+        //theFurnace.numberofcompletedrecipes=save.completedrecipes  ;
+        GameObject.Find("Furnace").GetComponent<FurnaceScript>().numberofcompletedrecipes=save.completedrecipes ;
+
+    }
+}
+
+public class Save
+{
+    public int scenenum;
+    public int money;
+    public int completedrecipes;
+    //graphics?
 }
