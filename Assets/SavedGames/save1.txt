@@ -1,5 +1,8 @@
 <Save>
-  <Money>4</Money>
-  <Scene>1</Scene>
-  <CompletedRecipes>2</CompletedRecipes>
+  <Money>2</Money>
+  <Scene>5</Scene>
+  <CompletedRecipes>1</CompletedRecipes>
+  <Counter>Counter_Red</Counter>
+  <Tent>Tent_Blue</Tent>
+  <Wall>Wall_Grey</Wall>
 </Save>

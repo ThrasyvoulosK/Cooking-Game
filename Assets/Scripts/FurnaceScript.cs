@@ -23,6 +23,15 @@ public class FurnaceScript : MonoBehaviour
     public int numberofcompletedrecipes = 0;
 
     public NextRecipeScript theNextRecipe;
+
+    private static FurnaceScript Instance;
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
     // Start is called before the first frame update
     void Start()
     {

@@ -24,13 +24,20 @@ transactions
 //-level4: change wall colour betwenn 2-3 colours
 
 saved game functionality: what to keep:
--level
+//-level
 -current graphics
 --boughtables
 --scenery(for later levels)
+//-money
+//-recipes played?
+-total number of recipes
+store all on the gamemanager as well?
+destroy gameobjects conflicting with loadables
+-furnace
+--load saved furnace properly
+--eg keep the one from the svaed level, not the one from the current level
 -money
--recipes played?
--number of recipes completed
+change between scenes =/= loading game!
 
 Gameplay Issues:
 -using money?
@@ -45,7 +52,6 @@ Add Functionality for Different Languages
 --'thank you' messages
 --speech???
 --UI items (menus)?
-
 
 
 Sounds???
@@ -69,9 +75,6 @@ ingredient text label disappears a little before the object itself exits the scr
 
 android screen should only be allowed on 'landscape' screen-orientations
 -test?
-
-Builds are buggy: (different between build and editor play)
--Language on main menu Title doesn't change!
 
 camerascript errors
 

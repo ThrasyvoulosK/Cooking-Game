@@ -1224,6 +1224,18 @@ MonoBehaviour:
   - {fileID: 1222428437914192223, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
   - {fileID: -8584748100523335948, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
   - {fileID: -7164903015606843743, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
+  - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
+  - {fileID: 21300000, guid: 51cc475c3bc1eb04590fb9b52fe4d663, type: 3}
+  - {fileID: 21300000, guid: 2fdf9025f6290d544a370e5b6fcf6efc, type: 3}
+  - {fileID: 21300000, guid: 21e3bff390469ca4896a9693be133d19, type: 3}
+  - {fileID: 21300000, guid: a705463ac144ce340ae5a463e4a2dc16, type: 3}
+  - {fileID: 21300000, guid: 858431c1c6a017e41af508657a296681, type: 3}
+  - {fileID: 21300000, guid: 73743ed40ea560443844930e17db3dca, type: 3}
+  - {fileID: 21300000, guid: 5b20e40daab576746bb0e032bf70f31a, type: 3}
+  - {fileID: 21300000, guid: fa090ca1abb7e1c46a38b07f9197bb8b, type: 3}
+  - {fileID: 21300000, guid: 0c18790fda6ab524f87235a83c63af3e, type: 3}
+  - {fileID: 21300000, guid: fe8685c7cbe41cc4e923bd67127b43ed, type: 3}
+  - {fileID: 21300000, guid: 6f40a7a6e692fb04a9e6a39b7c2c57b9, type: 3}
   spritesnames:
   - Sandwich_Tomato
   - Sandwich_Cheese
@@ -1239,6 +1251,18 @@ MonoBehaviour:
   - Coffee
   - Ice
   - Milk
+  - Counter_Grey
+  - Counter_Blue
+  - Counter_Metal
+  - Counter_Red
+  - Tent_Yellow
+  - Tent_Blue
+  - Tent_Green
+  - Tent_Red
+  - Wall_Grey
+  - Wall_Blue
+  - Wall_Metal
+  - Wall_Red
   languages:
   - Greek
   - English

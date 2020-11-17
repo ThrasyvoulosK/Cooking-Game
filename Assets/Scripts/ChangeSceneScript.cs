@@ -25,7 +25,7 @@ public class ChangeSceneScript : MonoBehaviour
     }
     public void change_scene()
     {
-        Debug.Log("change sceneto: "+ SceneManager.GetActiveScene().buildIndex + level_id * 2 + 1);
+        //Debug.Log("change sceneto: "+ SceneManager.GetActiveScene().buildIndex + level_id * 2 + 1);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +level_id*2+1);
 

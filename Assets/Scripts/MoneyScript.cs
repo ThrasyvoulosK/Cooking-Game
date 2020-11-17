@@ -11,6 +11,16 @@ public class MoneyScript : MonoBehaviour
     public Text moneytext;
 
     public float money = 0;
+
+    private static MoneyScript Instance;
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+
+    }
     // Start is called before the first frame update
     void Start()
     {
