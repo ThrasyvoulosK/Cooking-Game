@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 using System.Xml;
 using UnityEngine.SceneManagement;
+using System.IO;
+using UnityEditor;
 
 /*Initialise a sprite-string dictionary that stores the game's graphics*/
 /*This dictionary is defined inside the editor*/
@@ -44,45 +46,7 @@ public class GameMasterScript : MonoBehaviour
 
     void Awake()
     {
-        /*if(issavedgame)
-        {
-            Debug.Log("loaded saved game");
-            InitialiseDictionary();
-
-            Save save = new Save();
-            XmlDocument xmlDocument = new XmlDocument();
-            xmlDocument.Load(Application.dataPath + "/SavedGames/save1.txt");//
-
-            XmlNodeList xmoney = xmlDocument.GetElementsByTagName("Money");
-            save.money = int.Parse(xmoney[0].InnerText);
-            XmlNodeList xrec = xmlDocument.GetElementsByTagName("CompletedRecipes");
-            save.completedrecipes = int.Parse(xrec[0].InnerText);
-
-            XmlNodeList xcoun = xmlDocument.GetElementsByTagName("Counter");
-            save.counter =xcoun[0].InnerText;
-            //Debug.Log(xcoun[0].InnerText);
-            XmlNodeList xtent = xmlDocument.GetElementsByTagName("Tent");
-            save.tent = xtent[0].InnerText;
-            XmlNodeList xwall = xmlDocument.GetElementsByTagName("Wall");
-            save.wall = xwall[0].InnerText;
-
-            GameObject.Find("Money").GetComponent<MoneyScript>().money = (float)save.money;
-            GameObject.Find("Furnace").GetComponent<FurnaceScript>().numberofcompletedrecipes = save.completedrecipes;
-
-            //GameObject.Find("Counter").GetComponent<SpriteRenderer>().sprite = spriteslayers[save.counter];
-            GameObject.Find("Counter").GetComponent<SpriteRenderer>().sprite = spriteslayers[xcoun[0].InnerText];
-            boughtables["Counter"]= spriteslayers[xcoun[0].InnerText];
-            //Debug.Log("savecounter " + save.counter);
-            //Debug.Log("savecountername " + spriteslayers[save.counter]);
-            //GameObject.Find("Tent").GetComponent<SpriteRenderer>().sprite = spriteslayers[save.tent];
-            GameObject.Find("Tent").GetComponent<SpriteRenderer>().sprite = spriteslayers[xtent[0].InnerText];
-            boughtables["Tent"] = spriteslayers[xtent[0].InnerText];
-            //GameObject.Find("Wall").GetComponent<SpriteRenderer>().sprite = spriteslayers[save.wall];
-            GameObject.Find("Wall").GetComponent<SpriteRenderer>().sprite = spriteslayers[xwall[0].InnerText];
-            boughtables["Wall"] = spriteslayers[xwall[0].InnerText];
-            issavedgame = false;
-
-        }*/
+        
         Debug.Log("current language is: " + language_current);
         //Instance = this;
         if (Instance == null)
@@ -94,17 +58,7 @@ public class GameMasterScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        /*
-        if (language_current == "English")
-        {
-            Debug.Log("yes, language is english!");
-            GameObject speechbubble = null;
-            if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
-                speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
-        }
-        else
-            Debug.Log("current language is: " + language_current);
-        */
+        
 
         DontDestroyOnLoad(this);//
     }
@@ -118,6 +72,14 @@ public class GameMasterScript : MonoBehaviour
         //initialise English as the default language
         //the player can change language from the main menu
         changelanguage_en();//
+
+        if ((Application.dataPath + "/Resources/scrnsht.png") != null)
+        {
+            Debug.Log("screenshot exists");
+            GameObject.Find("Continue").GetComponent<Image>().preserveAspect = true;
+            GameObject.Find("Continue").GetComponent<Image>().sprite = Resources.Load<Sprite>("scrnsht");
+            
+        }
     }
 
     // Update is called once per frame
@@ -129,6 +91,13 @@ public class GameMasterScript : MonoBehaviour
             if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
                 speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
         }
+        else if(language_current=="Greek")
+        {
+            GameObject decdesc = null;
+            if ((decdesc = GameObject.Find("DecText")) != null)
+                decdesc.GetComponent<Text>().text = "Συγχαρητήρια!\nΔιάλεξε νέα διακόσμηση για να συνεχίσεις!";
+        }
+
 
         GameObject cnt = GameObject.Find("Counter");
         if(cnt!=null)
@@ -159,7 +128,8 @@ public class GameMasterScript : MonoBehaviour
 
             Save save = new Save();
             XmlDocument xmlDocument = new XmlDocument();
-            xmlDocument.Load(Application.dataPath + "/SavedGames/save1.txt");//
+            //xmlDocument.Load(Application.dataPath + "/SavedGames/save1.txt");//
+            xmlDocument.Load(Application.dataPath + "/Resources/save1.txt");//
 
             XmlNodeList xmoney = xmlDocument.GetElementsByTagName("Money");
             save.money = int.Parse(xmoney[0].InnerText);
@@ -246,10 +216,11 @@ public class GameMasterScript : MonoBehaviour
         //Debug.Log(languagehandler["LetsCook!"]);
         //Debug.Log(languagehandler["Cheese"]);
         //Change menu items as well
-        GameObject[] menuitems = new GameObject[3];
+        GameObject[] menuitems = new GameObject[4];
         menuitems[0] = GameObject.Find("TitleText");
         menuitems[1] = GameObject.Find("LanguagesButton");
         menuitems[2] = GameObject.Find("LevelsButton");
+        menuitems[3] = GameObject.Find("Continue");
         foreach (GameObject men in menuitems)
         {
             if (men == null)
@@ -259,6 +230,7 @@ public class GameMasterScript : MonoBehaviour
                 menuitems[0].GetComponentInChildren<Text>().text = languagehandler["Let's Cook!"];
                 menuitems[1].GetComponentInChildren<Text>().text = languagehandler["Language"];
                 menuitems[2].GetComponentInChildren<Text>().text = languagehandler["Levels"];
+                menuitems[3].GetComponentInChildren<Text>().text = languagehandler["Continue"];
             }
         }
     }
@@ -274,6 +246,13 @@ public class GameMasterScript : MonoBehaviour
     public void SaveGame()
     {
         SaveXML();
+
+        //take a screenshot
+        //ScreenCapture.CaptureScreenshot(Application.dataPath + "/SavedGames/scrnsht.png");
+        ScreenCapture.CaptureScreenshot(Application.dataPath + "/Resources/scrnsht.png");
+        //refresh its metadata
+        //AssetDatabase.ImportAsset("Assets/Resources/scrnsht.png");
+        //AssetDatabase.ImportAsset("Assets/Resources/scrnsht.png.meta");
     }
 
     
@@ -338,7 +317,10 @@ public class GameMasterScript : MonoBehaviour
 
         xmlDocument.AppendChild(root);
 
-        xmlDocument.Save(Application.dataPath + "/SavedGames/save1.txt");//
+        //xmlDocument.Save(Application.dataPath + "/SavedGames/save1.txt");//
+        //xmlDocument.Save(Application.persistentDataPath + "/SavedGames/save1.txt");//
+        xmlDocument.Save(Application.dataPath + "/Resources/save1.txt");//
+        //xmlDocument.Save(save1.txt);//
     }
 
     //this variable will be called whenever we load a scene
@@ -353,7 +335,7 @@ public class GameMasterScript : MonoBehaviour
     {
         Save save = new Save();
         XmlDocument xmlDocument = new XmlDocument();
-        xmlDocument.Load(Application.dataPath + "/SavedGames/save1.txt");//
+        xmlDocument.Load(Application.dataPath + "/Resources/save1.txt");//
 
         XmlNodeList xmoney = xmlDocument.GetElementsByTagName("Money");
         save.money = int.Parse(xmoney[0].InnerText);

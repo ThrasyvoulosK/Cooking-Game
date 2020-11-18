@@ -9,6 +9,8 @@ public class QuitButtonScript : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("quitting the game");
+        //save the game before quitting
+        GameObject.Find("GameMaster").GetComponent<GameMasterScript>().SaveGame();
         Application.Quit();
     }
 
@@ -17,7 +19,8 @@ public class QuitButtonScript : MonoBehaviour
         if (Input.GetKey("escape"))
         {
             Debug.Log("escape pressed");
-            Application.Quit();
+            //Application.Quit();
+            QuitGame();
         }
     }
 }
