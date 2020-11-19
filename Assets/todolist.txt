@@ -3,9 +3,6 @@ Cooking Game
 
 Add/Edit:
 
-screen resolution issues:
--too much gets cut in higher resolutions?
--camerascript errors in menuscreens
 
 Replace all sprites with the ones in the dictionary of gamemaster!
 
@@ -16,17 +13,37 @@ ticked ingredients positions seem to change slightly from their un-ticked counte
 -change their 'center' accordingly?
 
 transactions
--level3: paper towels
+-level3: paper towels(instead of walls(level 4))
+-change descriptioon to something more suitable to the current purchase
+--according to suggestions
 
 saved game functionality: what to keep:
--scenery(for later levels)
-usage in the game:
--save when exiting (esc key)
--'continue' on main-menu
---show as a screenshot
+-keep scenery saved (for later levels)
+-current recipe
+//--ingredients (both used and unused)
+//--recipe image
+--RecipeSO
+-current customer sprite
+-available recipes from the furnace( the ones that aren't played yet)
+--list of recipesos
+-treadmill ingredients
+--and their positions
+--and their sprites
+//-change saved path (for functionality with android)?
 
-saved games
--change saved path (for functionality with android)
+level select levels could be loaded as the ones we currently have?
+eg level2, when loaded, would have the chosen counter already changed
+also, disable not played levels
+-make them unlockables instead
+???can all be achieved from the same save file???
+-or is it a bad idea?
+
+fix loading errors
+-current recipe
+-next recipes list
+-customer sprite
+
+mark down completed work on design doc
 
 
 Gameplay Issues:

@@ -1,8 +1,19 @@
 <Save>
-  <Money>6</Money>
-  <Scene>7</Scene>
-  <CompletedRecipes>3</CompletedRecipes>
-  <Counter>Counter_Grey</Counter>
-  <Tent>Tent_Blue</Tent>
-  <Wall>Wall_Blue</Wall>
+  <Money>4</Money>
+  <Scene>3</Scene>
+  <CompletedRecipes>2</CompletedRecipes>
+  <CurrentRecipe>Toast_Cheese_Ham_Tomato</CurrentRecipe>
+  <RemainingRecipes>Sandwich_Ham</RemainingRecipes>
+  <RemainingRecipes>Sandwich_Cheese_Tomato</RemainingRecipes>
+  <RemainingRecipes>Toast_Cheese</RemainingRecipes>
+  <RemainingRecipes>Toast_Cheese_Ham</RemainingRecipes>
+  <RemainingRecipes>Toast_Cheese_Tomato</RemainingRecipes>
+  <RemainingRecipes>Toast_Ham_Tomato</RemainingRecipes>
+  <RemainingRecipes>Sandwich_Cheese</RemainingRecipes>
+  <RemainingRecipes>Sandwich_Cheese_Tomato</RemainingRecipes>
+  <RemainingRecipes>Sandwich_Ham_Tomato</RemainingRecipes>
+  <Counter>Counter_Metal</Counter>
+  <Tent>Tent_Yellow</Tent>
+  <Wall>Wall_Grey</Wall>
+  <Customer>2</Customer>
 </Save>

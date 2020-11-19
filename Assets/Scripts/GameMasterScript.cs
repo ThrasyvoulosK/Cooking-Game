@@ -47,7 +47,7 @@ public class GameMasterScript : MonoBehaviour
     void Awake()
     {
         
-        Debug.Log("current language is: " + language_current);
+        //Debug.Log("current language is: " + language_current);
         //Instance = this;
         if (Instance == null)
         {
@@ -136,6 +136,17 @@ public class GameMasterScript : MonoBehaviour
             XmlNodeList xrec = xmlDocument.GetElementsByTagName("CompletedRecipes");
             save.completedrecipes = int.Parse(xrec[0].InnerText);
 
+            XmlNodeList xcurrec = xmlDocument.GetElementsByTagName("CurrentRecipe");
+            save.currentrecipe = xcurrec[0].InnerText;
+
+            save.remainingrecipes.Clear();
+            XmlNodeList xremrec = xmlDocument.GetElementsByTagName("RemainingRecipes");
+            //foreach(XmlNodeList remn in xremrec)
+            for (int i = 0; i < xremrec.Count; i++)
+            {
+                save.remainingrecipes.Add(xremrec[i].InnerText);
+            }
+
             XmlNodeList xcoun = xmlDocument.GetElementsByTagName("Counter");
             save.counter = xcoun[0].InnerText;
             //Debug.Log(xcoun[0].InnerText);
@@ -144,11 +155,51 @@ public class GameMasterScript : MonoBehaviour
             XmlNodeList xwall = xmlDocument.GetElementsByTagName("Wall");
             save.wall = xwall[0].InnerText;
 
+            XmlNodeList xcus = xmlDocument.GetElementsByTagName("Customer");
+            save.customer = int.Parse(xcus[0].InnerText);
+
             GameObject.Find("Money").GetComponent<MoneyScript>().money = (float)save.money;
             GameObject.Find("Furnace").GetComponent<FurnaceScript>().numberofcompletedrecipes = save.completedrecipes;
 
-            //GameObject.Find("Counter").GetComponent<SpriteRenderer>().sprite = spriteslayers[save.counter];
-            GameObject.Find("Counter").GetComponent<SpriteRenderer>().sprite = spriteslayers[xcoun[0].InnerText];
+            //WIP
+            //GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.name=save.currentrecipe;
+            foreach(Recipe_SO rso in GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe)
+            {
+                if (rso.name == save.currentrecipe)
+                {
+                    GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe = rso;
+                    GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.neededIngr = rso.neededIngr;
+                    GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.numbOfIng = rso.numbOfIng;
+                    GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.recipeSprite=rso.recipeSprite;
+
+                    GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.Remove(rso);//
+                    break;
+                }
+            }
+
+            //GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.Clear();
+            /*
+            foreach (string nrecipe in save.remainingrecipes)
+            {
+                bool recipeexists = false;
+                int num = 0;
+                foreach (Recipe_SO rso in GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe)
+                {
+                    if (rso.name == nrecipe)
+                    {
+                        recipeexists = true;
+                        break;
+                    }
+                    num++;
+                }
+                if (recipeexists == false)
+                    GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.RemoveAt(num);
+            }
+            */
+
+
+                //GameObject.Find("Counter").GetComponent<SpriteRenderer>().sprite = spriteslayers[save.counter];
+                GameObject.Find("Counter").GetComponent<SpriteRenderer>().sprite = spriteslayers[xcoun[0].InnerText];
             boughtables["Counter"] = spriteslayers[xcoun[0].InnerText];
             //Debug.Log("savecounter " + save.counter);
             //Debug.Log("savecountername " + spriteslayers[save.counter]);
@@ -158,6 +209,8 @@ public class GameMasterScript : MonoBehaviour
             //GameObject.Find("Wall").GetComponent<SpriteRenderer>().sprite = spriteslayers[save.wall];
             GameObject.Find("Wall").GetComponent<SpriteRenderer>().sprite = spriteslayers[xwall[0].InnerText];
             boughtables["Wall"] = spriteslayers[xwall[0].InnerText];
+
+            GameObject.Find("Customer").GetComponent<CustomerScript>().customerandom = save.customer;
             issavedgame = false;
 
         }
@@ -261,11 +314,30 @@ public class GameMasterScript : MonoBehaviour
     {
         Save save = new Save();
 
+        //do not allow saving when we don't have the necessary objects
+        GameObject frn=null;
+        if((frn=GameObject.Find("Furnace"))==null)
+        {
+            Debug.Log("save in this state isn't supported!");
+            return;
+        }
+
         save.scenenum = SceneManager.GetActiveScene().buildIndex;
         save.money = (int)GameObject.Find("Money").GetComponent<MoneyScript>().money;
         //save.completedrecipes = theFurnace.numberofcompletedrecipes;
-        save.completedrecipes = GameObject.Find("Furnace").GetComponent<FurnaceScript>().numberofcompletedrecipes;
+        save.completedrecipes = frn.GetComponent<FurnaceScript>().numberofcompletedrecipes;
 
+        save.currentrecipe = frn.GetComponent<FurnaceScript>().recipe.name;
+
+        save.remainingrecipes.Clear();
+        foreach(Recipe_SO rso in frn.GetComponent<FurnaceScript>().next_recipe)
+        {
+            save.remainingrecipes.Add(rso.name);
+        }
+
+        save.customer = GameObject.Find("Customer").GetComponent<CustomerScript>().customerandom;
+
+        //create the xml document with the above values
         XmlDocument xmlDocument = new XmlDocument();
 
         XmlElement root = xmlDocument.CreateElement("Save");
@@ -281,6 +353,19 @@ public class GameMasterScript : MonoBehaviour
         XmlElement xrec = xmlDocument.CreateElement("CompletedRecipes");
         xrec.InnerText = save.completedrecipes.ToString();
         root.AppendChild(xrec);
+
+        XmlElement xcurrec = xmlDocument.CreateElement("CurrentRecipe");
+        xcurrec.InnerText = save.currentrecipe;
+        root.AppendChild(xcurrec);
+
+        
+        XmlElement xremrec;
+        for (int i = 0; i < save.remainingrecipes.Count; i++)
+        {
+            xremrec = xmlDocument.CreateElement("RemainingRecipes");
+            xremrec.InnerText = save.remainingrecipes[i];
+            root.AppendChild(xremrec);
+        }
 
         //find the graphics currently in use
         foreach(string desc in spritesnames)
@@ -314,6 +399,10 @@ public class GameMasterScript : MonoBehaviour
             }
 
         }
+                
+        XmlElement xcus = xmlDocument.CreateElement("Customer");
+        xcus.InnerText = save.customer.ToString();
+        root.AppendChild(xcus);
 
         xmlDocument.AppendChild(root);
 
@@ -344,6 +433,17 @@ public class GameMasterScript : MonoBehaviour
         XmlNodeList xrec = xmlDocument.GetElementsByTagName("CompletedRecipes");
         save.completedrecipes = int.Parse(xrec[0].InnerText);
 
+        XmlNodeList xcurrec = xmlDocument.GetElementsByTagName("CurrentRecipe");
+        save.currentrecipe = xcurrec[0].InnerText;
+
+        save.remainingrecipes.Clear();
+        XmlNodeList xremrec = xmlDocument.GetElementsByTagName("RemainingRecipes");
+        //foreach(XmlNodeList remn in xremrec)
+        for(int i=0;i<xremrec.Count;i++)
+        {
+            save.remainingrecipes.Add(xremrec[i].InnerText);
+        }
+
         XmlNodeList xcoun = xmlDocument.GetElementsByTagName("Counter");
         //save.counter = (xcoun[0].InnerText).ToString();
         save.counter = xcoun[0].InnerText;
@@ -354,12 +454,8 @@ public class GameMasterScript : MonoBehaviour
         //save.wall = (xwall[0].InnerText).ToString();
         save.wall = xwall[0].InnerText;
 
-
-        //GameObject.Find("Money").GetComponent<MoneyScript>().money = (float)save.money;
-        //GameObject.Find("Furnace").GetComponent<FurnaceScript>().numberofcompletedrecipes=save.completedrecipes ;
-
-        //DontDestroyOnLoad(GameObject.Find("Money"));
-        //DontDestroyOnLoad(GameObject.Find("Furnace"));
+        XmlNodeList xcus = xmlDocument.GetElementsByTagName("Customer");
+        save.customer = int.Parse(xcus[0].InnerText);
 
         issavedgame = true;
         
@@ -373,8 +469,12 @@ public class Save
     public int scenenum;
     public int money;
     public int completedrecipes;
-    //graphics?
+    //recipes
+    public string currentrecipe;
+    public List<string> remainingrecipes = new List<string>();
+    //graphics
     public string counter;
     public string tent;
     public string wall;
+    public int customer;
 }
