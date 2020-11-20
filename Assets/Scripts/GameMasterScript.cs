@@ -76,26 +76,57 @@ public class GameMasterScript : MonoBehaviour
         if ((Application.dataPath + "/Resources/scrnsht.png") != null)
         {
             Debug.Log("screenshot exists");
+
+            //Sprite newsprite;
+
+            /*AssetDatabase.ImportAsset("Assets/Resources/scrnsht.png");
+            AssetDatabase.ImportAsset("Assets/Resources/scrnsht.png.meta");*/
+            //newsprite = Sprite.Create(Texture2D tex);
+            /*GameObject co = new GameObject();
+            co.AddComponent<SpriteRenderer>();
+            co.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("scrnsht");*/
+
             GameObject.Find("Continue").GetComponent<Image>().preserveAspect = true;
-            GameObject.Find("Continue").GetComponent<Image>().sprite = Resources.Load<Sprite>("scrnsht");
-            
+            //GameObject.Find("Continue").GetComponent<Image>().sprite = Resources.Load<Sprite>("scrnsht");
+            GameObject.Find("Continue").GetComponent<Image>().sprite = spriteslayers["Screenshot"];
+            //GameObject.Find("Continue").GetComponent<Image>().sprite = co.GetComponent<SpriteRenderer>().sprite;
+
+
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (GameObject.Find("Continue") != null)
+        {
+            if ((Application.dataPath + "/Resources/scrnsht.png") != null)
+                //GameObject.Find("Continue").GetComponent<Image>().sprite = Resources.Load<Sprite>("scrnsht");
+                GameObject.Find("Continue").GetComponent<Image>().sprite = spriteslayers["Screenshot"];
+        }
+
         if (language_current == "English")
         {
             GameObject speechbubble = null;
             if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
                 speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
+            GameObject decdesc = null;
+            if ((decdesc = GameObject.Find("DecText")) != null)
+            {
+                string boght;
+                boght = languagehandler[GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().objecttobebought];
+                decdesc.GetComponent<Text>().text = "Congratulations!\nChoose a new " + boght + " colour to continue!";
+            }
         }
-        else if(language_current=="Greek")
+        else if (language_current == "Greek")
         {
             GameObject decdesc = null;
             if ((decdesc = GameObject.Find("DecText")) != null)
-                decdesc.GetComponent<Text>().text = "Συγχαρητήρια!\nΔιάλεξε νέα διακόσμηση για να συνεχίσεις!";
+            {
+                string boght;
+                boght = languagehandler[GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().objecttobebought];
+                decdesc.GetComponent<Text>().text = "Συγχαρητήρια!\nΔιάλεξε νέο χρώμα "+boght+" για να συνεχίσεις!";
+            }
         }
 
 
@@ -158,7 +189,13 @@ public class GameMasterScript : MonoBehaviour
             XmlNodeList xcus = xmlDocument.GetElementsByTagName("Customer");
             save.customer = int.Parse(xcus[0].InnerText);
 
-            GameObject.Find("Money").GetComponent<MoneyScript>().money = (float)save.money;
+            //reload if we cannot find our objects yet
+            if (GameObject.Find("Money") == null)
+            {
+                Debug.Log("cannot find money");
+                return;
+            }
+            GameObject.Find("Money").GetComponent<MoneyScript>().money = save.money;
             GameObject.Find("Furnace").GetComponent<FurnaceScript>().numberofcompletedrecipes = save.completedrecipes;
 
             //WIP
@@ -167,10 +204,18 @@ public class GameMasterScript : MonoBehaviour
             {
                 if (rso.name == save.currentrecipe)
                 {
+                    GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe = null;
                     GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe = rso;
                     GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.neededIngr = rso.neededIngr;
                     GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.numbOfIng = rso.numbOfIng;
                     GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.recipeSprite=rso.recipeSprite;
+
+                    GameObject.Find("Furnace").GetComponent<FurnaceScript>().usable_number_of_ingredients.Clear();
+                    foreach (int j in rso.numbOfIng)
+                    {
+                        GameObject.Find("Furnace").GetComponent<FurnaceScript>().usable_number_of_ingredients.Add(j);
+                        //break;
+                    }
 
                     GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.Remove(rso);//
                     break;
@@ -178,7 +223,7 @@ public class GameMasterScript : MonoBehaviour
             }
 
             //GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.Clear();
-            /*
+            List<Recipe_SO> nrsl = new List<Recipe_SO>();
             foreach (string nrecipe in save.remainingrecipes)
             {
                 bool recipeexists = false;
@@ -188,18 +233,26 @@ public class GameMasterScript : MonoBehaviour
                     if (rso.name == nrecipe)
                     {
                         recipeexists = true;
+                        nrsl.Add(rso);
                         break;
                     }
                     num++;
                 }
                 if (recipeexists == false)
-                    GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.RemoveAt(num);
+                {
+                    Debug.Log("recipe " + nrecipe + " doesn't exist here");
+                    //Debug.Log("num is: " + num +" nextrecipes are: "+ GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.Count);
+                    //Debug.Log("recipebefore1 " + GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe[23].name);
+                    //Debug.Log("will delete recipe " + GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe[num].name);
+                    //GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.RemoveAt(num);
+                }
             }
-            */
+            GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.Clear();
+            GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe = nrsl;
 
 
-                //GameObject.Find("Counter").GetComponent<SpriteRenderer>().sprite = spriteslayers[save.counter];
-                GameObject.Find("Counter").GetComponent<SpriteRenderer>().sprite = spriteslayers[xcoun[0].InnerText];
+            //GameObject.Find("Counter").GetComponent<SpriteRenderer>().sprite = spriteslayers[save.counter];
+            GameObject.Find("Counter").GetComponent<SpriteRenderer>().sprite = spriteslayers[xcoun[0].InnerText];
             boughtables["Counter"] = spriteslayers[xcoun[0].InnerText];
             //Debug.Log("savecounter " + save.counter);
             //Debug.Log("savecountername " + spriteslayers[save.counter]);
@@ -211,6 +264,15 @@ public class GameMasterScript : MonoBehaviour
             boughtables["Wall"] = spriteslayers[xwall[0].InnerText];
 
             GameObject.Find("Customer").GetComponent<CustomerScript>().customerandom = save.customer;
+            GameObject.Find("Customer").GetComponent<CustomerScript>().customercurrentspriterenderer.sprite = GameObject.Find("Customer").GetComponent<CustomerScript>().customerspritelistcurrent[save.customer];
+            // GameObject.Find("Customer").GetComponent<CustomerScript>().allowspritetochange=true;
+            //GameObject.Find("Customer").GetComponent<CustomerScript>().customerchangesprite();
+            if (GameObject.Find("Customer").GetComponent<SpriteRenderer>().sprite == GameObject.Find("Customer").GetComponent<CustomerScript>().customerspritelistcurrent[save.customer])
+                Debug.Log("same customer sprite "+save.customer);
+            else
+                Debug.Log("different customer sprite");
+            //GameObject.Find("Customer").GetComponent<CustomerScript>().allowspritetochange = false;
+
             issavedgame = false;
 
         }
@@ -335,7 +397,17 @@ public class GameMasterScript : MonoBehaviour
             save.remainingrecipes.Add(rso.name);
         }
 
-        save.customer = GameObject.Find("Customer").GetComponent<CustomerScript>().customerandom;
+        //foreach(Sprite sprite in GameObject.Find("Customer").GetComponent<CustomerScript>().customerspritelist)
+        save.customer = 0;
+        for(int i=0;i< GameObject.Find("Customer").GetComponent<CustomerScript>().customerspritelist.Count;i++)
+            {
+                if(GameObject.Find("Customer").GetComponent<CustomerScript>().customerspritelist[i]== GameObject.Find("Customer").GetComponent<SpriteRenderer>().sprite)
+                {
+                    Debug.Log("getting sprite");
+                    save.customer = i;
+                }
+            }
+        //save.customer = GameObject.Find("Customer").GetComponent<CustomerScript>().customerandom;
 
         //create the xml document with the above values
         XmlDocument xmlDocument = new XmlDocument();

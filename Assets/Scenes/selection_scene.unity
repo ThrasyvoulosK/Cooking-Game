@@ -1449,6 +1449,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0c18790fda6ab524f87235a83c63af3e, type: 3}
   - {fileID: 21300000, guid: fe8685c7cbe41cc4e923bd67127b43ed, type: 3}
   - {fileID: 21300000, guid: 6f40a7a6e692fb04a9e6a39b7c2c57b9, type: 3}
+  - {fileID: 21300000, guid: a165e3537fbc0ca43af2c64307f1c798, type: 3}
   spritesnames:
   - Sandwich_Tomato
   - Sandwich_Cheese
@@ -1476,6 +1477,7 @@ MonoBehaviour:
   - Wall_Blue
   - Wall_Metal
   - Wall_Red
+  - Screenshot
   languages:
   - Greek
   - English
@@ -1492,6 +1494,9 @@ MonoBehaviour:
   - Language
   - Levels
   - Continue
+  - Counter
+  - Tent
+  - Wall
   words_gr:
   - "\u03A4\u03A5\u03A1\u0399"
   - "\u0396\u0391\u039C\u03A0\u039F\u039D"
@@ -1504,6 +1509,9 @@ MonoBehaviour:
   - "\u0393\u03BB\u03CE\u03C3\u03C3\u03B1"
   - "\u0395\u03C0\u03AF\u03C0\u03B5\u03B4\u03B1"
   - "\u03A3\u03C5\u03BD\u03AD\u03C7\u03B5\u03B9\u03B1"
+  - "\u03A0\u03AC\u03B3\u03BA\u03BF\u03C5"
+  - "\u03A4\u03AD\u03BD\u03C4\u03B1\u03C2"
+  - "\u03A4\u03BF\u03AF\u03C7\u03BF\u03C5"
   words_en:
   - CHEESE
   - HAM
@@ -1516,6 +1524,9 @@ MonoBehaviour:
   - Language
   - Levels
   - Continue
+  - Counter
+  - Tent
+  - Wall
   words_current: []
   boughtablesprites:
   - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}

@@ -9,9 +9,6 @@ Replace all sprites with the ones in the dictionary of gamemaster!
 fix scenes so that updating them all becomes less of a hussle
 -make them prefabs?
 
-ticked ingredients positions seem to change slightly from their un-ticked counterparts
--change their 'center' accordingly?
-
 transactions
 -level3: paper towels(instead of walls(level 4))
 -change descriptioon to something more suitable to the current purchase
@@ -38,10 +35,11 @@ also, disable not played levels
 ???can all be achieved from the same save file???
 -or is it a bad idea?
 
-fix loading errors
--current recipe
--next recipes list
--customer sprite
+'thank you' bubble position vs previous one
+
+fix saving/loading errors
+-image on 'continu' button doesn't update
+-
 
 mark down completed work on design doc
 

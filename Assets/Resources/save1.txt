@@ -1,18 +1,18 @@
 <Save>
-  <Money>4</Money>
+  <Money>2</Money>
   <Scene>3</Scene>
-  <CompletedRecipes>2</CompletedRecipes>
-  <CurrentRecipe>Toast_Cheese_Ham_Tomato</CurrentRecipe>
+  <CompletedRecipes>1</CompletedRecipes>
+  <CurrentRecipe>Toast_Cheese_Ham</CurrentRecipe>
   <RemainingRecipes>Sandwich_Ham</RemainingRecipes>
+  <RemainingRecipes>Sandwich_Cheese_Ham</RemainingRecipes>
   <RemainingRecipes>Sandwich_Cheese_Tomato</RemainingRecipes>
-  <RemainingRecipes>Toast_Cheese</RemainingRecipes>
-  <RemainingRecipes>Toast_Cheese_Ham</RemainingRecipes>
+  <RemainingRecipes>Toast_Ham</RemainingRecipes>
+  <RemainingRecipes>Toast_Cheese_Ham_Tomato</RemainingRecipes>
   <RemainingRecipes>Toast_Cheese_Tomato</RemainingRecipes>
   <RemainingRecipes>Toast_Ham_Tomato</RemainingRecipes>
-  <RemainingRecipes>Sandwich_Cheese</RemainingRecipes>
   <RemainingRecipes>Sandwich_Cheese_Tomato</RemainingRecipes>
   <RemainingRecipes>Sandwich_Ham_Tomato</RemainingRecipes>
-  <Counter>Counter_Metal</Counter>
+  <Counter>Counter_Red</Counter>
   <Tent>Tent_Yellow</Tent>
   <Wall>Wall_Grey</Wall>
   <Customer>2</Customer>
