@@ -95,18 +95,23 @@ public class CameraScript : MonoBehaviour
                 GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(760f, 212f, 0f);
             }
         }
-        else if (Camera.main.aspect < 1.57f)
+        /*else if (Camera.main.aspect < 1.57f)
         {
             Debug.Log("800x480");
             //GameObject.Find("RecImage").GetComponent<RectTransform>().anchoredPosition = new Vector3(483f, -47f, 0f);
-        }
+        }*/
         else if (Camera.main.aspect < 1.67f)
         {
             Debug.Log("16:10");
-            Debug.Log("800x480");
+            //Debug.Log("800x480");
 
             if (isgamescene)
-                GameObject.Find("RecImage").GetComponent<RectTransform>().anchoredPosition = new Vector3(483f, -47f, 0f);
+            {
+                //GameObject.Find("RecImage").GetComponent<RectTransform>().anchoredPosition = new Vector3(483f, -47f, 0f);
+                GameObject.Find("RecImage").GetComponent<RectTransform>().anchoredPosition = new Vector3(460f, -47f, 0f);
+
+                GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(870f, 260f, 0f);
+            }
         }
         else if (Camera.main.aspect < 1.78f)//1920/1080
         { 

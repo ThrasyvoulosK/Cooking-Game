@@ -44,6 +44,8 @@ public class GameMasterScript : MonoBehaviour
 
     public FurnaceScript theFurnace;
 
+    public float money = 0;
+
     void Awake()
     {
         
@@ -490,6 +492,8 @@ public class GameMasterScript : MonoBehaviour
     public void LoadGame()
     {
         LoadXML();
+        //if a saved game dosn't exist, start from level1
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);//
     }
 
     private void LoadXML()

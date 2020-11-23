@@ -11,21 +11,13 @@ fix scenes so that updating them all becomes less of a hussle
 
 transactions
 -level3: paper towels(instead of walls(level 4))
--change descriptioon to something more suitable to the current purchase
---according to suggestions
 
 saved game functionality: what to keep:
 -keep scenery saved (for later levels)
--current recipe
-//--ingredients (both used and unused)
-//--recipe image
---RecipeSO
--current customer sprite
--available recipes from the furnace( the ones that aren't played yet)
---list of recipesos
--treadmill ingredients
+-treadmill ingredients?
 --and their positions
 --and their sprites
+-paper towels?
 //-change saved path (for functionality with android)?
 
 level select levels could be loaded as the ones we currently have?
@@ -35,13 +27,36 @@ also, disable not played levels
 ???can all be achieved from the same save file???
 -or is it a bad idea?
 
-'thank you' bubble position vs previous one
-
 fix saving/loading errors
--image on 'continu' button doesn't update
--
+-image on 'continue' button doesn't update
+--disble?
+--generate image from saved xml data
 
 mark down completed work on design doc
+
+menu screens should appear separately
+-don't delete anything
+-put a back button
+
+ingredioentsnames on checklist
+//continue/save doesn't work
+//-go to level1 if thers no saved game
+menu
+-'options' choice insteaad of separate 'language', 'levels' etc
+-'sound' option?
+difficulty options?
+changes in levels adn numbers of recipes?
+congratulations during play
+ui gets cut
+-proven, android 2:1, 2160*1080
+--scale background objects (x=1.1) (no y)
+---objects appear ot of nowhere and then disappear into thin air!
+//keep money
+//-+10 money instead!
+
+exit button position
+and texts and menus according to idgames conversation!
+
 
 
 Gameplay Issues:

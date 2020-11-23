@@ -12,18 +12,22 @@ public class MoneyScript : MonoBehaviour
 
     public float money = 0;
 
-    private static MoneyScript Instance;
+    public static MoneyScript Instance;
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
         else
+        {
+            //money = gameObject.GetComponent<MoneyScript>().money;
             Destroy(gameObject);
-
+        }
+        //DontDestroyOnLoad(this);
     }
     // Start is called before the first frame update
     void Start()
     {
+        money = GameObject.Find("GameMaster").GetComponent<GameMasterScript>().money;
         moneytext = GetComponent<Text>();
 
     }
@@ -34,6 +38,7 @@ public class MoneyScript : MonoBehaviour
         //moneytext.text = "Money: "+money+" €";
         moneytext.text =money+" ";
 
-        
+        GameObject.Find("GameMaster").GetComponent<GameMasterScript>().money = money;
+
     }
 }

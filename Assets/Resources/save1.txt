@@ -1,19 +1,13 @@
 <Save>
-  <Money>2</Money>
-  <Scene>3</Scene>
-  <CompletedRecipes>1</CompletedRecipes>
-  <CurrentRecipe>Toast_Cheese_Ham</CurrentRecipe>
+  <Money>20</Money>
+  <Scene>1</Scene>
+  <CompletedRecipes>2</CompletedRecipes>
+  <CurrentRecipe>Sandwich_Ham</CurrentRecipe>
+  <RemainingRecipes>Sandwich_Cheese</RemainingRecipes>
   <RemainingRecipes>Sandwich_Ham</RemainingRecipes>
-  <RemainingRecipes>Sandwich_Cheese_Ham</RemainingRecipes>
-  <RemainingRecipes>Sandwich_Cheese_Tomato</RemainingRecipes>
-  <RemainingRecipes>Toast_Ham</RemainingRecipes>
-  <RemainingRecipes>Toast_Cheese_Ham_Tomato</RemainingRecipes>
-  <RemainingRecipes>Toast_Cheese_Tomato</RemainingRecipes>
-  <RemainingRecipes>Toast_Ham_Tomato</RemainingRecipes>
-  <RemainingRecipes>Sandwich_Cheese_Tomato</RemainingRecipes>
-  <RemainingRecipes>Sandwich_Ham_Tomato</RemainingRecipes>
-  <Counter>Counter_Red</Counter>
+  <RemainingRecipes>Sandwich_Cheese</RemainingRecipes>
+  <Counter>Counter_Grey</Counter>
   <Tent>Tent_Yellow</Tent>
   <Wall>Wall_Grey</Wall>
-  <Customer>2</Customer>
+  <Customer>1</Customer>
 </Save>

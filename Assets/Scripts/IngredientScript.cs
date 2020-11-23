@@ -221,7 +221,7 @@ public class IngredientScript : MonoBehaviour
                     //Time.timeScale = 0;
 
                     //add money
-                    theMoney.money = theMoney.money + 2f;
+                    theMoney.money = theMoney.money + 10f;
 
                     //add the upper bun graphically
                     theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);
