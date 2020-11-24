@@ -1738,6 +1738,13 @@ MonoBehaviour:
   - Counter
   - Tent
   - Wall
+  - Cheese_lc
+  - Ham_lc
+  - Lettuce_lc
+  - Tomato_lc
+  - Coffee_lc
+  - Ice_lc
+  - Milk_lc
   words_gr:
   - "\u03A4\u03A5\u03A1\u0399"
   - "\u0396\u0391\u039C\u03A0\u039F\u039D"
@@ -1753,6 +1760,13 @@ MonoBehaviour:
   - "\u03A0\u03AC\u03B3\u03BA\u03BF\u03C5"
   - "\u03A4\u03AD\u03BD\u03C4\u03B1\u03C2"
   - "\u03A4\u03BF\u03AF\u03C7\u03BF\u03C5"
+  - "\u03A4\u03C5\u03C1\u03AF"
+  - "\u0396\u03B1\u03BC\u03C0\u03CC\u03BD"
+  - "\u039C\u03B1\u03C1\u03BF\u03CD\u03BB\u03B9"
+  - "\u039D\u03C4\u03BF\u03BC\u03AC\u03C4\u03B1"
+  - "\u039A\u03B1\u03C6\u03AD\u03C2"
+  - "\u03A0\u03AC\u03B3\u03BF\u03C2"
+  - "\u0393\u03AC\u03BB\u03B1"
   words_en:
   - CHEESE
   - HAM
@@ -1768,6 +1782,13 @@ MonoBehaviour:
   - Counter
   - Tent
   - Wall
+  - Cheese
+  - Ham
+  - Lettuce
+  - Tomato
+  - Coffee
+  - Ice
+  - Milk
   words_current: []
   boughtablesprites:
   - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
@@ -1778,6 +1799,7 @@ MonoBehaviour:
   - Tent
   - Wall
   theFurnace: {fileID: 0}
+  money: 0
 --- !u!4 &957027913
 Transform:
   m_ObjectHideFlags: 0

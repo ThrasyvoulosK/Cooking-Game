@@ -68,7 +68,7 @@ public class IngredientScript : MonoBehaviour
         if (gameObject.name.Contains("Clone"))
         {
             transform.Translate(Vector2.right * Time.deltaTime*theSpawning.gamespeed);
-            if (gameObject.transform.position.x >11)
+            if (gameObject.transform.position.x >12)
             {
                 Destroy(gameObject);
             }

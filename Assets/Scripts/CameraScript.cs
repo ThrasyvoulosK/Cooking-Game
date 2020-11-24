@@ -126,10 +126,10 @@ public class CameraScript : MonoBehaviour
         else if (Camera.main.aspect == 2f)//2160/1080
         {
             Debug.Log("2:1");
-            Camera.main.orthographicSize = 4.5f;
+            //Camera.main.orthographicSize = 4.5f;
             if (isgamescene)
             {
-                GameObject.Find("recipe board").GetComponent<RectTransform>().anchoredPosition = new Vector3(254f, -88f, 0f);
+                /*GameObject.Find("recipe board").GetComponent<RectTransform>().anchoredPosition = new Vector3(254f, -88f, 0f);
                 GameObject.Find("recipe board").GetComponent<RectTransform>().anchoredPosition = new Vector3(171f, -88f, 0f);
 
                 GameObject.Find("Board").GetComponent<RectTransform>().anchoredPosition = new Vector3(60f, -90f, 0f);
@@ -137,7 +137,19 @@ public class CameraScript : MonoBehaviour
 
                 GameObject.Find("RecImage").GetComponent<RectTransform>().anchoredPosition = new Vector3(579f, -15f, 0f);
 
-                GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(1000f, 285f, 0f);
+                GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(1000f, 285f, 0f);*/
+                Debug.Log("2:1");
+                GameObject.Find("BackgroundObjects").GetComponent<Transform>().localScale = new Vector3(1.1f, 1f, 1f);
+
+                GameObject.Find("recipe board").GetComponent<RectTransform>().anchoredPosition = new Vector3(180f, -88f, 0f);
+
+                GameObject.Find("Board").GetComponent<RectTransform>().sizeDelta = new Vector2(1.1f, 1.1f);
+                GameObject.Find("RecImage").GetComponent<RectTransform>().anchoredPosition = new Vector3(565f, -47f, 0f);
+
+                GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(1000f, 260f, 0f);
+
+                GameObject.Find("SpawningPoint").GetComponent<Transform>().position = new Vector3(-12f, -3f, 0f);
+
             }
         }
         else if (Camera.main.aspect < 2.06f)//2960/1440

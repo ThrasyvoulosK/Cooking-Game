@@ -19,12 +19,15 @@ public class RecipeCheckScript : MonoBehaviour
     public Image recipeimage;// = new Image();
     public SpriteRenderer speechbubble;
 
+    public GameMasterScript theGameMaster;
+
     // Start is called before the first frame update
     void Start()
     {
         recipenote = GetComponent<Text>();
 
         furnscript = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
+        theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
 
         theNextRecipe = GameObject.Find("NextRecipeButton").GetComponent<NextRecipeScript>();
 
@@ -76,7 +79,20 @@ public class RecipeCheckScript : MonoBehaviour
                 speechbubble.GetComponentInChildren<TextMeshPro>().enabled = false;
 
                 gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i],furnscript.usable_number_of_ingredients[i]);
-                    
+
+                //text description of images
+                RecipeIngredientDesc(furnscript.recipe.neededIngr[i], gameObject.GetComponent<RecipeCheckScript>().images[i]);
+                //gameObject.GetComponentInChildren<Image>().GetComponentInChildren<TextMeshPro>().SetText("txtx");
+                /*GameObject img;
+                img = GameObject.Find("Image");
+                if (img == null)
+                    Debug.Log("null image");
+                //img.GetComponentInChildren<TextMeshPro>().SetText("txtx");
+                //img.GetComponent<TextMeshPro>().SetText("txtx");
+                img.GetComponentInChildren<Text>().text = "tex";
+                img.GetComponentInChildren<TextMeshPro>().text = "Thank You!";*/
+
+
                 //Debug.Log(furnscript.recipe.neededIngr.Count);
                 //Debug.Log(furnscript.usable_number_of_ingredients.Count);
             }
@@ -97,8 +113,10 @@ public class RecipeCheckScript : MonoBehaviour
     {
         if (ingredientname == "Cheese")
         {
-            if(numberofingredientsleft>0)
-                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[1];
+            if (numberofingredientsleft > 0)
+            {
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[1]; 
+            }
             else
                 return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[3];
         }
@@ -145,5 +163,24 @@ public class RecipeCheckScript : MonoBehaviour
                 return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[13];
         }
         return null;
+    }
+
+    public void RecipeIngredientDesc(string ingredientname, Image gmo)
+    {
+        Debug.Log("recipeingredientdesc");
+        //gmo.GetComponentInChildren<TextMeshPro>().SetText( theGameMaster.languagehandler[ingredientname + "_lc"]);
+        //gmo.GetComponent<TextMeshPro>().SetText( theGameMaster.languagehandler[ingredientname + "_lc"]);
+        //gmo.GetComponentInChildren<Text>().text = theGameMaster.languagehandler[ingredientname + "_lc"];
+        //if (gmo.GetComponentInChildren<TextMeshPro>() != null)
+        if (gmo.GetComponentInChildren<Text>() != null)
+        {
+            Debug.Log("text not null");
+            gmo.GetComponentInChildren<Text>().text = theGameMaster.languagehandler[ingredientname + "_lc"];
+        }
+        else
+        {
+            Debug.Log("textisnull");
+            Debug.Log(gmo.name);
+        }
     }
 }

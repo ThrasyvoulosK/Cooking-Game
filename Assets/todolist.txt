@@ -3,60 +3,30 @@ Cooking Game
 
 Add/Edit:
 
-
 Replace all sprites with the ones in the dictionary of gamemaster!
 
 fix scenes so that updating them all becomes less of a hussle
 -make them prefabs?
 
-transactions
--level3: paper towels(instead of walls(level 4))
-
-saved game functionality: what to keep:
--keep scenery saved (for later levels)
--treadmill ingredients?
---and their positions
---and their sprites
--paper towels?
-//-change saved path (for functionality with android)?
-
-level select levels could be loaded as the ones we currently have?
-eg level2, when loaded, would have the chosen counter already changed
-also, disable not played levels
--make them unlockables instead
-???can all be achieved from the same save file???
--or is it a bad idea?
-
-fix saving/loading errors
--image on 'continue' button doesn't update
---disble?
---generate image from saved xml data
-
-mark down completed work on design doc
-
-menu screens should appear separately
--don't delete anything
--put a back button
-
-ingredioentsnames on checklist
-//continue/save doesn't work
-//-go to level1 if thers no saved game
-menu
--'options' choice insteaad of separate 'language', 'levels' etc
+menu screens 
+(follow the given layouts!)
+//-don't delete anything
+//-put a back button
+-'options' choice instead of separate 'language', 'levels' etc
 -'sound' option?
 difficulty options?
 changes in levels adn numbers of recipes?
+
 congratulations during play
-ui gets cut
--proven, android 2:1, 2160*1080
---scale background objects (x=1.1) (no y)
----objects appear ot of nowhere and then disappear into thin air!
-//keep money
-//-+10 money instead!
+-fireworks!(particles)
+--make one that actually looks like a firework exploding
 
-exit button position
-and texts and menus according to idgames conversation!
+exit button position and texts and menus according to idgames conversation!
+-consult aforementioned layouts
 
+ingredients' names on checklist
+-fix text shape, size and position
+checklist objects' positions will have to be updated as well
 
 
 Gameplay Issues:
@@ -71,7 +41,6 @@ Add Functionality for Different Languages
 --'thank you' messages
 --speech???
 --UI items (menus)?
-
 
 Sounds???
 -for negative and affirmative actions
@@ -121,6 +90,24 @@ speed issues:
 -leaving food and customer speed
 
 change font of cash register to sth more appropriate, eg calculator?
+
+level select levels could be loaded as the ones we currently have?
+eg level2, when loaded, would have the chosen counter already changed
+also, disable not played levels
+-make them unlockables instead
+???can all be achieved from the same save file???
+-or is it a bad idea?
+
+transactions
+-level3: paper towels(instead of walls(level 4))
+
+saved game functionality: what to keep:
+-keep scenery saved (for later levels)
+-treadmill ingredients?
+--and their positions
+--and their sprites
+-paper towels?
+//-change saved path (for functionality with android)?
 
 Clean Code
 add necessary descriptions for the game's functionality
