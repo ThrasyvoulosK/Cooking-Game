@@ -20,28 +20,44 @@ changes in levels adn numbers of recipes?
 congratulations during play
 -fireworks!(particles)
 --make one that actually looks like a firework exploding
+---add it to the game!
+---layers in particles?
+----particle: layer order in renderer
 
 exit button position and texts and menus according to idgames conversation!
 -consult aforementioned layouts
 
 ingredients' names on checklist
--fix text shape, size and position
-checklist objects' positions will have to be updated as well
+-test with different screen resolutions
 
-menus
-start over
+main menu: start over
 -first screen
---background image
---play button(continue?)
---options button
----back
+//--background image
+//--play button(continue?)
+//--options button
+//---back
 ---character?
 ---sound?
 ---languages
 ---levels
+----change functionality to rather save the level number, instead of changing it immediately
 --info button?
---exit button
-decorations
+//--exit button
+---update functionality for exiting from menus
+???rectangle around selection OR faded graphics when something isn't applied???
+change option button images to the ones currently selected
+
+decorations menu
+
+translations in menu errors
+-make an array of menuitems on GameMasters, and rather make their changes there
+--apply the same for other leftover gameobjects eg 'speechbubble'
+
+menu parent/children objects
+-assign options submenus directly under their related one
+-?all submenus is still useful for 'back' button?
+
+fix sound/character options menu
 
 
 Gameplay Issues:
