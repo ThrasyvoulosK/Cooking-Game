@@ -51,6 +51,8 @@ public class RecipeCheckScript : MonoBehaviour
             {
                 imagei.enabled = false;
                 imagei.preserveAspect = true;
+
+                imagei.GetComponentInChildren<Text>().enabled = false;
             }
 
             speechbubble = GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>();
@@ -82,17 +84,8 @@ public class RecipeCheckScript : MonoBehaviour
 
                 //text description of images
                 RecipeIngredientDesc(furnscript.recipe.neededIngr[i], gameObject.GetComponent<RecipeCheckScript>().images[i]);
-                //gameObject.GetComponentInChildren<Image>().GetComponentInChildren<TextMeshPro>().SetText("txtx");
-                /*GameObject img;
-                img = GameObject.Find("Image");
-                if (img == null)
-                    Debug.Log("null image");
-                //img.GetComponentInChildren<TextMeshPro>().SetText("txtx");
-                //img.GetComponent<TextMeshPro>().SetText("txtx");
-                img.GetComponentInChildren<Text>().text = "tex";
-                img.GetComponentInChildren<TextMeshPro>().text = "Thank You!";*/
-
-
+                gameObject.GetComponent<RecipeCheckScript>().images[i].GetComponentInChildren<Text>().enabled = true;
+                
                 //Debug.Log(furnscript.recipe.neededIngr.Count);
                 //Debug.Log(furnscript.usable_number_of_ingredients.Count);
             }

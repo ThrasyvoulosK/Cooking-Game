@@ -7030,6 +7030,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1625293373}
     m_Modifications:
+    - target: {fileID: 1525123107232952, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525123107232952, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 593335471539344095, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2063236012857231461, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0.5
@@ -7077,6 +7089,10 @@ PrefabInstance:
     - target: {fileID: 4560060429664188726, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628069350846157406, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 5635930136822104769, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
       propertyPath: m_LocalScale.x

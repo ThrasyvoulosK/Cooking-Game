@@ -28,6 +28,21 @@ ingredients' names on checklist
 -fix text shape, size and position
 checklist objects' positions will have to be updated as well
 
+menus
+start over
+-first screen
+--background image
+--play button(continue?)
+--options button
+---back
+---character?
+---sound?
+---languages
+---levels
+--info button?
+--exit button
+decorations
+
 
 Gameplay Issues:
 -using money?
@@ -67,6 +82,11 @@ android screen should only be allowed on 'landscape' screen-orientations
 screenshot metadata error
 -warning message in editor
 -between games, the previous screenshot is shown on the screen; not the current one
+
+saves not working?
+-path error?
+
+disabling menu objects causes errors
 
 
 
