@@ -21,6 +21,9 @@ public class RecipeCheckScript : MonoBehaviour
 
     public GameMasterScript theGameMaster;
 
+    public GameObject firework;
+    public ParticleSystem fireworkplay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +35,9 @@ public class RecipeCheckScript : MonoBehaviour
         theNextRecipe = GameObject.Find("NextRecipeButton").GetComponent<NextRecipeScript>();
 
         speechbubble = GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>();
+
+        firework=Instantiate(firework);
+        fireworkplay = firework.GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -89,6 +95,8 @@ public class RecipeCheckScript : MonoBehaviour
                 //Debug.Log(furnscript.recipe.neededIngr.Count);
                 //Debug.Log(furnscript.usable_number_of_ingredients.Count);
             }
+
+            fireworkplay.Stop();
         }
         else
         {
@@ -96,6 +104,10 @@ public class RecipeCheckScript : MonoBehaviour
             //speechbubble.enabled = false;
             speechbubble.sprite = Resources.LoadAll<Sprite>("canteen _ευχαριστω bubble copy")[0];
             speechbubble.GetComponentInChildren<TextMeshPro>().enabled = true;
+
+            //Instantiate(firework);
+            //fireworkplay.Stop();
+            fireworkplay.Play();
         }
         
 

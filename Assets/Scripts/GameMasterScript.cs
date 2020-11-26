@@ -46,6 +46,12 @@ public class GameMasterScript : MonoBehaviour
 
     public float money = 0;
 
+    //keep the selected level number saved
+    public int levelid=1;
+    //this variable keeps track of whether we changed the level in the options
+    // so that the functionality of 'continue' may change
+    public bool levelchanged = false;
+
     void Awake()
     {
         
@@ -491,9 +497,14 @@ public class GameMasterScript : MonoBehaviour
     public static bool issavedgame = false;
     public void LoadGame()
     {
-        LoadXML();
-        //if a saved game dosn't exist, start from level1
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);//
+        if (levelchanged == false)
+        {
+            LoadXML();
+            //if a saved game dosn't exist, start from level1
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);//
+        }
+        else
+            SceneManager.LoadScene(levelid);
     }
 
     private void LoadXML()

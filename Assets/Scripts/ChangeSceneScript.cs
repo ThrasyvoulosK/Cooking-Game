@@ -25,10 +25,13 @@ public class ChangeSceneScript : MonoBehaviour
     }
     public void change_scene()
     {
-        //Debug.Log("change sceneto: "+ SceneManager.GetActiveScene().buildIndex + level_id * 2 + 1);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +level_id*2+1);
 
+    }
+    public void change_scene_option()
+    {
+        GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelid = SceneManager.GetActiveScene().buildIndex + level_id * 2 + 1;
+        GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelchanged = true;
     }
 
 }

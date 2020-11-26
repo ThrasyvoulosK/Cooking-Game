@@ -8,21 +8,9 @@ Replace all sprites with the ones in the dictionary of gamemaster!
 fix scenes so that updating them all becomes less of a hussle
 -make them prefabs?
 
-menu screens 
-(follow the given layouts!)
-//-don't delete anything
-//-put a back button
--'options' choice instead of separate 'language', 'levels' etc
--'sound' option?
-difficulty options?
-changes in levels adn numbers of recipes?
-
-congratulations during play
--fireworks!(particles)
---make one that actually looks like a firework exploding
----add it to the game!
----layers in particles?
-----particle: layer order in renderer
+fireworks!(particles)
+-is it good enough?
+-seems to start late if we are quick enough  to finish the next recipe?
 
 exit button position and texts and menus according to idgames conversation!
 -consult aforementioned layouts
@@ -40,7 +28,6 @@ main menu: start over
 ---sound?
 ---languages
 ---levels
-----change functionality to rather save the level number, instead of changing it immediately
 --info button?
 //--exit button
 ---update functionality for exiting from menus
@@ -48,17 +35,19 @@ main menu: start over
 change option button images to the ones currently selected
 
 decorations menu
+-add functionality for background rectangles
+-should function similarly to levelbuttons in gamemaster
 
 translations in menu errors
 -make an array of menuitems on GameMasters, and rather make their changes there
 --apply the same for other leftover gameobjects eg 'speechbubble'
 
-menu parent/children objects
--assign options submenus directly under their related one
--?all submenus is still useful for 'back' button?
+menu options/back functionality
+- clicking back while on the submenu should take us to the main menu
+clicking on a submenuobject should take us to the options menu
+-add onclick(): press option button
 
 fix sound/character options menu
-
 
 Gameplay Issues:
 -using money?
@@ -136,6 +125,10 @@ also, disable not played levels
 
 transactions
 -level3: paper towels(instead of walls(level 4))
+
+-'sound' option?
+difficulty options?
+changes in levels adn numbers of recipes?
 
 saved game functionality: what to keep:
 -keep scenery saved (for later levels)
