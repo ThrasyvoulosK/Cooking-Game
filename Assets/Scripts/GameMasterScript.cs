@@ -23,15 +23,15 @@ public class GameMasterScript : MonoBehaviour
 
     public List<string> languages = new List<string>() { "Greek", "English" };
     [SerializeField]
-    public  string language_current;
+    public string language_current;
 
-    public List<string> words_en_base = new List<string>() { "Cheese", "Ham", "Lettuce", "Tomato", "Coffee", "Ice", "Milk","Let's Cook!","Language","Levels" };
+    public List<string> words_en_base = new List<string>() { "Cheese", "Ham", "Lettuce", "Tomato", "Coffee", "Ice", "Milk", "Let's Cook!", "Language", "Levels" };
 
-    public List<string> words_gr = new List<string>() { "ΤΥΡΙ","ΖΑΜΠΟΝ","ΜΑΡΟΥΛΙ","ΝΤΟΜΑΤΑ","ΚΑΦΕΣ","ΠΑΓΟΣ","ΓΑΛΑ","Ας Μαγειρέψουμε","Γλώσσα","Επίπεδα" };
-    public List<string> words_en = new List<string>() { "CHEESE","HAM","LETTUCE","TOMATO","COFFEE","ICE","MILK", "Let's Cook!", "Language", "Levels" };
+    public List<string> words_gr = new List<string>() { "ΤΥΡΙ", "ΖΑΜΠΟΝ", "ΜΑΡΟΥΛΙ", "ΝΤΟΜΑΤΑ", "ΚΑΦΕΣ", "ΠΑΓΟΣ", "ΓΑΛΑ", "Ας Μαγειρέψουμε", "Γλώσσα", "Επίπεδα" };
+    public List<string> words_en = new List<string>() { "CHEESE", "HAM", "LETTUCE", "TOMATO", "COFFEE", "ICE", "MILK", "Let's Cook!", "Language", "Levels" };
 
     [SerializeField]
-    public  List<string> words_current;
+    public List<string> words_current;
     public Dictionary<string, string> languagehandler = new Dictionary<string, string>();
 
     //transactions
@@ -47,14 +47,14 @@ public class GameMasterScript : MonoBehaviour
     public float money = 0;
 
     //keep the selected level number saved
-    public int levelid=1;
+    public int levelid = 1;
     //this variable keeps track of whether we changed the level in the options
     // so that the functionality of 'continue' may change
     public bool levelchanged = false;
 
     void Awake()
     {
-        
+
         //Debug.Log("current language is: " + language_current);
         //Instance = this;
         if (Instance == null)
@@ -66,7 +66,7 @@ public class GameMasterScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        
+
 
         DontDestroyOnLoad(this);//
     }
@@ -82,7 +82,8 @@ public class GameMasterScript : MonoBehaviour
         changelanguage_en();//
 
         if ((Application.dataPath + "/Resources/scrnsht.png") != null)
-        {
+        //if ((Application.persistentDataPath + "/Resources/scrnsht.png") != null)
+            {
             Debug.Log("screenshot exists");
 
             //Sprite newsprite;
@@ -109,7 +110,8 @@ public class GameMasterScript : MonoBehaviour
         if (GameObject.Find("Continue") != null)
         {
             if ((Application.dataPath + "/Resources/scrnsht.png") != null)
-                //GameObject.Find("Continue").GetComponent<Image>().sprite = Resources.Load<Sprite>("scrnsht");
+            //GameObject.Find("Continue").GetComponent<Image>().sprite = Resources.Load<Sprite>("scrnsht");
+            //if ((Application.persistentDataPath + "/Resources/scrnsht.png") != null)
                 GameObject.Find("Continue").GetComponent<Image>().sprite = spriteslayers["Screenshot"];
         }
 
@@ -133,13 +135,13 @@ public class GameMasterScript : MonoBehaviour
             {
                 string boght;
                 boght = languagehandler[GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().objecttobebought];
-                decdesc.GetComponent<Text>().text = "Συγχαρητήρια!\nΔιάλεξε νέο χρώμα "+boght+" για να συνεχίσεις!";
+                decdesc.GetComponent<Text>().text = "Συγχαρητήρια!\nΔιάλεξε νέο χρώμα " + boght + " για να συνεχίσεις!";
             }
         }
 
 
         GameObject cnt = GameObject.Find("Counter");
-        if(cnt!=null)
+        if (cnt != null)
         {
             cnt.GetComponent<SpriteRenderer>().sprite = boughtables["Counter"];
             //tents and walls are on the same scene as the counter (so we can change them)
@@ -149,16 +151,16 @@ public class GameMasterScript : MonoBehaviour
         }
 
         //cheat mode!
-        
+
         /*theFurnace = null;
         if(GameObject.Find("Furnace")!=null)
         {
             theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
             theFurnace.numberofrecipesinlevel = 1;
         }*/
-        
 
-        
+
+
 
         if (issavedgame)
         {
@@ -169,6 +171,7 @@ public class GameMasterScript : MonoBehaviour
             XmlDocument xmlDocument = new XmlDocument();
             //xmlDocument.Load(Application.dataPath + "/SavedGames/save1.txt");//
             xmlDocument.Load(Application.dataPath + "/Resources/save1.txt");//
+            //xmlDocument.Load(Application.persistentDataPath + "/Resources/save1.txt");//
 
             XmlNodeList xmoney = xmlDocument.GetElementsByTagName("Money");
             save.money = int.Parse(xmoney[0].InnerText);
@@ -208,7 +211,7 @@ public class GameMasterScript : MonoBehaviour
 
             //WIP
             //GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.name=save.currentrecipe;
-            foreach(Recipe_SO rso in GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe)
+            foreach (Recipe_SO rso in GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe)
             {
                 if (rso.name == save.currentrecipe)
                 {
@@ -216,7 +219,7 @@ public class GameMasterScript : MonoBehaviour
                     GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe = rso;
                     GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.neededIngr = rso.neededIngr;
                     GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.numbOfIng = rso.numbOfIng;
-                    GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.recipeSprite=rso.recipeSprite;
+                    GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.recipeSprite = rso.recipeSprite;
 
                     GameObject.Find("Furnace").GetComponent<FurnaceScript>().usable_number_of_ingredients.Clear();
                     foreach (int j in rso.numbOfIng)
@@ -276,7 +279,7 @@ public class GameMasterScript : MonoBehaviour
             // GameObject.Find("Customer").GetComponent<CustomerScript>().allowspritetochange=true;
             //GameObject.Find("Customer").GetComponent<CustomerScript>().customerchangesprite();
             if (GameObject.Find("Customer").GetComponent<SpriteRenderer>().sprite == GameObject.Find("Customer").GetComponent<CustomerScript>().customerspritelistcurrent[save.customer])
-                Debug.Log("same customer sprite "+save.customer);
+                Debug.Log("same customer sprite " + save.customer);
             else
                 Debug.Log("different customer sprite");
             //GameObject.Find("Customer").GetComponent<CustomerScript>().allowspritetochange = false;
@@ -314,7 +317,7 @@ public class GameMasterScript : MonoBehaviour
             //speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
             speechbubble.GetComponentInChildren<TextMeshPro>().SetText("Thank You!");// = "Thank You!";
 
-        
+
 
     }
 
@@ -339,7 +342,7 @@ public class GameMasterScript : MonoBehaviour
         //Debug.Log(languagehandler["LetsCook!"]);
         //Debug.Log(languagehandler["Cheese"]);
         //Change menu items as well
-        GameObject[] menuitems = new GameObject[4];
+        /*GameObject[] menuitems = new GameObject[4];
         menuitems[0] = GameObject.Find("TitleText");
         menuitems[1] = GameObject.Find("LanguagesButton");
         menuitems[2] = GameObject.Find("LevelsButton");
@@ -355,7 +358,23 @@ public class GameMasterScript : MonoBehaviour
                 menuitems[2].GetComponentInChildren<Text>().text = languagehandler["Levels"];
                 menuitems[3].GetComponentInChildren<Text>().text = languagehandler["Continue"];
             }
+        }*/
+        foreach (GameObject men in menuitems)
+        {
+            if (men == null)
+                break;
+            else
+            {
+                Debug.Log("menuitem name: " + men.GetComponentInChildren<Text>().text);
+                men.GetComponentInChildren<Text>().text = languagehandler[men.GetComponentInChildren<Text>().text];
+            }
         }
+    }
+
+    public GameObject[] menuitems;
+    void menuitemhandler(Text menutext)
+    {
+        menutext.text=languagehandler[menutext.text];
     }
 
     private void InitialiseBoughtables()
@@ -373,6 +392,7 @@ public class GameMasterScript : MonoBehaviour
         //take a screenshot
         //ScreenCapture.CaptureScreenshot(Application.dataPath + "/SavedGames/scrnsht.png");
         ScreenCapture.CaptureScreenshot(Application.dataPath + "/Resources/scrnsht.png");
+        //ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/Resources/scrnsht.png");
         //refresh its metadata
         //AssetDatabase.ImportAsset("Assets/Resources/scrnsht.png");
         //AssetDatabase.ImportAsset("Assets/Resources/scrnsht.png.meta");
@@ -489,6 +509,7 @@ public class GameMasterScript : MonoBehaviour
         //xmlDocument.Save(Application.dataPath + "/SavedGames/save1.txt");//
         //xmlDocument.Save(Application.persistentDataPath + "/SavedGames/save1.txt");//
         xmlDocument.Save(Application.dataPath + "/Resources/save1.txt");//
+        //xmlDocument.Save(Application.persistentDataPath + "/Resources/save1.txt");//
         //xmlDocument.Save(save1.txt);//
     }
 
@@ -497,6 +518,7 @@ public class GameMasterScript : MonoBehaviour
     public static bool issavedgame = false;
     public void LoadGame()
     {
+        Debug.Log("current level_id: " + levelid);
         if (levelchanged == false)
         {
             LoadXML();
@@ -512,6 +534,7 @@ public class GameMasterScript : MonoBehaviour
         Save save = new Save();
         XmlDocument xmlDocument = new XmlDocument();
         xmlDocument.Load(Application.dataPath + "/Resources/save1.txt");//
+        //xmlDocument.Load(Application.persistentDataPath + "/Resources/save1.txt");//
 
         XmlNodeList xmoney = xmlDocument.GetElementsByTagName("Money");
         save.money = int.Parse(xmoney[0].InnerText);

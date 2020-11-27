@@ -10,7 +10,7 @@ fix scenes so that updating them all becomes less of a hussle
 
 fireworks!(particles)
 -is it good enough?
--seems to start late if we are quick enough  to finish the next recipe?
+//-seems to start late if we are quick enough  to finish the next recipe?
 
 exit button position and texts and menus according to idgames conversation!
 -consult aforementioned layouts
@@ -34,20 +34,15 @@ main menu: start over
 ???rectangle around selection OR faded graphics when something isn't applied???
 change option button images to the ones currently selected
 
-decorations menu
--add functionality for background rectangles
--should function similarly to levelbuttons in gamemaster
 
 translations in menu errors
 -make an array of menuitems on GameMasters, and rather make their changes there
+--'choose' on decoration screen
 --apply the same for other leftover gameobjects eg 'speechbubble'
 
-menu options/back functionality
-- clicking back while on the submenu should take us to the main menu
-clicking on a submenuobject should take us to the options menu
--add onclick(): press option button
-
 fix sound/character options menu
+-save these preferences for future use
+
 
 Gameplay Issues:
 -using money?

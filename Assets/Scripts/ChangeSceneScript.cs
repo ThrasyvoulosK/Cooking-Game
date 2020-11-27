@@ -30,7 +30,8 @@ public class ChangeSceneScript : MonoBehaviour
     }
     public void change_scene_option()
     {
-        GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelid = SceneManager.GetActiveScene().buildIndex + level_id * 2 + 1;
+        GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelid = (SceneManager.GetActiveScene().buildIndex + level_id*2 +1);
+        Debug.Log("scene changed to:" + GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelid);
         GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelchanged = true;
     }
 

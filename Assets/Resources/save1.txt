@@ -1,10 +1,12 @@
 <Save>
-  <Money>20</Money>
+  <Money>0</Money>
   <Scene>1</Scene>
-  <CompletedRecipes>2</CompletedRecipes>
-  <CurrentRecipe>Sandwich_Ham</CurrentRecipe>
-  <RemainingRecipes>Sandwich_Cheese</RemainingRecipes>
+  <CompletedRecipes>0</CompletedRecipes>
+  <CurrentRecipe>Sandwich_Cheese</CurrentRecipe>
   <RemainingRecipes>Sandwich_Ham</RemainingRecipes>
+  <RemainingRecipes>Sandwich_Ham</RemainingRecipes>
+  <RemainingRecipes>Sandwich_Ham</RemainingRecipes>
+  <RemainingRecipes>Sandwich_Cheese</RemainingRecipes>
   <RemainingRecipes>Sandwich_Cheese</RemainingRecipes>
   <Counter>Counter_Grey</Counter>
   <Tent>Tent_Yellow</Tent>

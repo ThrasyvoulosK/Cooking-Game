@@ -172,14 +172,10 @@ public class RecipeCheckScript : MonoBehaviour
 
     public void RecipeIngredientDesc(string ingredientname, Image gmo)
     {
-        Debug.Log("recipeingredientdesc");
-        //gmo.GetComponentInChildren<TextMeshPro>().SetText( theGameMaster.languagehandler[ingredientname + "_lc"]);
-        //gmo.GetComponent<TextMeshPro>().SetText( theGameMaster.languagehandler[ingredientname + "_lc"]);
-        //gmo.GetComponentInChildren<Text>().text = theGameMaster.languagehandler[ingredientname + "_lc"];
-        //if (gmo.GetComponentInChildren<TextMeshPro>() != null)
+        //Debug.Log("recipeingredientdesc");
         if (gmo.GetComponentInChildren<Text>() != null)
         {
-            Debug.Log("text not null");
+            //Debug.Log("text not null");
             gmo.GetComponentInChildren<Text>().text = theGameMaster.languagehandler[ingredientname + "_lc"];
         }
         else

@@ -34,10 +34,37 @@ public class TransactionScript : MonoBehaviour
                 theGameMaster.boughtables[objecttobebought] = hit2D.collider.GetComponent<SpriteRenderer>().sprite;
                 Debug.Log(theGameMaster.boughtables[objecttobebought].name);
 
-                theChangeScene.change_scene();
+                Transform transform = hit2D.collider.transform;
+
+                greenrectangle(transform);
+                //theChangeScene.change_scene();
             }
 
         }
         
+    }
+
+    //this function creates a green rectangle around an object, when we click on it
+    void greenrectangle(Transform transform)
+    {
+        GameObject gr=new GameObject();
+        gr.SetActive(false);
+        //SpriteRenderer grspr = new SpriteRenderer();
+        //grspr.sprite = theGameMaster.spriteslayers["Rectangle_Green_Full"];
+        gr.AddComponent<SpriteRenderer>();
+        gr.GetComponent<SpriteRenderer>().sprite= theGameMaster.spriteslayers["Rectangle_Green_Full"];
+
+        GameObject otherobject;
+        if ((otherobject = GameObject.Find("Selected")) != null)
+            Destroy(otherobject);
+        gr.name = "Selected";
+        //gr = Instantiate(gr,transform);
+        gr.GetComponent<Transform>().position = transform.position;
+        gr.GetComponent<Transform>().localScale= new Vector3(0.6f,0.6f,0f);
+
+        gr.GetComponent<SpriteRenderer>().sortingOrder = -2;
+
+        gr.SetActive(true);
+
     }
 }
