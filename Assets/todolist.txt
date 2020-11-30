@@ -8,9 +8,7 @@ Replace all sprites with the ones in the dictionary of gamemaster!
 fix scenes so that updating them all becomes less of a hussle
 -make them prefabs?
 
-fireworks!(particles)
--is it good enough?
-//-seems to start late if we are quick enough  to finish the next recipe?
+fireworks!(particles) -is it good enough?
 
 exit button position and texts and menus according to idgames conversation!
 -consult aforementioned layouts
@@ -18,30 +16,31 @@ exit button position and texts and menus according to idgames conversation!
 ingredients' names on checklist
 -test with different screen resolutions
 
+language select error
+-changing language twice brings up this error
+--menuitems array is to blame
+---when we change to Greek and change the menuitems, reinitialising our dictionary keeps the Greek terms, instead of using the basewords, which get deleted, thus making it impossible to change back!
+
+capitalise asap
+
 main menu: start over
 -first screen
-//--background image
-//--play button(continue?)
-//--options button
 //---back
----character?
----sound?
----languages
----levels
+//---character?
+//---sound?
+//---languages
+//---levels
 --info button?
 //--exit button
 ---update functionality for exiting from menus
+---write 'exit' next to the button
 ???rectangle around selection OR faded graphics when something isn't applied???
 change option button images to the ones currently selected
 
+translations in menus
+-apply the same for other leftover gameobjects eg 'speechbubble'
 
-translations in menu errors
--make an array of menuitems on GameMasters, and rather make their changes there
---'choose' on decoration screen
---apply the same for other leftover gameobjects eg 'speechbubble'
-
-fix sound/character options menu
--save these preferences for future use
+read new level doc!
 
 
 Gameplay Issues:

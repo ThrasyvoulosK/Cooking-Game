@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
 public class TransactionScript : MonoBehaviour
 {
     public string objecttobebought;
@@ -18,6 +19,8 @@ public class TransactionScript : MonoBehaviour
         GameObject.Find("Object1").GetComponent<SpriteRenderer>().sprite = spritetobebought[0];
         GameObject.Find("Object2").GetComponent<SpriteRenderer>().sprite = spritetobebought[1];
         GameObject.Find("Object3").GetComponent<SpriteRenderer>().sprite = spritetobebought[2];
+
+        GameObject.Find("ChooseButton").GetComponentInChildren<Text>().text = theGameMaster.languagehandler["Choose"];
         
     }
 
