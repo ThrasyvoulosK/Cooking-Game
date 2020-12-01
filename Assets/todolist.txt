@@ -21,7 +21,7 @@ language select error
 --menuitems array is to blame
 ---when we change to Greek and change the menuitems, reinitialising our dictionary keeps the Greek terms, instead of using the basewords, which get deleted, thus making it impossible to change back!
 
-capitalise asap
+//capitalise asap
 
 main menu: start over
 -first screen
@@ -42,6 +42,20 @@ translations in menus
 
 read new level doc!
 
+fix buttons
+-sizes
+-colours
+-positions
+-images
+--initialise properly, with current data
+--disable on clicking
+
+congratulation screen before transaction
+//-initialise properly:
+-apply on the rest of the screens
+
+check if player has already played
+-application.iseditor
 
 Gameplay Issues:
 -using money?

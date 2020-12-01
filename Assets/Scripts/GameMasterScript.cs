@@ -33,6 +33,8 @@ public class GameMasterScript : MonoBehaviour
     [SerializeField]
     public List<string> words_current;
     public Dictionary<string, string> languagehandler = new Dictionary<string, string>();
+    //keep the following stored in case we want to change language more than once
+    public Dictionary<string, string> languagehandlerprev = new Dictionary<string, string>();
 
     //transactions
     //assign current sprites on screen gameobjects
@@ -53,7 +55,7 @@ public class GameMasterScript : MonoBehaviour
     public bool levelchanged = false;
 
     //select character options
-    public string option_character = "m";
+    public string option_character = "Character_M";
     //select sound options
     public bool option_sound = true;
     //select music options
@@ -151,14 +153,14 @@ public class GameMasterScript : MonoBehaviour
         }
 
         //cheat mode!
-        /*
+        
         theFurnace = null;
         if(GameObject.Find("Furnace")!=null)
         {
             theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
             theFurnace.numberofrecipesinlevel = 1;
         }
-        */
+        
 
 
 
@@ -307,6 +309,23 @@ public class GameMasterScript : MonoBehaviour
 
     public void changelanguage_en()
     {
+        /*languagehandlerprev.Clear();
+        for (int i = 0; i < words_en_base.Count; i++)
+        {
+            languagehandlerprev.Add(words_en_base[i], words_current[i]);
+            Debug.Log("added to dictionary: " + words_en_base[i] + words_current[i]);
+        }*/
+        if (languagehandler.Count>0)
+        {
+            Debug.Log("languagehandelernot null" + languagehandler.Count);
+            for (int i = 0; i < words_en_base.Count; i++)
+            {
+                foreach (GameObject men in menuitems)
+                    if (languagehandler[words_en_base[i]] == men.GetComponentInChildren<Text>().text)
+                        men.GetComponentInChildren<Text>().text = words_en_base[i];
+            }
+        }
+
         language_current = "English";
         Debug.Log("current language is: " + language_current);
         words_current = words_en;
@@ -323,33 +342,49 @@ public class GameMasterScript : MonoBehaviour
 
     public void changelanguage_gr()
     {
+        /*language_current = "English";
+        words_current = words_en;
+        //InitialiseLanguage();
+        languagehandlerprev.Clear();
+        for (int i = 0; i < words_en_base.Count; i++)
+        {
+            languagehandlerprev.Add(words_en_base[i], words_current[i]);
+            Debug.Log("added to dictionary: " + words_en_base[i] + words_current[i]);
+        }*/
+        for (int i = 0; i < words_en_base.Count; i++)
+        {
+            foreach (GameObject men in menuitems)
+                if (languagehandler[words_en_base[i]] == men.GetComponentInChildren<Text>().text)
+                    men.GetComponentInChildren<Text>().text = words_en_base[i];
+        }
+
+
         language_current = "Greek";
         words_current = words_gr;
         InitialiseLanguage();
-
     }
     private void InitialiseLanguage()
     {
         //words_current = words_en;//
         //words_current = words_gr;//
+        /*languagehandlerprev.Clear();
+        languagehandlerprev = languagehandler;*/
         languagehandler.Clear();
         for (int i = 0; i < words_en_base.Count; i++)
         {
             languagehandler.Add(words_en_base[i], words_current[i]);
-            //Debug.Log("added to dictionary: " + words_en_base[i]);
+            Debug.Log("added to dictionary: " + words_en_base[i]+words_current[i]);
+            /*Debug.Log(languagehandler[words_en_base[i]]);
+            Debug.Log(languagehandler[words_current[i]]);*/
         }
         //Debug.Log("sizeof base: " + words_en_base.Count + " Sizeof curr: " + words_current.Count);
         foreach (GameObject men in menuitems)
         {
-            if (men == null)
-                break;
-            else
-            {
-                Debug.Log("menuitem name: " + men.GetComponentInChildren<Text>().text);
-                Debug.Log("menuitemdic name: " + languagehandler[men.GetComponentInChildren<Text>().text]);
-                men.GetComponentInChildren<Text>().text = languagehandler[men.GetComponentInChildren<Text>().text];
-            }
+            men.GetComponentInChildren<Text>().text = languagehandler[men.GetComponentInChildren<Text>().text];
+            //preserve image aspect in here as well
+            men.GetComponentInChildren<Image>().preserveAspect=true;
         }
+        
     }
 
     public GameObject[] menuitems;
@@ -368,11 +403,11 @@ public class GameMasterScript : MonoBehaviour
 
     public void change_character_m()
     {
-        option_character = "m";                    
+        option_character = "Character_M";                    
     }
     public void change_character_f()
     {
-        option_character = "f";                    
+        option_character = "Character_F";                    
     }
     public void change_sound()
     {

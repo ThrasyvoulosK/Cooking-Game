@@ -10,6 +10,8 @@ public class TransactionScript : MonoBehaviour
 
     public GameMasterScript theGameMaster;
     public ChangeSceneScript theChangeScene;
+
+    public GameObject[] screenGameObjects;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,19 @@ public class TransactionScript : MonoBehaviour
         GameObject.Find("Object3").GetComponent<SpriteRenderer>().sprite = spritetobebought[2];
 
         GameObject.Find("ChooseButton").GetComponentInChildren<Text>().text = theGameMaster.languagehandler["Choose"];
+
+        //
+        GameObject.Find("ContinueButton").GetComponentInChildren<Text>().text = theGameMaster.languagehandler["Continue"];
+        GameObject.Find("Congratulations").GetComponent<Text>().text = theGameMaster.languagehandler["Congratulations"];
+        Debug.Log("option character" + theGameMaster.option_character);
+        GameObject.Find("CharacterImage").GetComponent<Image>().sprite = theGameMaster.spriteslayers[theGameMaster.option_character];
+        //GameObject.Find("CharacterImage").GetComponent<Image>().sprite = theGameMaster.spriteslayers["Character_M"];
+
+        //hide all these until we press coninue
+        foreach(GameObject sgameObject in screenGameObjects)
+        {
+            sgameObject.SetActive(false);
+        }
         
     }
 
@@ -69,5 +84,14 @@ public class TransactionScript : MonoBehaviour
 
         gr.SetActive(true);
 
+    }
+
+    public void showscreen()
+    {
+        foreach (GameObject sgameObject in screenGameObjects)
+        {
+            Debug.Log("showscreen " + sgameObject.name);
+            sgameObject.SetActive(true);
+        }
     }
 }

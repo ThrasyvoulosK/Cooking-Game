@@ -1,7 +1,23 @@
 fileFormatVersion: 2
 guid: 9f131d9f91127f343945b378b7e531b6
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4763818779790182156
+    second: "canteen_congrats \u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03B9\u03B1 extra
+      \u03B1\u03BD \u03C7\u03C1\u03B5\u03B9\u03B1\u03C3\u03C4\u03BF\u03C5\u03BD \u03B1\u03C1\u03B3\u03BF\u03C4\u03B5\u03C1\u03B1_0"
+  - first:
+      213: 4745524541729414952
+    second: "canteen_congrats \u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03B9\u03B1 extra
+      \u03B1\u03BD \u03C7\u03C1\u03B5\u03B9\u03B1\u03C3\u03C4\u03BF\u03C5\u03BD \u03B1\u03C1\u03B3\u03BF\u03C4\u03B5\u03C1\u03B1_1"
+  - first:
+      213: 2656192046368269938
+    second: "canteen_congrats \u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03B9\u03B1 extra
+      \u03B1\u03BD \u03C7\u03C1\u03B5\u03B9\u03B1\u03C3\u03C4\u03BF\u03C5\u03BD \u03B1\u03C1\u03B3\u03BF\u03C4\u03B5\u03C1\u03B1_2"
+  - first:
+      213: 3293971628020299023
+    second: "canteen_congrats \u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03B9\u03B1 extra
+      \u03B1\u03BD \u03C7\u03C1\u03B5\u03B9\u03B1\u03C3\u03C4\u03BF\u03C5\u03BD \u03B1\u03C1\u03B3\u03BF\u03C4\u03B5\u03C1\u03B1_3"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +57,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +89,125 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "canteen_congrats \u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03B9\u03B1 extra
+        \u03B1\u03BD \u03C7\u03C1\u03B5\u03B9\u03B1\u03C3\u03C4\u03BF\u03C5\u03BD
+        \u03B1\u03C1\u03B3\u03BF\u03C4\u03B5\u03C1\u03B1_0"
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1227
+        width: 1927
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c078abfb0fb7c1240800000000000000
+      internalID: 4763818779790182156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_congrats \u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03B9\u03B1 extra
+        \u03B1\u03BD \u03C7\u03C1\u03B5\u03B9\u03B1\u03C3\u03C4\u03BF\u03C5\u03BD
+        \u03B1\u03C1\u03B3\u03BF\u03C4\u03B5\u03C1\u03B1_1"
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 1227
+        width: 1927
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f1ea68d6d7bd140800000000000000
+      internalID: 4745524541729414952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_congrats \u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03B9\u03B1 extra
+        \u03B1\u03BD \u03C7\u03C1\u03B5\u03B9\u03B1\u03C3\u03C4\u03BF\u03C5\u03BD
+        \u03B1\u03C1\u03B3\u03BF\u03C4\u03B5\u03C1\u03B1_2"
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 66
+        width: 1923
+        height: 1109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276aff2d790bcd420800000000000000
+      internalID: 2656192046368269938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_congrats \u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03B9\u03B1 extra
+        \u03B1\u03BD \u03C7\u03C1\u03B5\u03B9\u03B1\u03C3\u03C4\u03BF\u03C5\u03BD
+        \u03B1\u03C1\u03B3\u03BF\u03C4\u03B5\u03C1\u03B1_3"
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 74
+        width: 1929
+        height: 1101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f057d545eb986bd20800000000000000
+      internalID: 3293971628020299023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
