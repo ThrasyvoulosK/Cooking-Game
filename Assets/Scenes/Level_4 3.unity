@@ -289,6 +289,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1625293373}
     m_Modifications:
+    - target: {fileID: 5537815702724466937, guid: e9190ba87e4188f449cdf9ebe3243932, type: 3}
+      propertyPath: m_Text
+      value: x
+      objectReference: {fileID: 0}
     - target: {fileID: 5537815703427119960, guid: e9190ba87e4188f449cdf9ebe3243932, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -343,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5537815703427119960, guid: e9190ba87e4188f449cdf9ebe3243932, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 68.150055
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5537815703427119960, guid: e9190ba87e4188f449cdf9ebe3243932, type: 3}
       propertyPath: m_SizeDelta.y
@@ -376,6 +380,10 @@ PrefabInstance:
     - target: {fileID: 5537815703427119961, guid: e9190ba87e4188f449cdf9ebe3243932, type: 3}
       propertyPath: m_Name
       value: QuitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565856405723699672, guid: e9190ba87e4188f449cdf9ebe3243932, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9190ba87e4188f449cdf9ebe3243932, type: 3}
@@ -651,6 +659,9 @@ MonoBehaviour:
   money: 0
   levelid: 1
   levelchanged: 0
+  option_character: Character_M
+  option_sound: 1
+  option_music: 1
   menuitems: []
 --- !u!114 &384308904 stripped
 MonoBehaviour:

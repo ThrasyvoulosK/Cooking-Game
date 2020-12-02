@@ -8,39 +8,41 @@ Replace all sprites with the ones in the dictionary of gamemaster!
 fix scenes so that updating them all becomes less of a hussle
 -make them prefabs?
 
-fireworks!(particles) -is it good enough?
+//fireworks!(particles) -is it good enough?
 
 exit button position and texts and menus according to idgames conversation!
 -consult aforementioned layouts
 
-ingredients' names on checklist
--test with different screen resolutions
+test with different screen resolutions
 
-language select error
--changing language twice brings up this error
---menuitems array is to blame
----when we change to Greek and change the menuitems, reinitialising our dictionary keeps the Greek terms, instead of using the basewords, which get deleted, thus making it impossible to change back!
+//language select error
 
 //capitalise asap
 
-main menu: start over
--first screen
-//---back
-//---character?
-//---sound?
-//---languages
-//---levels
---info button?
-//--exit button
----update functionality for exiting from menus
----write 'exit' next to the button
-???rectangle around selection OR faded graphics when something isn't applied???
-change option button images to the ones currently selected
+main menu:
+-info button?
+-fade graphics when something isn't applied
+//change option button images to the ones currently selected
+
+exit button
+-update functionality for exiting from menus
+//-write 'exit' next to the button
+-fix for game scenes
+
 
 translations in menus
 -apply the same for other leftover gameobjects eg 'speechbubble'
 
-read new level doc!
+//read new level doc!
+change recipes
+-levels 1 to 4
+add new levels
+-5 to 10
+add new recipes
+-ice creams
+-salads
+-club sandwiches
+new ingredients for old and new types of recipes
 
 fix buttons
 -sizes
@@ -50,12 +52,19 @@ fix buttons
 --initialise properly, with current data
 --disable on clicking
 
-congratulation screen before transaction
-//-initialise properly:
--apply on the rest of the screens
+transaction screen:
+-proper translation of all its objects
+-update actual transactions based on layouts
 
 check if player has already played
 -application.iseditor
+
+graphics that need change
+-first screen
+--yellow pixel line on its left part
+--'x' button remove
+--subsequent menu screen 
+---background graphic changes position (height?)
 
 Gameplay Issues:
 -using money?
@@ -96,10 +105,9 @@ screenshot metadata error
 -warning message in editor
 -between games, the previous screenshot is shown on the screen; not the current one
 
-saves not working?
--path error?
+//saves not working?-path error?
 
-disabling menu objects causes errors
+//disabling menu objects causes errors
 
 
 

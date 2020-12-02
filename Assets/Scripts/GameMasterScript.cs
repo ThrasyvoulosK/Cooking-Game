@@ -153,14 +153,14 @@ public class GameMasterScript : MonoBehaviour
         }
 
         //cheat mode!
-        
+        /*
         theFurnace = null;
         if(GameObject.Find("Furnace")!=null)
         {
             theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
             theFurnace.numberofrecipesinlevel = 1;
         }
-        
+        */
 
 
 
@@ -382,7 +382,8 @@ public class GameMasterScript : MonoBehaviour
         {
             men.GetComponentInChildren<Text>().text = languagehandler[men.GetComponentInChildren<Text>().text];
             //preserve image aspect in here as well
-            men.GetComponentInChildren<Image>().preserveAspect=true;
+            if(men.GetComponentInChildren<Image>()!=null)
+                men.GetComponentInChildren<Image>().preserveAspect=true;
         }
         
     }
