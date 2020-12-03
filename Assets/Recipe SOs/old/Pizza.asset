@@ -10,10 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6055c507492e90246a990ba159192779, type: 3}
-  m_Name: Meats
+  m_Name: Pizza
   m_EditorClassIdentifier: 
+  nameofrecipe: 
   recipeSprite: {fileID: 0}
   neededIngr:
-  - Bacon
+  - Bread
   - Ham
-  numbOfIng: 0100000001000000
+  - Bacon
+  - Cheese
+  - Tomato
+  numbOfIng: 0100000001000000010000000100000001000000
+  layeredingredients: []

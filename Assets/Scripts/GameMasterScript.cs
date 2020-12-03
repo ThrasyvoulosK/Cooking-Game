@@ -127,7 +127,7 @@ public class GameMasterScript : MonoBehaviour
             {
                 string boght;
                 boght = languagehandler[GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().objecttobebought];
-                decdesc.GetComponent<Text>().text = "Congratulations!\nChoose a new " + boght + " colour to continue!";
+                decdesc.GetComponent<Text>().text = "Choose a new " + boght + " colour for your canteen!";
             }
         }
         else if (language_current == "Greek")
@@ -137,7 +137,7 @@ public class GameMasterScript : MonoBehaviour
             {
                 string boght;
                 boght = languagehandler[GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().objecttobebought];
-                decdesc.GetComponent<Text>().text = "Συγχαρητήρια!\nΔιάλεξε νέο χρώμα " + boght + " για να συνεχίσεις!";
+                decdesc.GetComponent<Text>().text = "Διάλεξε νέο χρώμα " + boght + " για τη καντίνα σου!";
             }
         }
 

@@ -235,11 +235,13 @@ public class IngredientScript : MonoBehaviour
                     {
                         //don't search if there aren't any recipes left
                         // and change the level, since this is the Winning Condition!
+                        /*
                         if (theFurnace.next_recipe.Count == 0)
                         {
                             //Debug.Log("no more recipes");
                             theChangeScene.change_scene();
                         }
+                        */
 
                         //otherwise,
                         //search for a non-null recipe in the nextrecipes lists
