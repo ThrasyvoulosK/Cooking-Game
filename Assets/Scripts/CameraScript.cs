@@ -21,10 +21,12 @@ public class CameraScript : MonoBehaviour
         }
         DontDestroyOnLoad(this);
     }*/
-
+    public GameMasterScript theGameMaster;
     // Start is called before the first frame update
     void Start()
     {
+        //call the gamemaster gameobject
+        theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
         //find the camera's aspect
         // and change its aspect accordingly
 
@@ -54,6 +56,20 @@ public class CameraScript : MonoBehaviour
 
                 GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(635f, 185f, 0f);
             }
+            else if (GameObject.Find("OptionsButton") != null)
+            {
+                //get 'back' menu button
+                theGameMaster.menuitems[0].GetComponent<RectTransform>().anchoredPosition = new Vector3(-425f, 386f, 0);
+                theGameMaster.menuitems[0].GetComponent<RectTransform>().localScale = new Vector3(0.75f, 0.75f, 0);
+
+                theGameMaster.menuitems[6].GetComponent<RectTransform>().anchoredPosition = new Vector3(-110f, -447f, 0);
+
+            }
+            else if(GameObject.Find("ContinueButton")!=null)
+            {
+                GameObject.Find("ContinueButton").GetComponent<RectTransform>().localScale = new Vector3(3.5f, 3.5f, 0);
+                GameObject.Find("DecText").GetComponent<RectTransform>().localScale = new Vector3(0.4f, 0.4f, 0);
+            }
 
         }
         else if (Camera.main.aspect < 1.34f)//640/480
@@ -73,6 +89,20 @@ public class CameraScript : MonoBehaviour
                 GameObject.Find("RecImage").GetComponent<RectTransform>().sizeDelta = new Vector2(190f, 100f);
 
                 GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(672f, 194f, 0f);
+            }
+            else if (GameObject.Find("OptionsButton") != null)
+            {
+                //get 'back' menu button
+                theGameMaster.menuitems[0].GetComponent<RectTransform>().anchoredPosition = new Vector3(-455f, 386f, 0);
+                theGameMaster.menuitems[0].GetComponent<RectTransform>().localScale = new Vector3(0.9f, 0.9f, 0);
+
+                theGameMaster.menuitems[6].GetComponent<RectTransform>().anchoredPosition = new Vector3(-125f, -447f, 0);
+
+            }
+            else if (GameObject.Find("ContinueButton") != null)
+            {
+                GameObject.Find("ContinueButton").GetComponent<RectTransform>().localScale = new Vector3(3.5f, 3.5f, 0);
+                GameObject.Find("DecText").GetComponent<RectTransform>().localScale = new Vector3(0.4f, 0.4f, 0);
             }
             //quit button?
 
@@ -94,12 +124,19 @@ public class CameraScript : MonoBehaviour
 
                 GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(760f, 212f, 0f);
             }
+            else if (GameObject.Find("OptionsButton") != null)
+            {
+                theGameMaster.menuitems[0].GetComponent<RectTransform>().anchoredPosition = new Vector3(-505f, 386f, 0);
+                //options button
+                theGameMaster.menuitems[6].GetComponent<RectTransform>().anchoredPosition = new Vector3(-150f, -447f, 0);
+
+            }
+            else if (GameObject.Find("ContinueButton") != null)
+            {
+                GameObject.Find("ContinueButton").GetComponent<RectTransform>().localScale = new Vector3(3.5f, 3.5f, 0);
+                GameObject.Find("DecText").GetComponent<RectTransform>().localScale = new Vector3(0.4f, 0.4f, 0);
+            }
         }
-        /*else if (Camera.main.aspect < 1.57f)
-        {
-            Debug.Log("800x480");
-            //GameObject.Find("RecImage").GetComponent<RectTransform>().anchoredPosition = new Vector3(483f, -47f, 0f);
-        }*/
         else if (Camera.main.aspect < 1.67f)
         {
             Debug.Log("16:10");
@@ -111,6 +148,13 @@ public class CameraScript : MonoBehaviour
                 GameObject.Find("RecImage").GetComponent<RectTransform>().anchoredPosition = new Vector3(460f, -47f, 0f);
 
                 GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(870f, 260f, 0f);
+            }
+            else if (GameObject.Find("OptionsButton") != null)
+            {
+                theGameMaster.menuitems[0].GetComponent<RectTransform>().anchoredPosition = new Vector3(-570f, 386f, 0);
+                //options button
+                theGameMaster.menuitems[6].GetComponent<RectTransform>().anchoredPosition = new Vector3(-180f, -447f, 0);
+
             }
         }
         else if (Camera.main.aspect < 1.78f)//1920/1080
@@ -151,6 +195,11 @@ public class CameraScript : MonoBehaviour
                 GameObject.Find("SpawningPoint").GetComponent<Transform>().position = new Vector3(-12f, -3f, 0f);
 
             }
+            else if(GameObject.Find("OptionsButton")!=null)
+            {
+                //get 'back' menu button
+                theGameMaster.menuitems[0].GetComponent<RectTransform>().anchoredPosition = new Vector3(-680f, 386f, 0);
+            }
         }
         else if (Camera.main.aspect < 2.06f)//2960/1440
         { 
@@ -167,6 +216,8 @@ public class CameraScript : MonoBehaviour
 
                 GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(1022f, 290f, 0f);
             }
+            else if (GameObject.Find("OptionsButton") != null)
+                theGameMaster.menuitems[0].GetComponent<RectTransform>().anchoredPosition = new Vector3(-700f, 386f, 0);            
         }
         //Debug.Log("CurrentRatio is: " + Camera.main.aspect);
         //Camera.main.orthographicSize += Camera.main.aspect/2;

@@ -373,7 +373,7 @@ public class GameMasterScript : MonoBehaviour
         for (int i = 0; i < words_en_base.Count; i++)
         {
             languagehandler.Add(words_en_base[i], words_current[i]);
-            Debug.Log("added to dictionary: " + words_en_base[i]+words_current[i]);
+            //Debug.Log("added to dictionary: " + words_en_base[i]+words_current[i]);
             /*Debug.Log(languagehandler[words_en_base[i]]);
             Debug.Log(languagehandler[words_current[i]]);*/
         }

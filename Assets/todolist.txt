@@ -11,14 +11,7 @@ fix scenes so that updating them all becomes less of a hussle
 exit button position and texts and menus according to idgames conversation!
 -consult aforementioned layouts
 
-test with different screen resolutions
-//2:1
--back button
--options button
--transaction description
--continue button
--Greek version, too
--fireworks appear on the dark part of the screen
+fireworks appear on the dark part of the screen,breaking the fourth wall
 
 main menu:
 -info button?
@@ -32,30 +25,17 @@ exit button
 
 //translations of gameobjects eg 'speechbubble'
 
-//read new level doc!
-//change recipes
-add new levels
--5 to 10
-add new recipes
--ice creams
---cream,chocolate,strawberry,//banana, peanut
--salads
---onion,carrot,cucumber,cabbage, //nuts, cruttons
--club sandwiches
---potatoes, mayonaise
-new ingredients for old and new types of recipes
--chocolate and caramel syrup
--ketchup and mustard
+add //peanut//nuts, cruttons-club sandwiches--potatoes, mayonaise-chocolate and caramel syrup-ketchup and mustard
 
 check if player has already played
 -application.iseditor
 
 graphics that might need change
 -first screen
-//--yellow pixel line on its left part
 --'x' button remove
 --subsequent menu screen 
 ---background graphic changes position (height?)
+---background of background (blue) visible?
 
 
 Gameplay Issues:
