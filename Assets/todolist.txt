@@ -8,9 +8,6 @@ Replace all sprites with the ones in the dictionary of gamemaster!
 fix scenes so that updating them all becomes less of a hussle
 -make them prefabs?
 
-exit button position and texts and menus according to idgames conversation!
--consult aforementioned layouts
-
 fireworks appear on the dark part of the screen,breaking the fourth wall
 
 main menu:
@@ -22,6 +19,8 @@ exit button
 -update functionality for exiting from menus
 //-write 'exit' next to the button
 //-fix for game scenes
+-position and texts and menus according to idgames conversation!
+--consult aforementioned layouts
 
 //translations of gameobjects eg 'speechbubble'
 
@@ -35,7 +34,11 @@ graphics that might need change
 --'x' button remove
 --subsequent menu screen 
 ---background graphic changes position (height?)
----background of background (blue) visible?
+
+integrate ice-cream graphics
+//-flying ingredients//-tick when correct//--add componetn : tick sprite//--change textmeshpro layer to +1 of sprite
+-make accomodating recipes for given sprites
+-recipe check sprites
 
 
 Gameplay Issues:

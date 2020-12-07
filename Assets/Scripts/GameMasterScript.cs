@@ -439,12 +439,14 @@ public class GameMasterScript : MonoBehaviour
 
     public void SaveGame()
     {
+        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "scrnsht.png");
+        //ScreenCapture.CaptureScreenshot(Application.dataPath + "/Resources/scrnsht.png");
         SaveXML();
 
         //take a screenshot
         //ScreenCapture.CaptureScreenshot(Application.dataPath + "/SavedGames/scrnsht.png");
         //ScreenCapture.CaptureScreenshot(Application.dataPath + "/Resources/scrnsht.png");
-        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "scrnsht.png");
+        /*ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "scrnsht.png");*/
         //refresh its metadata
         //AssetDatabase.ImportAsset("Assets/Resources/scrnsht.png");
         //AssetDatabase.ImportAsset("Assets/Resources/scrnsht.png.meta");

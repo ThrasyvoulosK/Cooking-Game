@@ -23,6 +23,8 @@ public class FoodLayersScript : MonoBehaviour
 
     public ChangeSceneScript theChangeScene;
 
+    public GameMasterScript theGameMaster;
+
     GameObject target;
     GameObject movetoward;
 
@@ -46,7 +48,14 @@ public class FoodLayersScript : MonoBehaviour
         theChangeScene = GameObject.Find("Canvas").GetComponent<ChangeSceneScript>();
         theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
 
+        theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
+
         gameObject.name = "FoodLayer(Clone)";
+
+        //change ice cream's position to within the board's surface
+        if (theFurnace.recipe.name.StartsWith("IceCream"))
+            gameObject.transform.position = new Vector3(-0.67f, 0.4f, 0);
+
 
     }
 
@@ -172,6 +181,13 @@ public class FoodLayersScript : MonoBehaviour
         {
             return SpriteHandler("Coffee_Down");
         }
+        else if (recipename.StartsWith("IceCream"))
+        {
+            Debug.Log("icecream base");
+            return theGameMaster.spriteslayers["IceCream_Down"];
+        }
+
+        Debug.Log("null base: "+recipename);
         return null;
     }
 
@@ -274,7 +290,11 @@ public class FoodLayersScript : MonoBehaviour
             }
 
         }
-        return null;
+        else if (recipename.StartsWith("IceCream"))
+        {
+            return GameMasterScript.Instance.spriteslayers[ingredientname];
+        }
+            return null;
     }
 
     Vector2 directiontotarget;

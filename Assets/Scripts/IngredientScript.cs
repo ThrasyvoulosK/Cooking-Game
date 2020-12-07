@@ -341,6 +341,27 @@ public class IngredientScript : MonoBehaviour
         }
         else
         {
+            //fingredient.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 128);
+            // add as a child fingredient.AddComponent<>
+            //Instantiate(GameObject);
+            GameObject tick = Instantiate(fingredient);
+            tick.name = "Tick";
+            SpriteRenderer sp2= tick.AddComponent<SpriteRenderer>();
+            //sp2.sprite= Resources.LoadAll<Sprite>("canteen_imantas")[1];
+            tick.GetComponent<SpriteRenderer>().sprite= Resources.LoadAll<Sprite>("canteen_imantas")[1];
+
+            fingredient.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 128);
+            tick.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+            tick.GetComponentInChildren<TextMeshPro>().enabled = false;//
+            //tick.GetComponent<SpriteRenderer>().sortingLayerID = 8;
+            
+
+            tick.transform.parent = fingredient.transform;
+            tick.GetComponent<Transform>().localPosition = new Vector3(0.25f, -0.25f, 0);
+            tick.GetComponent<SpriteRenderer>().sortingOrder = 8;
+
+
+
             Debug.Log("falsename");
         }
         //Instantiate(ingredient).name = "none(Clone)";
