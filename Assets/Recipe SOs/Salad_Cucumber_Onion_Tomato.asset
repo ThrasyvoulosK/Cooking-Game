@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Salad_Cucumber_Onion_Tomato
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: 0}
+  recipeSprite: {fileID: 2892591638889852893, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
   neededIngr:
   - Cucumber
   - Onion

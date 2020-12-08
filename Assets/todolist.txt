@@ -36,9 +36,10 @@ graphics that might need change
 ---background graphic changes position (height?)
 
 integrate ice-cream graphics
-//-flying ingredients//-tick when correct//--add componetn : tick sprite//--change textmeshpro layer to +1 of sprite
--make accomodating recipes for given sprites
+-make accomodating recipes for given sprites?
 -recipe check sprites
+
+level 6
 
 
 Gameplay Issues:

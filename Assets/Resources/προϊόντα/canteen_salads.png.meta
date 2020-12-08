@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: 4cce4e67ac1a88f489f716894e5c96e0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7934898108026215741
+    second: canteen_salads_0
+  - first:
+      213: 1564343831195828338
+    second: canteen_salads_1
+  - first:
+      213: 2892591638889852893
+    second: canteen_salads_2
+  - first:
+      213: -2839831588173555644
+    second: canteen_salads_3
+  - first:
+      213: 3806118019153522000
+    second: canteen_salads_4
+  - first:
+      213: 4425926091244599083
+    second: canteen_salads_5
+  - first:
+      213: 7179612850240442308
+    second: canteen_salads_6
+  - first:
+      213: -6910035244135375433
+    second: canteen_salads_7
+  - first:
+      213: -368802311026359259
+    second: canteen_salads_8
+  - first:
+      213: -2188034785014524245
+    second: canteen_salads_9
+  - first:
+      213: -2691944418341691026
+    second: canteen_salads_10
+  - first:
+      213: 4529445637244112028
+    second: canteen_salads_11
+  - first:
+      213: 908940712110909834
+    second: canteen_salads_12
+  - first:
+      213: -734269695507775701
+    second: canteen_salads_13
+  - first:
+      213: 423680605295965231
+    second: canteen_salads_14
+  - first:
+      213: -7834775772889405522
+    second: canteen_salads_15
+  - first:
+      213: -4423514374897209493
+    second: canteen_salads_16
+  - first:
+      213: -7902838514687000683
+    second: canteen_salads_17
+  - first:
+      213: 3552121648880394108
+    second: canteen_salads_18
+  - first:
+      213: 4859517993337695687
+    second: canteen_salads_19
+  - first:
+      213: -248107888166708497
+    second: canteen_salads_20
+  - first:
+      213: 6646096578636517670
+    second: canteen_salads_21
+  - first:
+      213: -79776242618715871
+    second: canteen_salads_22
+  - first:
+      213: -1184015888063055196
+    second: canteen_salads_23
+  - first:
+      213: 7827834329895989170
+    second: canteen_salads_24
+  - first:
+      213: 8541733593532170859
+    second: canteen_salads_25
+  - first:
+      213: 1734810408071505001
+    second: canteen_salads_26
+  - first:
+      213: 5621331520812522263
+    second: canteen_salads_27
+  - first:
+      213: 2060521675779035565
+    second: canteen_salads_28
+  - first:
+      213: 6065603487584851559
+    second: canteen_salads_29
+  - first:
+      213: -1522403876776850218
+    second: canteen_salads_30
+  - first:
+      213: -5262884795171010389
+    second: canteen_salads_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: canteen_salads_0
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 734
+        width: 288
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2ad2e263491e190800000000000000
+      internalID: -7934898108026215741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_1
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 734
+        width: 289
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270400d1d6aa5b510800000000000000
+      internalID: 1564343831195828338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_2
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 734
+        width: 289
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf6b4c15cc842820800000000000000
+      internalID: 2892591638889852893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_3
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 734
+        width: 288
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4485bf47734e698d0800000000000000
+      internalID: -2839831588173555644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_4
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 734
+        width: 288
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05debd83c2c02d430800000000000000
+      internalID: 3806118019153522000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_5
+      rect:
+        serializedVersion: 2
+        x: 2022
+        y: 734
+        width: 288
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2774c6945c0c6d30800000000000000
+      internalID: 4425926091244599083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_6
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 471
+        width: 304
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf496b19db13a360800000000000000
+      internalID: 7179612850240442308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_7
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 435
+        width: 293
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd91ef6e8f9a10a0800000000000000
+      internalID: -6910035244135375433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_12
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 462
+        width: 264
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89e24b03c43d9c00800000000000000
+      internalID: 908940712110909834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_13
+      rect:
+        serializedVersion: 2
+        x: 2420
+        y: 491
+        width: 281
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2fbced2a995fc5f0800000000000000
+      internalID: -734269695507775701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_15
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 459
+        width: 203
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7271ae1f8454390800000000000000
+      internalID: -7834775772889405522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_23
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 476
+        width: 203
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa359fa2d7819fe0800000000000000
+      internalID: -1184015888063055196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_26
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 94
+        width: 399
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964a0cdefd8431810800000000000000
+      internalID: 1734810408071505001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_27
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 94
+        width: 401
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b9cbe2c3bf20e40800000000000000
+      internalID: 5621331520812522263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_28
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 95
+        width: 401
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da15dc80c81789c10800000000000000
+      internalID: 2060521675779035565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_29
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 91
+        width: 401
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7669dd92c3a5d2450800000000000000
+      internalID: 6065603487584851559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_30
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 92
+        width: 399
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcc9087db55fdae0800000000000000
+      internalID: -1522403876776850218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_salads_31
+      rect:
+        serializedVersion: 2
+        x: 2357
+        y: 89
+        width: 401
+        height: 297
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8070aa92a76f6b0800000000000000
+      internalID: -5262884795171010389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

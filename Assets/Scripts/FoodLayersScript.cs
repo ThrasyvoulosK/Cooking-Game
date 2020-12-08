@@ -53,9 +53,8 @@ public class FoodLayersScript : MonoBehaviour
         gameObject.name = "FoodLayer(Clone)";
 
         //change ice cream's position to within the board's surface
-        if (theFurnace.recipe.name.StartsWith("IceCream"))
+        if (theFurnace.recipe.name.StartsWith("IceCream")|| theFurnace.recipe.name.StartsWith("Salad"))
             gameObject.transform.position = new Vector3(-0.67f, 0.4f, 0);
-
 
     }
 
@@ -183,9 +182,12 @@ public class FoodLayersScript : MonoBehaviour
         }
         else if (recipename.StartsWith("IceCream"))
         {
-            Debug.Log("icecream base");
+            //Debug.Log("icecream base");
             return theGameMaster.spriteslayers["IceCream_Down"];
         }
+        else if (recipename.StartsWith("Salad"))
+            return theGameMaster.spriteslayers["Salad_Bowl"];
+
 
         Debug.Log("null base: "+recipename);
         return null;
@@ -294,7 +296,15 @@ public class FoodLayersScript : MonoBehaviour
         {
             return GameMasterScript.Instance.spriteslayers[ingredientname];
         }
-            return null;
+        else if (recipename.StartsWith("Salad"))
+        {
+            if (ingredientname == "Tomato")
+                return GameMasterScript.Instance.spriteslayers["Salad_Tomato"];
+            else if (ingredientname == "Lettuce")
+                return GameMasterScript.Instance.spriteslayers["Salad_Lettuce"];
+            return GameMasterScript.Instance.spriteslayers[ingredientname];
+        }
+        return null;
     }
 
     Vector2 directiontotarget;

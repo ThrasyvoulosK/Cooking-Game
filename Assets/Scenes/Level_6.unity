@@ -546,17 +546,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnallowed: 1
   ingredients:
-  - {fileID: 3555500861215330897, guid: 456c0c40146249749aea0576afe6bf7f, type: 3}
-  - {fileID: 3555500861215330897, guid: b5080eb0557827b4cb1e9ae052052903, type: 3}
-  - {fileID: 3555500861215330897, guid: c5ec62c958e6bd646b3d091a06ef76e6, type: 3}
-  - {fileID: 3555500861215330897, guid: 2c6527271b1b5a94a862dc1d77b021bb, type: 3}
-  - {fileID: 3555500861215330897, guid: fd2891efcab6d894c993ad972e91a275, type: 3}
-  - {fileID: 2740246263342394054, guid: a468d310bc022444d85c147d5bfea106, type: 3}
+  - {fileID: 4444269678779388149, guid: 9078088170bbe46468516f85c765a767, type: 3}
+  - {fileID: 4444269678779388149, guid: c6f0d32f0e9e72f4184a7efd45b530cc, type: 3}
+  - {fileID: 4444269678779388149, guid: 3a3853818d07dcc45ae0c99ea96eb2f4, type: 3}
   - {fileID: 4444269678779388149, guid: 92b49ed462fc68547a1563cf5257f134, type: 3}
+  - {fileID: 4444269678779388149, guid: 8832b09e8eb89414abf49538d8aea215, type: 3}
   - {fileID: 4391675842522330170, guid: 5e15497866a43b54b845c24b7ab859ab, type: 3}
-  - {fileID: 3555500861215330897, guid: be290c78dece69442a5e3086278a2a36, type: 3}
-  - {fileID: 3555500861215330897, guid: 5f294f8efcd4eae4998c3031757b3424, type: 3}
-  - {fileID: 3555500861215330897, guid: 870308f9b9b8bca42903631ed4c72c3f, type: 3}
   ingredients_current: []
   spawnpoints:
   - {fileID: 489495051}
@@ -901,6 +896,302 @@ Transform:
   - {fileID: 413132283}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1037054996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1037054998}
+  - component: {fileID: 1037054997}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1037054997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037054996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742036a19ee999842b5664619a4dd8ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 6795080098137956420, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -8209493743397234753, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -393077866477028774, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -884315242955372229, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -913569899736772905, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -5044462051708577863, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -2257703242698487362, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: -7140087995865160524, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: 8263195158465498870, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: 3087734001931203600, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: -3173214758604753708, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: 1222428437914192223, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
+  - {fileID: -8584748100523335948, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
+  - {fileID: -7164903015606843743, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
+  - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
+  - {fileID: 21300000, guid: 51cc475c3bc1eb04590fb9b52fe4d663, type: 3}
+  - {fileID: 21300000, guid: 2fdf9025f6290d544a370e5b6fcf6efc, type: 3}
+  - {fileID: 21300000, guid: 21e3bff390469ca4896a9693be133d19, type: 3}
+  - {fileID: -1886764556333328586, guid: 5960d59b672bdbe48aba6d4fb60f767e, type: 3}
+  - {fileID: 8847379102083037254, guid: 858431c1c6a017e41af508657a296681, type: 3}
+  - {fileID: 654458921956528515, guid: 73743ed40ea560443844930e17db3dca, type: 3}
+  - {fileID: 3795728192540832934, guid: 5b20e40daab576746bb0e032bf70f31a, type: 3}
+  - {fileID: 21300000, guid: fa090ca1abb7e1c46a38b07f9197bb8b, type: 3}
+  - {fileID: 21300000, guid: 0c18790fda6ab524f87235a83c63af3e, type: 3}
+  - {fileID: 21300000, guid: fe8685c7cbe41cc4e923bd67127b43ed, type: 3}
+  - {fileID: 21300000, guid: 6f40a7a6e692fb04a9e6a39b7c2c57b9, type: 3}
+  - {fileID: 21300000, guid: a165e3537fbc0ca43af2c64307f1c798, type: 3}
+  - {fileID: -888781099504439867, guid: 3c69722b474128c4a9d05c2b0b33e22b, type: 3}
+  - {fileID: 5193741487003750703, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
+  - {fileID: 8176824057624764152, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
+  - {fileID: -7322673281525614074, guid: d04b86a5282126e46b48835f53416801, type: 3}
+  - {fileID: 3617403723222548406, guid: d04b86a5282126e46b48835f53416801, type: 3}
+  - {fileID: -4697343442086750709, guid: d04b86a5282126e46b48835f53416801, type: 3}
+  - {fileID: -8138318783325234043, guid: d04b86a5282126e46b48835f53416801, type: 3}
+  - {fileID: 7179612850240442308, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  - {fileID: -6910035244135375433, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  - {fileID: -7834775772889405522, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  - {fileID: -1184015888063055196, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  - {fileID: -4689910887251294942, guid: d04b86a5282126e46b48835f53416801, type: 3}
+  - {fileID: -7934898108026215741, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  - {fileID: 908940712110909834, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  - {fileID: -734269695507775701, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  spritesnames:
+  - Sandwich_Tomato
+  - Sandwich_Cheese
+  - Sandwich_Ham
+  - Sandwich_Lettuce
+  - Sandwich_Base
+  - Sandwich_Top
+  - Toast_Tomato
+  - Toast_Cheese
+  - Toast_Ham
+  - Toast_Lettuce
+  - Toast_Bread
+  - Coffee
+  - Ice
+  - Milk
+  - Counter_Grey
+  - Counter_Blue
+  - Counter_Metal
+  - Counter_Red
+  - Tent_Yellow
+  - Tent_Blue
+  - Tent_Green
+  - Tent_Red
+  - Wall_Grey
+  - Wall_Blue
+  - Wall_Metal
+  - Wall_Red
+  - Screenshot
+  - Rectangle_Green_Full
+  - Character_M
+  - Character_F
+  - Banana
+  - Chocolate
+  - Cream
+  - Strawberry
+  - Cabbage
+  - Carrot
+  - Cucumber
+  - Onion
+  - IceCream_Down
+  - Salad_Bowl
+  - Salad_Tomato
+  - Salad_Lettuce
+  languages:
+  - Greek
+  - English
+  language_current: 
+  words_en_base:
+  - Cheese
+  - Ham
+  - Lettuce
+  - Tomato
+  - Coffee
+  - Ice
+  - Milk
+  - Let's Cook!
+  - Language
+  - Levels
+  - Play!
+  - Counter
+  - Tent
+  - Wall
+  - Cheese_lc
+  - Ham_lc
+  - Lettuce_lc
+  - Tomato_lc
+  - Coffee_lc
+  - Ice_lc
+  - Milk_lc
+  - Back
+  - Character
+  - Sound
+  - Options
+  - Choose
+  - Continue
+  - Congratulations
+  - Exit
+  - Banana
+  - Chocolate
+  - Cream
+  - Strawberry
+  - Banana_lc
+  - Chocolate_lc
+  - Cream_lc
+  - Strawberry_lc
+  - Cabbage
+  - Carrot
+  - Cucumber
+  - Onion
+  - Cabbage_lc
+  - Carrot_lc
+  - Cucumber_lc
+  - Onion_lc
+  words_gr:
+  - "\u03A4\u03A5\u03A1\u0399"
+  - "\u0396\u0391\u039C\u03A0\u039F\u039D"
+  - "\u039C\u0391\u03A1\u039F\u03A5\u039B\u0399"
+  - "\u039D\u03A4\u039F\u039C\u0391\u03A4\u0391"
+  - "\u039A\u0391\u03A6\u0395\u03A3"
+  - "\u03A0\u0391\u0393\u039F\u03A3"
+  - "\u0393\u0391\u039B\u0391"
+  - "\u0391\u03C2 \u039C\u03B1\u03B3\u03B5\u03B9\u03C1\u03AD\u03C8\u03BF\u03C5\u03BC\u03B5!"
+  - "\u0393\u039B\u03A9\u03A3\u03A3\u0391"
+  - "\u0395\u03A0\u0399\u03A0\u0395\u0394\u039F"
+  - "\u03A0\u0391\u0399\u039E\u0395!"
+  - "\u03A0\u03AC\u03B3\u03BA\u03BF\u03C5"
+  - "\u03A4\u03AD\u03BD\u03C4\u03B1\u03C2"
+  - "\u03A4\u03BF\u03AF\u03C7\u03BF\u03C5"
+  - "\u03A4\u03C5\u03C1\u03AF"
+  - "\u0396\u03B1\u03BC\u03C0\u03CC\u03BD"
+  - "\u039C\u03B1\u03C1\u03BF\u03CD\u03BB\u03B9"
+  - "\u039D\u03C4\u03BF\u03BC\u03AC\u03C4\u03B1"
+  - "\u039A\u03B1\u03C6\u03AD\u03C2"
+  - "\u03A0\u03AC\u03B3\u03BF\u03C2"
+  - "\u0393\u03AC\u03BB\u03B1"
+  - "\u03A0\u0399\u03A3\u03A9"
+  - "\u03A7\u0391\u03A1\u0391\u039A\u03A4\u0397\u03A1\u0391\u03A3"
+  - "\u0397\u03A7\u039F\u03A3"
+  - "\u03A1\u03A5\u0398\u039C\u0399\u03A3\u0395\u0399\u03A3"
+  - "\u0395\u03A0\u0399\u039B\u039F\u0393\u0397"
+  - "\u03A3\u03A5\u039D\u0395\u03A7\u0395\u0399\u0391"
+  - "\u03A3\u03A5\u0393\u03A7\u0391\u03A1\u0397\u03A4\u0397\u03A1\u0399\u0391!"
+  - "\u0388\u039E\u039F\u0394\u039F\u03A3"
+  - "\u039C\u03A0\u0391\u039D\u0391\u039D\u0391"
+  - "\u03A3\u039F\u039A\u039F\u039B\u0391\u03A4\u0391"
+  - "\u039A\u03A1\u0395\u039C\u0391"
+  - "\u03A6\u03A1\u0391\u039F\u03A5\u039B\u0391"
+  - "\u039C\u03C0\u03B1\u03BD\u03AC\u03BD\u03B1"
+  - "\u03A3\u03BF\u03BA\u03BF\u03BB\u03AC\u03C4\u03B1"
+  - "\u039A\u03C1\u03AD\u03BC\u03B1"
+  - "\u03A6\u03C1\u03AC\u03BF\u03C5\u03BB\u03B1"
+  - "\u039B\u0391\u03A7\u0391\u039D\u039F"
+  - "\u039A\u0391\u03A1\u039F\u03A4\u039F"
+  - "\u0391\u0393\u0393\u039F\u03A5\u03A1\u0399"
+  - "\u039A\u03A1\u0395\u039C\u039C\u03A5\u0394\u0399"
+  - "\u039B\u03AC\u03C7\u03B1\u03BD\u03BF"
+  - "\u039A\u03B1\u03C1\u03CC\u03C4\u03BF"
+  - "\u0391\u03B3\u03B3\u03BF\u03CD\u03C1\u03B9"
+  - "\u039A\u03C1\u03B5\u03BC\u03BC\u03CD\u03B4\u03B9"
+  words_en:
+  - CHEESE
+  - HAM
+  - LETTUCE
+  - TOMATO
+  - COFFEE
+  - ICE
+  - MILK
+  - Let's Cook!
+  - LANGUAGE
+  - LEVEL
+  - PLAY!
+  - Counter
+  - Tent
+  - Wall
+  - Cheese
+  - Ham
+  - Lettuce
+  - Tomato
+  - Coffee
+  - Ice
+  - Milk
+  - BACK
+  - CHARACTER
+  - SOUND
+  - OPTIONS
+  - CHOICE
+  - CONTINUE
+  - CONGRATULATIONS!
+  - EXIT
+  - BANANA
+  - CHOCOLATE
+  - CREAM
+  - STRAWBERRY
+  - Banana
+  - Chocolate
+  - Cream
+  - Strawberry
+  - CABBAGE
+  - CARROT
+  - CUCUMBER
+  - ONION
+  - Cabbage
+  - Carrot
+  - Cucumber
+  - Onion
+  words_current: []
+  boughtablesprites:
+  - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
+  - {fileID: -1886764556333328586, guid: 5960d59b672bdbe48aba6d4fb60f767e, type: 3}
+  - {fileID: 21300000, guid: fa090ca1abb7e1c46a38b07f9197bb8b, type: 3}
+  boughtablesnames:
+  - Counter
+  - Tent
+  - Wall
+  theFurnace: {fileID: 0}
+  money: 0
+  levelid: 1
+  levelchanged: 0
+  option_character: Character_M
+  option_sound: 1
+  option_music: 1
+  menuitems:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!4 &1037054998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037054996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1701077, y: 0.6891093, z: -39.683285}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051236654
 GameObject:
@@ -1525,296 +1816,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1399740683
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1399740685}
-  - component: {fileID: 1399740684}
-  m_Layer: 0
-  m_Name: GameMaster
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1399740684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399740683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 742036a19ee999842b5664619a4dd8ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 6795080098137956420, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
-  - {fileID: -8209493743397234753, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
-  - {fileID: -393077866477028774, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
-  - {fileID: -884315242955372229, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
-  - {fileID: -913569899736772905, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
-  - {fileID: -5044462051708577863, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
-  - {fileID: -2257703242698487362, guid: bef5d5b047393754dac72319747544d6, type: 3}
-  - {fileID: -7140087995865160524, guid: bef5d5b047393754dac72319747544d6, type: 3}
-  - {fileID: 8263195158465498870, guid: bef5d5b047393754dac72319747544d6, type: 3}
-  - {fileID: 3087734001931203600, guid: bef5d5b047393754dac72319747544d6, type: 3}
-  - {fileID: -3173214758604753708, guid: bef5d5b047393754dac72319747544d6, type: 3}
-  - {fileID: 1222428437914192223, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
-  - {fileID: -8584748100523335948, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
-  - {fileID: -7164903015606843743, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
-  - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
-  - {fileID: 21300000, guid: 51cc475c3bc1eb04590fb9b52fe4d663, type: 3}
-  - {fileID: 21300000, guid: 2fdf9025f6290d544a370e5b6fcf6efc, type: 3}
-  - {fileID: 21300000, guid: 21e3bff390469ca4896a9693be133d19, type: 3}
-  - {fileID: -1886764556333328586, guid: 5960d59b672bdbe48aba6d4fb60f767e, type: 3}
-  - {fileID: 8847379102083037254, guid: 858431c1c6a017e41af508657a296681, type: 3}
-  - {fileID: 654458921956528515, guid: 73743ed40ea560443844930e17db3dca, type: 3}
-  - {fileID: 3795728192540832934, guid: 5b20e40daab576746bb0e032bf70f31a, type: 3}
-  - {fileID: 21300000, guid: fa090ca1abb7e1c46a38b07f9197bb8b, type: 3}
-  - {fileID: 21300000, guid: 0c18790fda6ab524f87235a83c63af3e, type: 3}
-  - {fileID: 21300000, guid: fe8685c7cbe41cc4e923bd67127b43ed, type: 3}
-  - {fileID: 21300000, guid: 6f40a7a6e692fb04a9e6a39b7c2c57b9, type: 3}
-  - {fileID: 21300000, guid: a165e3537fbc0ca43af2c64307f1c798, type: 3}
-  - {fileID: -888781099504439867, guid: 3c69722b474128c4a9d05c2b0b33e22b, type: 3}
-  - {fileID: 5193741487003750703, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
-  - {fileID: 8176824057624764152, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
-  - {fileID: -7322673281525614074, guid: d04b86a5282126e46b48835f53416801, type: 3}
-  - {fileID: 3617403723222548406, guid: d04b86a5282126e46b48835f53416801, type: 3}
-  - {fileID: -4697343442086750709, guid: d04b86a5282126e46b48835f53416801, type: 3}
-  - {fileID: -8138318783325234043, guid: d04b86a5282126e46b48835f53416801, type: 3}
-  - {fileID: 8176824057624764152, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
-  - {fileID: 8176824057624764152, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
-  - {fileID: 8176824057624764152, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
-  - {fileID: 0}
-  - {fileID: -4689910887251294942, guid: d04b86a5282126e46b48835f53416801, type: 3}
-  spritesnames:
-  - Sandwich_Tomato
-  - Sandwich_Cheese
-  - Sandwich_Ham
-  - Sandwich_Lettuce
-  - Sandwich_Base
-  - Sandwich_Top
-  - Toast_Tomato
-  - Toast_Cheese
-  - Toast_Ham
-  - Toast_Lettuce
-  - Toast_Bread
-  - Coffee
-  - Ice
-  - Milk
-  - Counter_Grey
-  - Counter_Blue
-  - Counter_Metal
-  - Counter_Red
-  - Tent_Yellow
-  - Tent_Blue
-  - Tent_Green
-  - Tent_Red
-  - Wall_Grey
-  - Wall_Blue
-  - Wall_Metal
-  - Wall_Red
-  - Screenshot
-  - Rectangle_Green_Full
-  - Character_M
-  - Character_F
-  - Banana
-  - Chocolate
-  - Cream
-  - Strawberry
-  - Cabbage
-  - Carrot
-  - Cucumber
-  - Onion
-  - IceCream_Down
-  languages:
-  - Greek
-  - English
-  language_current: 
-  words_en_base:
-  - Cheese
-  - Ham
-  - Lettuce
-  - Tomato
-  - Coffee
-  - Ice
-  - Milk
-  - Let's Cook!
-  - Language
-  - Levels
-  - Play!
-  - Counter
-  - Tent
-  - Wall
-  - Cheese_lc
-  - Ham_lc
-  - Lettuce_lc
-  - Tomato_lc
-  - Coffee_lc
-  - Ice_lc
-  - Milk_lc
-  - Back
-  - Character
-  - Sound
-  - Options
-  - Choose
-  - Continue
-  - Congratulations
-  - Exit
-  - Banana
-  - Chocolate
-  - Cream
-  - Strawberry
-  - Banana_lc
-  - Chocolate_lc
-  - Cream_lc
-  - Strawberry_lc
-  - Cabbage
-  - Carrot
-  - Cucumber
-  - Onion
-  - Cabbage_lc
-  - Carrot_lc
-  - Cucumber_lc
-  - Onion_lc
-  words_gr:
-  - "\u03A4\u03A5\u03A1\u0399"
-  - "\u0396\u0391\u039C\u03A0\u039F\u039D"
-  - "\u039C\u0391\u03A1\u039F\u03A5\u039B\u0399"
-  - "\u039D\u03A4\u039F\u039C\u0391\u03A4\u0391"
-  - "\u039A\u0391\u03A6\u0395\u03A3"
-  - "\u03A0\u0391\u0393\u039F\u03A3"
-  - "\u0393\u0391\u039B\u0391"
-  - "\u0391\u03C2 \u039C\u03B1\u03B3\u03B5\u03B9\u03C1\u03AD\u03C8\u03BF\u03C5\u03BC\u03B5!"
-  - "\u0393\u039B\u03A9\u03A3\u03A3\u0391"
-  - "\u0395\u03A0\u0399\u03A0\u0395\u0394\u039F"
-  - "\u03A0\u0391\u0399\u039E\u0395!"
-  - "\u03A0\u03AC\u03B3\u03BA\u03BF\u03C5"
-  - "\u03A4\u03AD\u03BD\u03C4\u03B1\u03C2"
-  - "\u03A4\u03BF\u03AF\u03C7\u03BF\u03C5"
-  - "\u03A4\u03C5\u03C1\u03AF"
-  - "\u0396\u03B1\u03BC\u03C0\u03CC\u03BD"
-  - "\u039C\u03B1\u03C1\u03BF\u03CD\u03BB\u03B9"
-  - "\u039D\u03C4\u03BF\u03BC\u03AC\u03C4\u03B1"
-  - "\u039A\u03B1\u03C6\u03AD\u03C2"
-  - "\u03A0\u03AC\u03B3\u03BF\u03C2"
-  - "\u0393\u03AC\u03BB\u03B1"
-  - "\u03A0\u0399\u03A3\u03A9"
-  - "\u03A7\u0391\u03A1\u0391\u039A\u03A4\u0397\u03A1\u0391\u03A3"
-  - "\u0397\u03A7\u039F\u03A3"
-  - "\u03A1\u03A5\u0398\u039C\u0399\u03A3\u0395\u0399\u03A3"
-  - "\u0395\u03A0\u0399\u039B\u039F\u0393\u0397"
-  - "\u03A3\u03A5\u039D\u0395\u03A7\u0395\u0399\u0391"
-  - "\u03A3\u03A5\u0393\u03A7\u0391\u03A1\u0397\u03A4\u0397\u03A1\u0399\u0391!"
-  - "\u0388\u039E\u039F\u0394\u039F\u03A3"
-  - "\u039C\u03A0\u0391\u039D\u0391\u039D\u0391"
-  - "\u03A3\u039F\u039A\u039F\u039B\u0391\u03A4\u0391"
-  - "\u039A\u03A1\u0395\u039C\u0391"
-  - "\u03A6\u03A1\u0391\u039F\u03A5\u039B\u0391"
-  - "\u039C\u03C0\u03B1\u03BD\u03AC\u03BD\u03B1"
-  - "\u03A3\u03BF\u03BA\u03BF\u03BB\u03AC\u03C4\u03B1"
-  - "\u039A\u03C1\u03AD\u03BC\u03B1"
-  - "\u03A6\u03C1\u03AC\u03BF\u03C5\u03BB\u03B1"
-  - "\u039B\u0391\u03A7\u0391\u039D\u039F"
-  - "\u039A\u0391\u03A1\u039F\u03A4\u039F"
-  - "\u0391\u0393\u0393\u039F\u03A5\u03A1\u0399"
-  - "\u039A\u03A1\u0395\u039C\u039C\u03A5\u0394\u0399"
-  - "\u039B\u03AC\u03C7\u03B1\u03BD\u03BF"
-  - "\u039A\u03B1\u03C1\u03CC\u03C4\u03BF"
-  - "\u0391\u03B3\u03B3\u03BF\u03CD\u03C1\u03B9"
-  - "\u039A\u03C1\u03B5\u03BC\u03BC\u03CD\u03B4\u03B9"
-  words_en:
-  - CHEESE
-  - HAM
-  - LETTUCE
-  - TOMATO
-  - COFFEE
-  - ICE
-  - MILK
-  - Let's Cook!
-  - LANGUAGE
-  - LEVEL
-  - PLAY!
-  - Counter
-  - Tent
-  - Wall
-  - Cheese
-  - Ham
-  - Lettuce
-  - Tomato
-  - Coffee
-  - Ice
-  - Milk
-  - BACK
-  - CHARACTER
-  - SOUND
-  - OPTIONS
-  - CHOICE
-  - CONTINUE
-  - CONGRATULATIONS!
-  - EXIT
-  - BANANA
-  - CHOCOLATE
-  - CREAM
-  - STRAWBERRY
-  - Banana
-  - Chocolate
-  - Cream
-  - Strawberry
-  - CABBAGE
-  - CARROT
-  - CUCUMBER
-  - ONION
-  - Cabbage
-  - Carrot
-  - Cucumber
-  - Onion
-  words_current: []
-  boughtablesprites:
-  - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
-  - {fileID: -1886764556333328586, guid: 5960d59b672bdbe48aba6d4fb60f767e, type: 3}
-  - {fileID: 21300000, guid: fa090ca1abb7e1c46a38b07f9197bb8b, type: 3}
-  boughtablesnames:
-  - Counter
-  - Tent
-  - Wall
-  theFurnace: {fileID: 0}
-  money: 0
-  levelid: 1
-  levelchanged: 0
-  option_character: Character_M
-  option_sound: 1
-  option_music: 1
-  menuitems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!4 &1399740685
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399740683}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1701077, y: 0.6891093, z: -39.683285}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1418057863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,7 +2478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.size
-      value: 24
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: recipe
@@ -2490,43 +2491,43 @@ PrefabInstance:
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 9989347dab54f604ea720b8c1b8e03c8, type: 2}
+      objectReference: {fileID: 11400000, guid: e65735daf72cd3849a077f355ffacd09, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: f142c14a9374a5f4aa84a16e8f6b7cea, type: 2}
+      objectReference: {fileID: 11400000, guid: 4839d19b769cb544e8e00e74fa5a67d7, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 627c89cac8bc0ad4da0429f1b25a205e, type: 2}
+      objectReference: {fileID: 11400000, guid: e34db7873434984479d189de10439499, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 9a86f740b57386b4a85ed2b1b909cd09, type: 2}
+      objectReference: {fileID: 11400000, guid: 1b1b1b9153082d749bc22e015bad12ae, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: eb01909fe3561694badb3c2407ffa93c, type: 2}
+      objectReference: {fileID: 11400000, guid: 30072072271f73d4e9efd43d813393c1, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 19c73733126573b45b78b46d8085a7f9, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 30b77826fe64c3e46a8cd2a6be4ca87b, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[7]
       value: 
-      objectReference: {fileID: 11400000, guid: a2d4f805feffa1848ac3120e91a5547b, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[8]
       value: 
-      objectReference: {fileID: 11400000, guid: 824e337b2977d654e8e945cd82b6fa5a, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[9]
       value: 
-      objectReference: {fileID: 11400000, guid: e7b9115e6e452eb488e98227c3f7205f, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[10]
       value: 
