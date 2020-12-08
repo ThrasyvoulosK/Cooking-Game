@@ -20,7 +20,8 @@ public class SpawningScript : MonoBehaviour
     public float gamespeed = 2f;
     //public float gamespeed = 4f;
 
-    public GameMasterScript theGameMaster; 
+    public GameMasterScript theGameMaster;
+    public FurnaceScript theFurnace;
 
     // Start is called before the first frame update
     void Start()
@@ -33,14 +34,16 @@ public class SpawningScript : MonoBehaviour
             InvokeRepeating("SpawnIngredient", 0, 1*gamespeed);
 
         theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
+        theFurnace= GameObject.Find("Furnace").GetComponent<FurnaceScript>();
     }
-    /*
+    
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
+        ingredients = theFurnace.current_recipe;
         
-    }
-    */
+    }*/
+    
     void SpawnIngredient()
     {
 

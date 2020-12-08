@@ -167,6 +167,12 @@ public class RecipeCheckScript : MonoBehaviour
             else
                 return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[13];
         }
+        else
+        {
+            if (numberofingredientsleft <= 0)
+                return theGameMaster.spriteslayers[ingredientname + "_ing_done"];
+            return theGameMaster.spriteslayers[ingredientname + "_ing"];
+        }
         return null;
     }
 

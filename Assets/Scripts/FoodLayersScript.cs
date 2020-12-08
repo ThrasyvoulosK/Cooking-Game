@@ -187,6 +187,11 @@ public class FoodLayersScript : MonoBehaviour
         }
         else if (recipename.StartsWith("Salad"))
             return theGameMaster.spriteslayers["Salad_Bowl"];
+        else if(recipename.StartsWith("Club"))
+        {
+            //add plate
+            return theGameMaster.spriteslayers["Club_Down"];
+        }
 
 
         Debug.Log("null base: "+recipename);
@@ -215,6 +220,11 @@ public class FoodLayersScript : MonoBehaviour
                 else if (recipename.StartsWith("Coffee"))
                 {
                     rendr.sprite = SpriteHandler("Coffee_Up");
+                    return renderers;
+                }
+                else if(recipename.StartsWith("Club"))
+                {
+                    rendr.sprite = theGameMaster.spriteslayers["Club_Up"];
                     return renderers;
                 }
 
@@ -303,6 +313,10 @@ public class FoodLayersScript : MonoBehaviour
             else if (ingredientname == "Lettuce")
                 return GameMasterScript.Instance.spriteslayers["Salad_Lettuce"];
             return GameMasterScript.Instance.spriteslayers[ingredientname];
+        }
+        else if(recipename.StartsWith("Club"))
+        {
+            return GameMasterScript.Instance.spriteslayers["Club_" + ingredientname];
         }
         return null;
     }

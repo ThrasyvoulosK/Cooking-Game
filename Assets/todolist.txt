@@ -25,6 +25,7 @@ exit button
 //translations of gameobjects eg 'speechbubble'
 
 add //peanut//nuts, cruttons-club sandwiches--potatoes, mayonaise-chocolate and caramel syrup-ketchup and mustard
+-confirm recipes?
 
 check if player has already played
 -application.iseditor
@@ -35,11 +36,18 @@ graphics that might need change
 --subsequent menu screen 
 ---background graphic changes position (height?)
 
-integrate ice-cream graphics
--make accomodating recipes for given sprites?
--recipe check sprites
+//integrate ice-cream graphics-make accomodating recipes for given sprites?-recipe check sprites
 
-level 6
+//level 6
+
+attempt to fix long ingredient waits by assigning spawned ingredients to current recipe ingredients
+-make a dictionary for <string,gameobject>
+-much easier?
+--add n (number-of-ingredients) random ingredients more to this list
+
+club sandwiches
+-add plate underneath
+
 
 
 Gameplay Issues:

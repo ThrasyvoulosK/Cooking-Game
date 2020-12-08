@@ -546,26 +546,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnallowed: 1
   ingredients:
-  - {fileID: 3555500861215330897, guid: 456c0c40146249749aea0576afe6bf7f, type: 3}
-  - {fileID: 3555500861215330897, guid: b5080eb0557827b4cb1e9ae052052903, type: 3}
-  - {fileID: 3555500861215330897, guid: c5ec62c958e6bd646b3d091a06ef76e6, type: 3}
-  - {fileID: 3555500861215330897, guid: 2c6527271b1b5a94a862dc1d77b021bb, type: 3}
-  - {fileID: 3555500861215330897, guid: fd2891efcab6d894c993ad972e91a275, type: 3}
+  - {fileID: 3555500861215330897, guid: da49e7af214450f47bc47d0f6a786f7b, type: 3}
   - {fileID: 2740246263342394054, guid: a468d310bc022444d85c147d5bfea106, type: 3}
-  - {fileID: 4444269678779388149, guid: 92b49ed462fc68547a1563cf5257f134, type: 3}
-  - {fileID: 4391675842522330170, guid: 5e15497866a43b54b845c24b7ab859ab, type: 3}
-  - {fileID: 3555500861215330897, guid: be290c78dece69442a5e3086278a2a36, type: 3}
-  - {fileID: 3555500861215330897, guid: 5f294f8efcd4eae4998c3031757b3424, type: 3}
-  - {fileID: 3555500861215330897, guid: 870308f9b9b8bca42903631ed4c72c3f, type: 3}
-  - {fileID: 4444269678779388149, guid: 9078088170bbe46468516f85c765a767, type: 3}
-  - {fileID: 4444269678779388149, guid: c6f0d32f0e9e72f4184a7efd45b530cc, type: 3}
-  - {fileID: 4444269678779388149, guid: 3a3853818d07dcc45ae0c99ea96eb2f4, type: 3}
-  - {fileID: 4444269678779388149, guid: 8832b09e8eb89414abf49538d8aea215, type: 3}
   ingredients_current: []
   spawnpoints:
   - {fileID: 489495051}
   gamespeed: 2
   theGameMaster: {fileID: 0}
+  theFurnace: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,6 +2058,12 @@ MonoBehaviour:
   - {fileID: -438447498083485979, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
   - {fileID: -1018015131435337868, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
   - {fileID: 7071727076556926637, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 2397463220351689086, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: -4093691748369007177, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: -5637552033943677094, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: -91717742165320787, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: 5018069142418566148, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -350160273018629328, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
   spritesnames:
   - Sandwich_Tomato
   - Sandwich_Cheese
@@ -2129,6 +2123,12 @@ MonoBehaviour:
   - Cream_ing_done
   - Strawberry_ing
   - Strawberry_ing_done
+  - Club_Up
+  - Club_Down
+  - Club_Mayonnaise
+  - Club_Ham
+  - Mayonnaise_ing
+  - Mayonnaise_ing_done
   languages:
   - Greek
   - English
@@ -2179,6 +2179,8 @@ MonoBehaviour:
   - Carrot_lc
   - Cucumber_lc
   - Onion_lc
+  - Mayonnaise
+  - Mayonnaise_lc
   words_gr:
   - "\u03A4\u03A5\u03A1\u0399"
   - "\u0396\u0391\u039C\u03A0\u039F\u039D"
@@ -2225,6 +2227,8 @@ MonoBehaviour:
   - "\u039A\u03B1\u03C1\u03CC\u03C4\u03BF"
   - "\u0391\u03B3\u03B3\u03BF\u03CD\u03C1\u03B9"
   - "\u039A\u03C1\u03B5\u03BC\u03BC\u03CD\u03B4\u03B9"
+  - "\u039C\u0391\u0393\u0399\u039F\u039D\u0395\u0396\u0391"
+  - "\u039C\u03B1\u03B3\u03B9\u03BF\u03BD\u03AD\u03B6\u03B1"
   words_en:
   - CHEESE
   - HAM
@@ -2271,6 +2275,8 @@ MonoBehaviour:
   - Carrot
   - Cucumber
   - Onion
+  - MAYONNAISE
+  - Mayonnaise
   words_current: []
   boughtablesprites:
   - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
@@ -2519,7 +2525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.size
-      value: 29
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: recipe
@@ -2532,23 +2538,23 @@ PrefabInstance:
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 9989347dab54f604ea720b8c1b8e03c8, type: 2}
+      objectReference: {fileID: 11400000, guid: 10f5c15801e4e1246b19274c7d9437f4, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: f142c14a9374a5f4aa84a16e8f6b7cea, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 627c89cac8bc0ad4da0429f1b25a205e, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 9a86f740b57386b4a85ed2b1b909cd09, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: eb01909fe3561694badb3c2407ffa93c, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[5]
       value: 
