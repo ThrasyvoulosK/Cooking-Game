@@ -40,13 +40,13 @@ graphics that might need change
 
 //level 6
 
-attempt to fix long ingredient waits by assigning spawned ingredients to current recipe ingredients
--make a dictionary for <string,gameobject>
--much easier?
---add n (number-of-ingredients) random ingredients more to this list
+spawned ingredients list fix
+-add also at start
 
 club sandwiches
--add plate underneath
+-plate layer issue between plate and potatoes?
+-top bread should take the potatoes' place as last ingredient
+-distances between ingredients should be smaller
 
 
 

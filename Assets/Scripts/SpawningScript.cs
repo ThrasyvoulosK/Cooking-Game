@@ -53,7 +53,20 @@ public class SpawningScript : MonoBehaviour
             if (ingredients_current.Count < 1)
             {
                 foreach (GameObject ingr in ingredients)
-                    ingredients_current.Add(ingr);
+                {
+                    //if(ingr.name )
+                    foreach(string recing in theFurnace.recipe.neededIngr)
+                    {
+                        if (recing == ingr.name)
+                        {
+                            ingredients_current.Add(ingr);
+                            randomingredient = Random.Range(0, ingredients.Count);
+                            ingredients_current.Add(ingredients[randomingredient]);
+
+                        }
+                    }
+                    //ingredients_current.Add(ingr);
+                }
             }
 
             randomingredient = Random.Range(0, ingredients_current.Count);

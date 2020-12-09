@@ -51,11 +51,43 @@ public class FoodLayersScript : MonoBehaviour
         theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
 
         gameObject.name = "FoodLayer(Clone)";
-
+        
         //change ice cream's position to within the board's surface
         if (theFurnace.recipe.name.StartsWith("IceCream")|| theFurnace.recipe.name.StartsWith("Salad"))
             gameObject.transform.position = new Vector3(-0.67f, 0.4f, 0);
+        else if(theFurnace.recipe.name.StartsWith("Club"))//initialise club sandwich, if needed
+        {
+            //gameObject.GetComponentInChildren<Transform>().localPosition = new Vector3(0f, 0f, 0);
+            int clchldrn;
+            clchldrn = gameObject.transform.childCount;
+            
+            for(int i=1;i<clchldrn;i++)
+            {
+                Debug.Log("forloop");
+                
+                if (theFurnace.recipe.neededIngr.Count < i)
+                    break;
+               // Debug.Log("i "+i+" neededingr "+theFurnace.recipe.neededIngr.Count);
+                Debug.Log(theFurnace.recipe.neededIngr[i-1]);
+                
+                if (theFurnace.recipe.neededIngr[i-1] == "Potato")
+                { 
+                    gameObject.transform.GetChild(i-1).GetComponent<Transform>().localPosition = new Vector3(0f, -0.10f, 0);
+                    gameObject.transform.GetChild(i-1).GetComponent<SpriteRenderer>().sortingOrder = 5;
+                    //continue;
+                }
+                
+                 
+            }
+            for (int i = 1; i < clchldrn; i++)
+                gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition += new Vector3(0f, 0.250f, 0);
 
+            gameObject.GetComponent<SpriteRenderer>().sprite= theGameMaster.spriteslayers["Plate"];
+            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 4;
+
+        }
+        
+        Debug.Log("k");
     }
 
     public bool change = false;
