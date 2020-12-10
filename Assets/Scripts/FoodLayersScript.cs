@@ -28,6 +28,7 @@ public class FoodLayersScript : MonoBehaviour
     GameObject target;
     GameObject movetoward;
 
+    bool potatoeson=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,8 +72,13 @@ public class FoodLayersScript : MonoBehaviour
                 Debug.Log(theFurnace.recipe.neededIngr[i-1]);
                 
                 if (theFurnace.recipe.neededIngr[i-1] == "Potato")
-                { 
-                    gameObject.transform.GetChild(i-1).GetComponent<Transform>().localPosition = new Vector3(0f, -0.10f, 0);
+                {
+                    potatoeson = true;
+                    //gameObject.transform.GetChild(i-1).GetComponent<Transform>().localPosition = new Vector3(0f, -0.10f, 0);
+                    //assign the base's position on potatoes
+                    gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition = gameObject.transform.GetChild(4).GetComponent<Transform>().localPosition;
+                    //gameObject.transform.GetChild(i - 1).GetComponent<Transform>().position = new Vector3(0,0,0);
+                    //gameObject.transform.GetChild(i - 1).GetComponent<Transform>().position = gameObject.GetComponent<Transform>().position;
                     gameObject.transform.GetChild(i-1).GetComponent<SpriteRenderer>().sortingOrder = 5;
                     //continue;
                 }
@@ -80,7 +86,16 @@ public class FoodLayersScript : MonoBehaviour
                  
             }
             for (int i = 1; i < clchldrn; i++)
-                gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition += new Vector3(0f, 0.250f, 0);
+            {
+                if (potatoeson)
+                {
+                    gameObject.transform.GetChild(i - 1).GetComponent<SpriteRenderer>().sortingOrder++;
+                    if(i==clchldrn-1)
+                        gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition += new Vector3(0f, -0.350f, 0);
+
+                }
+                gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition += new Vector3(0f, 0.250f, 0); 
+            }
 
             gameObject.GetComponent<SpriteRenderer>().sprite= theGameMaster.spriteslayers["Plate"];
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = 4;
@@ -290,6 +305,7 @@ public class FoodLayersScript : MonoBehaviour
                 return GameMasterScript.Instance.spriteslayers["Sandwich_Tomato"];
                 //return Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[14];
             }
+            return GameMasterScript.Instance.spriteslayers[ingredientname];
 
         }
         else if (recipename.StartsWith("Toast"))

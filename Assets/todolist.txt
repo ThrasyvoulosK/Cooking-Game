@@ -44,9 +44,21 @@ spawned ingredients list fix
 -add also at start
 
 club sandwiches
--plate layer issue between plate and potatoes?
--top bread should take the potatoes' place as last ingredient
+//-plate layer issue between plate and potatoes?
+//-top bread should take the potatoes' place as last ingredient
 -distances between ingredients should be smaller
+
+level 7
+
+add levels 5-7 to the menu
+-peanut for ice-cream
+-nut and crouton for salad
+
+recipes with 5+ ingredients
+-fit into canvas
+-salad bowl disappears?
+
+update original gamemaster with new data
 
 
 

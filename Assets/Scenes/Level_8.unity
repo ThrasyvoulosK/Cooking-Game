@@ -546,15 +546,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnallowed: 1
   ingredients:
-  - {fileID: 4444269678779388149, guid: 9078088170bbe46468516f85c765a767, type: 3}
-  - {fileID: 4444269678779388149, guid: c6f0d32f0e9e72f4184a7efd45b530cc, type: 3}
-  - {fileID: 4444269678779388149, guid: 3a3853818d07dcc45ae0c99ea96eb2f4, type: 3}
-  - {fileID: 4391675842522330170, guid: 5e15497866a43b54b845c24b7ab859ab, type: 3}
-  - {fileID: 4444269678779388149, guid: 8832b09e8eb89414abf49538d8aea215, type: 3}
-  - {fileID: 4444269678779388149, guid: 061bc4135429f784087d4ddf55f3c71c, type: 3}
-  - {fileID: 4444269678779388149, guid: 92b49ed462fc68547a1563cf5257f134, type: 3}
-  - {fileID: 3555500861215330897, guid: 04896af1377bd434596ac31fe3887339, type: 3}
-  - {fileID: 4444269678779388149, guid: e2217993414a36c4dbc06e455dfd033b, type: 3}
+  - {fileID: 3555500861215330897, guid: 4766c312b7d5e064790eb763964f9ae5, type: 3}
+  - {fileID: 3555500861215330897, guid: 96605a51551d064468ad3251e370b642, type: 3}
+  - {fileID: 2740246263342394054, guid: a468d310bc022444d85c147d5bfea106, type: 3}
   ingredients_current: []
   spawnpoints:
   - {fileID: 489495051}
@@ -693,82 +687,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &731504883
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 731504884}
-  - component: {fileID: 731504886}
-  - component: {fileID: 731504885}
-  m_Layer: 5
-  m_Name: Image (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &731504884
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731504883}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1261857104}
-  m_Father: {fileID: 1138703340}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -277}
-  m_SizeDelta: {x: 90, y: 90}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &731504885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731504883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &731504886
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731504883}
-  m_CullTransparentMesh: 0
 --- !u!1 &797088019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,7 +1278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8703307642633452475, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
       propertyPath: images.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8703307642633452475, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
       propertyPath: images.Array.data[0]
@@ -1390,10 +1308,6 @@ PrefabInstance:
       propertyPath: firework
       value: 
       objectReference: {fileID: 6043895147763170857, guid: daf586a133a661846badab9ddb9922ac, type: 3}
-    - target: {fileID: 8703307642633452475, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
-      propertyPath: images.Array.data[4]
-      value: 
-      objectReference: {fileID: 731504885}
     - target: {fileID: 8703307642633452479, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
       propertyPath: m_Name
       value: recipe board
@@ -1460,85 +1374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1261857103
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1261857104}
-  - component: {fileID: 1261857106}
-  - component: {fileID: 1261857105}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1261857104
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261857103}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
-  m_Children: []
-  m_Father: {fileID: 731504884}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -60}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1261857105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261857103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 36
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: New Text
---- !u!222 &1261857106
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261857103}
-  m_CullTransparentMesh: 0
 --- !u!1001 &1305152346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2413,7 +2248,7 @@ MonoBehaviour:
   - Peanut_lc
   - Nut
   - Nut_lc
-  - Crouton
+  - Couton
   - Crouton_lc
   - Ketchup
   - Ketchup_lc
@@ -2795,7 +2630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.size
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: recipe
@@ -2808,43 +2643,43 @@ PrefabInstance:
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: a0071cae8c7cc4a44bfa42fab593af1e, type: 2}
+      objectReference: {fileID: 11400000, guid: a49d37131ef8be84c861297facab00a2, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 30072072271f73d4e9efd43d813393c1, type: 2}
+      objectReference: {fileID: 11400000, guid: 1ac19b8587209014884042d035fdafe2, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 50bee18847acb094ba96187b7ac5c6a7, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 1b1b1b9153082d749bc22e015bad12ae, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: f92d5f69cb8cbe5419558e17b3ab014e, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: e34db7873434984479d189de10439499, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: b02514007b86c4a4baa5730a3a9569b6, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[7]
       value: 
-      objectReference: {fileID: 11400000, guid: 28e4d733457684e4ca2b0bdfc910691c, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[8]
       value: 
-      objectReference: {fileID: 11400000, guid: 4839d19b769cb544e8e00e74fa5a67d7, type: 2}
+      objectReference: {fileID: 11400000, guid: a49d37131ef8be84c861297facab00a2, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[9]
       value: 
-      objectReference: {fileID: 11400000, guid: e65735daf72cd3849a077f355ffacd09, type: 2}
+      objectReference: {fileID: 11400000, guid: 1ac19b8587209014884042d035fdafe2, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[10]
       value: 
