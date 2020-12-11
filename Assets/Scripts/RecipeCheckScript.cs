@@ -38,8 +38,25 @@ public class RecipeCheckScript : MonoBehaviour
 
         firework=Instantiate(firework);
         fireworkplay = firework.GetComponent<ParticleSystem>();
+
+        foreach (Image imagei in gameObject.GetComponent<RecipeCheckScript>().images)
+        {
+            //resize image, if recipe has five or more ingredients
+            if (images.Count >= 5)
+            {
+                imagei.GetComponent<RectTransform>().sizeDelta = new Vector3(60f, 60f, 0);
+                //imagei.GetComponentInChildren<RectTransform>().position -= new Vector3(0, 990f, 0);
+                imagei.GetComponent<RectTransform>().position += new Vector3(0, 75f, 0);
+                Debug.Log("imagei children: "+imagei.GetComponentInChildren<RectTransform>().position);
+                Debug.Log("imagei children: "+imagei.GetComponentInChildren<Text>().text);
+                //imagei.GetComponentInChildren<RectTransform>().localPosition += new Vector3(0, 90f, 0);
+
+
+            }
+        }
     }
 
+    //bool ingredientnumber
     // Update is called once per frame
     void Update()
     {
@@ -58,7 +75,17 @@ public class RecipeCheckScript : MonoBehaviour
                 imagei.enabled = false;
                 imagei.preserveAspect = true;
 
+                //imagei.GetComponentInChildren<RectTransform>().anchoredPosition = new Vector3(0, 100f, 0);
                 imagei.GetComponentInChildren<Text>().enabled = false;
+
+                ////resize image, if recipe has five or more ingredients
+                //if (images.Count >= 5)
+                //{
+                //    imagei.GetComponent<RectTransform>().sizeDelta = new Vector3(60f, 60f, 0); 
+                    //imagei.GetComponentInChildren<RectTransform>().localPosition += new Vector3(0, 1f, 0); 
+                //    imagei.GetComponent<RectTransform>().position -= new Vector3(0, 150f, 0); 
+                //Debug.Log("imagei children: " + imagei.GetComponentInChildren<Text>().text);
+                //}
             }
 
             speechbubble = GameObject.Find("SpeechBubble").GetComponent<SpriteRenderer>();
@@ -86,6 +113,7 @@ public class RecipeCheckScript : MonoBehaviour
                 speechbubble.sprite= Resources.LoadAll<Sprite>("canteen_things")[1];
                 speechbubble.GetComponentInChildren<TextMeshPro>().enabled = false;
 
+                Debug.Log(furnscript.recipe.neededIngr[i]);
                 gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i],furnscript.usable_number_of_ingredients[i]);
 
                 //text description of images

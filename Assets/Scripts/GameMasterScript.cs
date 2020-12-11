@@ -380,6 +380,7 @@ public class GameMasterScript : MonoBehaviour
         //Debug.Log("sizeof base: " + words_en_base.Count + " Sizeof curr: " + words_current.Count);
         foreach (GameObject men in menuitems)
         {
+            Debug.Log("menuitems " + men.GetComponentInChildren<Text>().text);
             men.GetComponentInChildren<Text>().text = languagehandler[men.GetComponentInChildren<Text>().text];
             //preserve image aspect in here as well
             if(men.GetComponentInChildren<Image>()!=null)
