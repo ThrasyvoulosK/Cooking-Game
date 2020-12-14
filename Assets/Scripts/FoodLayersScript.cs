@@ -141,13 +141,15 @@ public class FoodLayersScript : MonoBehaviour
         {
             //Debug.Log("rendred null");
             if (gameObject.name.EndsWith("(Clone)"))
-                renderers[4].sprite = null;
+                //renderers[4].sprite = null;
+                renderers[renderers.Count - 2].sprite = null;
         }
         else
         {
             //Debug.Log("spriterenderedfully");
             if (gameObject.name.EndsWith("(Clone)"))
-                renderers[4].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
+                //renderers[4].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
+                renderers[renderers.Count-2].sprite = SpriteLayerBase(target.GetComponent<FurnaceScript>().recipe.name);
         }
 
     }

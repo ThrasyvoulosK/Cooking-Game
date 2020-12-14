@@ -24,7 +24,7 @@ exit button
 
 //translations of gameobjects eg 'speechbubble'
 
-add //peanut//nuts, cruttons-club sandwiches--potatoes, mayonaise-chocolate and caramel syrup-ketchup and mustard
+add //peanut//nuts, //cruttons-club sandwiches--potatoes, mayonaise-chocolate and caramel syrup-ketchup and mustard
 -confirm recipes?
 
 check if player has already played
@@ -36,10 +36,6 @@ graphics that might need change
 --subsequent menu screen 
 ---background graphic changes position (height?)
 
-//integrate ice-cream graphics-make accomodating recipes for given sprites?-recipe check sprites
-
-//level 6
-
 spawned ingredients list fix
 -add also at start
 
@@ -50,16 +46,34 @@ club sandwiches
 
 level 7
 
-add levels 5-7 to the menu
--peanut for ice-cream
--nut and crouton for salad
-
 recipes with 5+ ingredients
 -fit into canvas
 --shrink(0.66) and move
--salad bowl disappears?
+//-salad bowl disappears?
 
-update original gamemaster with new data
+//update original gamemaster with new data
+
+feedback issues
+-no info
+//-menu items in wrong positions//--play button on top left?!!!//--character button moves beyond screen down-left?!!
+--language selections?
+//-capitalise letters on recipe board
+//-'ingredients' on recipe board
+-5+ ingredients out of board
+-hovering ice cream ingredients?
+-different order in ice cream ingredients between recipe image and built recipe
+//-coffee screenshot?
+//-boughtables new colours
+//--napkins: all except beige and black
+saves not working
+-congratulations pc unclear screen?
+-'congratulations' letters in better position
+-transaction screen green rectangle shouldn't make everything green!
+
+integrate napkins to the game!
+-at least from level 5 onwards
+
+reset cheat mode!
 
 
 

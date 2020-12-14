@@ -698,6 +698,7 @@ MonoBehaviour:
   - {fileID: 489495051}
   gamespeed: 2
   theGameMaster: {fileID: 0}
+  theFurnace: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,6 +738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e74e7258f054a428004c5ce12feb24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theGameMaster: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2158,6 +2160,10 @@ PrefabInstance:
     - target: {fileID: 5731843968205007682, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875820576353060773, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6187794154094042427, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
       propertyPath: m_AnchoredPosition.x

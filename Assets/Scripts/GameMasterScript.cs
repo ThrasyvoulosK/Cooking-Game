@@ -153,14 +153,14 @@ public class GameMasterScript : MonoBehaviour
         }
 
         //cheat mode!
-        /*
+        
         theFurnace = null;
         if(GameObject.Find("Furnace")!=null)
         {
             theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
             theFurnace.numberofrecipesinlevel = 1;
         }
-        */
+        
 
 
 

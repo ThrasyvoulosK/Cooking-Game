@@ -59,10 +59,10 @@ public class CameraScript : MonoBehaviour
             else if (GameObject.Find("OptionsButton") != null)
             {
                 //get 'back' menu button
-                theGameMaster.menuitems[0].GetComponent<RectTransform>().anchoredPosition = new Vector3(-425f, 386f, 0);
-                theGameMaster.menuitems[0].GetComponent<RectTransform>().localScale = new Vector3(0.75f, 0.75f, 0);
+                theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-425f, 386f, 0);
+                theGameMaster.menuitems[3].GetComponent<RectTransform>().localScale = new Vector3(0.75f, 0.75f, 0);
 
-                theGameMaster.menuitems[6].GetComponent<RectTransform>().anchoredPosition = new Vector3(-110f, -447f, 0);
+                theGameMaster.menuitems[1].GetComponent<RectTransform>().anchoredPosition = new Vector3(-110f, -447f, 0);
 
             }
             else if(GameObject.Find("ContinueButton")!=null)
@@ -93,10 +93,10 @@ public class CameraScript : MonoBehaviour
             else if (GameObject.Find("OptionsButton") != null)
             {
                 //get 'back' menu button
-                theGameMaster.menuitems[0].GetComponent<RectTransform>().anchoredPosition = new Vector3(-455f, 386f, 0);
-                theGameMaster.menuitems[0].GetComponent<RectTransform>().localScale = new Vector3(0.9f, 0.9f, 0);
+                theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-455f, 386f, 0);
+                theGameMaster.menuitems[3].GetComponent<RectTransform>().localScale = new Vector3(0.9f, 0.9f, 0);
 
-                theGameMaster.menuitems[6].GetComponent<RectTransform>().anchoredPosition = new Vector3(-125f, -447f, 0);
+                theGameMaster.menuitems[1].GetComponent<RectTransform>().anchoredPosition = new Vector3(-125f, -447f, 0);
 
             }
             else if (GameObject.Find("ContinueButton") != null)
@@ -126,9 +126,9 @@ public class CameraScript : MonoBehaviour
             }
             else if (GameObject.Find("OptionsButton") != null)
             {
-                theGameMaster.menuitems[0].GetComponent<RectTransform>().anchoredPosition = new Vector3(-505f, 386f, 0);
+                theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-505f, 386f, 0);
                 //options button
-                theGameMaster.menuitems[6].GetComponent<RectTransform>().anchoredPosition = new Vector3(-150f, -447f, 0);
+                theGameMaster.menuitems[1].GetComponent<RectTransform>().anchoredPosition = new Vector3(-150f, -447f, 0);
 
             }
             else if (GameObject.Find("ContinueButton") != null)
@@ -151,9 +151,9 @@ public class CameraScript : MonoBehaviour
             }
             else if (GameObject.Find("OptionsButton") != null)
             {
-                theGameMaster.menuitems[0].GetComponent<RectTransform>().anchoredPosition = new Vector3(-570f, 386f, 0);
+                theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-550f, 386f, 0);
                 //options button
-                theGameMaster.menuitems[6].GetComponent<RectTransform>().anchoredPosition = new Vector3(-180f, -447f, 0);
+                theGameMaster.menuitems[1].GetComponent<RectTransform>().anchoredPosition = new Vector3(-180f, -447f, 0);
 
             }
         }
@@ -198,7 +198,7 @@ public class CameraScript : MonoBehaviour
             else if(GameObject.Find("OptionsButton")!=null)
             {
                 //get 'back' menu button
-                theGameMaster.menuitems[0].GetComponent<RectTransform>().anchoredPosition = new Vector3(-680f, 386f, 0);
+                theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-680f, 386f, 0);
             }
         }
         else if (Camera.main.aspect < 2.06f)//2960/1440
@@ -217,7 +217,7 @@ public class CameraScript : MonoBehaviour
                 GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(1022f, 290f, 0f);
             }
             else if (GameObject.Find("OptionsButton") != null)
-                theGameMaster.menuitems[0].GetComponent<RectTransform>().anchoredPosition = new Vector3(-700f, 386f, 0);            
+                theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-700f, 386f, 0);            
         }
         //Debug.Log("CurrentRatio is: " + Camera.main.aspect);
         //Camera.main.orthographicSize += Camera.main.aspect/2;

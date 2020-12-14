@@ -39,6 +39,9 @@ public class RecipeCheckScript : MonoBehaviour
         firework=Instantiate(firework);
         fireworkplay = firework.GetComponent<ParticleSystem>();
 
+        if (GameObject.Find("IngredientsText") != null)
+            GameObject.Find("IngredientsText").GetComponent<Text>().text = theGameMaster.languagehandler["Ingredients"];
+
         foreach (Image imagei in gameObject.GetComponent<RecipeCheckScript>().images)
         {
             //resize image, if recipe has five or more ingredients
@@ -210,7 +213,8 @@ public class RecipeCheckScript : MonoBehaviour
         if (gmo.GetComponentInChildren<Text>() != null)
         {
             //Debug.Log("text not null");
-            gmo.GetComponentInChildren<Text>().text = theGameMaster.languagehandler[ingredientname + "_lc"];
+            //gmo.GetComponentInChildren<Text>().text = theGameMaster.languagehandler[ingredientname + "_lc"];
+            gmo.GetComponentInChildren<Text>().text = theGameMaster.languagehandler[ingredientname];
         }
         else
         {
