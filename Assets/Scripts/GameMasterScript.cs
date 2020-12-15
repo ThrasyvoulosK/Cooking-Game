@@ -141,7 +141,7 @@ public class GameMasterScript : MonoBehaviour
             }
         }
 
-
+        //assign sprites to the ones we bought
         GameObject cnt = GameObject.Find("Counter");
         if (cnt != null)
         {
@@ -150,16 +150,17 @@ public class GameMasterScript : MonoBehaviour
             GameObject.Find("Wall").GetComponent<SpriteRenderer>().sprite = boughtables["Wall"];
             GameObject.Find("Tent").GetComponent<SpriteRenderer>().sprite = boughtables["Tent"];
             //Debug.Log("boughtablesCounter: " + boughtables["Counter"].name);
+            GameObject.Find("PaperTowels").GetComponent<SpriteRenderer>().sprite = boughtables["Napkins"];
         }
 
         //cheat mode!
-        
+        /*
         theFurnace = null;
         if(GameObject.Find("Furnace")!=null)
         {
             theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
             theFurnace.numberofrecipesinlevel = 1;
-        }
+        }*/
         
 
 
@@ -636,5 +637,6 @@ public class Save
     public string counter;
     public string tent;
     public string wall;
+    public string napkins;
     public int customer;
 }

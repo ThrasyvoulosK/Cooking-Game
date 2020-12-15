@@ -229,4 +229,13 @@ public class CameraScript : MonoBehaviour
     {
         
     }
+
+    public void cameracolourdark()
+    {
+        GetComponent<Camera>().backgroundColor = new Vector4(0, 0, 0, 0);
+    }
+    public void cameracolourlight()
+    {
+        GetComponent<Camera>().backgroundColor = new Vector4(255, 255, 255, 0);
+    }
 }

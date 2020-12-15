@@ -42,7 +42,7 @@ public class RecipeCheckScript : MonoBehaviour
         if (GameObject.Find("IngredientsText") != null)
             GameObject.Find("IngredientsText").GetComponent<Text>().text = theGameMaster.languagehandler["Ingredients"];
 
-        foreach (Image imagei in gameObject.GetComponent<RecipeCheckScript>().images)
+        /*foreach (Image imagei in gameObject.GetComponent<RecipeCheckScript>().images)
         {
             //resize image, if recipe has five or more ingredients
             if (images.Count >= 5)
@@ -56,7 +56,7 @@ public class RecipeCheckScript : MonoBehaviour
 
 
             }
-        }
+        }*/
     }
 
     //bool ingredientnumber

@@ -24,7 +24,7 @@ exit button
 
 //translations of gameobjects eg 'speechbubble'
 
-add //peanut//nuts, //cruttons-club sandwiches--potatoes, mayonaise-chocolate and caramel syrup-ketchup and mustard
+add //peanut//nuts, //cruttons-club sandwiches--potatoes, mayonaise-chocolate and caramel syrup//-ketchup and mustard
 -confirm recipes?
 
 check if player has already played
@@ -36,15 +36,14 @@ graphics that might need change
 --subsequent menu screen 
 ---background graphic changes position (height?)
 
-spawned ingredients list fix
--add also at start
+//spawned ingredients list fix-add also at start
 
 club sandwiches
 //-plate layer issue between plate and potatoes?
 //-top bread should take the potatoes' place as last ingredient
 -distances between ingredients should be smaller
 
-level 7
+//level 7
 
 recipes with 5+ ingredients
 -fit into canvas
@@ -54,33 +53,35 @@ recipes with 5+ ingredients
 //update original gamemaster with new data
 
 feedback issues
--no info
-//-menu items in wrong positions//--play button on top left?!!!//--character button moves beyond screen down-left?!!
---language selections?
-//-capitalise letters on recipe board
-//-'ingredients' on recipe board
--5+ ingredients out of board
--hovering ice cream ingredients?
+-no info button
+//-menu items in wrong positions--language selections?
+//-5+ ingredients out of board
+//-hovering ice cream ingredients?
 -different order in ice cream ingredients between recipe image and built recipe
-//-coffee screenshot?
-//-boughtables new colours
-//--napkins: all except beige and black
 saves not working
--congratulations pc unclear screen?
--'congratulations' letters in better position
--transaction screen green rectangle shouldn't make everything green!
+//-congratulations pc unclear screen?
+//-'congratulations' letters in better position
+//-transaction screen green rectangle shouldn't make everything green!
 
-integrate napkins to the game!
--at least from level 5 onwards
+add napkins to save
+-and load
+add napkin choices to gamemaster
 
-reset cheat mode!
+apply level 1 transaction changes to all
+-
+
+apply 5+ ingredients on all levels
+
+6+ ingredients?
+
+//reset cheat mode!
 
 
 
 Gameplay Issues:
 -using money?
--skill measuring?
--speed changing within the game?
+//-skill measuring?
+//-speed changing within the game?
 -how do we know how many recipes we need in-game?
 
 Add Functionality for Different Languages
@@ -93,7 +94,7 @@ Add Functionality for Different Languages
 Sounds???
 -for negative and affirmative actions
 
-possibilities?
+//possibilities?
 
 Performance Issues:
 -for loop in recipe-check-list update
@@ -104,23 +105,16 @@ Performance Issues:
 
 Bugs:
 
-ingredient text label disappears a little before the object itself exits the screen
-(this has happened both on build and editor)
--not now?
--now yes? randomly? RAM issue?
-
 android screen should only be allowed on 'landscape' screen-orientations
 -test?
 
-screenshot metadata error
--warning message in editor
--between games, the previous screenshot is shown on the screen; not the current one
+//screenshot metadata error-warning message in editor-between games, the previous screenshot is shown on the screen; not the current one
 
-//saves not working?-path error?
+saves not working?//-path error?
 
 //disabling menu objects causes errors
 
-
+error warning about too small of a name to 'remove "(Clone)"' from its name?
 
 Other Concerns:
 

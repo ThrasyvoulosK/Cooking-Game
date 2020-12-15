@@ -350,6 +350,7 @@ public class FoodLayersScript : MonoBehaviour
                 //return Resources.LoadAll<Sprite>("προϊόντα/canteen_coffee")[9];
                 return GameMasterScript.Instance.spriteslayers["Milk"];
             }
+            return GameMasterScript.Instance.spriteslayers[ingredientname];
 
         }
         else if (recipename.StartsWith("IceCream"))

@@ -27,14 +27,23 @@ public class SpawningScript : MonoBehaviour
     void Start()
     {
         //ingredients_current = ingredients;
-        foreach (GameObject ingr in ingredients)
-            ingredients_current.Add(ingr);
+        /*foreach (GameObject ingr in ingredients)
+            ingredients_current.Add(ingr);*/
+        theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
+        if (theFurnace.recipe!=null)
+            spawningredientsfromrecipe(ingredients);
+        else
+        {
+            foreach (GameObject ingr in ingredients)
+                ingredients_current.Add(ingr);
+        }
+
         //spawnallowed = false;//
         if (spawnallowed==true)
             InvokeRepeating("SpawnIngredient", 0, 1*gamespeed);
 
         theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
-        theFurnace= GameObject.Find("Furnace").GetComponent<FurnaceScript>();
+        //theFurnace= GameObject.Find("Furnace").GetComponent<FurnaceScript>();
     }
     
     // Update is called once per frame
@@ -52,9 +61,8 @@ public class SpawningScript : MonoBehaviour
         {
             if (ingredients_current.Count < 1)
             {
-                foreach (GameObject ingr in ingredients)
+                /*foreach (GameObject ingr in ingredients)
                 {
-                    //if(ingr.name )
                     foreach(string recing in theFurnace.recipe.neededIngr)
                     {
                         if (recing == ingr.name)
@@ -62,11 +70,11 @@ public class SpawningScript : MonoBehaviour
                             ingredients_current.Add(ingr);
                             randomingredient = Random.Range(0, ingredients.Count);
                             ingredients_current.Add(ingredients[randomingredient]);
-
                         }
                     }
-                    //ingredients_current.Add(ingr);
-                }
+                }*/
+                spawningredientsfromrecipe(ingredients);
+
             }
 
             randomingredient = Random.Range(0, ingredients_current.Count);
@@ -84,5 +92,22 @@ public class SpawningScript : MonoBehaviour
 
         }
 
+    }
+
+    void spawningredientsfromrecipe(List<GameObject> ingredients)
+    {
+        int randomingredient;
+        foreach (GameObject ingr in ingredients)
+        {
+            foreach (string recing in theFurnace.recipe.neededIngr)
+            {
+                if (recing == ingr.name)
+                {
+                    ingredients_current.Add(ingr);
+                    randomingredient = Random.Range(0, ingredients.Count);
+                    ingredients_current.Add(ingredients[randomingredient]);
+                }
+            }
+        }
     }
 }
