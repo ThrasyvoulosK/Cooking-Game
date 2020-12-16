@@ -30,53 +30,52 @@ add //peanut//nuts, //cruttons-club sandwiches--potatoes, mayonaise-chocolate an
 check if player has already played
 -application.iseditor
 
-graphics that might need change
--first screen
---'x' button remove
---subsequent menu screen 
----background graphic changes position (height?)
-
-//spawned ingredients list fix-add also at start
+//graphics that might need change
+//-first screen
+//--'x' button remove
+//--subsequent menu screen 
+//---background graphic changes position (height?)
 
 club sandwiches
 //-plate layer issue between plate and potatoes?
 //-top bread should take the potatoes' place as last ingredient
 -distances between ingredients should be smaller
 
-//level 7
-
-recipes with 5+ ingredients
--fit into canvas
---shrink(0.66) and move
-//-salad bowl disappears?
-
-//update original gamemaster with new data
-
 feedback issues
 -no info button
-//-menu items in wrong positions--language selections?
-//-5+ ingredients out of board
 //-hovering ice cream ingredients?
 -different order in ice cream ingredients between recipe image and built recipe
 saves not working
+
+//add napkins to save-and load -add napkin choices to gamemaster
+
+apply level 1 transaction changes to all
 //-congratulations pc unclear screen?
 //-'congratulations' letters in better position
 //-transaction screen green rectangle shouldn't make everything green!
 
-add napkins to save
--and load
-add napkin choices to gamemaster
-
-apply level 1 transaction changes to all
--
-
-apply 5+ ingredients on all levels
-
-6+ ingredients?
+//apply 6+ ingredients on all levels 
 
 //reset cheat mode!
 
+recipe board texts overflow
+-chocolate and caramel syrups spill over other ingredients!
+--shorten names to 'chocolate s.' or 'choc. syrup'?
 
+//levels 7 & 8 update salad recipes
+
+intro-tutorial
+-video with audio
+-play before first level
+
+disable 'choice' button in transactions when nothing is chosen
+-start with button already disabled
+--activate it with every click on an item
+
+Greek labels on treadmill ingredients
+-mustard, ketchup, mayonnaise and syrups
+
+coffee syrup below glass on recipes with two ingredients
 
 Gameplay Issues:
 -using money?
@@ -93,8 +92,6 @@ Add Functionality for Different Languages
 
 Sounds???
 -for negative and affirmative actions
-
-//possibilities?
 
 Performance Issues:
 -for loop in recipe-check-list update
@@ -115,6 +112,8 @@ saves not working?//-path error?
 //disabling menu objects causes errors
 
 error warning about too small of a name to 'remove "(Clone)"' from its name?
+
+treadmill ingredient names disappear before exiting
 
 Other Concerns:
 

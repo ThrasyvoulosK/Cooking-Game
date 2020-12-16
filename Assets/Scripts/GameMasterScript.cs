@@ -154,13 +154,13 @@ public class GameMasterScript : MonoBehaviour
         }
 
         //cheat mode!
-        /*
+        
         theFurnace = null;
         if(GameObject.Find("Furnace")!=null)
         {
             theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
             theFurnace.numberofrecipesinlevel = 1;
-        }*/
+        }
         
 
 
@@ -199,6 +199,8 @@ public class GameMasterScript : MonoBehaviour
             save.tent = xtent[0].InnerText;
             XmlNodeList xwall = xmlDocument.GetElementsByTagName("Wall");
             save.wall = xwall[0].InnerText;
+            XmlNodeList xnap = xmlDocument.GetElementsByTagName("Napkins");
+            save.napkins = xnap[0].InnerText;
 
             XmlNodeList xcus = xmlDocument.GetElementsByTagName("Customer");
             save.customer = int.Parse(xcus[0].InnerText);
@@ -276,6 +278,8 @@ public class GameMasterScript : MonoBehaviour
             //GameObject.Find("Wall").GetComponent<SpriteRenderer>().sprite = spriteslayers[save.wall];
             GameObject.Find("Wall").GetComponent<SpriteRenderer>().sprite = spriteslayers[xwall[0].InnerText];
             boughtables["Wall"] = spriteslayers[xwall[0].InnerText];
+            GameObject.Find("PaperTowels").GetComponent<SpriteRenderer>().sprite = spriteslayers[xnap[0].InnerText];
+            boughtables["Napkins"] = spriteslayers[xnap[0].InnerText];
 
             GameObject.Find("Customer").GetComponent<CustomerScript>().customerandom = save.customer;
             GameObject.Find("Customer").GetComponent<CustomerScript>().customercurrentspriterenderer.sprite = GameObject.Find("Customer").GetComponent<CustomerScript>().customerspritelistcurrent[save.customer];
@@ -487,7 +491,7 @@ public class GameMasterScript : MonoBehaviour
             {
                 if(GameObject.Find("Customer").GetComponent<CustomerScript>().customerspritelist[i]== GameObject.Find("Customer").GetComponent<SpriteRenderer>().sprite)
                 {
-                    Debug.Log("getting sprite");
+                    //Debug.Log("getting sprite");
                     save.customer = i;
                 }
             }
@@ -553,6 +557,14 @@ public class GameMasterScript : MonoBehaviour
                 xwall.InnerText = save.wall;
                 root.AppendChild(xwall);
             }
+            if (spriteslayers[desc] == boughtables["Napkins"])
+            {
+                save.napkins = desc;
+
+                XmlElement xnap = xmlDocument.CreateElement("Napkins");
+                xnap.InnerText = save.napkins;
+                root.AppendChild(xnap);
+            }
 
         }
                 
@@ -614,6 +626,8 @@ public class GameMasterScript : MonoBehaviour
         save.tent = xtent[0].InnerText;
         XmlNodeList xwall = xmlDocument.GetElementsByTagName("Wall");
         save.wall = xwall[0].InnerText;
+        XmlNodeList xnap = xmlDocument.GetElementsByTagName("Napkins");
+        save.napkins = xnap[0].InnerText;
 
         XmlNodeList xcus = xmlDocument.GetElementsByTagName("Customer");
         save.customer = int.Parse(xcus[0].InnerText);

@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6055c507492e90246a990ba159192779, type: 3}
-  m_Name: Salad_Cabbage_Lettuce_Tomato_Onion_Crouton
+  m_Name: Salad_Cabbage_Carrot_Lettuce_Tomato_Crouton_Nut
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: 7291991036438313410, guid: 8995148599dcba94c8309dfd3ffa3a20, type: 3}
+  recipeSprite: {fileID: -5339683318101054052, guid: 8995148599dcba94c8309dfd3ffa3a20, type: 3}
   neededIngr:
   - Cabbage
+  - Carrot
   - Lettuce
   - Tomato
-  - Onion
+  - Crouton
   - Nut
-  numbOfIng: 0100000001000000010000000100000001000000
+  numbOfIng: 010000000100000001000000010000000100000001000000
   layeredingredients: []

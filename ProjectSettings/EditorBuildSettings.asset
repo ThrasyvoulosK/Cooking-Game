@@ -48,6 +48,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_7.unity
     guid: eba0dd5e63ac62047abbe581cd3ccebd
   - enabled: 1
+    path: Assets/Scenes/transaction7.unity
+    guid: ce4155ac51be63946bf52aae3b4665ce
+  - enabled: 1
+    path: Assets/Scenes/Level_8.unity
+    guid: 1fe71b556e2550c4b89347590a55ec7a
+  - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: d8b510d25ad50ff4d81a566598565381
   m_configObjects: {}
