@@ -45,9 +45,7 @@ feedback issues
 -no info button
 //-hovering ice cream ingredients?
 -different order in ice cream ingredients between recipe image and built recipe
-saves not working
-
-//add napkins to save-and load -add napkin choices to gamemaster
+//saves not working
 
 apply level 1 transaction changes to all
 //-congratulations pc unclear screen?
@@ -56,7 +54,7 @@ apply level 1 transaction changes to all
 
 //apply 6+ ingredients on all levels 
 
-//reset cheat mode!
+reset cheat mode!
 
 recipe board texts overflow
 -chocolate and caramel syrups spill over other ingredients!
@@ -75,7 +73,13 @@ disable 'choice' button in transactions when nothing is chosen
 Greek labels on treadmill ingredients
 -mustard, ketchup, mayonnaise and syrups
 
-coffee syrup below glass on recipes with two ingredients
+//coffee syrup below glass on recipes with two ingredients
+
+save new board as a choice, and make its size: w=600,h=440
+change location of napkins
+
+add transactions 6 and 7
+(8 wins for the moment)
 
 Gameplay Issues:
 -using money?

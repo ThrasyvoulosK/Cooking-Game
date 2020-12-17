@@ -20,7 +20,8 @@ public class TransactionScript : MonoBehaviour
 
         GameObject.Find("Object1").GetComponent<SpriteRenderer>().sprite = spritetobebought[0];
         GameObject.Find("Object2").GetComponent<SpriteRenderer>().sprite = spritetobebought[1];
-        GameObject.Find("Object3").GetComponent<SpriteRenderer>().sprite = spritetobebought[2];
+        if(spritetobebought.Length>=3)
+            GameObject.Find("Object3").GetComponent<SpriteRenderer>().sprite = spritetobebought[2];
 
         GameObject.Find("ChooseButton").GetComponentInChildren<Text>().text = theGameMaster.languagehandler["Choose"];
 
@@ -55,6 +56,9 @@ public class TransactionScript : MonoBehaviour
                 Transform transform = hit2D.collider.transform;
 
                 greenrectangle(transform);
+
+                //allow 'choice' button
+                GameObject.Find("ChooseButton").GetComponent<Button>().interactable = true;
                 //theChangeScene.change_scene();
             }
 
@@ -78,7 +82,7 @@ public class TransactionScript : MonoBehaviour
         gr.name = "Selected";
         //gr = Instantiate(gr,transform);
         gr.GetComponent<Transform>().position = transform.position;
-        gr.GetComponent<Transform>().localScale= new Vector3(0.6f,0.6f,0f);
+        gr.GetComponent<Transform>().localScale= new Vector3(0.65f,0.65f,0f);
 
         gr.GetComponent<SpriteRenderer>().sortingOrder = -2;
 

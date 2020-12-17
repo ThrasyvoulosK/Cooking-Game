@@ -83,7 +83,7 @@ public class SpawningScript : MonoBehaviour
             ingredients_current.RemoveAt(randomingredient);
 
             spingredient.name = spingredient.name.Substring(0, spingredient.name.Length - 7);//remove (clone)
-            Debug.Log("spingredient name: " + spingredient.name);
+            //Debug.Log("spingredient name: " + spingredient.name);
             spingredient.GetComponentInChildren<TextMeshPro>().SetText(theGameMaster.languagehandler[spingredient.name]);
             spingredient.name += "(Clone)";
 

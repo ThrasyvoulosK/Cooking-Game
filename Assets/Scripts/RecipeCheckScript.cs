@@ -116,7 +116,7 @@ public class RecipeCheckScript : MonoBehaviour
                 speechbubble.sprite= Resources.LoadAll<Sprite>("canteen_things")[1];
                 speechbubble.GetComponentInChildren<TextMeshPro>().enabled = false;
 
-                Debug.Log(furnscript.recipe.neededIngr[i]);
+                //Debug.Log(furnscript.recipe.neededIngr[i]);
                 gameObject.GetComponent<RecipeCheckScript>().images[i].sprite = RecipeIngredientCheckListSprite(furnscript.recipe.neededIngr[i],furnscript.usable_number_of_ingredients[i]);
 
                 //text description of images

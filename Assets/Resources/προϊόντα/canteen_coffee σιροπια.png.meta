@@ -363,9 +363,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 327
-        y: 414
+        y: 417
         width: 104
-        height: 144
+        height: 141
       alignment: 9
       pivot: {x: 0.5, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,10 +383,10 @@ TextureImporter:
       name: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_11"
       rect:
         serializedVersion: 2
-        x: 576
-        y: 417
-        width: 105
-        height: 147
+        x: 577
+        y: 423
+        width: 104
+        height: 141
       alignment: 9
       pivot: {x: 0.5, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}

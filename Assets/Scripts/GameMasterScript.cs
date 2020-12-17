@@ -151,6 +151,13 @@ public class GameMasterScript : MonoBehaviour
             GameObject.Find("Tent").GetComponent<SpriteRenderer>().sprite = boughtables["Tent"];
             //Debug.Log("boughtablesCounter: " + boughtables["Counter"].name);
             GameObject.Find("PaperTowels").GetComponent<SpriteRenderer>().sprite = boughtables["Napkins"];
+
+            GameObject.Find("Board").GetComponent<Image>().sprite = boughtables["Board"];
+            //change board size to fit better, now that it's changed
+            if(levelid>9)
+            {
+                GameObject.Find("Board").GetComponent<RectTransform>().sizeDelta = new Vector2(600, 400);
+            }
         }
 
         //cheat mode!
@@ -174,7 +181,7 @@ public class GameMasterScript : MonoBehaviour
             XmlDocument xmlDocument = new XmlDocument();
             //xmlDocument.Load(Application.dataPath + "/SavedGames/save1.txt");//
             //xmlDocument.Load(Application.dataPath + "/Resources/save1.txt");//
-            xmlDocument.Load(Application.persistentDataPath + "save1.txt");//
+            xmlDocument.Load(Application.persistentDataPath + "/save1.txt");//
 
             XmlNodeList xmoney = xmlDocument.GetElementsByTagName("Money");
             save.money = int.Parse(xmoney[0].InnerText);
@@ -445,7 +452,7 @@ public class GameMasterScript : MonoBehaviour
 
     public void SaveGame()
     {
-        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "scrnsht.png");
+        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/scrnsht.png");
         //ScreenCapture.CaptureScreenshot(Application.dataPath + "/Resources/scrnsht.png");
         SaveXML();
 
@@ -575,7 +582,7 @@ public class GameMasterScript : MonoBehaviour
         xmlDocument.AppendChild(root);
 
         //xmlDocument.Save(Application.dataPath + "/Resources/save1.txt");//
-        xmlDocument.Save(Application.persistentDataPath + "save1.txt");//
+        xmlDocument.Save(Application.persistentDataPath + "/save1.txt");//
     }
 
     //this variable will be called whenever we load a scene
@@ -586,11 +593,21 @@ public class GameMasterScript : MonoBehaviour
         Debug.Log("current level_id: " + levelid);
         if (levelchanged == false)
         {
-            string sav = Application.persistentDataPath + "save1.txt";
-            if(System.IO.File.Exists(sav))
+            string sav = Application.persistentDataPath + "/save1.txt";
+            Debug.Log("persistent data path save: " + sav);
+            if (System.IO.File.Exists(sav))
+            {
+                Debug.Log("loading saved file");
                 LoadXML();
+                Debug.Log("loading aborted");               
+            }
+            else
+                Debug.Log("Save doesn't exist");
             //if a saved game dosn't exist, start from level1
+            /*SceneManager.LoadScene(levelid);
+            Debug.Log("starting from level 1");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);//
+            */
         }
         else
             SceneManager.LoadScene(levelid);
@@ -601,24 +618,22 @@ public class GameMasterScript : MonoBehaviour
         Save save = new Save();
         XmlDocument xmlDocument = new XmlDocument();
         //xmlDocument.Load(Application.dataPath + "/Resources/save1.txt");//
-        xmlDocument.Load(Application.persistentDataPath + "save1.txt");//
+        xmlDocument.Load(Application.persistentDataPath + "/save1.txt");//
 
         XmlNodeList xmoney = xmlDocument.GetElementsByTagName("Money");
         save.money = int.Parse(xmoney[0].InnerText);
         XmlNodeList xscene = xmlDocument.GetElementsByTagName("Scene");
         save.scenenum = int.Parse(xscene[0].InnerText);
+        /*edit: keep only scene and change the rest on update*/
+        /*issavedgame = true;
+        Debug.Log("LoadXML loads scene " + save.scenenum);
+        SceneManager.LoadScene(save.scenenum);*/
+        /**/
         XmlNodeList xrec = xmlDocument.GetElementsByTagName("CompletedRecipes");
         save.completedrecipes = int.Parse(xrec[0].InnerText);
 
         XmlNodeList xcurrec = xmlDocument.GetElementsByTagName("CurrentRecipe");
         save.currentrecipe = xcurrec[0].InnerText;
-
-        save.remainingrecipes.Clear();
-        XmlNodeList xremrec = xmlDocument.GetElementsByTagName("RemainingRecipes");
-        for(int i=0;i<xremrec.Count;i++)
-        {
-            save.remainingrecipes.Add(xremrec[i].InnerText);
-        }
 
         XmlNodeList xcoun = xmlDocument.GetElementsByTagName("Counter");
         save.counter = xcoun[0].InnerText;
@@ -628,6 +643,22 @@ public class GameMasterScript : MonoBehaviour
         save.wall = xwall[0].InnerText;
         XmlNodeList xnap = xmlDocument.GetElementsByTagName("Napkins");
         save.napkins = xnap[0].InnerText;
+
+        save.remainingrecipes.Clear();
+        XmlNodeList xremrec = xmlDocument.GetElementsByTagName("RemainingRecipes");
+        for (int i=0;i<xremrec.Count;i++)
+        {
+            save.remainingrecipes.Add(xremrec[i].InnerText);
+        }
+
+        /*XmlNodeList xcoun = xmlDocument.GetElementsByTagName("Counter");
+        save.counter = xcoun[0].InnerText;
+        XmlNodeList xtent = xmlDocument.GetElementsByTagName("Tent");
+        save.tent = xtent[0].InnerText;
+        XmlNodeList xwall = xmlDocument.GetElementsByTagName("Wall");
+        save.wall = xwall[0].InnerText;
+        XmlNodeList xnap = xmlDocument.GetElementsByTagName("Napkins");
+        save.napkins = xnap[0].InnerText;*/
 
         XmlNodeList xcus = xmlDocument.GetElementsByTagName("Customer");
         save.customer = int.Parse(xcus[0].InnerText);
