@@ -154,21 +154,36 @@ public class GameMasterScript : MonoBehaviour
 
             GameObject.Find("Board").GetComponent<Image>().sprite = boughtables["Board"];
             //change board size to fit better, now that it's changed
-            if(levelid>9)
+            if(SceneManager.GetActiveScene().buildIndex > 9)
             {
-                GameObject.Find("Board").GetComponent<RectTransform>().sizeDelta = new Vector2(600, 400);
+                //Debug.Log("SceneManager.GetActiveScene().buildIndex>=9" + levelid);
+                GameObject.Find("Board").GetComponent<RectTransform>().sizeDelta = new Vector2(660, 440);
+                GameObject.Find("Board").GetComponent<RectTransform>().anchoredPosition = new Vector2(60, -160);
+
+                //change our board to one of the new ones, if we have the original at this point
+                if(GameObject.Find("Board").GetComponent<Image>().sprite==spriteslayers["Board_orig"])
+                    GameObject.Find("Board").GetComponent<Image>().sprite=spriteslayers["Board_Beige"];
+
+                //change napkins' position too, because they get hidden
+                GameObject.Find("PaperTowels").GetComponent<Transform>().position = new Vector3(-6, -2, 0);
+            }
+            if (GameObject.Find("Table") != null)
+            {
+                GameObject.Find("Table").GetComponent<SpriteRenderer>().sprite = boughtables["Table"];
+                if (GameObject.Find("TableDec") != null)
+                    GameObject.Find("TableDec").GetComponent<SpriteRenderer>().sprite = boughtables["Table Decoration"];
             }
         }
 
         //cheat mode!
-        
+        /*
         theFurnace = null;
         if(GameObject.Find("Furnace")!=null)
         {
             theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
             theFurnace.numberofrecipesinlevel = 1;
         }
-        
+        */
 
 
 

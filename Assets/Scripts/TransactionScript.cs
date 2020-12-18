@@ -82,6 +82,7 @@ public class TransactionScript : MonoBehaviour
         gr.name = "Selected";
         //gr = Instantiate(gr,transform);
         gr.GetComponent<Transform>().position = transform.position;
+        gr.GetComponent<Transform>().position -= new Vector3(0,transform.position.y,0);
         gr.GetComponent<Transform>().localScale= new Vector3(0.65f,0.65f,0f);
 
         gr.GetComponent<SpriteRenderer>().sortingOrder = -2;

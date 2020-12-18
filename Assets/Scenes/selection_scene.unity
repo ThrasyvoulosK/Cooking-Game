@@ -4699,6 +4699,12 @@ MonoBehaviour:
   - {fileID: 4907985705408935729, guid: c7467aea2443e4f42b9172796a3445e4, type: 3}
   - {fileID: 6841333499150755801, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
   - {fileID: -2231923792859303970, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -7865212156404934262, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 4954574728673246695, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 3536844162800087377, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -7837207120064668628, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -5139094413518592378, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -54765728827472461, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
   spritesnames:
   - Sandwich_Tomato
   - Sandwich_Cheese
@@ -4799,6 +4805,12 @@ MonoBehaviour:
   - Board_orig
   - Board_Beige
   - Board_White
+  - Table_1
+  - Table_2
+  - Table_3
+  - Table_Dec_1
+  - Table_Dec_2
+  - Table_Dec_3
   languages:
   - Greek
   - English
@@ -4870,6 +4882,8 @@ MonoBehaviour:
   - Napkins
   - Ingredients
   - Board
+  - Table
+  - Table Decoration
   words_gr:
   - "\u03A4\u03A5\u03A1\u0399"
   - "\u0396\u0391\u039C\u03A0\u039F\u039D"
@@ -4937,6 +4951,8 @@ MonoBehaviour:
   - "\u03A7\u03B1\u03C1\u03C4\u03BF\u03C0\u03B5\u03C4\u03C3\u03B5\u03C4\u03CE\u03BD"
   - "\u03A5\u039B\u0399\u039A\u0391"
   - "\u03A0\u03AF\u03BD\u03B1\u03BA\u03B1"
+  - "\u03A4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BF\u03CD"
+  - "\u0394\u03B9\u03B1\u03BA\u03CC\u03C3\u03BC\u03B7\u03C3\u03B7\u03C2 \u03A4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BF\u03CD"
   words_en:
   - CHEESE
   - HAM
@@ -5004,6 +5020,8 @@ MonoBehaviour:
   - Napkins
   - INGREDIENTS
   - Board
+  - Table
+  - Table Decoration
   words_current: []
   boughtablesprites:
   - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
@@ -5011,12 +5029,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fa090ca1abb7e1c46a38b07f9197bb8b, type: 3}
   - {fileID: 6191295521471560383, guid: 69e58d2b99c494044ae6805c5c10d691, type: 3}
   - {fileID: 4907985705408935729, guid: c7467aea2443e4f42b9172796a3445e4, type: 3}
+  - {fileID: -7865212156404934262, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -7837207120064668628, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
   boughtablesnames:
   - Counter
   - Tent
   - Wall
   - Napkins
   - Board
+  - Table
+  - Table Decoration
   theFurnace: {fileID: 0}
   money: 0
   levelid: 1

@@ -1188,6 +1188,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5875820576353060773, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6187794154094042427, guid: a0bbb23766b540d4a88572b9ea48d5db, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0

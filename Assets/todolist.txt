@@ -66,20 +66,29 @@ intro-tutorial
 -video with audio
 -play before first level
 
-disable 'choice' button in transactions when nothing is chosen
--start with button already disabled
---activate it with every click on an item
-
-Greek labels on treadmill ingredients
--mustard, ketchup, mayonnaise and syrups
+//Greek labels on treadmill ingredients//-mustard, //ketchup, mayonnaise and //syrups
 
 //coffee syrup below glass on recipes with two ingredients
 
-save new board as a choice, and make its size: w=600,h=440
-change location of napkins
+//save new board as a choice, and make its size: w=600,h=440//change location of napkins
 
-add transactions 6 and 7
-(8 wins for the moment)
+//add transactions 6 and 7
+
+//table decorations don't always match//-table1 doesn't match with candle//-table2 and 3 don't match with pots
+
+gameobject positions issues
+2:1
+-transaction 7 (table decorations)
+--green rectangle is wrong, because of the change in height center for thefirst two objects
+-small board is visible behind large one
+1920x1300
+-"ingredients" goes above black space
+-'exit' button too
+
+descriptions of transaction scenes are too big for the screen?
+
+
+
 
 Gameplay Issues:
 -using money?
