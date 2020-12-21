@@ -4,6 +4,7 @@ using System.Linq;
 using TMPro;
 //using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*VERY IMPORTANT SCRIPT*/
 /*IngredientScript handles everything about the ingredients after their spawning, including their movement and their fitting within recipes */
@@ -257,8 +258,12 @@ public class IngredientScript : MonoBehaviour
                             theFurnace.recipe.neededIngr = theFurnace.next_recipe[it].neededIngr;//
                             theFurnace.recipe = theFurnace.next_recipe[it];
 
-                            //remove "it" member of list-of-next-recipes
-                            theFurnace.next_recipe.RemoveAt(it);
+                            //remove "it" member of list-of-next-recipes if !=level 10!
+                            if (SceneManager.GetActiveScene().buildIndex != (SceneManager.sceneCountInBuildSettings-2))
+                            {
+                                Debug.Log("current scene: " + SceneManager.GetActiveScene().buildIndex + " scenecount: " + SceneManager.sceneCountInBuildSettings);
+                                theFurnace.next_recipe.RemoveAt(it); 
+                            }
 
                         }
 
@@ -331,10 +336,10 @@ public class IngredientScript : MonoBehaviour
         {
             fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[4];
         }
-        else if (formername.StartsWith("Coffee"))
+        /*else if (formername.StartsWith("Coffee"))
         {
             fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[5];
-        }
+        }*/
         else if (formername.StartsWith("Ice"))
         {
             fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[6];

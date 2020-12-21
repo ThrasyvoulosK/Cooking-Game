@@ -3725,7 +3725,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1059090787
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4705,6 +4705,14 @@ MonoBehaviour:
   - {fileID: -7837207120064668628, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
   - {fileID: -5139094413518592378, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
   - {fileID: -54765728827472461, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 6591038416801406945, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -7223775157892528725, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 9211177866061595956, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 6690062836333500996, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 4039165537884659264, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 126031767474139960, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 1468160588827105429, guid: 2a8562bceb5a75241ba107de3ca303fc, type: 3}
+  - {fileID: 7646371382768671465, guid: 2a8562bceb5a75241ba107de3ca303fc, type: 3}
   spritesnames:
   - Sandwich_Tomato
   - Sandwich_Cheese
@@ -4811,6 +4819,14 @@ MonoBehaviour:
   - Table_Dec_1
   - Table_Dec_2
   - Table_Dec_3
+  - Umbrella_Yellow
+  - Umbrella_Red
+  - Umbrella_Green
+  - Logo_1
+  - Logo_2
+  - Logo_3
+  - Coffee_ing
+  - Coffee_ing_done
   languages:
   - Greek
   - English
@@ -4884,6 +4900,8 @@ MonoBehaviour:
   - Board
   - Table
   - Table Decoration
+  - Umbrella
+  - Logo
   words_gr:
   - "\u03A4\u03A5\u03A1\u0399"
   - "\u0396\u0391\u039C\u03A0\u039F\u039D"
@@ -4953,6 +4971,8 @@ MonoBehaviour:
   - "\u03A0\u03AF\u03BD\u03B1\u03BA\u03B1"
   - "\u03A4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BF\u03CD"
   - "\u0394\u03B9\u03B1\u03BA\u03CC\u03C3\u03BC\u03B7\u03C3\u03B7\u03C2 \u03A4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BF\u03CD"
+  - "\u039F\u03BC\u03C0\u03C1\u03AD\u03BB\u03BB\u03B1\u03C2"
+  - "\u039B\u03BF\u03B3\u03CC\u03C4\u03C5\u03C0\u03BF\u03C5"
   words_en:
   - CHEESE
   - HAM
@@ -5022,6 +5042,8 @@ MonoBehaviour:
   - Board
   - Table
   - Table Decoration
+  - Umbrella
+  - Logo
   words_current: []
   boughtablesprites:
   - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
@@ -5031,6 +5053,8 @@ MonoBehaviour:
   - {fileID: 4907985705408935729, guid: c7467aea2443e4f42b9172796a3445e4, type: 3}
   - {fileID: -7865212156404934262, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
   - {fileID: -7837207120064668628, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 6591038416801406945, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 6690062836333500996, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
   boughtablesnames:
   - Counter
   - Tent
@@ -5039,6 +5063,8 @@ MonoBehaviour:
   - Board
   - Table
   - Table Decoration
+  - Umbrella
+  - Logo
   theFurnace: {fileID: 0}
   money: 0
   levelid: 1
@@ -8314,7 +8340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1987589296
 RectTransform:
   m_ObjectHideFlags: 0

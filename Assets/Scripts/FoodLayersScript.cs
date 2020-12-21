@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 //using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*FoodLayersScript deals with the appearance of the layered food that is under construction in the middle of the screen.
   It also deals with its movement, scaling and disappearance routines*/
@@ -24,6 +25,8 @@ public class FoodLayersScript : MonoBehaviour
     public ChangeSceneScript theChangeScene;
 
     public GameMasterScript theGameMaster;
+
+    public MoneyScript theMoney;
 
     GameObject target;
     GameObject movetoward;
@@ -64,22 +67,22 @@ public class FoodLayersScript : MonoBehaviour
             
             for(int i=1;i<clchldrn;i++)
             {
-                Debug.Log("forloop");
+                //Debug.Log("forloop");
                 
                 if (theFurnace.recipe.neededIngr.Count < i)
                     break;
                // Debug.Log("i "+i+" neededingr "+theFurnace.recipe.neededIngr.Count);
-                Debug.Log(theFurnace.recipe.neededIngr[i-1]);
+                //Debug.Log(theFurnace.recipe.neededIngr[i-1]);
                 
                 if (theFurnace.recipe.neededIngr[i-1] == "Potato")
                 {
                     potatoeson = true;
                     //gameObject.transform.GetChild(i-1).GetComponent<Transform>().localPosition = new Vector3(0f, -0.10f, 0);
                     //assign the base's position on potatoes
-                    gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition = gameObject.transform.GetChild(4).GetComponent<Transform>().localPosition;
+                    gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition = gameObject.transform.GetChild(clchldrn-2).GetComponent<Transform>().localPosition;
                     //gameObject.transform.GetChild(i - 1).GetComponent<Transform>().position = new Vector3(0,0,0);
                     //gameObject.transform.GetChild(i - 1).GetComponent<Transform>().position = gameObject.GetComponent<Transform>().position;
-                    gameObject.transform.GetChild(i-1).GetComponent<SpriteRenderer>().sortingOrder = 5;
+                    gameObject.transform.GetChild(i-1).GetComponent<SpriteRenderer>().sortingOrder = 4;
                     //continue;
                 }
                 
@@ -102,7 +105,7 @@ public class FoodLayersScript : MonoBehaviour
 
         }
         
-        Debug.Log("k");
+        //Debug.Log("k");
     }
 
     public bool change = false;
@@ -243,7 +246,7 @@ public class FoodLayersScript : MonoBehaviour
         }
 
 
-        Debug.Log("null base: "+recipename);
+        //Debug.Log("null base: "+recipename);
         return null;
     }
 
@@ -274,6 +277,8 @@ public class FoodLayersScript : MonoBehaviour
                 else if(recipename.StartsWith("Club"))
                 {
                     rendr.sprite = theGameMaster.spriteslayers["Club_Up"];
+                    if (potatoeson)
+                        rendr.GetComponent<Transform>().position -= new Vector3(0, 0.175f, 0);
                     return renderers;
                 }
 
@@ -410,8 +415,12 @@ public class FoodLayersScript : MonoBehaviour
         CustomerScript.Instance.tesrFunction();
 
         //winning condition
-        if (theFurnace.numberofcompletedrecipes == theFurnace.numberofrecipesinlevel)
-            theChangeScene.change_scene();
+        if (SceneManager.GetActiveScene().buildIndex != (SceneManager.sceneCountInBuildSettings-2))
+            if ((theFurnace.numberofcompletedrecipes == theFurnace.numberofrecipesinlevel))
+                theChangeScene.change_scene();
+        else 
+            if (theMoney.money >= 10000)
+                theChangeScene.change_scene();
 
 
         Destroy(gameObject);

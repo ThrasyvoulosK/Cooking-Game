@@ -177,13 +177,13 @@ public class RecipeCheckScript : MonoBehaviour
             else
                 return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[2];
         }
-        else if (ingredientname == "Coffee")
+        /*else if (ingredientname == "Coffee")
         {
             if (numberofingredientsleft > 0)
                 return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[8];
             else
                 return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[10];
-        }
+        }*/
         else if (ingredientname == "Ice")
         {
             if (numberofingredientsleft > 0)

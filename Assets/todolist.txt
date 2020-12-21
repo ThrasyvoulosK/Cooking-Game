@@ -22,11 +22,6 @@ exit button
 -position and texts and menus according to idgames conversation!
 --consult aforementioned layouts
 
-//translations of gameobjects eg 'speechbubble'
-
-add //peanut//nuts, //cruttons-club sandwiches--potatoes, mayonaise-chocolate and caramel syrup//-ketchup and mustard
--confirm recipes?
-
 check if player has already played
 -application.iseditor
 
@@ -39,7 +34,8 @@ check if player has already played
 club sandwiches
 //-plate layer issue between plate and potatoes?
 //-top bread should take the potatoes' place as last ingredient
--distances between ingredients should be smaller
+-distances between ingredients should be smaller?
+//-rest of recipes
 
 feedback issues
 -no info button
@@ -47,32 +43,18 @@ feedback issues
 -different order in ice cream ingredients between recipe image and built recipe
 //saves not working
 
-apply level 1 transaction changes to all
-//-congratulations pc unclear screen?
-//-'congratulations' letters in better position
-//-transaction screen green rectangle shouldn't make everything green!
-
-//apply 6+ ingredients on all levels 
-
 reset cheat mode!
 
 recipe board texts overflow
 -chocolate and caramel syrups spill over other ingredients!
 --shorten names to 'chocolate s.' or 'choc. syrup'?
-
-//levels 7 & 8 update salad recipes
+-try smaller text sizes
 
 intro-tutorial
 -video with audio
 -play before first level
 
-//Greek labels on treadmill ingredients//-mustard, //ketchup, mayonnaise and //syrups
-
-//coffee syrup below glass on recipes with two ingredients
-
-//save new board as a choice, and make its size: w=600,h=440//change location of napkins
-
-//add transactions 6 and 7
+//Greek labels on mayonnaise
 
 //table decorations don't always match//-table1 doesn't match with candle//-table2 and 3 don't match with pots
 
@@ -85,9 +67,16 @@ gameobject positions issues
 -"ingredients" goes above black space
 -'exit' button too
 
-descriptions of transaction scenes are too big for the screen?
+descriptions of transaction scenes 
+-too big for the screen?
+-wrong in places eg asking for colour when its a different thing altogether
 
+//level 9
+//level 10
+//integrate new coffee graphics
 
+add new objects to saves!
+-canvases, tables, tables' decorations, umbrellas and logos
 
 
 Gameplay Issues:
@@ -122,8 +111,6 @@ android screen should only be allowed on 'landscape' screen-orientations
 
 saves not working?//-path error?
 
-//disabling menu objects causes errors
-
 error warning about too small of a name to 'remove "(Clone)"' from its name?
 
 treadmill ingredient names disappear before exiting
@@ -156,8 +143,7 @@ also, disable not played levels
 ???can all be achieved from the same save file???
 -or is it a bad idea?
 
-transactions
--level3: paper towels(instead of walls(level 4))
+//transactions//-level3: paper towels(instead of walls(level 4))
 
 -'sound' option?
 difficulty options?
