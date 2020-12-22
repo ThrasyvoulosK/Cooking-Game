@@ -31,32 +31,19 @@ check if player has already played
 //--subsequent menu screen 
 //---background graphic changes position (height?)
 
-club sandwiches
-//-plate layer issue between plate and potatoes?
-//-top bread should take the potatoes' place as last ingredient
--distances between ingredients should be smaller?
-//-rest of recipes
+club sandwiches distances between ingredients should be smaller?
 
 feedback issues
 -no info button
 //-hovering ice cream ingredients?
 -different order in ice cream ingredients between recipe image and built recipe
-//saves not working
 
-reset cheat mode!
-
-recipe board texts overflow
--chocolate and caramel syrups spill over other ingredients!
---shorten names to 'chocolate s.' or 'choc. syrup'?
--try smaller text sizes
+//recipe board texts overflow-chocolate and caramel syrups spill over other ingredients!--shorten names to 'chocolate s.' or 'choc. syrup'?-try smaller text sizes
 
 intro-tutorial
--video with audio
+-//video
+--with audio
 -play before first level
-
-//Greek labels on mayonnaise
-
-//table decorations don't always match//-table1 doesn't match with candle//-table2 and 3 don't match with pots
 
 gameobject positions issues
 2:1
@@ -68,15 +55,11 @@ gameobject positions issues
 -'exit' button too
 
 descriptions of transaction scenes 
--too big for the screen?
+-'table decoration' too big for the screen in both languages?
 -wrong in places eg asking for colour when its a different thing altogether
+--just remove the word 'colour' when not needed
 
-//level 9
-//level 10
-//integrate new coffee graphics
-
-add new objects to saves!
--canvases, tables, tables' decorations, umbrellas and logos
+//add new objects to saves!-canvases, tables, tables' decorations, umbrellas and logos
 
 
 Gameplay Issues:
@@ -117,22 +100,13 @@ treadmill ingredient names disappear before exiting
 
 Other Concerns:
 
-//ticked images
-//-change only when the ingredient reaches the "plate"
-//--too late?
-
 //split counter image?(canvas&cashmachine&cuttingboard?)
 
 //objects shrinking in size when clicked?
 
-//THE FURNACE IS THE TOAST-MAKER!
-//-merge?
+//merge the furnace with foodlayer?
 
-//use z axis instead of order-in-layer?
-
-speed issues:
--spawning speed
--leaving food and customer speed
+//spawning speed and leaving food and customer speed
 
 change font of cash register to sth more appropriate, eg calculator?
 
@@ -149,13 +123,8 @@ also, disable not played levels
 difficulty options?
 changes in levels adn numbers of recipes?
 
-saved game functionality: what to keep:
--keep scenery saved (for later levels)
--treadmill ingredients?
---and their positions
---and their sprites
--paper towels?
-//-change saved path (for functionality with android)?
+change 'win' screen?
+-similar to 'congratulations' but without 'continue'
 
 Clean Code
 add necessary descriptions for the game's functionality

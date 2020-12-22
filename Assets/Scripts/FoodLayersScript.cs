@@ -54,6 +54,8 @@ public class FoodLayersScript : MonoBehaviour
 
         theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
 
+        theMoney = GameObject.Find("Money").GetComponent<MoneyScript>();
+
         gameObject.name = "FoodLayer(Clone)";
         
         //change ice cream's position to within the board's surface
@@ -415,12 +417,17 @@ public class FoodLayersScript : MonoBehaviour
         CustomerScript.Instance.tesrFunction();
 
         //winning condition
-        if (SceneManager.GetActiveScene().buildIndex != (SceneManager.sceneCountInBuildSettings-2))
+        if (SceneManager.GetActiveScene().buildIndex != (SceneManager.sceneCountInBuildSettings - 2))
+        {
             if ((theFurnace.numberofcompletedrecipes == theFurnace.numberofrecipesinlevel))
                 theChangeScene.change_scene();
-        else 
+        }
+        else
+        {
+            //Debug.Log("Level 10 with money: " + theMoney.money);
             if (theMoney.money >= 10000)
                 theChangeScene.change_scene();
+        }
 
 
         Destroy(gameObject);

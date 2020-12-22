@@ -351,7 +351,7 @@ public class IngredientScript : MonoBehaviour
             //Instantiate(GameObject);
             GameObject tick = Instantiate(fingredient);
             tick.name = "Tick";
-            SpriteRenderer sp2= tick.AddComponent<SpriteRenderer>();
+            //SpriteRenderer sp2= tick.AddComponent<SpriteRenderer>();
             //sp2.sprite= Resources.LoadAll<Sprite>("canteen_imantas")[1];
             tick.GetComponent<SpriteRenderer>().sprite= Resources.LoadAll<Sprite>("canteen_imantas")[1];
 
@@ -367,7 +367,7 @@ public class IngredientScript : MonoBehaviour
 
 
 
-            Debug.Log("falsename");
+            //Debug.Log("falsename");
         }
         //Instantiate(ingredient).name = "none(Clone)";
         
