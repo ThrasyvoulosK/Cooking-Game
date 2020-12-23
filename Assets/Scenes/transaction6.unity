@@ -2485,6 +2485,7 @@ MonoBehaviour:
   - {fileID: 1664152913}
   - {fileID: 7916558545539617302}
   - {fileID: 2115958143}
+  is_colour: 0
 --- !u!114 &7916558545539617296
 MonoBehaviour:
   m_ObjectHideFlags: 0

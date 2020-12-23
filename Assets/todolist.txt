@@ -11,7 +11,7 @@ fix scenes so that updating them all becomes less of a hussle
 fireworks appear on the dark part of the screen,breaking the fourth wall
 
 main menu:
--info button?
+//-info button
 -fade graphics when something isn't applied
 -initialise images on menus properly, with current data
 
@@ -34,14 +34,14 @@ check if player has already played
 club sandwiches distances between ingredients should be smaller?
 
 feedback issues
--no info button
+//-no info button
 //-hovering ice cream ingredients?
 -different order in ice cream ingredients between recipe image and built recipe
 
 //recipe board texts overflow-chocolate and caramel syrups spill over other ingredients!--shorten names to 'chocolate s.' or 'choc. syrup'?-try smaller text sizes
 
 intro-tutorial
--//video
+-video
 --with audio
 -play before first level
 
@@ -54,10 +54,10 @@ gameobject positions issues
 -"ingredients" goes above black space
 -'exit' button too
 
-descriptions of transaction scenes 
--'table decoration' too big for the screen in both languages?
--wrong in places eg asking for colour when its a different thing altogether
---just remove the word 'colour' when not needed
+//descriptions of transaction scenes 
+//-'table decoration' too big for the screen in both languages?
+//-wrong in places eg asking for colour when its a different thing altogether
+//--just remove the word 'colour' when not needed
 
 //add new objects to saves!-canvases, tables, tables' decorations, umbrellas and logos
 
@@ -87,14 +87,13 @@ Performance Issues:
 
 Bugs:
 
-android screen should only be allowed on 'landscape' screen-orientations
--test?
+//android screen should only be allowed on 'landscape' screen-orientations
 
 //screenshot metadata error-warning message in editor-between games, the previous screenshot is shown on the screen; not the current one
 
-saves not working?//-path error?
+//saves not working?//-path error?
 
-error warning about too small of a name to 'remove "(Clone)"' from its name?
+//error warning about too small of a name to 'remove "(Clone)"' from its name?
 
 treadmill ingredient names disappear before exiting
 
@@ -123,8 +122,14 @@ also, disable not played levels
 difficulty options?
 changes in levels adn numbers of recipes?
 
-change 'win' screen?
--similar to 'congratulations' but without 'continue'
+//change 'win' screen?-similar to 'congratulations' but without 'continue'
+
+Add new cheats for easier debugging
+//-make the one in gamemaster update a function
+-search furnace for recipes with a specific ingredient
+-finish recipes with one click
+
+add company's logo as a splash screen?
 
 Clean Code
 add necessary descriptions for the game's functionality

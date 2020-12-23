@@ -12,6 +12,8 @@ public class TransactionScript : MonoBehaviour
     public ChangeSceneScript theChangeScene;
 
     public GameObject[] screenGameObjects;
+
+    public bool is_colour = true;
     // Start is called before the first frame update
     void Start()
     {

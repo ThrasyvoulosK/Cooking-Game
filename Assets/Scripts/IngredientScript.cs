@@ -63,8 +63,6 @@ public class IngredientScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
         //keep moving until the edge if no interaction happens
         if (gameObject.name.Contains("Clone"))
         {
@@ -76,7 +74,6 @@ public class IngredientScript : MonoBehaviour
         }
 
         MoveIngredient();
-
     }
 
     bool notnullrecipeexists;
@@ -108,7 +105,14 @@ public class IngredientScript : MonoBehaviour
         theNextRecipe.gamepause = false;
 
         //rename our object so that it is usable within recipes
-        gameObject.name = gameObject.name.Substring(0, gameObject.name.Length - 7);//remove (clone) from string
+        //(remove (clone) from string)
+        if (gameObject.name.EndsWith("(Clone)"))
+            gameObject.name = gameObject.name.Substring(0, gameObject.name.Length - 7);
+        else
+        {
+            Debug.Log("cannot delete ingredient's substring");
+            return;
+        }            
 
         //add to current recipe
         theFurnace.current_recipe.Add(gameObject.name);
@@ -142,14 +146,13 @@ public class IngredientScript : MonoBehaviour
 
                 //also, clone it as a transparent-ticked object
                 string formrname = gameObject.name;
-                invisivise2(formrname,gameObject);// Instantiate(gameObject).name="gamobject(Clone)";//
+                invisivise2(formrname,gameObject);
 
-                //since we have our target, we should change our sprite to something more convenient
+                //since we have our target, we should change our sprite to something more relevant
                 gameObject.GetComponent<SpriteRenderer>().sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
-                //disable text labels as well
-                //gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
-                gameObject.GetComponentInChildren<TextMeshPro>().enabled = false;
 
+                //disable text labels as well
+                gameObject.GetComponentInChildren<TextMeshPro>().enabled = false;
 
                 break;
             }
@@ -203,13 +206,8 @@ public class IngredientScript : MonoBehaviour
                 if (correctingr <= 0)
                 {
                     //Debug.Log("fully completed ingredient"+theFurnace.recipe.neededIngr[correctingr]);
-                    //ingredientcompleted[correctingr] = true;
                     i++;
                 }
-                /*else
-                {
-                    ingredientcompleted[correctingr] = false;
-                }*/
                 //if we have all the correct ingredients in our recipe, decide what to do next
                 if (i == theFurnace.recipe.neededIngr.Count)
                 {
@@ -226,7 +224,6 @@ public class IngredientScript : MonoBehaviour
 
                     //add the upper bun graphically
                     theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);
-
 
                     //reset currentrecipe list
                     theFurnace.current_recipe.Clear();
@@ -268,8 +265,6 @@ public class IngredientScript : MonoBehaviour
                         }
 
                         //Debug.Log("curent recipes first ingredient" + theFurnace.recipe.neededIngr[0]);
-
-                        //???change the next recipe???
                         //Debug.Log("next recipe length " + theFurnace.next_recipe.Count);
                     }
 

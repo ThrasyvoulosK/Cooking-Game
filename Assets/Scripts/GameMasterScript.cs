@@ -127,7 +127,10 @@ public class GameMasterScript : MonoBehaviour
             {
                 string boght;
                 boght = languagehandler[GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().objecttobebought];
-                decdesc.GetComponent<Text>().text = "Choose a new " + boght + " colour \nfor your canteen to continue!";
+                if(GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().is_colour==true)
+                    decdesc.GetComponent<Text>().text = "Choose a new " + boght + " colour \nfor your canteen to continue!";
+                else
+                    decdesc.GetComponent<Text>().text = "Choose a new " + boght + "\nfor your canteen to continue!";
             }
         }
         else if (language_current == "Greek")
@@ -137,7 +140,10 @@ public class GameMasterScript : MonoBehaviour
             {
                 string boght;
                 boght = languagehandler[GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().objecttobebought];
-                decdesc.GetComponent<Text>().text = "Διάλεξε νέο χρώμα " + boght + "\nγια τη καντίνα σου, για να συνεχίσεις!";
+                if (GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().is_colour == true)
+                    decdesc.GetComponent<Text>().text = "Διάλεξε νέο χρώμα " + boght + "\nγια τη καντίνα σου, για να συνεχίσεις!";
+                else
+                    decdesc.GetComponent<Text>().text = "Κάνε νέα επιλογή " + boght + "\nγια τη καντίνα σου, για να συνεχίσεις!";
             }
         }
 
@@ -145,15 +151,7 @@ public class GameMasterScript : MonoBehaviour
         boughtables_assigner();
 
         //cheat mode!
-        theFurnace = null;
-        if (GameObject.Find("Furnace") != null)
-        {
-            theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
-            theFurnace.numberofrecipesinlevel = 1;
-        }
-
-
-
+        //cheat_one_recipe_only();
 
         LoadCheck();
 
@@ -754,6 +752,17 @@ public class GameMasterScript : MonoBehaviour
 
             issavedgame = false;
 
+        }
+    }
+
+    //Cheats!
+    void cheat_one_recipe_only()
+    {
+        theFurnace = null;
+        if (GameObject.Find("Furnace") != null)
+        {
+            theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
+            theFurnace.numberofrecipesinlevel = 1;
         }
     }
 }
