@@ -8,28 +8,14 @@ using UnityEngine.UI;
 /*All of the following elements have been calculated by hand*/
 public class CameraScript : MonoBehaviour
 {
-    /*public static CameraScript Instance;
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(this);
-    }*/
     public GameMasterScript theGameMaster;
     // Start is called before the first frame update
     void Start()
     {
         //call the gamemaster gameobject
         theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
-        //find the camera's aspect
-        // and change its aspect accordingly
-
+        
+        //match screen to height
         GameObject.Find("Canvas").GetComponent<CanvasScaler>().matchWidthOrHeight = 1f;
         
         //to determine whether our scene is a menu or a game scene,
@@ -39,6 +25,8 @@ public class CameraScript : MonoBehaviour
         if ((cntr = GameObject.Find("Counter"))!=null)
             isgamescene = true;
 
+        //find the camera's aspect
+        // and change it accordingly
         if (Camera.main.aspect < 1.26f)//1280/1024
         {
             Debug.Log("5:4");
@@ -61,7 +49,7 @@ public class CameraScript : MonoBehaviour
                 //get 'back' menu button
                 theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-425f, 386f, 0);
                 theGameMaster.menuitems[3].GetComponent<RectTransform>().localScale = new Vector3(0.75f, 0.75f, 0);
-
+                //'options' button
                 theGameMaster.menuitems[1].GetComponent<RectTransform>().anchoredPosition = new Vector3(-110f, -447f, 0);
 
             }
@@ -173,21 +161,14 @@ public class CameraScript : MonoBehaviour
             //Camera.main.orthographicSize = 4.5f;
             if (isgamescene)
             {
-                /*GameObject.Find("recipe board").GetComponent<RectTransform>().anchoredPosition = new Vector3(254f, -88f, 0f);
-                GameObject.Find("recipe board").GetComponent<RectTransform>().anchoredPosition = new Vector3(171f, -88f, 0f);
-
-                GameObject.Find("Board").GetComponent<RectTransform>().anchoredPosition = new Vector3(60f, -90f, 0f);
-                GameObject.Find("Board").GetComponent<RectTransform>().sizeDelta = new Vector2(1.1f, 1.1f);
-
-                GameObject.Find("RecImage").GetComponent<RectTransform>().anchoredPosition = new Vector3(579f, -15f, 0f);
-
-                GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(1000f, 285f, 0f);*/
                 Debug.Log("2:1");
                 GameObject.Find("BackgroundObjects").GetComponent<Transform>().localScale = new Vector3(1.1f, 1f, 1f);
 
                 GameObject.Find("recipe board").GetComponent<RectTransform>().anchoredPosition = new Vector3(180f, -88f, 0f);
 
-                GameObject.Find("Board").GetComponent<RectTransform>().sizeDelta = new Vector2(1.1f, 1.1f);
+                //GameObject.Find("Board").GetComponent<Image>().preserveAspect = false;
+                //GameObject.Find("Board").GetComponent<RectTransform>().sizeDelta = new Vector2(1.2f, 1.2f);//
+                GameObject.Find("Board").GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1.0f, 0);
                 GameObject.Find("RecImage").GetComponent<RectTransform>().anchoredPosition = new Vector3(565f, -47f, 0f);
 
                 GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(1000f, 260f, 0f);
@@ -199,6 +180,10 @@ public class CameraScript : MonoBehaviour
             {
                 //get 'back' menu button
                 theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-680f, 386f, 0);
+                //options 
+                theGameMaster.menuitems[1].GetComponent<RectTransform>().anchoredPosition = new Vector3(-270f, -447f, 0);
+                //info
+                theGameMaster.menuitems[8].GetComponent<RectTransform>().anchoredPosition = new Vector3(280f, -447f, 0);
             }
         }
         else if (Camera.main.aspect < 2.06f)//2960/1440

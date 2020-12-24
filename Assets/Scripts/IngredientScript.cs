@@ -68,9 +68,7 @@ public class IngredientScript : MonoBehaviour
         {
             transform.Translate(Vector2.right * Time.deltaTime*theSpawning.gamespeed);
             if (gameObject.transform.position.x >12)
-            {
                 Destroy(gameObject);
-            }
         }
 
         MoveIngredient();
@@ -198,7 +196,6 @@ public class IngredientScript : MonoBehaviour
             //Debug.Log("before second loop");
             foreach (int correctingr in theFurnace.usable_number_of_ingredients)
             {
-
                 int it = 0;
 
                 //Debug.Log("within second loop");
@@ -212,7 +209,6 @@ public class IngredientScript : MonoBehaviour
                 if (i == theFurnace.recipe.neededIngr.Count)
                 {
                     Debug.Log("recipe ready!");
-
 
                     //allow for a pause between recipes//
                     //wait for the button to be pressed
@@ -261,9 +257,7 @@ public class IngredientScript : MonoBehaviour
                                 Debug.Log("current scene: " + SceneManager.GetActiveScene().buildIndex + " scenecount: " + SceneManager.sceneCountInBuildSettings);
                                 theFurnace.next_recipe.RemoveAt(it); 
                             }
-
                         }
-
                         //Debug.Log("curent recipes first ingredient" + theFurnace.recipe.neededIngr[0]);
                         //Debug.Log("next recipe length " + theFurnace.next_recipe.Count);
                     }
@@ -311,61 +305,39 @@ public class IngredientScript : MonoBehaviour
         fingredient.GetComponent<SpriteRenderer>().sortingOrder = 7;
 
         if (formername.StartsWith("Cheese"))
-        {
             fingredient.GetComponent<SpriteRenderer>().sprite= Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[1];
-            //ingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("canteen_checked _1")[0];
-        }
         else if (formername.StartsWith("Tomato"))
-        {
             fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[0];
-        }
         else if (formername.StartsWith("Ham"))
-        {
             fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[2];
-        }
         else if (formername.StartsWith("Lettuce"))
-        {
             fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[3];
-        }
         else if (formername.StartsWith("Milk"))
-        {
             fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[4];
-        }
         /*else if (formername.StartsWith("Coffee"))
         {
             fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[5];
         }*/
         else if (formername.StartsWith("Ice"))
-        {
             fingredient.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_checked")[6];
-        }
         else
         {
-            //fingredient.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 128);
             // add as a child fingredient.AddComponent<>
-            //Instantiate(GameObject);
             GameObject tick = Instantiate(fingredient);
             tick.name = "Tick";
-            //SpriteRenderer sp2= tick.AddComponent<SpriteRenderer>();
-            //sp2.sprite= Resources.LoadAll<Sprite>("canteen_imantas")[1];
             tick.GetComponent<SpriteRenderer>().sprite= Resources.LoadAll<Sprite>("canteen_imantas")[1];
 
             fingredient.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 128);
             tick.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
             tick.GetComponentInChildren<TextMeshPro>().enabled = false;//
-            //tick.GetComponent<SpriteRenderer>().sortingLayerID = 8;
-            
+            //tick.GetComponent<SpriteRenderer>().sortingLayerID = 8;            
 
             tick.transform.parent = fingredient.transform;
             tick.GetComponent<Transform>().localPosition = new Vector3(0.25f, -0.25f, 0);
             tick.GetComponent<SpriteRenderer>().sortingOrder = 8;
 
-
-
             //Debug.Log("falsename");
         }
-        //Instantiate(ingredient).name = "none(Clone)";
-        
-
+        //Instantiate(ingredient).name = "none(Clone)";      
     }
 }

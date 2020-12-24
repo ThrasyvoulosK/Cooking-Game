@@ -26,13 +26,9 @@ public class CustomerScript : MonoBehaviour
     private void Awake()
     {
         if (Instance == null)
-        {
             Instance = this;
-        }
         else
-        {
             Destroy(gameObject);
-        }
     }
 
   
@@ -47,6 +43,7 @@ public class CustomerScript : MonoBehaviour
 
         theNextRecipe = GameObject.Find("NextRecipeButton").GetComponent<NextRecipeScript>();
 
+        //add allowed customers from this list
         foreach (Sprite cust in customerspritelist)
             customerspritelistcurrent.Add(cust);
     }

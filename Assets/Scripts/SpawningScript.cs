@@ -26,10 +26,9 @@ public class SpawningScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //ingredients_current = ingredients;
-        /*foreach (GameObject ingr in ingredients)
-            ingredients_current.Add(ingr);*/
         theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
+
+        //start by assigning spawning ingredients 'mostly' relevant to our current recipe
         if (theFurnace.recipe!=null)
             spawningredientsfromrecipe(ingredients);
         else
@@ -43,7 +42,6 @@ public class SpawningScript : MonoBehaviour
             InvokeRepeating("SpawnIngredient", 0, 1*gamespeed);
 
         theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
-        //theFurnace= GameObject.Find("Furnace").GetComponent<FurnaceScript>();
     }
     
     // Update is called once per frame
@@ -53,29 +51,15 @@ public class SpawningScript : MonoBehaviour
         
     }*/
     
+    //choose which ingredient to spawn on the treadmill
+    // based on needed ingredients and those already spawned
     void SpawnIngredient()
     {
-
         int randomingredient;
         if(spawnallowed)
         {
             if (ingredients_current.Count < 1)
-            {
-                /*foreach (GameObject ingr in ingredients)
-                {
-                    foreach(string recing in theFurnace.recipe.neededIngr)
-                    {
-                        if (recing == ingr.name)
-                        {
-                            ingredients_current.Add(ingr);
-                            randomingredient = Random.Range(0, ingredients.Count);
-                            ingredients_current.Add(ingredients[randomingredient]);
-                        }
-                    }
-                }*/
                 spawningredientsfromrecipe(ingredients);
-
-            }
 
             randomingredient = Random.Range(0, ingredients_current.Count);
             //Instantiate(ingredients_current[randomingredient], spawnpoints[0].position, Quaternion.identity);
@@ -88,12 +72,12 @@ public class SpawningScript : MonoBehaviour
             spingredient.name += "(Clone)";
 
             //spawnallowed = false; //allow always
-            //allow again when destroyed in ingredeient script
-
+            //allow again when destroyed in ingredient script
         }
-
     }
 
+    //allows us to spawn only ingredients from the recipe,
+    // as well as some more random ones
     void spawningredientsfromrecipe(List<GameObject> ingredients)
     {
         int randomingredient;

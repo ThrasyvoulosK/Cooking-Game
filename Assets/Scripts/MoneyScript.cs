@@ -18,18 +18,13 @@ public class MoneyScript : MonoBehaviour
         if (Instance == null)
             Instance = this;
         else
-        {
-            //money = gameObject.GetComponent<MoneyScript>().money;
             Destroy(gameObject);
-        }
-        //DontDestroyOnLoad(this);
     }
     // Start is called before the first frame update
     void Start()
     {
         money = GameObject.Find("GameMaster").GetComponent<GameMasterScript>().money;
         moneytext = GetComponent<Text>();
-
     }
 
     // Update is called once per frame
@@ -39,6 +34,5 @@ public class MoneyScript : MonoBehaviour
         moneytext.text =money+" ";
 
         GameObject.Find("GameMaster").GetComponent<GameMasterScript>().money = money;
-
     }
 }

@@ -43,9 +43,7 @@ public class FurnaceScript : MonoBehaviour
 
         // add its ingredients
         foreach(int i in recipe.numbOfIng)
-        {
             usable_number_of_ingredients.Add(i);
-        }
 
 }
 

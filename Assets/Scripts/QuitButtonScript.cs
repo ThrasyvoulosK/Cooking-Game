@@ -19,7 +19,6 @@ public class QuitButtonScript : MonoBehaviour
         if (Input.GetKey("escape"))
         {
             Debug.Log("escape pressed");
-            //Application.Quit();
             QuitGame();
         }
     }

@@ -63,22 +63,17 @@ public class GameMasterScript : MonoBehaviour
 
     void Awake()
     {
-
         //Debug.Log("current language is: " + language_current);
-        //Instance = this;
+
         if (Instance == null)
-        {
             Instance = this;
-        }
         else
-        {
             Destroy(gameObject);
-        }
 
-
-
-        DontDestroyOnLoad(this);//
+        //do not delete GameMaster
+        DontDestroyOnLoad(this);
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,79 +85,32 @@ public class GameMasterScript : MonoBehaviour
         //the player can change language from the main menu
         changelanguage_en();//
 
-        /*
-          //if ((Application.dataPath + "/Resources/scrnsht.png") != null)
-        if ((Application.persistentDataPath + "scrnsht.png") != null)
-        {
-            Debug.Log("screenshot exists");
-
-            //Sprite newsprite;
-
-            GameObject.Find("Continue").GetComponent<Image>().preserveAspect = true;
-            //GameObject.Find("Continue").GetComponent<Image>().sprite = Resources.Load<Sprite>("scrnsht");
-            GameObject.Find("Continue").GetComponent<Image>().sprite = spriteslayers["Screenshot"];
-            //GameObject.Find("Continue").GetComponent<Image>().sprite = co.GetComponent<SpriteRenderer>().sprite;
-        }
-        */
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if (GameObject.Find("Continue") != null)
-        {
-            //if ((Application.dataPath + "/Resources/scrnsht.png") != null)
-            //GameObject.Find("Continue").GetComponent<Image>().sprite = Resources.Load<Sprite>("scrnsht");
-            if ((Application.persistentDataPath + "scrnsht.png") != null)
-                GameObject.Find("Continue").GetComponent<Image>().sprite = spriteslayers["Screenshot"];
-        }*/
-
+        //handle speechbubble text here
+        //wip
         if (language_current == "English")
         {
             GameObject speechbubble = null;
             if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
                 speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
-            GameObject decdesc = null;
-            if ((decdesc = GameObject.Find("DecText")) != null)
-            {
-                string boght;
-                boght = languagehandler[GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().objecttobebought];
-                if(GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().is_colour==true)
-                    decdesc.GetComponent<Text>().text = "Choose a new " + boght + " colour \nfor your canteen to continue!";
-                else
-                    decdesc.GetComponent<Text>().text = "Choose a new " + boght + "\nfor your canteen to continue!";
-            }
         }
-        else if (language_current == "Greek")
-        {
-            GameObject decdesc = null;
-            if ((decdesc = GameObject.Find("DecText")) != null)
-            {
-                string boght;
-                boght = languagehandler[GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().objecttobebought];
-                if (GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().is_colour == true)
-                    decdesc.GetComponent<Text>().text = "Διάλεξε νέο χρώμα " + boght + "\nγια τη καντίνα σου, για να συνεχίσεις!";
-                else
-                    decdesc.GetComponent<Text>().text = "Κάνε νέα επιλογή " + boght + "\nγια τη καντίνα σου, για να συνεχίσεις!";
-            }
-        }
+
+        DecDescriptionText();
 
         //assign sprites to the ones we bought
         boughtables_assigner();
 
         //cheat mode!
         //cheat_one_recipe_only();
+        //cheat_only_ingredient_recipes("Syrup");
 
         LoadCheck();
 
-        if (Input.GetKeyDown("s"))
-            SaveGame();
-        if (Input.GetKeyDown("l"))
-        {
-            issavedgame = true;
-            LoadGame();
-        }
-
+        SaveOrLoadKeys();
     }
     private void InitialiseDictionary()
     {
@@ -174,12 +122,6 @@ public class GameMasterScript : MonoBehaviour
 
     public void changelanguage_en()
     {
-        /*languagehandlerprev.Clear();
-        for (int i = 0; i < words_en_base.Count; i++)
-        {
-            languagehandlerprev.Add(words_en_base[i], words_current[i]);
-            Debug.Log("added to dictionary: " + words_en_base[i] + words_current[i]);
-        }*/
         if (languagehandler.Count>0)
         {
             Debug.Log("languagehandelernot null" + languagehandler.Count);
@@ -199,23 +141,11 @@ public class GameMasterScript : MonoBehaviour
         GameObject speechbubble = null;
         if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
             //speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
-            speechbubble.GetComponentInChildren<TextMeshPro>().SetText("Thank You!");// = "Thank You!";
-
-
-
+            speechbubble.GetComponentInChildren<TextMeshPro>().SetText("Thank You!");
     }
 
     public void changelanguage_gr()
     {
-        /*language_current = "English";
-        words_current = words_en;
-        //InitialiseLanguage();
-        languagehandlerprev.Clear();
-        for (int i = 0; i < words_en_base.Count; i++)
-        {
-            languagehandlerprev.Add(words_en_base[i], words_current[i]);
-            Debug.Log("added to dictionary: " + words_en_base[i] + words_current[i]);
-        }*/
         for (int i = 0; i < words_en_base.Count; i++)
         {
             foreach (GameObject men in menuitems)
@@ -223,17 +153,12 @@ public class GameMasterScript : MonoBehaviour
                     men.GetComponentInChildren<Text>().text = words_en_base[i];
         }
 
-
         language_current = "Greek";
         words_current = words_gr;
         InitialiseLanguage();
     }
     private void InitialiseLanguage()
     {
-        //words_current = words_en;//
-        //words_current = words_gr;//
-        /*languagehandlerprev.Clear();
-        languagehandlerprev = languagehandler;*/
         languagehandler.Clear();
         for (int i = 0; i < words_en_base.Count; i++)
         {
@@ -344,22 +269,40 @@ public class GameMasterScript : MonoBehaviour
         }
     }
 
-    public void SaveGame()
+    //handle the descriptions of decoration screens here
+    //note that this is implemented separately from the gamemaster's dictionary
+    void DecDescriptionText()
     {
-        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/scrnsht.png");
-        //ScreenCapture.CaptureScreenshot(Application.dataPath + "/Resources/scrnsht.png");
-        SaveXML();
-
-        //take a screenshot
-        //ScreenCapture.CaptureScreenshot(Application.dataPath + "/SavedGames/scrnsht.png");
-        //ScreenCapture.CaptureScreenshot(Application.dataPath + "/Resources/scrnsht.png");
-        /*ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "scrnsht.png");*/
-        //refresh its metadata
-        //AssetDatabase.ImportAsset("Assets/Resources/scrnsht.png");
-        //AssetDatabase.ImportAsset("Assets/Resources/scrnsht.png.meta");
+        GameObject decdesc = null;
+        string boght;
+        if ((decdesc = GameObject.Find("DecText")) != null)
+        {
+            boght = languagehandler[GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().objecttobebought];
+            if (GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().is_colour == true)
+            {
+                if (language_current == "English")
+                    decdesc.GetComponent<Text>().text = "Choose a new " + boght + " colour \nfor your canteen, to continue!";
+                else if (language_current == "Greek")
+                    decdesc.GetComponent<Text>().text = "Διάλεξε νέο χρώμα " + boght + "\nγια τη καντίνα σου, για να συνεχίσεις!";
+            }
+            else
+            {
+                if (language_current == "English")
+                    decdesc.GetComponent<Text>().text = "Choose a new " + boght + "\nfor your canteen, to continue!";
+                else if (language_current == "Greek")
+                    decdesc.GetComponent<Text>().text = "Κάνε νέα επιλογή " + boght + "\nγια τη καντίνα σου, για να συνεχίσεις!";
+            }
+        }
     }
 
-    
+    public void SaveGame()
+    {
+        //take a screenshot
+        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/scrnsht.png");
+
+        //call save as xml file function
+        SaveXML();        
+    }    
 
     private void SaveXML()
     {
@@ -551,50 +494,21 @@ public class GameMasterScript : MonoBehaviour
     {
         Save save = new Save();
         XmlDocument xmlDocument = new XmlDocument();
-        //xmlDocument.Load(Application.dataPath + "/Resources/save1.txt");//
+
         xmlDocument.Load(Application.persistentDataPath + "/save1.txt");//
 
         XmlNodeList xmoney = xmlDocument.GetElementsByTagName("Money");
         save.money = int.Parse(xmoney[0].InnerText);
         XmlNodeList xscene = xmlDocument.GetElementsByTagName("Scene");
         save.scenenum = int.Parse(xscene[0].InnerText);
-        /*edit: keep only scene and change the rest on update*/
+        /*edit: keep only scene and change the rest on update. See LoadCheck function*/
         issavedgame = true;
         Debug.Log("LoadXML loads scene " + save.scenenum);
         SceneManager.LoadScene(save.scenenum);
         return;
-        /**/
-        XmlNodeList xrec = xmlDocument.GetElementsByTagName("CompletedRecipes");
-        save.completedrecipes = int.Parse(xrec[0].InnerText);
-
-        XmlNodeList xcurrec = xmlDocument.GetElementsByTagName("CurrentRecipe");
-        save.currentrecipe = xcurrec[0].InnerText;
-
-        XmlNodeList xcoun = xmlDocument.GetElementsByTagName("Counter");
-        save.counter = xcoun[0].InnerText;
-        XmlNodeList xtent = xmlDocument.GetElementsByTagName("Tent");
-        save.tent = xtent[0].InnerText;
-        XmlNodeList xwall = xmlDocument.GetElementsByTagName("Wall");
-        save.wall = xwall[0].InnerText;
-        XmlNodeList xnap = xmlDocument.GetElementsByTagName("Napkins");
-        save.napkins = xnap[0].InnerText;
-
-        save.remainingrecipes.Clear();
-        XmlNodeList xremrec = xmlDocument.GetElementsByTagName("RemainingRecipes");
-        for (int i=0;i<xremrec.Count;i++)
-        {
-            save.remainingrecipes.Add(xremrec[i].InnerText);
-        }
-
-
-        XmlNodeList xcus = xmlDocument.GetElementsByTagName("Customer");
-        save.customer = int.Parse(xcus[0].InnerText);
-
-        issavedgame = true;
-        
-
-        SceneManager.LoadScene(save.scenenum);//
     }
+
+    //use this function in update, after LoadGame and LoadXML
 
     void LoadCheck()
     {
@@ -755,6 +669,17 @@ public class GameMasterScript : MonoBehaviour
         }
     }
 
+    //allow the game to be saved or loaded during Update by pressing keyboard keys
+    void SaveOrLoadKeys()
+    {
+        if (Input.GetKeyDown("s"))
+            SaveGame();
+        if (Input.GetKeyDown("l"))
+        {
+            issavedgame = true;
+            LoadGame();
+        }
+    }
     //Cheats!
     void cheat_one_recipe_only()
     {
@@ -763,6 +688,27 @@ public class GameMasterScript : MonoBehaviour
         {
             theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
             theFurnace.numberofrecipesinlevel = 1;
+        }
+    }
+
+    void cheat_only_ingredient_recipes(string ingredient)
+    {
+        theFurnace = null;
+        if (GameObject.Find("Furnace") != null)
+        {
+            theFurnace = GameObject.Find("Furnace").GetComponent<FurnaceScript>();
+            foreach(Recipe_SO rec in theFurnace.next_recipe)
+            {
+                if(rec.name.Contains(ingredient))
+                {
+                    Debug.Log("this recipe includes our ingredient of choice"+rec.name);
+                }
+                else
+                {
+                    Debug.Log("we do not need this recipe" + rec.name);
+                    theFurnace.next_recipe.Remove(rec);
+                }
+            }
         }
     }
 }

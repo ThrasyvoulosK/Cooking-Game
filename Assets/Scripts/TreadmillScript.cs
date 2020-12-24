@@ -11,16 +11,13 @@ public class TreadmillScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startpos = transform.position;
-        
+        startpos = transform.position;        
     }
 
     // Update is called once per frame
     void Update()
     {
-
         float newpos = Mathf.Repeat(Time.time * scrollspeed, 20);
-        transform.position = startpos + Vector2.right * newpos;
-        
+        transform.position = startpos + Vector2.right * newpos;        
     }
 }

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.UI;
+
+//This script is responsible for handling the Decoration Screens
+//see also GameMaster for description and language related functions to this
 public class TransactionScript : MonoBehaviour
 {
     public string objecttobebought;
@@ -20,6 +23,7 @@ public class TransactionScript : MonoBehaviour
         theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
         theChangeScene = GameObject.Find("Canvas").GetComponent<ChangeSceneScript>();
 
+        //assign a sprite to the objects that will appear
         GameObject.Find("Object1").GetComponent<SpriteRenderer>().sprite = spritetobebought[0];
         GameObject.Find("Object2").GetComponent<SpriteRenderer>().sprite = spritetobebought[1];
         if(spritetobebought.Length>=3)
@@ -27,19 +31,15 @@ public class TransactionScript : MonoBehaviour
 
         GameObject.Find("ChooseButton").GetComponentInChildren<Text>().text = theGameMaster.languagehandler["Choose"];
 
-        //
+        //initialise laguage and character elements
         GameObject.Find("ContinueButton").GetComponentInChildren<Text>().text = theGameMaster.languagehandler["Continue"];
         GameObject.Find("Congratulations").GetComponent<Text>().text = theGameMaster.languagehandler["Congratulations"];
-        Debug.Log("option character" + theGameMaster.option_character);
+        //Debug.Log("option character" + theGameMaster.option_character);
         GameObject.Find("CharacterImage").GetComponent<Image>().sprite = theGameMaster.spriteslayers[theGameMaster.option_character];
-        //GameObject.Find("CharacterImage").GetComponent<Image>().sprite = theGameMaster.spriteslayers["Character_M"];
 
-        //hide all these until we press coninue
+        //hide all of these until we press coninue
         foreach(GameObject sgameObject in screenGameObjects)
-        {
-            sgameObject.SetActive(false);
-        }
-        
+            sgameObject.SetActive(false);        
     }
 
     // Update is called once per frame
@@ -61,11 +61,8 @@ public class TransactionScript : MonoBehaviour
 
                 //allow 'choice' button
                 GameObject.Find("ChooseButton").GetComponent<Button>().interactable = true;
-                //theChangeScene.change_scene();
             }
-
-        }
-        
+        }        
     }
 
     //this function creates a green rectangle around an object, when we click on it
@@ -73,16 +70,15 @@ public class TransactionScript : MonoBehaviour
     {
         GameObject gr=new GameObject();
         gr.SetActive(false);
-        //SpriteRenderer grspr = new SpriteRenderer();
-        //grspr.sprite = theGameMaster.spriteslayers["Rectangle_Green_Full"];
+
         gr.AddComponent<SpriteRenderer>();
         gr.GetComponent<SpriteRenderer>().sprite= theGameMaster.spriteslayers["Rectangle_Green_Full"];
 
         GameObject otherobject;
         if ((otherobject = GameObject.Find("Selected")) != null)
             Destroy(otherobject);
+
         gr.name = "Selected";
-        //gr = Instantiate(gr,transform);
         gr.GetComponent<Transform>().position = transform.position;
         gr.GetComponent<Transform>().position -= new Vector3(0,transform.position.y,0);
         gr.GetComponent<Transform>().localScale= new Vector3(0.65f,0.65f,0f);
@@ -97,7 +93,7 @@ public class TransactionScript : MonoBehaviour
     {
         foreach (GameObject sgameObject in screenGameObjects)
         {
-            Debug.Log("showscreen " + sgameObject.name);
+            //Debug.Log("showscreen " + sgameObject.name);
             sgameObject.SetActive(true);
         }
     }

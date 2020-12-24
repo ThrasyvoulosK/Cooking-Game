@@ -49,13 +49,8 @@ public class NextRecipeScript : MonoBehaviour
     void Update()
     {
         if (gamepause)
-        {
             button.interactable = true;
-        }
         else
-        {
             button.interactable = false;
-        }
-
     }
 }

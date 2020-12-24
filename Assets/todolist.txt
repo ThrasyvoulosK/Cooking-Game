@@ -11,8 +11,7 @@ fix scenes so that updating them all becomes less of a hussle
 fireworks appear on the dark part of the screen,breaking the fourth wall
 
 main menu:
-//-info button
--fade graphics when something isn't applied
+-fade graphics when something isn't applied?
 -initialise images on menus properly, with current data
 
 exit button
@@ -34,7 +33,6 @@ check if player has already played
 club sandwiches distances between ingredients should be smaller?
 
 feedback issues
-//-no info button
 //-hovering ice cream ingredients?
 -different order in ice cream ingredients between recipe image and built recipe
 
@@ -46,20 +44,9 @@ intro-tutorial
 -play before first level
 
 gameobject positions issues
-2:1
--transaction 7 (table decorations)
---green rectangle is wrong, because of the change in height center for thefirst two objects
--small board is visible behind large one
 1920x1300
 -"ingredients" goes above black space
 -'exit' button too
-
-//descriptions of transaction scenes 
-//-'table decoration' too big for the screen in both languages?
-//-wrong in places eg asking for colour when its a different thing altogether
-//--just remove the word 'colour' when not needed
-
-//add new objects to saves!-canvases, tables, tables' decorations, umbrellas and logos
 
 
 Gameplay Issues:

@@ -52,7 +52,6 @@ public class RecipeCheckScript : MonoBehaviour
     void Update()
     {
         theFoodLayer = null;
-        //theFoodLayer = GameObject.Find("FoodLayer(Clone)").GetComponent<FoodLayersScript>();
         if ( GameObject.Find("FoodLayer(Clone)") == null)
             return;
         else //if(theFoodLayer!=null)
@@ -66,7 +65,6 @@ public class RecipeCheckScript : MonoBehaviour
                 imagei.enabled = false;
                 imagei.preserveAspect = true;
 
-                //imagei.GetComponentInChildren<RectTransform>().anchoredPosition = new Vector3(0, 100f, 0);
                 imagei.GetComponentInChildren<Text>().enabled = false;
 
             }
@@ -75,7 +73,6 @@ public class RecipeCheckScript : MonoBehaviour
             speechbubble.enabled = true;
 
         }
-
 
         recipenote.text = null;
         
@@ -111,13 +108,9 @@ public class RecipeCheckScript : MonoBehaviour
         }
         else
         {
-            //speechbubble = null;
-            //speechbubble.enabled = false;
             speechbubble.sprite = Resources.LoadAll<Sprite>("canteen _ευχαριστω bubble copy")[0];
             speechbubble.GetComponentInChildren<TextMeshPro>().enabled = true;
 
-            //Instantiate(firework);
-            //fireworkplay.Stop();
             fireworkplay.Play();
         }
         
@@ -130,9 +123,7 @@ public class RecipeCheckScript : MonoBehaviour
         if (ingredientname == "Cheese")
         {
             if (numberofingredientsleft > 0)
-            {
-                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[1]; 
-            }
+                return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[1];
             else
                 return Resources.LoadAll<Sprite>("προϊόντα/canteen_υλικα πινακα copy")[3];
         }
