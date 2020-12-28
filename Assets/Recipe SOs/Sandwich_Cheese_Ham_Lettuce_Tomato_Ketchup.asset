@@ -17,8 +17,8 @@ MonoBehaviour:
   neededIngr:
   - Cheese
   - Ham
-  - Lettuce
   - Tomato
+  - Lettuce
   - Ketchup
   numbOfIng: 0100000001000000010000000100000001000000
   layeredingredients: []

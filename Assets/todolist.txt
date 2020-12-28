@@ -30,7 +30,9 @@ check if player has already played
 //--subsequent menu screen 
 //---background graphic changes position (height?)
 
-club sandwiches distances between ingredients should be smaller?
+club sandwiches distances between ingredients should be 0.05
+-similar to set_ing_dist(...) function, but be careful about plate, potatoes and base starting from zero
+-fix potatoes!
 
 feedback issues
 //-hovering ice cream ingredients?
@@ -47,7 +49,6 @@ gameobject positions issues
 1920x1300
 -"ingredients" goes above black space
 -'exit' button too
-
 
 Gameplay Issues:
 -using money?
@@ -75,23 +76,18 @@ Performance Issues:
 Bugs:
 
 //android screen should only be allowed on 'landscape' screen-orientations
-
 //screenshot metadata error-warning message in editor-between games, the previous screenshot is shown on the screen; not the current one
-
 //saves not working?//-path error?
-
 //error warning about too small of a name to 'remove "(Clone)"' from its name?
 
 treadmill ingredient names disappear before exiting
+-sometimes?
 
 Other Concerns:
 
 //split counter image?(canvas&cashmachine&cuttingboard?)
-
 //objects shrinking in size when clicked?
-
 //merge the furnace with foodlayer?
-
 //spawning speed and leaving food and customer speed
 
 change font of cash register to sth more appropriate, eg calculator?
@@ -107,16 +103,11 @@ also, disable not played levels
 
 -'sound' option?
 difficulty options?
-changes in levels adn numbers of recipes?
+changes in levels and numbers of recipes?
 
 //change 'win' screen?-similar to 'congratulations' but without 'continue'
-
-Add new cheats for easier debugging
-//-make the one in gamemaster update a function
--search furnace for recipes with a specific ingredient
--finish recipes with one click
-
-add company's logo as a splash screen?
+//Add new cheats for easier debugging
+//-finish recipes with one click
 
 Clean Code
 add necessary descriptions for the game's functionality

@@ -15,8 +15,8 @@ MonoBehaviour:
   nameofrecipe: 
   recipeSprite: {fileID: -9200380934454134205, guid: 8995148599dcba94c8309dfd3ffa3a20, type: 3}
   neededIngr:
-  - Banana
   - Chocolate
+  - Banana
   - Cream
   - Peanut
   numbOfIng: 01000000010000000100000001000000

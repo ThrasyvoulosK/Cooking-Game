@@ -15,8 +15,8 @@ MonoBehaviour:
   nameofrecipe: 
   recipeSprite: {fileID: 7265692062737763975, guid: d04b86a5282126e46b48835f53416801, type: 3}
   neededIngr:
-  - Banana
   - Chocolate
+  - Banana
   - Cream
   numbOfIng: 010000000100000001000000
   layeredingredients: []

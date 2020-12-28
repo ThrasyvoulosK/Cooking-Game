@@ -106,7 +106,8 @@ public class GameMasterScript : MonoBehaviour
 
         //cheat mode!
         //cheat_one_recipe_only();
-        //cheat_only_ingredient_recipes("Syrup");
+        cheat_only_ingredient_recipes("Club");
+        //cheat_one_ingredient_recipe = true;
 
         LoadCheck();
 
@@ -509,18 +510,14 @@ public class GameMasterScript : MonoBehaviour
     }
 
     //use this function in update, after LoadGame and LoadXML
-
     void LoadCheck()
     {
         if (issavedgame)
         {
             Debug.Log("loaded saved game");
-            //InitialiseDictionary();
 
             Save save = new Save();
             XmlDocument xmlDocument = new XmlDocument();
-            //xmlDocument.Load(Application.dataPath + "/SavedGames/save1.txt");//
-            //xmlDocument.Load(Application.dataPath + "/Resources/save1.txt");//
             xmlDocument.Load(Application.persistentDataPath + "/save1.txt");//
 
             XmlNodeList xmoney = xmlDocument.GetElementsByTagName("Money");
@@ -533,11 +530,9 @@ public class GameMasterScript : MonoBehaviour
 
             save.remainingrecipes.Clear();
             XmlNodeList xremrec = xmlDocument.GetElementsByTagName("RemainingRecipes");
-            //foreach(XmlNodeList remn in xremrec)
+
             for (int i = 0; i < xremrec.Count; i++)
-            {
                 save.remainingrecipes.Add(xremrec[i].InnerText);
-            }
 
             XmlNodeList xcoun = xmlDocument.GetElementsByTagName("Counter");
             save.counter = xcoun[0].InnerText;
@@ -571,8 +566,7 @@ public class GameMasterScript : MonoBehaviour
             GameObject.Find("Money").GetComponent<MoneyScript>().money = save.money;
             GameObject.Find("Furnace").GetComponent<FurnaceScript>().numberofcompletedrecipes = save.completedrecipes;
 
-            //WIP
-            //GameObject.Find("Furnace").GetComponent<FurnaceScript>().recipe.name=save.currentrecipe;
+            //get recipes
             foreach (Recipe_SO rso in GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe)
             {
                 if (rso.name == save.currentrecipe)
@@ -595,7 +589,6 @@ public class GameMasterScript : MonoBehaviour
                 }
             }
 
-            //GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.Clear();
             List<Recipe_SO> nrsl = new List<Recipe_SO>();
             foreach (string nrecipe in save.remainingrecipes)
             {
@@ -617,16 +610,12 @@ public class GameMasterScript : MonoBehaviour
             GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.Clear();
             GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe = nrsl;
 
-
-            //GameObject.Find("Counter").GetComponent<SpriteRenderer>().sprite = spriteslayers[save.counter];
             GameObject.Find("Counter").GetComponent<SpriteRenderer>().sprite = spriteslayers[xcoun[0].InnerText];
             boughtables["Counter"] = spriteslayers[xcoun[0].InnerText];
             //Debug.Log("savecounter " + save.counter);
             //Debug.Log("savecountername " + spriteslayers[save.counter]);
-            //GameObject.Find("Tent").GetComponent<SpriteRenderer>().sprite = spriteslayers[save.tent];
             GameObject.Find("Tent").GetComponent<SpriteRenderer>().sprite = spriteslayers[xtent[0].InnerText];
             boughtables["Tent"] = spriteslayers[xtent[0].InnerText];
-            //GameObject.Find("Wall").GetComponent<SpriteRenderer>().sprite = spriteslayers[save.wall];
             GameObject.Find("Wall").GetComponent<SpriteRenderer>().sprite = spriteslayers[xwall[0].InnerText];
             boughtables["Wall"] = spriteslayers[xwall[0].InnerText];
             GameObject.Find("PaperTowels").GetComponent<SpriteRenderer>().sprite = spriteslayers[xnap[0].InnerText];
@@ -656,16 +645,13 @@ public class GameMasterScript : MonoBehaviour
 
             GameObject.Find("Customer").GetComponent<CustomerScript>().customerandom = save.customer;
             GameObject.Find("Customer").GetComponent<CustomerScript>().customercurrentspriterenderer.sprite = GameObject.Find("Customer").GetComponent<CustomerScript>().customerspritelistcurrent[save.customer];
-            // GameObject.Find("Customer").GetComponent<CustomerScript>().allowspritetochange=true;
-            //GameObject.Find("Customer").GetComponent<CustomerScript>().customerchangesprite();
+
             if (GameObject.Find("Customer").GetComponent<SpriteRenderer>().sprite == GameObject.Find("Customer").GetComponent<CustomerScript>().customerspritelistcurrent[save.customer])
                 Debug.Log("same customer sprite " + save.customer);
             else
                 Debug.Log("different customer sprite");
-            //GameObject.Find("Customer").GetComponent<CustomerScript>().allowspritetochange = false;
 
             issavedgame = false;
-
         }
     }
 
@@ -680,7 +666,11 @@ public class GameMasterScript : MonoBehaviour
             LoadGame();
         }
     }
+
     //Cheats!
+    //Experimental. Game experience may vary. 
+
+    //win the level by finishing only one recipe
     void cheat_one_recipe_only()
     {
         theFurnace = null;
@@ -691,6 +681,8 @@ public class GameMasterScript : MonoBehaviour
         }
     }
 
+    //the game will only use recipes that include the given string in their names
+    //can be used for specific ingredients eg 'tomato' or recipe types such as 'sandwich', 'salad' etc
     void cheat_only_ingredient_recipes(string ingredient)
     {
         theFurnace = null;
@@ -711,6 +703,9 @@ public class GameMasterScript : MonoBehaviour
             }
         }
     }
+
+    //allow recipes to be completed with only one correct ingredient
+    public bool cheat_one_ingredient_recipe = false;
 }
 
 public class Save

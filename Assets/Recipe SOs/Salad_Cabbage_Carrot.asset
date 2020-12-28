@@ -15,7 +15,7 @@ MonoBehaviour:
   nameofrecipe: 
   recipeSprite: {fileID: -2839831588173555644, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
   neededIngr:
-  - Cabbage
   - Carrot
+  - Cabbage
   numbOfIng: 0100000001000000
   layeredingredients: []

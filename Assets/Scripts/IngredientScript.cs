@@ -29,6 +29,7 @@ public class IngredientScript : MonoBehaviour
     public GameObject foodlayergameobject=null;
     public MoneyScript theMoney;
     public NextRecipeScript theNextRecipe;
+    public GameMasterScript theGameMaster;
 
     public Sprite spr;
 
@@ -59,6 +60,8 @@ public class IngredientScript : MonoBehaviour
         foodlayerclone = GameObject.Find("FoodLayer(Clone)");
 
         theNextRecipe = GameObject.Find("NextRecipeButton").GetComponent<NextRecipeScript>();
+
+        theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
     }
     // Update is called once per frame
     void Update()
@@ -204,6 +207,10 @@ public class IngredientScript : MonoBehaviour
                 {
                     //Debug.Log("fully completed ingredient"+theFurnace.recipe.neededIngr[correctingr]);
                     i++;
+
+                    //cheat: one click recipe:
+                    if (theGameMaster.cheat_one_ingredient_recipe == true)
+                        i = theFurnace.recipe.neededIngr.Count;
                 }
                 //if we have all the correct ingredients in our recipe, decide what to do next
                 if (i == theFurnace.recipe.neededIngr.Count)

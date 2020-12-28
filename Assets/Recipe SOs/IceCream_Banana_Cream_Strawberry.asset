@@ -15,8 +15,8 @@ MonoBehaviour:
   nameofrecipe: 
   recipeSprite: {fileID: 8446400475833022818, guid: d04b86a5282126e46b48835f53416801, type: 3}
   neededIngr:
+  - Strawberry
   - Banana
   - Cream
-  - Strawberry
   numbOfIng: 010000000100000001000000
   layeredingredients: []

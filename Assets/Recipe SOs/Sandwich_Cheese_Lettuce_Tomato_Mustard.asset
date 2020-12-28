@@ -16,8 +16,8 @@ MonoBehaviour:
   recipeSprite: {fileID: -8815095564903061033, guid: 07203a50ae8ce98488b4892e0386facc, type: 3}
   neededIngr:
   - Cheese
-  - Lettuce
   - Tomato
+  - Lettuce
   - Mustard
   numbOfIng: 01000000010000000100000001000000
   layeredingredients: []

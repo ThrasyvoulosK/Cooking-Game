@@ -16,7 +16,7 @@ MonoBehaviour:
   recipeSprite: {fileID: -8161503926238515985, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
   neededIngr:
   - Ham
-  - Lettuce
   - Tomato
+  - Lettuce
   numbOfIng: 010000000100000001000000
   layeredingredients: []

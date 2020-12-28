@@ -15,8 +15,8 @@ MonoBehaviour:
   nameofrecipe: 
   recipeSprite: {fileID: 3806118019153522000, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
   neededIngr:
-  - Cabbage
   - Carrot
+  - Cabbage
   - Lettuce
   - Tomato
   numbOfIng: 01000000010000000100000001000000

@@ -15,6 +15,8 @@ public class FoodLayersScript : MonoBehaviour
     public Sprite oldsprite,newsprite,othersprite;
     public List<SpriteRenderer> renderers = new List<SpriteRenderer>();
 
+    float distances_between_ingredients = 0.175f;
+
     //we need access to the furnace in order to obtain variables like number-of-ingredients
     public FurnaceScript theFurnace;
 
@@ -97,13 +99,31 @@ public class FoodLayersScript : MonoBehaviour
                         gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition += new Vector3(0f, -0.350f, 0);
 
                 }
-                gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition += new Vector3(0f, 0.250f, 0); 
+                if ((i != (clchldrn - 2)))
+                { 
+                    gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition = new Vector3(0f, 0.05f * (i), 0);
+                    if (theFurnace.recipe.neededIngr.Count>=i )
+                    {
+                        /*if ((theFurnace.recipe.neededIngr[i] == "Potato")&&(i<clchldrn-2))
+                            gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition = new Vector3(0f, 0f, 0);*/
+                    }
+                }
+                /*else
+                {
+                    gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition = new Vector3(0f, 0, 0);
+                }*/
+
+                gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition += new Vector3(0f, 0.175f, 0);
+                
+
             }
 
             gameObject.GetComponent<SpriteRenderer>().sprite= theGameMaster.spriteslayers["Plate"];
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = 4;
 
         }
+
+        set_ingredient_distance();
         
         //Debug.Log("k");
     }
@@ -333,4 +353,18 @@ public class FoodLayersScript : MonoBehaviour
         //theNextRecipe.gamepause = false;//
     }
 
+    void set_ingredient_distance()
+    {
+        int clchldrn=gameObject.transform.childCount;
+        float newdist;
+        newdist = 0.1f;
+        if ((theFurnace.recipe.name.StartsWith("Sandwich") || theFurnace.recipe.name.StartsWith("Toast") || theFurnace.recipe.name.StartsWith("Salad")) == false)
+            return;
+        gameObject.transform.GetChild(clchldrn - 2).GetComponent<Transform>().localPosition = new Vector3(0, -newdist, 0);
+        for(int i=0;i<clchldrn;i++)
+        {
+            if(i!=clchldrn-2)
+                gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition = new Vector3(0, i*newdist, 0);
+        }
+    }
 }

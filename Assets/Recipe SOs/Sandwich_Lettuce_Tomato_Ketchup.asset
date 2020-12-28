@@ -15,8 +15,8 @@ MonoBehaviour:
   nameofrecipe: 
   recipeSprite: {fileID: -674421080181922553, guid: 07203a50ae8ce98488b4892e0386facc, type: 3}
   neededIngr:
-  - Lettuce
   - Tomato
+  - Lettuce
   - Ketchup
   numbOfIng: 010000000100000001000000
   layeredingredients: []
