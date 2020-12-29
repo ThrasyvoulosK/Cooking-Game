@@ -10,9 +10,12 @@ fix scenes so that updating them all becomes less of a hussle
 
 fireworks appear on the dark part of the screen,breaking the fourth wall
 
-main menu:
--fade graphics when something isn't applied?
--initialise images on menus properly, with current data
+main menu fade graphics when something isn't applied?
+initialise images on menus properly, with current data
+-loadmenuxml
+--find menu objects?
+--levels soon to be obsolete?
+--keep: level?,character,language?,sound?,music?
 
 exit button
 -update functionality for exiting from menus
@@ -30,20 +33,18 @@ check if player has already played
 //--subsequent menu screen 
 //---background graphic changes position (height?)
 
-club sandwiches distances between ingredients should be 0.05
--similar to set_ing_dist(...) function, but be careful about plate, potatoes and base starting from zero
--fix potatoes!
+//club sandwiches distances between ingredients should be 0.05
+//-similar to set_ing_dist(...) function, but be careful about plate, potatoes and base starting from zero
+//-fix potatoes!
 
 feedback issues
 //-hovering ice cream ingredients?
--different order in ice cream ingredients between recipe image and built recipe
-
-//recipe board texts overflow-chocolate and caramel syrups spill over other ingredients!--shorten names to 'chocolate s.' or 'choc. syrup'?-try smaller text sizes
+//-different order in ice cream ingredients between recipe image and built recipe
 
 intro-tutorial
--video
---with audio
--play before first level
+//-video
+--with audio?
+//-play before first level
 
 gameobject positions issues
 1920x1300

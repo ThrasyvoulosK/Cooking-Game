@@ -73,12 +73,19 @@ public class FoodLayersScript : MonoBehaviour
             for(int i=1;i<clchldrn;i++)
             {
                 //Debug.Log("forloop");
-                
+
                 if (theFurnace.recipe.neededIngr.Count < i)
+                {
+                    gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition += new Vector3(0f, -0.175f * i + 0.05f * (i)+0.1f, 0);
                     break;
-               // Debug.Log("i "+i+" neededingr "+theFurnace.recipe.neededIngr.Count);
+                }
+                // Debug.Log("i "+i+" neededingr "+theFurnace.recipe.neededIngr.Count);
                 //Debug.Log(theFurnace.recipe.neededIngr[i-1]);
-                
+
+                //gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition = new Vector3(0f, 0.05f * (i-1), 0);
+                gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition += new Vector3(0f, -0.175f*i+0.05f*(i) , 0);
+                Debug.Log("0.05*i-1=" + 0.05 * (i-1));
+
                 if (theFurnace.recipe.neededIngr[i-1] == "Potato")
                 {
                     potatoeson = true;
@@ -92,28 +99,37 @@ public class FoodLayersScript : MonoBehaviour
             }
             for (int i = 1; i < clchldrn; i++)
             {
+                gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition += new Vector3(0f, 0.175f, 0);
                 if (potatoeson)
                 {
                     gameObject.transform.GetChild(i - 1).GetComponent<SpriteRenderer>().sortingOrder++;
                     if(i==clchldrn-1)
-                        gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition += new Vector3(0f, -0.350f, 0);
+                        //gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition += new Vector3(0f, -0.700f, 0);
+                        gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition = new Vector3(0f, theFurnace.recipe.neededIngr.Count*0.05f, 0);
 
                 }
-                if ((i != (clchldrn - 2)))
+                /*if ((i != (clchldrn - 2)))
                 { 
                     gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition = new Vector3(0f, 0.05f * (i), 0);
                     if (theFurnace.recipe.neededIngr.Count>=i )
                     {
-                        /*if ((theFurnace.recipe.neededIngr[i] == "Potato")&&(i<clchldrn-2))
-                            gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition = new Vector3(0f, 0f, 0);*/
+                        if (theFurnace.recipe.neededIngr[i] == "Potato")
+                        {
+                            Debug.Log("1");
+                            if (i < clchldrn - 2)
+                            {
+                                Debug.Log("2");
+                                gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition = new Vector3(0f, 0f, 0);
+                            }
+                        }
                     }
-                }
+                }*/
                 /*else
                 {
                     gameObject.transform.GetChild(i).GetComponent<Transform>().localPosition = new Vector3(0f, 0, 0);
                 }*/
 
-                gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition += new Vector3(0f, 0.175f, 0);
+                //gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition += new Vector3(0f, 0.175f, 0);
                 
 
             }

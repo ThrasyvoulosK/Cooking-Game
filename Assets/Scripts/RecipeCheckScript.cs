@@ -114,7 +114,8 @@ public class RecipeCheckScript : MonoBehaviour
             fireworkplay.Play();
         }
         
-
+        //destroy particles when exiting screen
+        //OnBecameInvisible
     }
     //decide on which sprite to show, based on our needs
     //also take into account that some objects get checked out
@@ -192,5 +193,11 @@ public class RecipeCheckScript : MonoBehaviour
             Debug.Log("textisnull");
             Debug.Log(gmo.name);
         }
+    }
+
+    //destroy items exiting the scene, such as fireworks
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }

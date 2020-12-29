@@ -70,6 +70,8 @@ public class GameMasterScript : MonoBehaviour
         else
             Destroy(gameObject);
 
+        //LoadMenuXML();
+
         //do not delete GameMaster
         DontDestroyOnLoad(this);
     }
@@ -106,7 +108,7 @@ public class GameMasterScript : MonoBehaviour
 
         //cheat mode!
         //cheat_one_recipe_only();
-        cheat_only_ingredient_recipes("Club");
+        //cheat_only_ingredient_recipes("Club");
         //cheat_one_ingredient_recipe = true;
 
         LoadCheck();
@@ -653,6 +655,30 @@ public class GameMasterScript : MonoBehaviour
 
             issavedgame = false;
         }
+    }
+
+    //load menu items properly
+    //WIP
+    void LoadMenuXML()
+    {
+        string sav = Application.persistentDataPath + "/save1.txt";
+        if (System.IO.File.Exists(sav))
+        {
+            Debug.Log("loading menu data from saved file");
+
+            //Save save = new Save();
+            XmlDocument xmlDocument = new XmlDocument();
+
+            xmlDocument.Load(Application.persistentDataPath + "/save1.txt");
+
+            XmlNodeList xscene = xmlDocument.GetElementsByTagName("Scene");
+            levelid = int.Parse(xscene[0].InnerText);
+            //levelchanged = true;
+            //menuitems[5].GetComponentInChildren<Image>().sprite=
+
+        }
+        else
+            Debug.Log("Save data doesn't exist");
     }
 
     //allow the game to be saved or loaded during Update by pressing keyboard keys
