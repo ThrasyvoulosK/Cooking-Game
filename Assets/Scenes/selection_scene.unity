@@ -5468,6 +5468,13 @@ MonoBehaviour:
   - {fileID: 1047593953}
   - {fileID: 762374970}
   - {fileID: 193516439}
+  loaded_menu_items:
+  - {fileID: 724872713}
+  - {fileID: 2095667507}
+  - {fileID: 1899141576}
+  - {fileID: 1047593953}
+  - {fileID: 0}
+  menuSettings: {fileID: 11400000, guid: cdf29c47a91eac348a4b8f242449d951, type: 2}
   cheat_one_ingredient_recipe: 0
 --- !u!4 &1492260247
 Transform:

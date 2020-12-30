@@ -227,6 +227,7 @@ MonoBehaviour:
   option_sound: 1
   option_music: 1
   menuitems: []
+  cheat_one_ingredient_recipe: 0
 --- !u!4 &42987270
 Transform:
   m_ObjectHideFlags: 0
@@ -1463,7 +1464,7 @@ RectTransform:
   m_GameObject: {fileID: 1489623535}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.11, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
   m_Children: []
   m_Father: {fileID: 69310479}
   m_RootOrder: 0
@@ -2208,6 +2209,7 @@ MonoBehaviour:
   - {fileID: 1664152913}
   - {fileID: 7916558545539617302}
   - {fileID: 2115958143}
+  is_colour: 1
 --- !u!114 &7916558545539617296
 MonoBehaviour:
   m_ObjectHideFlags: 0

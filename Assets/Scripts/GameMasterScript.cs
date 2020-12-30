@@ -61,6 +61,14 @@ public class GameMasterScript : MonoBehaviour
     //select music options
     public bool option_music = true;
 
+    //menu items that are disabled at various times can be accessed with this
+    public GameObject[] menuitems;
+
+    //pre-configured menu items to be loaded from this array
+    public GameObject[] loaded_menu_items;
+
+    public MenuSettings_SO menuSettings;
+
     void Awake()
     {
         //Debug.Log("current language is: " + language_current);
@@ -92,6 +100,8 @@ public class GameMasterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //menuSettings
+
         //handle speechbubble text here
         //wip
         if (language_current == "English")
@@ -114,6 +124,8 @@ public class GameMasterScript : MonoBehaviour
         LoadCheck();
 
         SaveOrLoadKeys();
+
+        set_menu(menuSettings);
     }
     private void InitialiseDictionary()
     {
@@ -182,7 +194,7 @@ public class GameMasterScript : MonoBehaviour
         
     }
 
-    public GameObject[] menuitems;
+    
     void menuitemhandler(Text menutext)
     {
         menutext.text = languagehandler[menutext.text];
@@ -303,6 +315,13 @@ public class GameMasterScript : MonoBehaviour
         //take a screenshot
         ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/scrnsht.png");
 
+        //do not allow saving when we don't have the necessary objects
+        GameObject frn = null;
+        if ((frn = GameObject.Find("Furnace")) == null)
+        {
+            Debug.Log("save in this state isn't supported!");
+            return;
+        }
         //call save as xml file function
         SaveXML();        
     }    
@@ -311,13 +330,7 @@ public class GameMasterScript : MonoBehaviour
     {
         Save save = new Save();
 
-        //do not allow saving when we don't have the necessary objects
-        GameObject frn=null;
-        if((frn=GameObject.Find("Furnace"))==null)
-        {
-            Debug.Log("save in this state isn't supported!");
-            return;
-        }
+        GameObject frn = GameObject.Find("Furnace");
 
         save.scenenum = SceneManager.GetActiveScene().buildIndex;
         save.money = (int)GameObject.Find("Money").GetComponent<MoneyScript>().money;
@@ -657,6 +670,13 @@ public class GameMasterScript : MonoBehaviour
         }
     }
 
+
+    //save menu items
+    //WIP
+    void SaveMenuXML()
+    {
+
+    }
     //load menu items properly
     //WIP
     void LoadMenuXML()
@@ -679,6 +699,21 @@ public class GameMasterScript : MonoBehaviour
         }
         else
             Debug.Log("Save data doesn't exist");
+    }
+
+    //assign menusettings
+    void set_menu(MenuSettings_SO mso)
+    {
+        Image tempimage = menuitems[6].GetComponentInChildren<Image>();
+
+        mso.CharacterSprite= tempimage.sprite;
+        mso.LevelSprite=menuitems[5].GetComponentInChildren<Image>().sprite;
+        mso.LanguageSprite=menuitems[4].GetComponentInChildren<Image>().sprite;
+
+        mso.language= language_current;
+        mso.level = levelid;
+        mso.character = option_character;
+
     }
 
     //allow the game to be saved or loaded during Update by pressing keyboard keys

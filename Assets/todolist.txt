@@ -8,14 +8,16 @@ Replace all sprites with the ones in the dictionary of gamemaster!
 fix scenes so that updating them all becomes less of a hussle
 -make them prefabs?
 
-fireworks appear on the dark part of the screen,breaking the fourth wall
+//fireworks appear on the dark part of the screen,breaking the fourth wall
 
 main menu fade graphics when something isn't applied?
 initialise images on menus properly, with current data
--loadmenuxml
---find menu objects?
+-loadmenuxml and savemenuxml
+--find menu objects from loadedmenuitems
 --levels soon to be obsolete?
 --keep: level?,character,language?,sound?,music?
+MenuSettings Scriptable Object as prefab
+-change sprites to images?
 
 exit button
 -update functionality for exiting from menus

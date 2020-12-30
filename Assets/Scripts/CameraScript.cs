@@ -202,7 +202,13 @@ public class CameraScript : MonoBehaviour
                 GameObject.Find("Money").GetComponent<RectTransform>().anchoredPosition = new Vector3(1022f, 290f, 0f);
             }
             else if (GameObject.Find("OptionsButton") != null)
-                theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-700f, 386f, 0);            
+            {
+                theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-700f, 386f, 0);
+                //info
+                theGameMaster.menuitems[8].GetComponent<RectTransform>().anchoredPosition +=new Vector2(20f, 0);
+                //options
+                theGameMaster.menuitems[1].GetComponent<RectTransform>().anchoredPosition +=new Vector2(-30f, 0);
+            }
         }
         //Debug.Log("CurrentRatio is: " + Camera.main.aspect);
         //Camera.main.orthographicSize += Camera.main.aspect/2;
