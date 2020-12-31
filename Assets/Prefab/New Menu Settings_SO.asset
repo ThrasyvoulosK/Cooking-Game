@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d1f3184ec662a42b3685f81e8fa616, type: 3}
   m_Name: New Menu Settings_SO
   m_EditorClassIdentifier: 
-  LevelSprite: {fileID: 0}
-  CharacterSprite: {fileID: 0}
-  LanguageSprite: {fileID: 0}
-  level: 0
-  character: 
-  language: 
+  LevelSprite: {fileID: 3496220161231794795, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
+  CharacterSprite: {fileID: 5193741487003750703, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
+  LanguageSprite: {fileID: 3182719106278621844, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
+  level: 9
+  character: Character_M
+  language: Greek

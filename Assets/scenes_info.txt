@@ -3,24 +3,22 @@
 menus and interludes
 
 -selection_scene
-It's just a button that changes to the next scene.
-In this case, it just goes to the fist level of the game, "Leve_1_new"(currently).
+It's the main menu of the game. It includes an instant-play button, an options button, an info button and an exit button.
+The options button opens a menu of differrent choices on game settings such as level, character, sound and language.
+Note:As of yet, sound changes are cosmetic, but with some code written for them in GameMasterScript. 
+	Languages other than Greek and English are currently disabled
 
--well_done 1 to 3
-These scenes serve as interludes between levels, by giving a message of victory to the player and allowing them to proceed to
-the next level whenever they want.
-Their functionality and setup is the same as the "selection_scene".
+-transaction scenes (1 to 9)
+After a congratulatory message, the player can choose one of up to three new decorations of a kind and then coninue to the next level.
 
 -WinScreen
 It provides the player with a victorious message after completing the last stage of the game.
-Its functionality is the same as above.
+Also allows the player to quit.
 
-cooking scenes (Level_ 1 to 4)
-//Level1_new, Level2_new, Level3_new and Level_4
+cooking scenes (Level 1 to 10)
 Being the main part of the game, in these scenes the player attempts to satisfy the demands of a finite number of customers 
- in each level by preparing them their preffered foods and drinks. Whenever that happens, a well_done scene is called, 
- congratulating the player and allowing them to continue on the next level.
-The setup and functionality is the same on all such scenes, currently, however, each scene handles different ingredients, 
+ in each level by preparing them their preffered foods and drinks. Whenever that happens, the corresponding transaction scene is called.
+The setup and functionality is similar on all such scenes, however, each scene handles different ingredients, 
  different recipes and different numbers of recipes needing to be completed
 
  the following is a list of Game Objects within such a scene, including their functionality and how they affect the game
@@ -55,7 +53,7 @@ Includes FurnaceScript.
  --NextRecipeButton
  It used to be a button, but now it is not, with its functionality replaced from scripts.
  --QuitButton
- Self explanatory, it also allows the player to exit the game by pressing 'esc'.
+ Self explanatory, it also allows the player to exit the game by pressing 'esc', saving the game in the process.
 
  -EventSystem?
 
@@ -64,7 +62,7 @@ This is the treadmill animation. It consists of two sprites that get animated ch
  interchangeably, just like a treadmill would. It doesn't interfere with anything else on the game.
 
  -GameMaster
- Includes the dictionary that assigns sprites to strings.
+ Includes the dictionary that assigns sprites to strings, language and option handling, save and load functionality, as well as some cheats (for debugging purposes).
 
  -SpawningFoodLayer
  It is responsible for the food-layer's position, as well as for loading its prefab.
@@ -82,4 +80,5 @@ This is the treadmill animation. It consists of two sprites that get animated ch
  Includes a small green 'screen' object that shows in front of the cash register, so that the 'money text' appears better on it instead
  of its current sprite
  ---Paper Towels
+ --Levels 8-10 bring new objects, such as tables, umbrellas and logos through their transaction scenes.
  

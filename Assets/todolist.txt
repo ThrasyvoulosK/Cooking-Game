@@ -18,6 +18,8 @@ initialise images on menus properly, with current data
 --keep: level?,character,language?,sound?,music?
 MenuSettings Scriptable Object as prefab
 -change sprites to images?
+-save current level being played from gameplay
+utilise xml after all, since build doesn't allow manipulation of prefabs?
 
 exit button
 -update functionality for exiting from menus
@@ -54,7 +56,7 @@ gameobject positions issues
 -'exit' button too
 
 Gameplay Issues:
--using money?
+//-using money?
 //-skill measuring?
 //-speed changing within the game?
 -how do we know how many recipes we need in-game?

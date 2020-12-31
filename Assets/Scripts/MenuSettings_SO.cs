@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*MenuSettings_SO*/
+/*MenuSettings_SO saves settings and their corresponding graphics, in order to be loaded properly between games*/
+/*WIP*/
 [CreateAssetMenu]
 public class MenuSettings_SO : ScriptableObject
 {

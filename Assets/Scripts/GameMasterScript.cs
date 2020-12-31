@@ -11,6 +11,9 @@ using UnityEditor;
 
 /*Initialise a sprite-string dictionary that stores the game's graphics*/
 /*This dictionary is defined inside the editor*/
+/*This script also handles language dictionaries and game options*/
+/*Includes Save/Load functionality*/
+/*Also includes cheat functions, to assist with debbuging*/
 public class GameMasterScript : MonoBehaviour
 {
     public Dictionary<string, Sprite> spriteslayers = new Dictionary<string, Sprite>();
@@ -65,7 +68,7 @@ public class GameMasterScript : MonoBehaviour
     public GameObject[] menuitems;
 
     //pre-configured menu items to be loaded from this array
-    public GameObject[] loaded_menu_items;
+    //public GameObject[] loaded_menu_items;
 
     public MenuSettings_SO menuSettings;
 
@@ -91,9 +94,23 @@ public class GameMasterScript : MonoBehaviour
 
         InitialiseBoughtables();
 
-        //initialise English as the default language
-        //the player can change language from the main menu
-        changelanguage_en();//
+        changelanguage_en();
+        //set_menu(menuSettings);
+
+        /*if (menuSettings.character != null)
+        {
+            Debug.Log("menusettings not null");
+            get_menu(menuSettings);
+            //initialise the default language
+            //the player can change language from the main menu
+            if (menuSettings.language == "English")
+                changelanguage_en();
+            else if (menuSettings.language == "Greek")
+                changelanguage_gr();
+        }
+        else
+            Debug.Log("menusettings prefab is null");
+        */
 
     }
 
@@ -125,7 +142,11 @@ public class GameMasterScript : MonoBehaviour
 
         SaveOrLoadKeys();
 
-        set_menu(menuSettings);
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        { 
+            set_menu(menuSettings);
+            //UnityEditor.EditorUtility.SetDirty(menuSettings);
+        }
     }
     private void InitialiseDictionary()
     {
@@ -185,7 +206,7 @@ public class GameMasterScript : MonoBehaviour
         //Debug.Log("sizeof base: " + words_en_base.Count + " Sizeof curr: " + words_current.Count);
         foreach (GameObject men in menuitems)
         {
-            Debug.Log("menuitems " + men.GetComponentInChildren<Text>().text);
+            //Debug.Log("menuitems " + men.GetComponentInChildren<Text>().text);
             men.GetComponentInChildren<Text>().text = languagehandler[men.GetComponentInChildren<Text>().text];
             //preserve image aspect in here as well
             if(men.GetComponentInChildren<Image>()!=null)
@@ -670,7 +691,7 @@ public class GameMasterScript : MonoBehaviour
         }
     }
 
-
+    /*
     //save menu items
     //WIP
     void SaveMenuXML()
@@ -700,20 +721,34 @@ public class GameMasterScript : MonoBehaviour
         else
             Debug.Log("Save data doesn't exist");
     }
+    */
 
     //assign menusettings
     void set_menu(MenuSettings_SO mso)
     {
-        Image tempimage = menuitems[6].GetComponentInChildren<Image>();
-
-        mso.CharacterSprite= tempimage.sprite;
-        mso.LevelSprite=menuitems[5].GetComponentInChildren<Image>().sprite;
-        mso.LanguageSprite=menuitems[4].GetComponentInChildren<Image>().sprite;
+        //get sprites from current settings
+        //(the second child of each of the folllowing gameobject is an Image)//
+        mso.CharacterSprite = menuitems[6].transform.GetChild(1).GetComponent<Image>().sprite;
+        mso.LevelSprite=menuitems[5].transform.GetChild(1).GetComponent<Image>().sprite;
+        mso.LanguageSprite=menuitems[4].transform.GetChild(1).GetComponent<Image>().sprite;
 
         mso.language= language_current;
         mso.level = levelid;
         mso.character = option_character;
+    }
 
+    //after setting the above correctly, 
+    // then we can get saved values from this SO
+    void get_menu(MenuSettings_SO mso)
+    {
+
+        menuitems[6].transform.GetChild(1).GetComponent<Image>().sprite=mso.CharacterSprite  ;
+        menuitems[5].transform.GetChild(1).GetComponent<Image>().sprite=mso.LevelSprite  ;
+        menuitems[4].transform.GetChild(1).GetComponent<Image>().sprite=mso.LanguageSprite  ;
+
+        language_current=mso.language  ;
+        levelid=mso.level  ;
+        option_character=mso.character  ;
     }
 
     //allow the game to be saved or loaded during Update by pressing keyboard keys
