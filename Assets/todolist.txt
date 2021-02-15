@@ -5,21 +5,16 @@ Add/Edit:
 
 Replace all sprites with the ones in the dictionary of gamemaster!
 
-fix scenes so that updating them all becomes less of a hussle
--make them prefabs?
+//fix scenes so that updating them all becomes less of a hussle-make them prefabs?
 
 //fireworks appear on the dark part of the screen,breaking the fourth wall
 
 main menu fade graphics when something isn't applied?
-initialise images on menus properly, with current data
--loadmenuxml and savemenuxml
---find menu objects from loadedmenuitems
---levels soon to be obsolete?
---keep: level?,character,language?,sound?,music?
-MenuSettings Scriptable Object as prefab
--change sprites to images?
--save current level being played from gameplay
-utilise xml after all, since build doesn't allow manipulation of prefabs?
+
+initialise images on menus properly, with current data with loadmenuxml and savemenuxml
+//--levels soon to be obsolete?
+--keep: level?,character,language,sound?,music?
+//check gamemaster dictionary for assignment to images
 
 exit button
 -update functionality for exiting from menus
@@ -55,6 +50,15 @@ gameobject positions issues
 -"ingredients" goes above black space
 -'exit' button too
 
+languages excel
+-5 rows: English, Greek, Polish, Portuguese, Romanian, type-of-object,notes
+-lines: The '[...]words" lists, except for capitals/other stuff we don't use
+--also include words not found in this, such as 'thanks' and transaction descriptions
+---transaction descriptions might need some explaining
+export a (english+'comma'+greek) csv
+-it can be reimported by the localization package
+//use streamwriter?
+
 Gameplay Issues:
 //-using money?
 //-skill measuring?
@@ -67,6 +71,7 @@ Add Functionality for Different Languages
 --'thank you' messages
 --speech???
 --UI items (menus)?
+-Make an excel file with our current 'lines', along with an empty space for the new ones
 
 Sounds???
 -for negative and affirmative actions

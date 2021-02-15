@@ -4960,8 +4960,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1492260247}
+  - component: {fileID: 1492260248}
   - component: {fileID: 1492260246}
+  - component: {fileID: 1492260247}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -5095,6 +5096,11 @@ MonoBehaviour:
   - {fileID: 126031767474139960, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
   - {fileID: 1468160588827105429, guid: 2a8562bceb5a75241ba107de3ca303fc, type: 3}
   - {fileID: 7646371382768671465, guid: 2a8562bceb5a75241ba107de3ca303fc, type: 3}
+  - {fileID: 3182719106278621844, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
+  - {fileID: -6297694172179438566, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
+  - {fileID: 1765882862154023772, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
+  - {fileID: -9016327377477566911, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
+  - {fileID: -6207044125792148073, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
   spritesnames:
   - Sandwich_Tomato
   - Sandwich_Cheese
@@ -5209,6 +5215,11 @@ MonoBehaviour:
   - Logo_3
   - Coffee_ing
   - Coffee_ing_done
+  - Language_El
+  - Language_Ro
+  - Language_Pt
+  - Language_Eng
+  - Language_Pl
   languages:
   - Greek
   - English
@@ -5468,28 +5479,35 @@ MonoBehaviour:
   - {fileID: 1047593953}
   - {fileID: 762374970}
   - {fileID: 193516439}
-  loaded_menu_items:
-  - {fileID: 724872713}
-  - {fileID: 2095667507}
-  - {fileID: 1899141576}
-  - {fileID: 1047593953}
-  - {fileID: 0}
   menuSettings: {fileID: 11400000, guid: cdf29c47a91eac348a4b8f242449d951, type: 2}
   cheat_one_ingredient_recipe: 0
---- !u!4 &1492260247
-Transform:
+--- !u!222 &1492260247
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492260245}
+  m_CullTransparentMesh: 0
+--- !u!224 &1492260248
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492260245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1701077, y: 0.6891093, z: -39.683285}
+  m_LocalPosition: {x: 0, y: 0, z: -39.683285}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.1701077, y: 0.6891093}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1511394153
 GameObject:
   m_ObjectHideFlags: 0

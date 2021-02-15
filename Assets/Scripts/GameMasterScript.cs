@@ -111,6 +111,16 @@ public class GameMasterScript : MonoBehaviour
         else
             Debug.Log("menusettings prefab is null");
         */
+        //load the menuitems data
+        LoadMenuXML();
+        //load individual images and data as well
+        if (language_current == "Greek")
+        { 
+            changelanguage_gr();
+            //menuitems[4].GetComponentInChildren<SpriteRenderer>().sprite = spriteslayers["Language_El"];
+            menuitems[4].transform.GetChild(1).GetComponent<Image>().sprite = spriteslayers["Language_El"];
+        }
+        menuitems[6].transform.GetChild(1).GetComponent<Image>().sprite = spriteslayers[option_character];
 
     }
 
@@ -141,6 +151,7 @@ public class GameMasterScript : MonoBehaviour
         LoadCheck();
 
         SaveOrLoadKeys();
+        SaveOrLoadKeysMenu();//
 
         if (SceneManager.GetActiveScene().buildIndex == 0)
         { 
@@ -691,37 +702,75 @@ public class GameMasterScript : MonoBehaviour
         }
     }
 
-    /*
+    
     //save menu items
     //WIP
     void SaveMenuXML()
     {
+        SaveMenu saveme=new SaveMenu();
+
+        saveme.language_current = language_current;
+        saveme.levelid = levelid;
+        //save.scenenum = SceneManager.GetActiveScene().buildIndex;
+        saveme.option_character = option_character;
+
+        //create the xml document with the above values
+        XmlDocument xmlDocument = new XmlDocument();
+
+        XmlElement root = xmlDocument.CreateElement("SaveMenu");
+
+        XmlElement xlang = xmlDocument.CreateElement("Language");
+        xlang.InnerText = saveme.language_current.ToString();
+        root.AppendChild(xlang);
+
+        XmlElement xlev = xmlDocument.CreateElement("Level");
+        xlev.InnerText = saveme.levelid.ToString();
+        root.AppendChild(xlev);
+
+        XmlElement xchar = xmlDocument.CreateElement("Character");
+        xchar.InnerText = saveme.option_character.ToString();
+        root.AppendChild(xchar);
+
+
+        xmlDocument.AppendChild(root);
+        xmlDocument.Save(Application.persistentDataPath + "/savemenu.txt");//
+        string sav = Application.persistentDataPath + "/savemenu.txt";
+        Debug.Log("persistent data path savemenu: " + sav);
+
 
     }
+    
     //load menu items properly
     //WIP
     void LoadMenuXML()
     {
-        string sav = Application.persistentDataPath + "/save1.txt";
+        string sav = Application.persistentDataPath + "/savemenu.txt";
         if (System.IO.File.Exists(sav))
         {
             Debug.Log("loading menu data from saved file");
 
-            //Save save = new Save();
+            SaveMenu saveme = new SaveMenu();
             XmlDocument xmlDocument = new XmlDocument();
 
-            xmlDocument.Load(Application.persistentDataPath + "/save1.txt");
+            xmlDocument.Load(Application.persistentDataPath + "/savemenu.txt");
 
-            XmlNodeList xscene = xmlDocument.GetElementsByTagName("Scene");
+            XmlNodeList xscene = xmlDocument.GetElementsByTagName("Level");
             levelid = int.Parse(xscene[0].InnerText);
             //levelchanged = true;
             //menuitems[5].GetComponentInChildren<Image>().sprite=
 
+            XmlNodeList xlang = xmlDocument.GetElementsByTagName("Language");
+            language_current = xlang[0].InnerText;
+            //
+
+            XmlNodeList xchar = xmlDocument.GetElementsByTagName("Character");
+            option_character = xchar[0].InnerText;
+            //
         }
         else
-            Debug.Log("Save data doesn't exist");
+            Debug.Log("Save menu data doesn't exist");
     }
-    */
+    /**/
 
     //assign menusettings
     void set_menu(MenuSettings_SO mso)
@@ -761,6 +810,29 @@ public class GameMasterScript : MonoBehaviour
             issavedgame = true;
             LoadGame();
         }
+    }
+
+    void SaveOrLoadKeysMenu()
+    {
+        if (Input.GetKeyDown("d"))
+            SaveMenuXML();
+        if (Input.GetKeyDown("k"))
+        {
+            //issavedgame = true;
+            LoadMenuXML();
+        }
+    }
+
+    //misc
+    //write csv
+    void writetocsv()
+    {
+        string firstrow = "English,Greek\n";
+        for(int i=0;i<words_en_base.Count;i++)
+        {
+            //append each couple of words to this, like above
+            //firstrow.
+        }            
     }
 
     //Cheats!
@@ -824,4 +896,11 @@ public class Save
     public string logo;
     //misc graphics
     public int customer;
+}
+
+public class SaveMenu
+{
+    public string language_current;
+    public int levelid;
+    public string option_character;
 }
