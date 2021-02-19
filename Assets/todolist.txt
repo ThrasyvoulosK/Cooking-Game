@@ -37,7 +37,7 @@ check if player has already played
 //-fix potatoes!
 
 feedback issues
-//-hovering ice cream ingredients?
+-hovering ice cream ingredients?
 //-different order in ice cream ingredients between recipe image and built recipe
 
 intro-tutorial
@@ -51,13 +51,20 @@ gameobject positions issues
 -'exit' button too
 
 languages excel
--5 rows: English, Greek, Polish, Portuguese, Romanian, type-of-object,notes
--lines: The '[...]words" lists, except for capitals/other stuff we don't use
---also include words not found in this, such as 'thanks' and transaction descriptions
+//-5 rows: English, Greek, Polish, Portuguese, Romanian, plus type-of-object and notes
+//-lines: The '[...]words" lists, except for capitals/other stuff we don't use
+//--also include words not found in this, such as 'thanks' and transaction descriptions
+//---DecDescription[...] function in Gamemaster
+//---RecipeCheckScript's 'thank-you' bubbles are hadcoded within the graphics
 ---transaction descriptions might need some explaining
-export a (english+'comma'+greek) csv
+//export a (english+'comma'+greek) csv
 -it can be reimported by the localization package
-//use streamwriter?
+//(use streamwriter?)
+-make a brief powerpoint, explaining the various types-of-objects with screenshots from the game 
+-Greek encoding issue on Excel? (Notepad++ displays it correctly)
+
+video is no good
+-it's a bit too 'flashy'
 
 Gameplay Issues:
 //-using money?

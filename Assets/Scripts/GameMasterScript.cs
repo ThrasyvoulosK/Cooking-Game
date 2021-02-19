@@ -111,16 +111,19 @@ public class GameMasterScript : MonoBehaviour
         else
             Debug.Log("menusettings prefab is null");
         */
+
         //load the menuitems data
         LoadMenuXML();
         //load individual images and data as well
         if (language_current == "Greek")
         { 
             changelanguage_gr();
-            //menuitems[4].GetComponentInChildren<SpriteRenderer>().sprite = spriteslayers["Language_El"];
             menuitems[4].transform.GetChild(1).GetComponent<Image>().sprite = spriteslayers["Language_El"];
         }
         menuitems[6].transform.GetChild(1).GetComponent<Image>().sprite = spriteslayers[option_character];
+
+        //write a localisation csv
+        writetocsv();
 
     }
 
@@ -827,12 +830,17 @@ public class GameMasterScript : MonoBehaviour
     //write csv
     void writetocsv()
     {
-        string firstrow = "English,Greek\n";
-        for(int i=0;i<words_en_base.Count;i++)
+        string firstrow = "id;English;Greek;Polish;Portuguese;Romanian;Type;Notes";
+        using(StreamWriter sw =new StreamWriter(Application.persistentDataPath + "/localisation.csv"))
         {
-            //append each couple of words to this, like above
-            //firstrow.
-        }            
+            sw.WriteLine(firstrow);
+            for (int i = 0; i < words_en_base.Count; i++)
+            {
+                //append each couple of words to this
+                sw.WriteLine(i+";"+words_en[i] + ";" + words_gr[i]);
+            }
+        }
+        Debug.Log("written csv at " + Application.persistentDataPath);
     }
 
     //Cheats!
