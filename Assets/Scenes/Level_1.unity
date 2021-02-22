@@ -408,7 +408,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131864900}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: f614703cddc24a64ba44983eda77e5b8, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 1834ce4b59307c840b0cfb340dceecaa, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -624,6 +624,7 @@ MonoBehaviour:
   option_sound: 1
   option_music: 1
   menuitems: []
+  menuSettings: {fileID: 0}
   cheat_one_ingredient_recipe: 0
 --- !u!114 &384308904 stripped
 MonoBehaviour:
@@ -2083,6 +2084,7 @@ MonoBehaviour:
   option_sound: 1
   option_music: 1
   menuitems: []
+  menuSettings: {fileID: 0}
   cheat_one_ingredient_recipe: 0
 --- !u!4 &1649455955
 Transform:
@@ -2121,6 +2123,7 @@ GameObject:
   - component: {fileID: 1768296671}
   - component: {fileID: 1768296670}
   - component: {fileID: 1768296673}
+  - component: {fileID: 1768296674}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -2262,6 +2265,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1768296674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768296669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3a91bd79a1df14f80badbf2a9d5737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1960479112 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2191280604491002069, guid: 1b36c348045acb442ae09b2fdb65f7bf, type: 3}

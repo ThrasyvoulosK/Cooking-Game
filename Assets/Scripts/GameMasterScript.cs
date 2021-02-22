@@ -72,6 +72,9 @@ public class GameMasterScript : MonoBehaviour
 
     public MenuSettings_SO menuSettings;
 
+    /*public UnityEngine.Video.VideoPlayer videoPlayer;
+    public UnityEngine.Video.VideoClip vc = Resources.Load<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut English");*/
+
     void Awake()
     {
         //Debug.Log("current language is: " + language_current);
@@ -119,6 +122,8 @@ public class GameMasterScript : MonoBehaviour
         { 
             changelanguage_gr();
             menuitems[4].transform.GetChild(1).GetComponent<Image>().sprite = spriteslayers["Language_El"];
+            UnityEngine.Video.VideoPlayer videoPlayer;
+             //vc = Resources.Load<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut");
         }
         menuitems[6].transform.GetChild(1).GetComponent<Image>().sprite = spriteslayers[option_character];
 
@@ -132,13 +137,47 @@ public class GameMasterScript : MonoBehaviour
     {
         //menuSettings
 
+        //load correct video
+        /*if (SceneManager.GetActiveScene().buildIndex  == 1)
+        
+            GameObject cnv = GameObject.Find("Canvas");
+
+            UnityEngine.Video.VideoPlayer videoPlayer;
+            UnityEngine.Video.VideoClip vc= Resources.Load<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut English");
+            videoPlayer = cnv.GetComponentInChildren<UnityEngine.Video.VideoPlayer>();
+            videoPlayer.clip = vc;
+            Debug.Log("video ok?");*/
+            /*
+            if (GameObject.Find("Canvas") != null)
+            {
+                if (cnv.GetComponentInChildren<UnityEngine.Video.VideoClip>() != null)
+                    Debug.Log("vidoe exists");
+                else
+                    Debug.Log("no video");
+                UnityEngine.Video.VideoClip vid = cnv.GetComponentInChildren<UnityEngine.Video.VideoClip>();
+                if (language_current == "English")
+                    vid = Resources.LoadAll<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut English")[0]; 
+                else if (language_current == "Greek")
+                    vid = Resources.LoadAll<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut")[0];
+            }
+            */
+            
+        
+
         //handle speechbubble text here
         //wip
         if (language_current == "English")
         {
             GameObject speechbubble = null;
             if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
-                speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
+                speechbubble.GetComponentInChildren<TextMeshPro>().text = "THANK YOU!";
+            //speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
+        }
+        else if (language_current == "Greek")
+        {
+            GameObject speechbubble = null;
+            if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
+                speechbubble.GetComponentInChildren<TextMeshPro>().text = "ΕΥΧΑΡΙΣΤΩ!";
         }
 
         DecDescriptionText();
@@ -191,7 +230,8 @@ public class GameMasterScript : MonoBehaviour
         GameObject speechbubble = null;
         if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
             //speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
-            speechbubble.GetComponentInChildren<TextMeshPro>().SetText("Thank You!");
+            speechbubble.GetComponentInChildren<TextMeshPro>().SetText("THANK YOU!");
+            //speechbubble.GetComponentInChildren<TextMeshPro>().SetText("Thank You!");
     }
 
     public void changelanguage_gr()
@@ -330,17 +370,25 @@ public class GameMasterScript : MonoBehaviour
             boght = languagehandler[GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().objecttobebought];
             if (GameObject.Find("ObjectsToBuy").GetComponent<TransactionScript>().is_colour == true)
             {
-                if (language_current == "English")
+                /*if (language_current == "English")
                     decdesc.GetComponent<Text>().text = "Choose a new " + boght + " colour \nfor your canteen, to continue!";
                 else if (language_current == "Greek")
-                    decdesc.GetComponent<Text>().text = "Διάλεξε νέο χρώμα " + boght + "\nγια τη καντίνα σου, για να συνεχίσεις!";
+                    decdesc.GetComponent<Text>().text = "Διάλεξε νέο χρώμα " + boght + "\nγια τη καντίνα σου, για να συνεχίσεις!";*/
+                if (language_current == "English")
+                    decdesc.GetComponent<Text>().text = "CHOOSE A NEW " + boght + " COLOUR \nFOR YOUR CANTEEN, TO CONTINUE!";
+                else if (language_current == "Greek")
+                    decdesc.GetComponent<Text>().text = "ΔΙΑΛΕΞΕ ΝΕΟ ΧΡΩΜΑ " + boght + "\nΓΙΑ ΤΗ ΚΑΝΤΙΝΑ ΣΟΥ, ΓΙΑ ΝΑ ΣΥΝΕΧΙΣΕΙΣ!";
             }
             else
             {
-                if (language_current == "English")
+                /*if (language_current == "English")
                     decdesc.GetComponent<Text>().text = "Choose a new " + boght + "\nfor your canteen, to continue!";
                 else if (language_current == "Greek")
-                    decdesc.GetComponent<Text>().text = "Κάνε νέα επιλογή " + boght + "\nγια τη καντίνα σου, για να συνεχίσεις!";
+                    decdesc.GetComponent<Text>().text = "Κάνε νέα επιλογή " + boght + "\nγια τη καντίνα σου, για να συνεχίσεις!";*/
+                if (language_current == "English")
+                    decdesc.GetComponent<Text>().text = "CHOOSE A NEW " + boght + "\nFOR YOUR CANTEEN, TO CONTINUE!";
+                else if (language_current == "Greek")
+                    decdesc.GetComponent<Text>().text = "ΚΑΝΕ ΝΕΑ ΕΠΙΛΟΓΗ " + boght + "\nΓΙΑ ΤΗ ΚΑΝΤΙΝΑ ΣΟΥ, ΓΙΑ ΝΑ ΣΥΝΕΧΙΣΕΙΣ!";
             }
         }
     }

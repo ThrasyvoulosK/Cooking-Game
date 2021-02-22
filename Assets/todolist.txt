@@ -58,13 +58,15 @@ languages excel
 //---RecipeCheckScript's 'thank-you' bubbles are hadcoded within the graphics
 ---transaction descriptions might need some explaining
 //export a (english+'comma'+greek) csv
--it can be reimported by the localization package
+-csv can be reimported by the localization package
 //(use streamwriter?)
--make a brief powerpoint, explaining the various types-of-objects with screenshots from the game 
--Greek encoding issue on Excel? (Notepad++ displays it correctly)
+//-make a brief powerpoint, explaining the various types-of-objects with screenshots from the game 
+//-Greek encoding issue on Excel? (Notepad++ displays it correctly)
 
 video is no good
 -it's a bit too 'flashy'
+-change wording to be somewhat more suitables
+-put 'speech bubbles' and 'arrows' instead of 'cards'
 
 Gameplay Issues:
 //-using money?
