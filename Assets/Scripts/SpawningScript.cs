@@ -88,10 +88,17 @@ public class SpawningScript : MonoBehaviour
                 if (recing == ingr.name)
                 {
                     ingredients_current.Add(ingr);
-                    randomingredient = Random.Range(0, ingredients.Count);
-                    ingredients_current.Add(ingredients[randomingredient]);
+                    /*randomingredient = Random.Range(0, ingredients.Count);
+                    ingredients_current.Add(ingredients[randomingredient]);*/
                 }
             }
+        }
+
+        //add random ingredients
+        for(int i=0;i<(ingredients.Count/2);i++)
+        {
+            randomingredient = Random.Range(0, ingredients.Count);
+            ingredients_current.Add(ingredients[randomingredient]);
         }
     }
 }

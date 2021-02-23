@@ -72,8 +72,9 @@ public class GameMasterScript : MonoBehaviour
 
     public MenuSettings_SO menuSettings;
 
-    /*public UnityEngine.Video.VideoPlayer videoPlayer;
-    public UnityEngine.Video.VideoClip vc = Resources.Load<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut English");*/
+    public UnityEngine.Video.VideoPlayer videoPlayer;
+    public UnityEngine.Video.VideoClip[] vc; //= Resources.Load<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut English");
+    public GameObject videoObject;
 
     void Awake()
     {
@@ -122,13 +123,14 @@ public class GameMasterScript : MonoBehaviour
         { 
             changelanguage_gr();
             menuitems[4].transform.GetChild(1).GetComponent<Image>().sprite = spriteslayers["Language_El"];
-            UnityEngine.Video.VideoPlayer videoPlayer;
-             //vc = Resources.Load<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut");
+            //UnityEngine.Video.VideoPlayer videoPlayer;
+            //vc = Resources.Load<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut");
         }
         menuitems[6].transform.GetChild(1).GetComponent<Image>().sprite = spriteslayers[option_character];
 
         //write a localisation csv
-        writetocsv();
+        if(Application.isEditor)
+            writetocsv();
 
     }
 
@@ -231,7 +233,11 @@ public class GameMasterScript : MonoBehaviour
         if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
             //speechbubble.GetComponentInChildren<TextMeshPro>().text = "Thank You!";
             speechbubble.GetComponentInChildren<TextMeshPro>().SetText("THANK YOU!");
-            //speechbubble.GetComponentInChildren<TextMeshPro>().SetText("Thank You!");
+        //speechbubble.GetComponentInChildren<TextMeshPro>().SetText("Thank You!");
+
+        //load the correct video in English
+        videoPlayer = videoObject.GetComponentInChildren<UnityEngine.Video.VideoPlayer>();
+        videoPlayer.clip = vc[0];
     }
 
     public void changelanguage_gr()
@@ -246,6 +252,10 @@ public class GameMasterScript : MonoBehaviour
         language_current = "Greek";
         words_current = words_gr;
         InitialiseLanguage();
+
+        //load the correct video in Greek
+        videoPlayer = videoObject.GetComponentInChildren<UnityEngine.Video.VideoPlayer>();
+        videoPlayer.clip = vc[1];
     }
     private void InitialiseLanguage()
     {

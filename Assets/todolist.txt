@@ -63,10 +63,34 @@ languages excel
 //-make a brief powerpoint, explaining the various types-of-objects with screenshots from the game 
 //-Greek encoding issue on Excel? (Notepad++ displays it correctly)
 
-video is no good
--it's a bit too 'flashy'
--change wording to be somewhat more suitables
+disable csv outside editor?
+
+changing video
+//-it's a bit too 'flashy'
+//-change wording to be somewhat more suitable
 -put 'speech bubbles' and 'arrows' instead of 'cards'
+
+//play an english video on english versions
+////-other languages as well
+//-make a new scene?
+//--this will probably cause a lot of bugs on scene changiging
+//-make the video a prefab
+
+new feedback issues:
+-art issues
+--pink strawberry?
+--big tomatoes on toasts
+-menu behaviour
+--'back' button
+---make one exclusively for the submenus?
+	or one for each submenu?
+//--changes in levels, languages and characters
+-gameplay
+--board
+//--board transaction
+--pots?
+//--spawning objects repeats itself a lot?
+--add a progress bar that works also as a game menu, to replace the 'x'?
 
 Gameplay Issues:
 //-using money?
