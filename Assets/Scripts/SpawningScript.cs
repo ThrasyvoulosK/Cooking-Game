@@ -95,10 +95,23 @@ public class SpawningScript : MonoBehaviour
         }
 
         //add random ingredients
-        for(int i=0;i<(ingredients.Count/2);i++)
+        for(int i=0;i<=(theFurnace.recipe.neededIngr.Count/2);i++)
         {
             randomingredient = Random.Range(0, ingredients.Count);
-            ingredients_current.Add(ingredients[randomingredient]);
+            bool alreadyin = false;
+            foreach (GameObject ingr in ingredients)
+            {
+                foreach (string recing in theFurnace.recipe.neededIngr)
+                {
+                    if (recing == ingredients[randomingredient].name)
+                        alreadyin = true;
+                }
+                
+            }
+            if (alreadyin == false)
+            {
+                ingredients_current.Add(ingredients[randomingredient]);
+            }
         }
     }
 }

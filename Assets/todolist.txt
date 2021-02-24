@@ -81,8 +81,8 @@ new feedback issues:
 --pink strawberry?
 --big tomatoes on toasts
 -menu behaviour
---'back' button
----make one exclusively for the submenus?
+//--'back' button
+//---make one exclusively for the submenus?
 	or one for each submenu?
 //--changes in levels, languages and characters
 -gameplay
