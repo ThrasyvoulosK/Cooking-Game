@@ -2867,6 +2867,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  menuSettings: {fileID: 0}
+  videoPlayer: {fileID: 0}
+  vc: []
+  videoObject: {fileID: 0}
+  cheat_one_ingredient_recipe: 0
 --- !u!4 &1710143554
 Transform:
   m_ObjectHideFlags: 0
@@ -3090,7 +3095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.size
-      value: 30
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: recipe
@@ -3111,11 +3116,11 @@ PrefabInstance:
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 50bee18847acb094ba96187b7ac5c6a7, type: 2}
+      objectReference: {fileID: 11400000, guid: 495bfccccca6937448960e639a874b88, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 1b1b1b9153082d749bc22e015bad12ae, type: 2}
+      objectReference: {fileID: 11400000, guid: 975d6eb62e58c7f44a2a262c19b50547, type: 2}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[4]
       value: 
@@ -3215,14 +3220,14 @@ PrefabInstance:
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[28]
       value: 
-      objectReference: {fileID: 11400000, guid: 495bfccccca6937448960e639a874b88, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: next_recipe.Array.data[29]
       value: 
-      objectReference: {fileID: 11400000, guid: 975d6eb62e58c7f44a2a262c19b50547, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572380, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: numberofrecipesinlevel
-      value: 29
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 5314863079734572382, guid: 44cadac4d57b728489bf2def69bd5c2e, type: 3}
       propertyPath: m_LocalPosition.x

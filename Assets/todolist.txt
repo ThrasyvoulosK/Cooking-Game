@@ -63,7 +63,7 @@ languages excel
 //-make a brief powerpoint, explaining the various types-of-objects with screenshots from the game 
 //-Greek encoding issue on Excel? (Notepad++ displays it correctly)
 
-disable csv outside editor?
+//disable csv outside editor?
 
 changing video
 //-it's a bit too 'flashy'
@@ -75,6 +75,9 @@ changing video
 //-make a new scene?
 //--this will probably cause a lot of bugs on scene changiging
 //-make the video a prefab
+
+write some code to help testing
+-eg code displaying a message about screen resolution
 
 new feedback issues:
 -art issues
@@ -91,6 +94,7 @@ new feedback issues:
 --pots?
 //--spawning objects repeats itself a lot?
 --add a progress bar that works also as a game menu, to replace the 'x'?
+---unity has a premade 'progress bar'. check it out
 
 Gameplay Issues:
 //-using money?

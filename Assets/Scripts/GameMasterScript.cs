@@ -139,31 +139,7 @@ public class GameMasterScript : MonoBehaviour
     {
         //menuSettings
 
-        //load correct video
-        /*if (SceneManager.GetActiveScene().buildIndex  == 1)
-        
-            GameObject cnv = GameObject.Find("Canvas");
-
-            UnityEngine.Video.VideoPlayer videoPlayer;
-            UnityEngine.Video.VideoClip vc= Resources.Load<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut English");
-            videoPlayer = cnv.GetComponentInChildren<UnityEngine.Video.VideoPlayer>();
-            videoPlayer.clip = vc;
-            Debug.Log("video ok?");*/
-            /*
-            if (GameObject.Find("Canvas") != null)
-            {
-                if (cnv.GetComponentInChildren<UnityEngine.Video.VideoClip>() != null)
-                    Debug.Log("vidoe exists");
-                else
-                    Debug.Log("no video");
-                UnityEngine.Video.VideoClip vid = cnv.GetComponentInChildren<UnityEngine.Video.VideoClip>();
-                if (language_current == "English")
-                    vid = Resources.LoadAll<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut English")[0]; 
-                else if (language_current == "Greek")
-                    vid = Resources.LoadAll<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut")[0];
-            }
-            */
-            
+              
         
 
         //handle speechbubble text here
@@ -187,15 +163,21 @@ public class GameMasterScript : MonoBehaviour
         //assign sprites to the ones we bought
         boughtables_assigner();
 
-        //cheat mode!
-        //cheat_one_recipe_only();
-        //cheat_only_ingredient_recipes("Club");
-        //cheat_one_ingredient_recipe = true;
+        if (Application.isEditor)
+        {
+            //Debug.Log("dev cheats allowed");
 
-        LoadCheck();
+            //cheat mode!
+            //cheat_one_recipe_only();
+            cheat_only_ingredient_recipes("Tomato");
+            //cheat_one_ingredient_recipe = true;
 
-        SaveOrLoadKeys();
-        SaveOrLoadKeysMenu();//
+            //keyboard commands
+            SaveOrLoadKeys();
+            SaveOrLoadKeysMenu();//
+        }
+
+        LoadCheck();        
 
         if (SceneManager.GetActiveScene().buildIndex == 0)
         { 
@@ -927,11 +909,11 @@ public class GameMasterScript : MonoBehaviour
             {
                 if(rec.name.Contains(ingredient))
                 {
-                    Debug.Log("this recipe includes our ingredient of choice"+rec.name);
+                    //Debug.Log("this recipe includes our ingredient of choice"+rec.name);
                 }
                 else
                 {
-                    Debug.Log("we do not need this recipe" + rec.name);
+                    //Debug.Log("we do not need this recipe" + rec.name);
                     theFurnace.next_recipe.Remove(rec);
                 }
             }

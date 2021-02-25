@@ -192,6 +192,16 @@ public class IngredientScript : MonoBehaviour
         if(collision.name=="Furnace")
         {
             foodlayerclone.GetComponent<FoodLayersScript>().renderers[inum].sprite = theFoodLayer.SpriteChooseIngredient(theFurnace.recipe.name, gameObject.name);
+
+            //special case: toast tomato
+            /*if (theFurnace.recipe.name.StartsWith("Toast") && (gameObject.name.Contains("Tomato")))
+            {
+                Debug.Log("testing toast tomato");
+                gameObject.transform.localScale = new Vector3(0.75f, 0.75f, 0);
+            }
+            else
+                Debug.Log("not what we're looking for: " + gameObject.name);*/
+
             inum = 0;
 
             int i = 0;

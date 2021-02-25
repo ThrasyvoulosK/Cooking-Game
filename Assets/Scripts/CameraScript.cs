@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class CameraScript : MonoBehaviour
 {
     public GameMasterScript theGameMaster;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +49,9 @@ public class CameraScript : MonoBehaviour
             {
                 //get 'back' menu button
                 theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-425f, 386f, 0);
+                theGameMaster.menuitems[10].GetComponent<RectTransform>().anchoredPosition = new Vector3(-425f, 386f, 0);
                 theGameMaster.menuitems[3].GetComponent<RectTransform>().localScale = new Vector3(0.75f, 0.75f, 0);
+                theGameMaster.menuitems[10].GetComponent<RectTransform>().localScale = new Vector3(0.75f, 0.75f, 0);
                 //'options' button
                 theGameMaster.menuitems[1].GetComponent<RectTransform>().anchoredPosition = new Vector3(-110f, -447f, 0);
 
@@ -82,7 +85,9 @@ public class CameraScript : MonoBehaviour
             {
                 //get 'back' menu button
                 theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-455f, 386f, 0);
+                theGameMaster.menuitems[10].GetComponent<RectTransform>().anchoredPosition = new Vector3(-455f, 386f, 0);
                 theGameMaster.menuitems[3].GetComponent<RectTransform>().localScale = new Vector3(0.9f, 0.9f, 0);
+                theGameMaster.menuitems[10].GetComponent<RectTransform>().localScale = new Vector3(0.9f, 0.9f, 0);
 
                 theGameMaster.menuitems[1].GetComponent<RectTransform>().anchoredPosition = new Vector3(-125f, -447f, 0);
 
@@ -115,6 +120,7 @@ public class CameraScript : MonoBehaviour
             else if (GameObject.Find("OptionsButton") != null)
             {
                 theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-505f, 386f, 0);
+                theGameMaster.menuitems[10].GetComponent<RectTransform>().anchoredPosition = new Vector3(-505f, 386f, 0);
                 //options button
                 theGameMaster.menuitems[1].GetComponent<RectTransform>().anchoredPosition = new Vector3(-150f, -447f, 0);
 
@@ -140,6 +146,7 @@ public class CameraScript : MonoBehaviour
             else if (GameObject.Find("OptionsButton") != null)
             {
                 theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-550f, 386f, 0);
+                theGameMaster.menuitems[10].GetComponent<RectTransform>().anchoredPosition = new Vector3(-550f, 386f, 0);
                 //options button
                 theGameMaster.menuitems[1].GetComponent<RectTransform>().anchoredPosition = new Vector3(-180f, -447f, 0);
 
@@ -180,6 +187,7 @@ public class CameraScript : MonoBehaviour
             {
                 //get 'back' menu button
                 theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-680f, 386f, 0);
+                theGameMaster.menuitems[10].GetComponent<RectTransform>().anchoredPosition = new Vector3(-680f, 386f, 0);
                 //options 
                 theGameMaster.menuitems[1].GetComponent<RectTransform>().anchoredPosition = new Vector3(-270f, -447f, 0);
                 //info
@@ -204,6 +212,7 @@ public class CameraScript : MonoBehaviour
             else if (GameObject.Find("OptionsButton") != null)
             {
                 theGameMaster.menuitems[3].GetComponent<RectTransform>().anchoredPosition = new Vector3(-700f, 386f, 0);
+                theGameMaster.menuitems[10].GetComponent<RectTransform>().anchoredPosition = new Vector3(-700f, 386f, 0);
                 //info
                 theGameMaster.menuitems[8].GetComponent<RectTransform>().anchoredPosition +=new Vector2(20f, 0);
                 //options

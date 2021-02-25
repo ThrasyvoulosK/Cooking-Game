@@ -84,7 +84,7 @@ public class FoodLayersScript : MonoBehaviour
 
                 //gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition = new Vector3(0f, 0.05f * (i-1), 0);
                 gameObject.transform.GetChild(i - 1).GetComponent<Transform>().localPosition += new Vector3(0f, -0.175f*i+0.05f*(i) , 0);
-                Debug.Log("0.05*i-1=" + 0.05 * (i-1));
+                //Debug.Log("0.05*i-1=" + 0.05 * (i-1));
 
                 if (theFurnace.recipe.neededIngr[i-1] == "Potato")
                 {
@@ -193,7 +193,7 @@ public class FoodLayersScript : MonoBehaviour
     {
         Sprite ingredientsprite=null;
 
-        if(ingredientname=="Cheese")
+        /*if(ingredientname=="Cheese")
             ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[15];
         else if (ingredientname == "Ham")
             ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[16];
@@ -201,7 +201,8 @@ public class FoodLayersScript : MonoBehaviour
             ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[17];
         else if (ingredientname == "Tomato")
             ingredientsprite = Resources.LoadAll<Sprite>("canteen_toast-01")[14];
-        else if (ingredientname == "Toast_Bread")
+        else*/
+        if (ingredientname == "Toast_Bread")
             ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_toast-01")[13];
         else if (ingredientname == "Sandwich_Bread_Down")
             ingredientsprite = Resources.LoadAll<Sprite>("προϊόντα/canteen_sandwich-02")[16];
@@ -297,7 +298,12 @@ public class FoodLayersScript : MonoBehaviour
             else if (ingredientname == "Lettuce")
                 return GameMasterScript.Instance.spriteslayers["Toast_Lettuce"];
             else if (ingredientname == "Tomato")
+            {
+                //GameMasterScript.Instance.spriteslayers["Toast_Tomato"].
+                //gameObject.transform.localScale = new Vector3(0.75f, 0.75f, 0);
                 return GameMasterScript.Instance.spriteslayers["Toast_Tomato"];
+            }
+                
         }
         else if (recipename.StartsWith("Coffee"))
         {
