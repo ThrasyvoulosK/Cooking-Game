@@ -128,9 +128,9 @@ public class GameMasterScript : MonoBehaviour
         }
         menuitems[6].transform.GetChild(1).GetComponent<Image>().sprite = spriteslayers[option_character];
 
-        //write a localisation csv
-        if(Application.isEditor)
-            writetocsv();
+        //write a localisation csv (optional)
+        /*if(Application.isEditor)
+            writetocsv();*/
 
     }
 
@@ -169,7 +169,7 @@ public class GameMasterScript : MonoBehaviour
 
             //cheat mode!
             //cheat_one_recipe_only();
-            cheat_only_ingredient_recipes("Tomato");
+            //cheat_only_ingredient_recipes("Tomato");
             //cheat_one_ingredient_recipe = true;
 
             //keyboard commands
@@ -748,7 +748,7 @@ public class GameMasterScript : MonoBehaviour
     
     //save menu items
     //WIP
-    void SaveMenuXML()
+    public void SaveMenuXML()
     {
         SaveMenu saveme=new SaveMenu();
 

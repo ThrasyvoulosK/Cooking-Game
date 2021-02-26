@@ -96,6 +96,8 @@ new feedback issues:
 --add a progress bar that works also as a game menu, to replace the 'x'?
 ---unity has a premade 'progress bar'. check it out
 
+savemenu should keep level information
+
 Gameplay Issues:
 //-using money?
 //-skill measuring?
