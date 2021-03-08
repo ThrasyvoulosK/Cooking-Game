@@ -90,7 +90,8 @@ public class RecipeCheckScript : MonoBehaviour
                 gameObject.GetComponent<RecipeCheckScript>().images[i].enabled = true;
 
                 speechbubble.enabled = true;
-                speechbubble.sprite= Resources.LoadAll<Sprite>("canteen_things")[1];
+                //speechbubble.sprite= Resources.LoadAll<Sprite>("canteen_things")[1];
+                speechbubble.sprite = theGameMaster.spriteslayers["SpeechBubble_Empty"];
                 speechbubble.GetComponentInChildren<TextMeshPro>().enabled = false;
 
                 //Debug.Log(furnscript.recipe.neededIngr[i]);
@@ -108,7 +109,8 @@ public class RecipeCheckScript : MonoBehaviour
         }
         else
         {
-            speechbubble.sprite = Resources.LoadAll<Sprite>("canteen _ευχαριστω bubble copy")[0];
+            //speechbubble.sprite = Resources.LoadAll<Sprite>("canteen _ευχαριστω bubble copy")[0];
+            speechbubble.sprite = theGameMaster.spriteslayers["SpeechBubble_Smile"];
             speechbubble.GetComponentInChildren<TextMeshPro>().enabled = true;
 
             fireworkplay.Play();
