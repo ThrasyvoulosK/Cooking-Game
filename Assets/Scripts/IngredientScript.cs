@@ -235,6 +235,9 @@ public class IngredientScript : MonoBehaviour
                     //add money
                     theMoney.money = theMoney.money + 10f;
 
+                    //increase bar
+                    GameObject.Find("Canvas").transform.Find("ProgressBar").GetComponent<ProgressBarScript>().currentfill++;
+
                     //add the upper bun graphically
                     theFoodLayer.SpriteLayerTop(theFurnace.recipe.name, foodlayerclone.GetComponent<FoodLayersScript>().renderers);
 

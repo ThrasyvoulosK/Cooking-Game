@@ -109,11 +109,15 @@ public class RecipeCheckScript : MonoBehaviour
         }
         else
         {
+            //recipe finished correctly
+
             //speechbubble.sprite = Resources.LoadAll<Sprite>("canteen _ευχαριστω bubble copy")[0];
             speechbubble.sprite = theGameMaster.spriteslayers["SpeechBubble_Smile"];
             speechbubble.GetComponentInChildren<TextMeshPro>().enabled = true;
 
             fireworkplay.Play();
+
+            //GameObject.Find("Canvas").transform.Find("ProgressBar").GetComponent<ProgressBarScript>().currentfill++;
         }
         
         //destroy particles when exiting screen

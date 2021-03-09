@@ -137,7 +137,7 @@ public class GameMasterScript : MonoBehaviour
         //write a localisation csv (optional)
         /*if(Application.isEditor)
             writetocsv();*/
-        readcsv();
+        //readcsv();
 
     }
 

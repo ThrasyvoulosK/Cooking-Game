@@ -98,6 +98,21 @@ new feedback issues:
 
 savemenu should keep level information
 
+//keep polish words and phrases saved on the inspector
+
+//change speech-bubble to one without words
+
+fix sizes of polish words and phrases to fit better
+
+progress bar:
+-remove 'x'
+-add a submenu that asks
+--quit to menu
+--quit to windows/android
+--(continue?)
+-the bar should show the level's number inside it
+--inside a star graphic?
+
 Gameplay Issues:
 //-using money?
 //-skill measuring?
