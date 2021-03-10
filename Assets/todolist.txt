@@ -102,7 +102,7 @@ savemenu should keep level information
 
 //change speech-bubble to one without words
 
-fix sizes of polish words and phrases to fit better
+//fix sizes of polish words and phrases to fit better
 
 progress bar:
 -remove 'x'
@@ -112,6 +112,13 @@ progress bar:
 --(continue?)
 -the bar should show the level's number inside it
 --inside a star graphic?
+
+some treadmill ingredients have bigger labels, while others have tiny ones
+-check all similar prefabs, to 'fit' words the same way
+
+check different resolutions to see if any amends need to be made
+
+after loading the game, the progress bar should load properly, too
 
 Gameplay Issues:
 //-using money?

@@ -381,6 +381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuitButton
       objectReference: {fileID: 0}
+    - target: {fileID: 5537815703427119961, guid: e9190ba87e4188f449cdf9ebe3243932, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6565856405723699672, guid: e9190ba87e4188f449cdf9ebe3243932, type: 3}
       propertyPath: m_IsActive
       value: 0
