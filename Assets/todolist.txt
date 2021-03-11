@@ -5,7 +5,9 @@ Add/Edit:
 
 Replace all sprites with the ones in the dictionary of gamemaster!
 
-//fix scenes so that updating them all becomes less of a hussle-make them prefabs?
+fix scenes so that updating them all becomes less of a hussle
+-make prefabs?
+-update canvas scaler to the one of tour friend
 
 //fireworks appear on the dark part of the screen,breaking the fourth wall
 
@@ -15,13 +17,6 @@ initialise images on menus properly, with current data with loadmenuxml and save
 //--levels soon to be obsolete?
 --keep: level?,character,language,sound?,music?
 //check gamemaster dictionary for assignment to images
-
-exit button
--update functionality for exiting from menus
-//-write 'exit' next to the button
-//-fix for game scenes
--position and texts and menus according to idgames conversation!
---consult aforementioned layouts
 
 check if player has already played
 -application.iseditor
@@ -51,30 +46,9 @@ gameobject positions issues
 -'exit' button too
 
 languages excel
-//-5 rows: English, Greek, Polish, Portuguese, Romanian, plus type-of-object and notes
-//-lines: The '[...]words" lists, except for capitals/other stuff we don't use
-//--also include words not found in this, such as 'thanks' and transaction descriptions
-//---DecDescription[...] function in Gamemaster
-//---RecipeCheckScript's 'thank-you' bubbles are hadcoded within the graphics
----transaction descriptions might need some explaining
-//export a (english+'comma'+greek) csv
--csv can be reimported by the localization package
-//(use streamwriter?)
-//-make a brief powerpoint, explaining the various types-of-objects with screenshots from the game 
-//-Greek encoding issue on Excel? (Notepad++ displays it correctly)
-
-//disable csv outside editor?
+-new words needed?
 
 changing video
-//-it's a bit too 'flashy'
-//-change wording to be somewhat more suitable
--put 'speech bubbles' and 'arrows' instead of 'cards'
-
-//play an english video on english versions
-////-other languages as well
-//-make a new scene?
-//--this will probably cause a lot of bugs on scene changiging
-//-make the video a prefab
 
 write some code to help testing
 -eg code displaying a message about screen resolution
@@ -83,29 +57,19 @@ new feedback issues:
 -art issues
 --pink strawberry?
 --big tomatoes on toasts
--menu behaviour
-//--'back' button
-//---make one exclusively for the submenus?
-	or one for each submenu?
-//--changes in levels, languages and characters
+//-menu behaviour
 -gameplay
 --board
 //--board transaction
 --pots?
 //--spawning objects repeats itself a lot?
---add a progress bar that works also as a game menu, to replace the 'x'?
----unity has a premade 'progress bar'. check it out
+//--add a progress bar that works also as a game menu, to replace the 'x'?
+//---unity has a premade 'progress bar'. check it out
 
 savemenu should keep level information
 
-//keep polish words and phrases saved on the inspector
-
-//change speech-bubble to one without words
-
-//fix sizes of polish words and phrases to fit better
-
 progress bar:
--remove 'x'
+//-remove 'x'
 -add a submenu that asks
 --quit to menu
 --quit to windows/android
@@ -113,10 +77,11 @@ progress bar:
 -the bar should show the level's number inside it
 --inside a star graphic?
 
-some treadmill ingredients have bigger labels, while others have tiny ones
--check all similar prefabs, to 'fit' words the same way
+//some treadmill ingredients have bigger labels, while others have tiny ones
+//-check all similar prefabs, to 'fit' words the same way
 
-check different resolutions to see if any amends need to be made
+progress bar on different resolutions
+-change canvas options like tour-friend on all scenes
 
 after loading the game, the progress bar should load properly, too
 
