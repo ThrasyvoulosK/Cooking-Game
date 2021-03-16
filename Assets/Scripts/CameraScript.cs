@@ -13,6 +13,11 @@ public class CameraScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (Application.isEditor)
+            return;
+
+        return;
+
         //call the gamemaster gameobject
         theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
         
