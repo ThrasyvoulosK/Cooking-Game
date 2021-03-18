@@ -399,6 +399,7 @@ MonoBehaviour:
   - ICE
   - MILK
   words_pl: []
+  words_ro: []
   words_current: []
   boughtablesprites: []
   boughtablesnames: []
@@ -2066,6 +2067,7 @@ MonoBehaviour:
   - Ice
   - Milk
   words_pl: []
+  words_ro: []
   words_current: []
   boughtablesprites:
   - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
@@ -2383,7 +2385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1828388005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2935,6 +2937,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4966111394051592729, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966111394051592729, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 489495052}
@@ -2942,6 +2948,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 542607304}
+    - target: {fileID: 4966111394051592729, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966111394051592729, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966111394051592729, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966111394051592729, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1828388004}
+    - target: {fileID: 4966111394051592729, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966111394051592729, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966111394051592729, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4966111394051592741, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
       propertyPath: m_Name
       value: RawImage

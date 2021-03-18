@@ -1049,6 +1049,9 @@ public class GameMasterScript : MonoBehaviour
 
     //allow recipes to be completed with only one correct ingredient
     public bool cheat_one_ingredient_recipe = false;
+
+    //right click ends level
+    //void onmouse
 }
 
 public class Save
