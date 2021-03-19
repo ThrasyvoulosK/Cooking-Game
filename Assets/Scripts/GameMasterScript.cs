@@ -409,7 +409,7 @@ public class GameMasterScript : MonoBehaviour
                     GameObject.Find("Board").GetComponent<Image>().sprite = spriteslayers["Board_Beige"];
 
                 //change napkins' position too, because they get hidden
-                GameObject.Find("PaperTowels").GetComponent<Transform>().position = new Vector3(-6, -2, 0);
+                //GameObject.Find("PaperTowels").GetComponent<Transform>().position = new Vector3(-6, -2, 0);
             }
             if (GameObject.Find("Table") != null)
             {
@@ -1051,7 +1051,7 @@ public class GameMasterScript : MonoBehaviour
     public bool cheat_one_ingredient_recipe = false;
 
     //right click ends level
-    //void onmouse
+    //void onmo
 }
 
 public class Save

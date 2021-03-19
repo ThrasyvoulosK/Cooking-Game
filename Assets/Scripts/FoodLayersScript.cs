@@ -64,7 +64,7 @@ public class FoodLayersScript : MonoBehaviour
 
         //change ice cream's position to within the board's surface
         if (theFurnace.recipe.name.StartsWith("IceCream")|| theFurnace.recipe.name.StartsWith("Salad"))
-            gameObject.transform.position = new Vector3(-0.67f, 0.4f, 0);
+            gameObject.transform.position = new Vector3(-0.3f, 0.2f, 0);
         else if(theFurnace.recipe.name.StartsWith("Club"))//initialise club sandwich, if needed
         {
             int clchldrn;

@@ -13,7 +13,7 @@ public class ProgressBarScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxfill = GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.Count -1;
+        maxfill = GameObject.Find("Furnace").GetComponent<FurnaceScript>().next_recipe.Count+1;
         currentfill = 0;
     }
 
