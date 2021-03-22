@@ -30,4 +30,14 @@ public class ChangeSceneScript : MonoBehaviour
         GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelchanged = true;
     }
 
+    //go back to the menu
+    public void changeToMenu()
+    {
+        Debug.Log("Going to menu");
+
+        GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelid = (0);
+        GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelchanged = true;
+        SceneManager.LoadScene(0);
+    }
+
 }
