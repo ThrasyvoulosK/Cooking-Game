@@ -37,6 +37,13 @@ public class ChangeSceneScript : MonoBehaviour
 
         GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelid = (0);
         GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelchanged = true;
+
+        //save
+        GameObject.Find("GameMaster").GetComponent<GameMasterScript>().SaveGame();
+
+        //resets game
+        Destroy(GameObject.Find("GameMaster"));
+
         SceneManager.LoadScene(0);
     }
 

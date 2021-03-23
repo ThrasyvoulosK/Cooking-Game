@@ -203,7 +203,7 @@ public class GameMasterScript : MonoBehaviour
 
         LoadCheck();        
 
-        if (SceneManager.GetActiveScene().buildIndex == 0)
+        if (SceneManager.GetActiveScene().buildIndex == 0)//&&levelchanged==false)
         { 
             set_menu(menuSettings);
             //UnityEditor.EditorUtility.SetDirty(menuSettings);

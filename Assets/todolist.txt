@@ -85,6 +85,10 @@ progress bar on different resolutions
 
 after loading the game, the progress bar should load properly, too
 
+integrate progress bar in other scenes
+
+fix 'levelid' on progressBar to current level
+
 Gameplay Issues:
 //-using money?
 //-skill measuring?
@@ -108,13 +112,7 @@ Performance Issues:
 -Resources Folder
 --fixing with dictionary
 
-
 Bugs:
-
-//android screen should only be allowed on 'landscape' screen-orientations
-//screenshot metadata error-warning message in editor-between games, the previous screenshot is shown on the screen; not the current one
-//saves not working?//-path error?
-//error warning about too small of a name to 'remove "(Clone)"' from its name?
 
 treadmill ingredient names disappear before exiting
 -sometimes?
