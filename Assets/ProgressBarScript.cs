@@ -4,6 +4,7 @@ using UnityEngine;
 
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ProgressBarScript : MonoBehaviour
 {
@@ -53,8 +54,10 @@ public class ProgressBarScript : MonoBehaviour
 
     }
 
+    //give the level's number on the progress bar
     public void setText()
     {
-        gameObject.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text =GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelid.ToString();
+        //gameObject.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text =(GameObject.Find("GameMaster").GetComponent<GameMasterScript>().levelid/2+1).ToString();
+        gameObject.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text =(SceneManager.GetActiveScene().buildIndex/2 +1).ToString();
     }
 }
