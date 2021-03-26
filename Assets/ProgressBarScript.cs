@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class ProgressBarScript : MonoBehaviour
 {
     public int currentfill;
-    int maxfill;
+    public int maxfill;
 
     public Image mask;
 

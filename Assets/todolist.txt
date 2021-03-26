@@ -87,7 +87,11 @@ after loading the game, the progress bar should load properly, too
 
 integrate progress bar in other scenes
 
-fix 'levelid' on progressBar to current level
+//fix 'levelid' on progressBar to current level
+
+fix progress bar load on level 1
+
+remove progress bar from level 10
 
 Gameplay Issues:
 //-using money?

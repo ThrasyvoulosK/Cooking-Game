@@ -511,7 +511,9 @@ public class GameMasterScript : MonoBehaviour
                     save.customer = i;
                 }
             }
-        //save.customer = GameObject.Find("Customer").GetComponent<CustomerScript>().customerandom;
+
+        save.barMax = (int)GameObject.Find("Canvas").transform.Find("ProgressBar").GetComponent<ProgressBarScript>().maxfill;
+        save.barFill = (int)GameObject.Find("Canvas").transform.Find("ProgressBar").GetComponent<ProgressBarScript>().currentfill;
 
         //create the xml document with the above values
         XmlDocument xmlDocument = new XmlDocument();
@@ -628,6 +630,15 @@ public class GameMasterScript : MonoBehaviour
         xcus.InnerText = save.customer.ToString();
         root.AppendChild(xcus);
 
+        XmlElement xBarCur = xmlDocument.CreateElement("BarCurrent");
+        xBarCur.InnerText = save.barFill.ToString();
+        root.AppendChild(xBarCur);
+
+        XmlElement xBarFull = xmlDocument.CreateElement("BarFull");
+        xBarFull.InnerText = save.barMax.ToString();
+        root.AppendChild(xBarFull);
+
+        //end
         xmlDocument.AppendChild(root);
 
         //xmlDocument.Save(Application.dataPath + "/Resources/save1.txt");//
@@ -728,6 +739,12 @@ public class GameMasterScript : MonoBehaviour
             XmlNodeList xcus = xmlDocument.GetElementsByTagName("Customer");
             save.customer = int.Parse(xcus[0].InnerText);
 
+            //
+            XmlNodeList xBarCurr = xmlDocument.GetElementsByTagName("BarCurrent");
+            save.barFill = int.Parse(xBarCurr[0].InnerText);
+            XmlNodeList xBarFull = xmlDocument.GetElementsByTagName("BarFull");
+            save.barMax = int.Parse(xBarFull[0].InnerText);
+
             //reload if we cannot find our objects yet
             if (GameObject.Find("Money") == null)
             {
@@ -822,6 +839,9 @@ public class GameMasterScript : MonoBehaviour
             else
                 Debug.Log("different customer sprite");
 
+            GameObject.Find("Canvas").transform.Find("ProgressBar").GetComponent<ProgressBarScript>().currentfill = save.barFill;
+            GameObject.Find("Canvas").transform.Find("ProgressBar").GetComponent<ProgressBarScript>().maxfill = save.barMax;
+
             issavedgame = false;
         }
     }
@@ -856,6 +876,7 @@ public class GameMasterScript : MonoBehaviour
         root.AppendChild(xchar);
 
 
+        //finish up by ending the xml code
         xmlDocument.AppendChild(root);
         xmlDocument.Save(Application.persistentDataPath + "/savemenu.txt");//
         string sav = Application.persistentDataPath + "/savemenu.txt";
@@ -1074,6 +1095,9 @@ public class Save
     public string logo;
     //misc graphics
     public int customer;
+    //progress bar
+    public int barMax;
+    public int barFill;
 }
 
 public class SaveMenu
