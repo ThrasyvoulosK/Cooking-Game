@@ -33,7 +33,7 @@ public class GameMasterScript : MonoBehaviour
     public List<string> words_gr = new List<string>() { "ΤΥΡΙ", "ΖΑΜΠΟΝ", "ΜΑΡΟΥΛΙ", "ΝΤΟΜΑΤΑ", "ΚΑΦΕΣ", "ΠΑΓΟΣ", "ΓΑΛΑ", "Ας Μαγειρέψουμε", "Γλώσσα", "Επίπεδα" };
     public List<string> words_en = new List<string>() { "CHEESE", "HAM", "LETTUCE", "TOMATO", "COFFEE", "ICE", "MILK", "Let's Cook!", "Language", "Levels" };
     public List<string> words_pl = new List<string>();
-    /*public List<string> words_pt = new List<string>();*/
+    public List<string> words_pt = new List<string>();
     public List<string> words_ro = new List<string>();
 
     [SerializeField]
@@ -137,6 +137,11 @@ public class GameMasterScript : MonoBehaviour
             changelanguage_ro();
             menuitems[4].transform.GetChild(1).GetComponent<Image>().sprite = spriteslayers["Language_Ro"];
         }
+        else if (language_current == "Portuguese")
+        {
+            changelanguage_pt();
+            menuitems[4].transform.GetChild(1).GetComponent<Image>().sprite = spriteslayers["Language_Pt"];
+        }
         menuitems[6].transform.GetChild(1).GetComponent<Image>().sprite = spriteslayers[option_character];
 
         //write a localisation csv (optional)
@@ -180,6 +185,12 @@ public class GameMasterScript : MonoBehaviour
             GameObject speechbubble = null;
             if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
                 speechbubble.GetComponentInChildren<TextMeshPro>().text = "MULȚUMESC!";
+        }
+        else if (language_current == "Portuguese")
+        {
+            GameObject speechbubble = null;
+            if ((speechbubble = GameObject.Find("SpeechBubble")) != null)
+                speechbubble.GetComponentInChildren<TextMeshPro>().text = "OBRIGADO!";
         }
 
         DecDescriptionText();
@@ -295,6 +306,23 @@ public class GameMasterScript : MonoBehaviour
         InitialiseLanguage();
 
         //load the correct video in Romanian? (currently english)
+        videoPlayer = videoObject.GetComponentInChildren<UnityEngine.Video.VideoPlayer>();
+        videoPlayer.clip = vc[0];
+    }
+    public void changelanguage_pt()
+    {
+        for (int i = 0; i < words_en_base.Count; i++)
+        {
+            foreach (GameObject men in menuitems)
+                if (languagehandler[words_en_base[i]] == men.GetComponentInChildren<Text>().text)
+                    men.GetComponentInChildren<Text>().text = words_en_base[i];
+        }
+
+        language_current = "Portuguese";
+        words_current = words_pt;
+        InitialiseLanguage();
+
+        //load the correct video in Portuguese? (currently english)
         videoPlayer = videoObject.GetComponentInChildren<UnityEngine.Video.VideoPlayer>();
         videoPlayer.clip = vc[0];
     }
@@ -447,6 +475,8 @@ public class GameMasterScript : MonoBehaviour
                     decdesc.GetComponent<Text>().text = "WYBIERZ NOWY KOLOR " + boght + "\nDLA TWOJEJ STOŁÓWKI ABY KONTYNUOWAĆ!";
                 else if (language_current == "Romanian")
                     decdesc.GetComponent<Text>().text = "ALEGE O NOUĂ " + boght + " CULOARE \nPENTRU BUCĂTĂRIA TA MOBILĂ, CA SĂ CONTINUI!";
+                else if (language_current == "Portuguese")
+                    decdesc.GetComponent<Text>().text = "PARA CONTINUAR, ESCOLHA UMA NOVA " + boght + " COR \nPARA A SUA CANTINA!";
             }
             else
             {
@@ -462,6 +492,8 @@ public class GameMasterScript : MonoBehaviour
                     decdesc.GetComponent<Text>().text = "WYBIERZ NOWY " + boght + "\nDLA TWOJEJ STOŁÓWKI ABY KONTYNUOWAĆ!";
                 else if (language_current == "Romanian")
                     decdesc.GetComponent<Text>().text = "ALEGE O NOUĂ " + boght + "\nPENTRU BUCĂTĂRIA TA MOBILĂ, CA SĂ CONTINUI!";
+                else if (language_current == "Portuguese")
+                    decdesc.GetComponent<Text>().text = "PARA CONTINUAR, ESCOLHA UMA NOVA " + boght + "\nPARA A SUA CANTINA";
             }
         }
     }
@@ -989,42 +1021,33 @@ public class GameMasterScript : MonoBehaviour
     void readcsv()
     {
         //string firstrow = "id;English;Greek;Polish;Portuguese;Romanian;Type;Notes";
+        int language_column = 4;
+        string language_name = "portuguese";
+
         string line;
         string[] columns=null;
         using (StreamReader sr = new StreamReader(Application.persistentDataPath + "/Copy of localisation - localisation.csv"))
         {
-            //sr.ReadLine(firstrow);
             sr.ReadLine();
-            /*for (int i = 0; i < words_en_base.Count; i++)
-            {
-                //append each couple of words to this
-                //sw.WriteLine(i + ";" + words_en[i] + ";" + words_gr[i]);
-            }*/
-            /*while(sr.Peek()>=0&&sr.Peek()<=100)
-            {
-                Debug.Log("reading line: "+sr.ReadLine());
-            }*/
 
-            InitialiseListLanguage(words_ro);
+            InitialiseListLanguage(words_pt);
             int id;
             while ((line = sr.ReadLine()) != null)
             {
                 columns = line.Split(',');
                 //Debug.Log("columns: " + columns[0]);
-                //id = ToInt32.(columns[0]);
                 id = int.Parse(columns[0]);
 
                 //assign
                 if (id < words_en.Count)
                 {
                     Debug.Log("current id: " + id);
-                    words_ro[id] = columns[5];                    
+                    words_pt[id] = columns[4];                    
                 }
                 else
                     Debug.Log("line not in words en " + columns[1]);
 
-                Debug.Log("english " + columns[1] + " romanian " + columns[5]);
-                //words_pl.ed
+                Debug.Log("english " + columns[1] + " portuguese " + columns[4]);
             }
 
         }
