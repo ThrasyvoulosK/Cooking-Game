@@ -88,8 +88,6 @@ public class GameMasterScript : MonoBehaviour
         else
             Destroy(gameObject);
 
-        //LoadMenuXML();
-
         //do not delete GameMaster
         DontDestroyOnLoad(this);
     }
@@ -121,6 +119,7 @@ public class GameMasterScript : MonoBehaviour
 
         //load the menuitems data
         LoadMenuXML();
+
         //load individual images and data as well
         if (language_current == "Greek")
         { 
@@ -691,7 +690,7 @@ public class GameMasterScript : MonoBehaviour
             {
                 Debug.Log("loading saved file");
                 LoadXML();
-                Debug.Log("loading aborted");               
+                //Debug.Log("loading aborted");               
             }
             else
                 Debug.Log("Save doesn't exist");
@@ -734,6 +733,27 @@ public class GameMasterScript : MonoBehaviour
             XmlDocument xmlDocument = new XmlDocument();
             xmlDocument.Load(Application.persistentDataPath + "/save1.txt");//
 
+            string fileName = Application.persistentDataPath + "/save1.txt";
+            int totalNodes = 0;// 16;//
+            totalNodes = 18;//all nodes being used, including <Save/S>
+            int xmlNodes = File.ReadAllLines(@fileName).Length - xmlDocument.GetElementsByTagName("RemainingRecipes").Count;
+            //before starting, check the number of nodes of the xml document
+            Debug.Log("we have " + totalNodes + " nodes");
+            Debug.Log("we have " + xmlNodes + " nodes");
+            //Debug.Log("we have " + xmlDocument.GetEnumerator() + " nodes");
+            //xmlDocument.SelectNodes(!=null).Count;
+            if(xmlNodes<totalNodes)
+            {
+                Debug.Log("old saved game. restarting.");
+                issavedgame = false;
+                return;
+            }
+            else
+            {
+                Debug.Log("Saved Game is Valid. Continuing normally");
+            }
+            
+
             XmlNodeList xmoney = xmlDocument.GetElementsByTagName("Money");
             save.money = int.Parse(xmoney[0].InnerText);
             XmlNodeList xrec = xmlDocument.GetElementsByTagName("CompletedRecipes");
@@ -773,7 +793,17 @@ public class GameMasterScript : MonoBehaviour
 
             //
             XmlNodeList xBarCurr = xmlDocument.GetElementsByTagName("BarCurrent");
+            //do not continue if we don't have this
+            if (XmlItemNull(xBarCurr) == true)
+            {
+                Debug.Log("returning");
+                issavedgame = false;
+                return;
+            }
+            else
+                Debug.Log("continuing load");
             save.barFill = int.Parse(xBarCurr[0].InnerText);
+
             XmlNodeList xBarFull = xmlDocument.GetElementsByTagName("BarFull");
             save.barMax = int.Parse(xBarFull[0].InnerText);
 
@@ -878,7 +908,20 @@ public class GameMasterScript : MonoBehaviour
         }
     }
 
-    
+    bool XmlItemNull(XmlNodeList xnl)
+    {
+        if (xnl == null||xnl.Count<=0)
+        {
+            Debug.Log("There is no item");
+            return true;
+        }
+        else
+        {
+            Debug.Log("item not null");
+            return false;
+        }
+
+    }
     //save menu items
     //WIP
     public void SaveMenuXML()

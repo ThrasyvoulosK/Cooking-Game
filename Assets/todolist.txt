@@ -93,11 +93,12 @@ fix progress bar load on level 1
 
 remove progress bar from level 10
 
+re-allow exit on menu
+
 Gameplay Issues:
 //-using money?
 //-skill measuring?
 //-speed changing within the game?
--how do we know how many recipes we need in-game?
 
 Add Functionality for Different Languages
 -Determined by :
@@ -120,6 +121,11 @@ Bugs:
 
 treadmill ingredient names disappear before exiting
 -sometimes?
+
+'play' button not working?
+-loading a level works though
+-problem with loading a saved game between different versions?
+--test it
 
 Other Concerns:
 
