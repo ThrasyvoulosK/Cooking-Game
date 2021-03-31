@@ -693,7 +693,10 @@ public class GameMasterScript : MonoBehaviour
                 //Debug.Log("loading aborted");               
             }
             else
-                Debug.Log("Save doesn't exist");
+            {
+                Debug.Log("Save doesn't exist. Starting from level 1");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
             //if a saved game dosn't exist, start from level1
             /*SceneManager.LoadScene(levelid);
             Debug.Log("starting from level 1");
@@ -1085,12 +1088,12 @@ public class GameMasterScript : MonoBehaviour
                 if (id < words_en.Count)
                 {
                     Debug.Log("current id: " + id);
-                    words_pt[id] = columns[4];                    
+                    words_pt[id] = columns[language_column];                    
                 }
                 else
                     Debug.Log("line not in words en " + columns[1]);
 
-                Debug.Log("english " + columns[1] + " portuguese " + columns[4]);
+                Debug.Log("english " + columns[1] + language_name + columns[language_column]);
             }
 
         }
