@@ -457,6 +457,7 @@ MonoBehaviour:
   - ICE
   - MILK
   words_pl: []
+  words_pt: []
   words_ro: []
   words_current: []
   boughtablesprites: []
@@ -2298,7 +2299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 905151117838879553, guid: 7d5ecc3da45788c409fd828d5030d513, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 775
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 905151117838879553, guid: 7d5ecc3da45788c409fd828d5030d513, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2306,7 +2307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 905151117838879553, guid: 7d5ecc3da45788c409fd828d5030d513, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 905151117838879553, guid: 7d5ecc3da45788c409fd828d5030d513, type: 3}
       propertyPath: m_SizeDelta.y
