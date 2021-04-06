@@ -1,7 +1,88 @@
 fileFormatVersion: 2
 guid: 15d65c4c88beea041bba12b0f4571293
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1698005444290278513
+    second: canteen_ice cream (1)_0
+  - first:
+      213: 277885040512869281
+    second: canteen_ice cream (1)_1
+  - first:
+      213: 629522811406494428
+    second: canteen_ice cream (1)_2
+  - first:
+      213: -1609283821531085027
+    second: canteen_ice cream (1)_3
+  - first:
+      213: 548342143909017063
+    second: canteen_ice cream (1)_4
+  - first:
+      213: -5784196795344741252
+    second: canteen_ice cream (1)_5
+  - first:
+      213: 1094884287001807729
+    second: canteen_ice cream (1)_6
+  - first:
+      213: 3471526249382075645
+    second: canteen_ice cream (1)_7
+  - first:
+      213: -1132662241881641868
+    second: canteen_ice cream (1)_8
+  - first:
+      213: 7426486411398332766
+    second: canteen_ice cream (1)_9
+  - first:
+      213: 481473654633968537
+    second: canteen_ice cream (1)_10
+  - first:
+      213: 338099880229945985
+    second: canteen_ice cream (1)_11
+  - first:
+      213: 5433571262186612096
+    second: canteen_ice cream (1)_12
+  - first:
+      213: 1138492175522906674
+    second: canteen_ice cream (1)_13
+  - first:
+      213: -947123934762628183
+    second: canteen_ice cream (1)_14
+  - first:
+      213: 4525804281732274151
+    second: canteen_ice cream (1)_15
+  - first:
+      213: -4859530741255354167
+    second: canteen_ice cream (1)_16
+  - first:
+      213: 6899330517395313192
+    second: canteen_ice cream (1)_17
+  - first:
+      213: -6592013765496244322
+    second: canteen_ice cream (1)_18
+  - first:
+      213: -2568023250801119445
+    second: canteen_ice cream (1)_19
+  - first:
+      213: -8565358882919354901
+    second: canteen_ice cream (1)_20
+  - first:
+      213: 78468286475436834
+    second: canteen_ice cream (1)_21
+  - first:
+      213: 3987666181041630358
+    second: canteen_ice cream (1)_22
+  - first:
+      213: -5870233262720517574
+    second: canteen_ice cream (1)_23
+  - first:
+      213: -1185382647484129958
+    second: canteen_ice cream (1)_24
+  - first:
+      213: 1766936231947302481
+    second: canteen_ice cream (1)_25
+  - first:
+      213: -5468633818600384483
+    second: canteen_ice cream (1)_26
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +122,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +154,600 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_0
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 833
+        width: 74
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174f99584f6809710800000000000000
+      internalID: 1698005444290278513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_1
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 829
+        width: 74
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a32a28d8fe3bd300800000000000000
+      internalID: 277885040512869281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_2
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 828
+        width: 74
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdaa3ef59a38cb800800000000000000
+      internalID: 629522811406494428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_3
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 827
+        width: 74
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d174bd204ecaaa9e0800000000000000
+      internalID: -1609283821531085027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_4
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 824
+        width: 74
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5b21f464a1c9700800000000000000
+      internalID: 548342143909017063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_5
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 824
+        width: 74
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c168e19a76abfa0800000000000000
+      internalID: -5784196795344741252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_6
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 817
+        width: 74
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b46e4457fc13f00800000000000000
+      internalID: 1094884287001807729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_7
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 815
+        width: 74
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcdcda1bb65d2030800000000000000
+      internalID: 3471526249382075645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_8
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 813
+        width: 74
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ca52e21b9f740f0800000000000000
+      internalID: -1132662241881641868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 746
+        width: 100
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51c9a04b0e201760800000000000000
+      internalID: 7426486411398332766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 750
+        width: 120
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993ba29ecb98ea600800000000000000
+      internalID: 481473654633968537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 745
+        width: 120
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18245bbbc0c21b400800000000000000
+      internalID: 338099880229945985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_12
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 673
+        width: 74
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0856760564ce76b40800000000000000
+      internalID: 5433571262186612096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_13
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 666
+        width: 74
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232ca950a9cbccf00800000000000000
+      internalID: 1138492175522906674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_14
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 666
+        width: 74
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab0436acc32bd2f0800000000000000
+      internalID: -947123934762628183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_15
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 666
+        width: 74
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e71897f303eece30800000000000000
+      internalID: 4525804281732274151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_16
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 663
+        width: 74
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c84268a98a7f8cb0800000000000000
+      internalID: -4859530741255354167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_17
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 659
+        width: 74
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8221c552d885fbf50800000000000000
+      internalID: 6899330517395313192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_18
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 510
+        width: 120
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e977c1108667484a0800000000000000
+      internalID: -6592013765496244322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_19
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 509
+        width: 120
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f2e09957c8c5cd0800000000000000
+      internalID: -2568023250801119445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_20
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 510
+        width: 120
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bedead92a7bb12980800000000000000
+      internalID: -8565358882919354901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_21
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 510
+        width: 120
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2238085ad76c61100800000000000000
+      internalID: 78468286475436834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_22
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 510
+        width: 120
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c23db9349075730800000000000000
+      internalID: 3987666181041630358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_23
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 93
+        width: 397
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a7cda03fdb88ea0800000000000000
+      internalID: -5870233262720517574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_24
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 93
+        width: 396
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ddbc533ccac8fe0800000000000000
+      internalID: -1185382647484129958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_25
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 93
+        width: 396
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1567cfd242b658810800000000000000
+      internalID: 1766936231947302481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_ice cream (1)_26
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 93
+        width: 397
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18d2ab14828b14b0800000000000000
+      internalID: -5468633818600384483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
