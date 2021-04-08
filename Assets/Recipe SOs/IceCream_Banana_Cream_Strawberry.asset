@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IceCream_Banana_Cream_Strawberry
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: 8446400475833022818, guid: d04b86a5282126e46b48835f53416801, type: 3}
+  recipeSprite: {fileID: -1609283821531085027, guid: 15d65c4c88beea041bba12b0f4571293, type: 3}
   neededIngr:
   - Strawberry
   - Banana

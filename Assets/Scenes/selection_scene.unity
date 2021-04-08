@@ -5483,11 +5483,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5537815703427119960, guid: e9190ba87e4188f449cdf9ebe3243932, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -960
+      value: -900
       objectReference: {fileID: 0}
     - target: {fileID: 5537815703427119960, guid: e9190ba87e4188f449cdf9ebe3243932, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 540
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5537815703427119960, guid: e9190ba87e4188f449cdf9ebe3243932, type: 3}
       propertyPath: m_SizeDelta.x
@@ -10387,7 +10387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 106.22503, y: -447.00015}
+  m_AnchoredPosition: {x: 105, y: -445}
   m_SizeDelta: {x: 365, y: 90}
   m_Pivot: {x: 0.065, y: 0.5}
 --- !u!114 &762374972
@@ -10411,7 +10411,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.9607843}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -17562,7 +17562,7 @@ MonoBehaviour:
   - {fileID: -575337046320641332, guid: 734ace3be5792624b8cae09cc13e9841, type: 3}
   - {fileID: 7279567733922663083, guid: 734ace3be5792624b8cae09cc13e9841, type: 3}
   - {fileID: -4058877833163511503, guid: 8995148599dcba94c8309dfd3ffa3a20, type: 3}
-  - {fileID: 9036597125546369082, guid: 8995148599dcba94c8309dfd3ffa3a20, type: 3}
+  - {fileID: 3987666181041630358, guid: 15d65c4c88beea041bba12b0f4571293, type: 3}
   - {fileID: 2137358106377202427, guid: 8995148599dcba94c8309dfd3ffa3a20, type: 3}
   - {fileID: 7775285142768831396, guid: 07203a50ae8ce98488b4892e0386facc, type: 3}
   - {fileID: 1364305794285839822, guid: 07203a50ae8ce98488b4892e0386facc, type: 3}
@@ -17594,6 +17594,11 @@ MonoBehaviour:
   - {fileID: 3749906936760378769, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
   - {fileID: 21300000, guid: ab66478e47778334d9bc3ab4a85c04db, type: 3}
   - {fileID: -6331809635374423740, guid: 69e58d2b99c494044ae6805c5c10d691, type: 3}
+  - {fileID: 3057489299315037486, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: -3491413066274850614, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: 525003313166373365, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: 720643365904917066, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: 2481770938291178123, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
   spritesnames:
   - Sandwich_Tomato
   - Sandwich_Cheese
@@ -17715,10 +17720,17 @@ MonoBehaviour:
   - Language_Pl
   - SpeechBubble_Smile
   - SpeechBubble_Empty
+  - GreekDisabled
+  - EnglishDisabled
+  - PolishDisabled
+  - PortugueseDisabled
+  - RomanianDisabled
   languages:
   - Greek
   - English
   - Polish
+  - Portuguese
+  - Romanian
   language_current: 
   words_en_base:
   - Cheese
@@ -24644,8 +24656,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -243.11044, y: -447.0043}
-  m_SizeDelta: {x: 260.00806, y: 90}
+  m_AnchoredPosition: {x: -335, y: -445}
+  m_SizeDelta: {x: 260, y: 90}
   m_Pivot: {x: 0.065, y: 0.5}
 --- !u!114 &1839488304
 MonoBehaviour:
@@ -24668,7 +24680,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.9607843}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}

@@ -120,6 +120,16 @@ public class GameMasterScript : MonoBehaviour
         //load the menuitems data
         LoadMenuXML();
 
+        //disable language icons that aren't being used currently
+        for(int child =0;child< GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.GetChild(0).transform.childCount; child++)
+        {
+            if(GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.GetChild(0).transform.GetChild(child).name!=language_current)
+            {
+                Debug.Log($"{GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.GetChild(0).name} child is {GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.GetChild(0).transform.GetChild(child).name}");
+                GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.GetChild(0).transform.GetChild(child).GetComponent<Image>().sprite = spriteslayers[GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.GetChild(0).transform.GetChild(child).name+"Disabled"];
+                GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.GetChild(0).transform.GetChild(child).transform.GetChild(0).GetComponent<Image>().enabled=false;
+            }
+        }
         //load individual images and data as well
         if (language_current == "Greek")
         { 
@@ -204,7 +214,7 @@ public class GameMasterScript : MonoBehaviour
             //cheat mode!
             //cheat_one_recipe_only();
             //cheat_only_ingredient_recipes("Tomato");
-            //cheat_one_ingredient_recipe = true;
+            cheat_one_ingredient_recipe = true;
 
             //keyboard commands
             SaveOrLoadKeys();
@@ -231,7 +241,7 @@ public class GameMasterScript : MonoBehaviour
     {
         if (languagehandler.Count>0)
         {
-            Debug.Log("languagehandelernot null" + languagehandler.Count);
+            //Debug.Log("languagehandelernot null" + languagehandler.Count);
             for (int i = 0; i < words_en_base.Count; i++)
             {
                 foreach (GameObject men in menuitems)
@@ -241,7 +251,7 @@ public class GameMasterScript : MonoBehaviour
         }
 
         language_current = "English";
-        Debug.Log("current language is: " + language_current);
+        //Debug.Log("current language is: " + language_current);
         words_current = words_en;
         InitialiseLanguage();
 

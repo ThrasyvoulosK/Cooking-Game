@@ -90,10 +90,9 @@ integrate progress bar in other scenes
 //fix 'levelid' on progressBar to current level
 
 fix progress bar load on level 1
-
 remove progress bar from level 10
 
-re-allow exit on menu
+//re-allow exit on menu
 
 Feedback:
 
@@ -101,7 +100,7 @@ Playtest (Myrto's Feedback)
 //-Στην αρχή δεν πατιώταν το κουμπί play και exit. Αφού έκανα επιλογή το επίπεδο από τις ρυθμίσεις to play λειτούργησε, το exit όχι
 -Κόβεται η ταμειακή στα δεξιά λίγο
 -πρεπει να μικρύνει η ντομάτα στα τοστ
--δεν μου εμφανίζεται το 5ο υλικό στον πίνακα(?)
+//-δεν μου εμφανίζεται το 5ο υλικό στον πίνακα(?)
 -ο μεγάλος πίνακας βρίσκεται σε επίπεδο μπροστά από τα υλικά που τρέχουν στον ιμάντα(?)
 -στην οθόνη που γράφει συγχαρητήρια να βάλουμε το εικονίδιο του χαρακτήρα που έχει επιλεχθεί (?)
 -Μετακίνηση του logo στο επίπεδο 10
@@ -111,6 +110,18 @@ Playtest (Myrto's Feedback)
 -οι θέσεις των γλωσσών να μπουν όπως στο template
 -Τα γράμματα στο κουμπί πίσω να μικρύνουν 80%
 //-Ο τίτλος “Πληροφορίες” να σκουρύνει
+
+add new characters
+
+test levels 8-10 and syrup graphics
+
+update video with new bubbles and images
+
+update languages
+
+update transaction-scenes to fit different languages
+
+update buttons to better fit text
 
 
 Gameplay Issues:
@@ -140,10 +151,10 @@ Bugs:
 treadmill ingredient names disappear before exiting
 -sometimes?
 
-'play' button not working?
--loading a level works though
--problem with loading a saved game between different versions?
---test it
+//'play' button not working?
+//-loading a level works though
+//-problem with loading a saved game between different versions?
+//--test it
 
 Other Concerns:
 
