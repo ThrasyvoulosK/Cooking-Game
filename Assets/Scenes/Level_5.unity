@@ -1302,6 +1302,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 39b0e8a78a78c9e44b84364a9cee0b2b, type: 3}
   - {fileID: 21300000, guid: 967099c63e78ce2438766b9b20090357, type: 3}
   - {fileID: 21300000, guid: 007707be389eb7e4d915cb7d3afc64d8, type: 3}
+  - {fileID: -4817516274880221774, guid: 5b753e75aae0ba747a1b6c19627a5cae, type: 3}
+  - {fileID: -1457516321193720938, guid: 5b753e75aae0ba747a1b6c19627a5cae, type: 3}
+  - {fileID: 4344498318608234564, guid: 5b753e75aae0ba747a1b6c19627a5cae, type: 3}
+  - {fileID: -2012725438062101733, guid: 5b753e75aae0ba747a1b6c19627a5cae, type: 3}
   customerspritelistcurrent: []
   customerinitialposition: []
   theNextRecipe: {fileID: 0}

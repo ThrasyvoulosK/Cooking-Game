@@ -111,16 +111,11 @@ Playtest (Myrto's Feedback)
 -Τα γράμματα στο κουμπί πίσω να μικρύνουν 80%
 //-Ο τίτλος “Πληροφορίες” να σκουρύνει
 
-add new characters
-
-test levels 8-10 and syrup graphics
-
+//add new characters
+//test levels 8-10 and syrup graphics
 update video with new bubbles and images
-
-update languages
-
-update transaction-scenes to fit different languages
-
+//update languages
+//update transaction-scenes to fit different languages
 update buttons to better fit text
 
 

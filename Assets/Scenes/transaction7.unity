@@ -210,6 +210,9 @@ MonoBehaviour:
   - COFFEE
   - ICE
   - MILK
+  words_pl: []
+  words_pt: []
+  words_ro: []
   words_current: []
   boughtablesprites:
   - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
@@ -227,6 +230,10 @@ MonoBehaviour:
   option_sound: 1
   option_music: 1
   menuitems: []
+  menuSettings: {fileID: 0}
+  videoPlayer: {fileID: 0}
+  vc: []
+  videoObject: {fileID: 0}
   cheat_one_ingredient_recipe: 0
 --- !u!4 &42987270
 Transform:
@@ -692,7 +699,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.55}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28}
+    pivot: {x: 0.5, y: 0.29}
     oldSize: {x: 1.8506286, y: 2.92}
     newSize: {x: 9.49, y: 5.39}
     adaptiveTilingThreshold: 0.5
@@ -1974,7 +1981,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.42}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.37}
+    pivot: {x: 0.5, y: 0.36}
     oldSize: {x: 1.9706694, y: 3.3700001}
     newSize: {x: 9.49, y: 5.39}
     adaptiveTilingThreshold: 0.5
@@ -2093,7 +2100,7 @@ RectTransform:
   m_GameObject: {fileID: 1664152913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.55, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1722554544}
   m_RootOrder: 6
@@ -2101,7 +2108,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 300}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 3500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1664152915
 MonoBehaviour:
@@ -2617,7 +2624,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -300}
-  m_SizeDelta: {x: 320, y: 90}
+  m_SizeDelta: {x: 400, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7916558546054439492
 CanvasRenderer:

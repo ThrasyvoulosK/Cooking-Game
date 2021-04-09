@@ -66,6 +66,8 @@ public class GameMasterScript : MonoBehaviour
     public bool option_sound = true;
     //select music options
     public bool option_music = true;
+    //speech options
+    public bool option_speech = true;
 
     //menu items that are disabled at various times can be accessed with this
     public GameObject[] menuitems;
@@ -155,8 +157,10 @@ public class GameMasterScript : MonoBehaviour
 
         //write a localisation csv (optional)
         /*if(Application.isEditor)
-            writetocsv();*/
-        //readcsv();
+        {
+            //writetocsv();
+            readcsv();
+        }*/
 
     }
 
@@ -420,6 +424,20 @@ public class GameMasterScript : MonoBehaviour
         }
     }
 
+    public void change_speech()
+    {
+        if (option_speech == true)
+        {
+            option_speech = false;
+            //change sprite accordingly
+        }
+        else
+        {
+            option_speech = true;
+            //change sprite again
+        }
+    }
+
     //if we have bought new objects, change their sprites through this function
     void boughtables_assigner()
     {
@@ -481,9 +499,9 @@ public class GameMasterScript : MonoBehaviour
                 else if (language_current == "Greek")
                     decdesc.GetComponent<Text>().text = "ΔΙΑΛΕΞΕ ΝΕΟ ΧΡΩΜΑ " + boght + "\nΓΙΑ ΤΗ ΚΑΝΤΙΝΑ ΣΟΥ, ΓΙΑ ΝΑ ΣΥΝΕΧΙΣΕΙΣ!";
                 else if (language_current == "Polish")
-                    decdesc.GetComponent<Text>().text = "WYBIERZ NOWY KOLOR " + boght + "\nDLA TWOJEJ STOŁÓWKI ABY KONTYNUOWAĆ!";
+                    decdesc.GetComponent<Text>().text = "WYBIERZ NOWY KOLOR " + boght + "\nDO SWOJEGO BARU, ABY KONTYNUOWAĆ!";
                 else if (language_current == "Romanian")
-                    decdesc.GetComponent<Text>().text = "ALEGE O NOUĂ " + boght + " CULOARE \nPENTRU BUCĂTĂRIA TA MOBILĂ, CA SĂ CONTINUI!";
+                    decdesc.GetComponent<Text>().text = "PENTRU A CONTINUA, ALEGE O NOUĂ " + boght + " CULOARE \nPENTRU CANTINA TA!";
                 else if (language_current == "Portuguese")
                     decdesc.GetComponent<Text>().text = "PARA CONTINUAR, ESCOLHA UMA NOVA " + boght + " COR \nPARA A SUA CANTINA!";
             }
@@ -498,9 +516,9 @@ public class GameMasterScript : MonoBehaviour
                 else if (language_current == "Greek")
                     decdesc.GetComponent<Text>().text = "ΚΑΝΕ ΝΕΑ ΕΠΙΛΟΓΗ " + boght + "\nΓΙΑ ΤΗ ΚΑΝΤΙΝΑ ΣΟΥ, ΓΙΑ ΝΑ ΣΥΝΕΧΙΣΕΙΣ!";
                 else if (language_current == "Polish")
-                    decdesc.GetComponent<Text>().text = "WYBIERZ NOWY " + boght + "\nDLA TWOJEJ STOŁÓWKI ABY KONTYNUOWAĆ!";
+                    decdesc.GetComponent<Text>().text = "WYBIERZ NOWY " + boght + "\nDO SWOJEGO BARU ABY KONTYNUOWAĆ!";
                 else if (language_current == "Romanian")
-                    decdesc.GetComponent<Text>().text = "ALEGE O NOUĂ " + boght + "\nPENTRU BUCĂTĂRIA TA MOBILĂ, CA SĂ CONTINUI!";
+                    decdesc.GetComponent<Text>().text = "PENTRU A CONTINUA, ALEGE O NOUĂ " + boght + "\nPENTRU CANTINA TA!";
                 else if (language_current == "Portuguese")
                     decdesc.GetComponent<Text>().text = "PARA CONTINUAR, ESCOLHA UMA NOVA " + boght + "\nPARA A SUA CANTINA";
             }
@@ -1086,7 +1104,9 @@ public class GameMasterScript : MonoBehaviour
         {
             sr.ReadLine();
 
+            InitialiseListLanguage(words_pl);
             InitialiseListLanguage(words_pt);
+            InitialiseListLanguage(words_ro);
             int id;
             while ((line = sr.ReadLine()) != null)
             {
@@ -1098,12 +1118,14 @@ public class GameMasterScript : MonoBehaviour
                 if (id < words_en.Count)
                 {
                     Debug.Log("current id: " + id);
+                    words_pl[id] = columns[3];                    
                     words_pt[id] = columns[language_column];                    
+                    words_ro[id] = columns[5];                    
                 }
                 else
                     Debug.Log("line not in words en " + columns[1]);
 
-                Debug.Log("english " + columns[1] + language_name + columns[language_column]);
+                Debug.Log("english " + columns[1] +" polish " +columns[3]+" "+ language_name+" " + columns[language_column]+" romanian " +columns[5]);
             }
 
         }

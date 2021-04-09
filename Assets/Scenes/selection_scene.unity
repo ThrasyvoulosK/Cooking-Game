@@ -3051,6 +3051,944 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193516439}
   m_CullTransparentMesh: 0
+--- !u!1 &230666769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 230666772}
+  - component: {fileID: 230666771}
+  - component: {fileID: 230666770}
+  m_Layer: 0
+  m_Name: GameMaster (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!222 &230666770
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230666769}
+  m_CullTransparentMesh: 0
+--- !u!114 &230666771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230666769}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742036a19ee999842b5664619a4dd8ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 6795080098137956420, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -8209493743397234753, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -393077866477028774, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -884315242955372229, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -913569899736772905, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -5044462051708577863, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  - {fileID: -2257703242698487362, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: -7140087995865160524, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: 8263195158465498870, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: 3087734001931203600, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: -3173214758604753708, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  - {fileID: 1222428437914192223, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
+  - {fileID: -8584748100523335948, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
+  - {fileID: -7164903015606843743, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
+  - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
+  - {fileID: 21300000, guid: 51cc475c3bc1eb04590fb9b52fe4d663, type: 3}
+  - {fileID: 21300000, guid: 69dc514bcc3614941ad9ffb1f161ca56, type: 3}
+  - {fileID: 21300000, guid: 21e3bff390469ca4896a9693be133d19, type: 3}
+  - {fileID: -1886764556333328586, guid: 5960d59b672bdbe48aba6d4fb60f767e, type: 3}
+  - {fileID: 8847379102083037254, guid: 858431c1c6a017e41af508657a296681, type: 3}
+  - {fileID: 654458921956528515, guid: 73743ed40ea560443844930e17db3dca, type: 3}
+  - {fileID: 3795728192540832934, guid: 5b20e40daab576746bb0e032bf70f31a, type: 3}
+  - {fileID: 21300000, guid: fa090ca1abb7e1c46a38b07f9197bb8b, type: 3}
+  - {fileID: 21300000, guid: 6274890a94a16a4468189e5d3c4cfc21, type: 3}
+  - {fileID: 21300000, guid: 823b28a9426467e4ca4163b52608de53, type: 3}
+  - {fileID: 21300000, guid: a44348d5a895be54f8a5df0e6c23da9d, type: 3}
+  - {fileID: 21300000, guid: a165e3537fbc0ca43af2c64307f1c798, type: 3}
+  - {fileID: -888781099504439867, guid: 3c69722b474128c4a9d05c2b0b33e22b, type: 3}
+  - {fileID: 5193741487003750703, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
+  - {fileID: 8176824057624764152, guid: 3b2bcc200eb94e14687f314ed95ebdcf, type: 3}
+  - {fileID: -2568023250801119445, guid: 15d65c4c88beea041bba12b0f4571293, type: 3}
+  - {fileID: -6592013765496244322, guid: 15d65c4c88beea041bba12b0f4571293, type: 3}
+  - {fileID: 78468286475436834, guid: 15d65c4c88beea041bba12b0f4571293, type: 3}
+  - {fileID: -8565358882919354901, guid: 15d65c4c88beea041bba12b0f4571293, type: 3}
+  - {fileID: 7179612850240442308, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  - {fileID: -6910035244135375433, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  - {fileID: -7834775772889405522, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  - {fileID: -1184015888063055196, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  - {fileID: 7426486411398332766, guid: 15d65c4c88beea041bba12b0f4571293, type: 3}
+  - {fileID: 21300000, guid: 4bc03e668aa794241b925ea85afbdbe0, type: 3}
+  - {fileID: 908940712110909834, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  - {fileID: -734269695507775701, guid: 4cce4e67ac1a88f489f716894e5c96e0, type: 3}
+  - {fileID: 5976005612273890613, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -484481549411853111, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 748424627867893776, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 6129817234849874910, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -5485402024883601861, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 2449641519832538347, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 6402759172739121558, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -4494247462985671392, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 7476325533407137989, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -3034765217270170548, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 6441421925029856528, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -2100646407034256904, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -8589734438762316621, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -438447498083485979, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -1018015131435337868, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 7071727076556926637, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 2397463220351689086, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: -4093691748369007177, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: -5637552033943677094, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: -91717742165320787, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: 5018069142418566148, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -350160273018629328, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 2686038161632406131, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: 587663554144834908, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: 8926415634167678512, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: 3673560562949779454, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: 7694642938358452018, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -2488591944438261832, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 1720573860863271246, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  - {fileID: 8474332723596707422, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -3606444875601380385, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 5720975180417818995, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -5075995686542879366, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -7574429256687856966, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 395087075914698441, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 6159289081099893734, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 1034647834226125864, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 8816000677239814077, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 9136624547336798992, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -6980611407024626005, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 7306654683027230128, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: 7563036002892854564, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -1521391659377308032, guid: 342daa03244ed714cb30940bc42c46b8, type: 3}
+  - {fileID: -575337046320641332, guid: 734ace3be5792624b8cae09cc13e9841, type: 3}
+  - {fileID: 7279567733922663083, guid: 734ace3be5792624b8cae09cc13e9841, type: 3}
+  - {fileID: -4058877833163511503, guid: 8995148599dcba94c8309dfd3ffa3a20, type: 3}
+  - {fileID: 3987666181041630358, guid: 15d65c4c88beea041bba12b0f4571293, type: 3}
+  - {fileID: 2137358106377202427, guid: 8995148599dcba94c8309dfd3ffa3a20, type: 3}
+  - {fileID: 7775285142768831396, guid: 07203a50ae8ce98488b4892e0386facc, type: 3}
+  - {fileID: 1364305794285839822, guid: 07203a50ae8ce98488b4892e0386facc, type: 3}
+  - {fileID: 6191295521471560383, guid: 69e58d2b99c494044ae6805c5c10d691, type: 3}
+  - {fileID: 21300000, guid: 82d2b185abe918048b633d4e6b6151ac, type: 3}
+  - {fileID: 21300000, guid: f1c05edd5e7c7184bbce45eaddd28d16, type: 3}
+  - {fileID: 21300000, guid: d915c17ae0c827d49a0f5739501d3d22, type: 3}
+  - {fileID: 4907985705408935729, guid: c7467aea2443e4f42b9172796a3445e4, type: 3}
+  - {fileID: 6841333499150755801, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -2231923792859303970, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -7865212156404934262, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 4954574728673246695, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 3536844162800087377, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -7837207120064668628, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -5139094413518592378, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -54765728827472461, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 6591038416801406945, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -7223775157892528725, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 9211177866061595956, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 6690062836333500996, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 4039165537884659264, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 126031767474139960, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 1468160588827105429, guid: 2a8562bceb5a75241ba107de3ca303fc, type: 3}
+  - {fileID: 7646371382768671465, guid: 2a8562bceb5a75241ba107de3ca303fc, type: 3}
+  - {fileID: 6969916710062937920, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: 6115030504673186961, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: 3210744471822511582, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: -2963672311811741427, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: 3749906936760378769, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: 21300000, guid: ab66478e47778334d9bc3ab4a85c04db, type: 3}
+  - {fileID: -6331809635374423740, guid: 69e58d2b99c494044ae6805c5c10d691, type: 3}
+  - {fileID: 3057489299315037486, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: -3491413066274850614, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: 525003313166373365, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: 720643365904917066, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  - {fileID: 2481770938291178123, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
+  spritesnames:
+  - Sandwich_Tomato
+  - Sandwich_Cheese
+  - Sandwich_Ham
+  - Sandwich_Lettuce
+  - Sandwich_Base
+  - Sandwich_Top
+  - Toast_Tomato
+  - Toast_Cheese
+  - Toast_Ham
+  - Toast_Lettuce
+  - Toast_Bread
+  - Coffee
+  - Ice
+  - Milk
+  - Counter_Grey
+  - Counter_Blue
+  - Counter_Metal
+  - Counter_Red
+  - Tent_Yellow
+  - Tent_Blue
+  - Tent_Green
+  - Tent_Red
+  - Wall_Grey
+  - Wall_Blue
+  - Wall_Metal
+  - Wall_Red
+  - Screenshot
+  - Rectangle_Green_Full
+  - Character_M
+  - Character_F
+  - Banana
+  - Chocolate
+  - Cream
+  - Strawberry
+  - Cabbage
+  - Carrot
+  - Cucumber
+  - Onion
+  - IceCream_Down
+  - Salad_Bowl
+  - Salad_Tomato
+  - Salad_Lettuce
+  - Cabbage_ing
+  - Cabbage_ing_done
+  - Carrot_ing
+  - Carrot_ing_done
+  - Cucumber_ing
+  - Cucumber_ing_done
+  - Onion_ing
+  - Onion_ing_done
+  - Banana_ing
+  - Banana_ing_done
+  - Chocolate_ing
+  - Chocolate_ing_done
+  - Cream_ing
+  - Cream_ing_done
+  - Strawberry_ing
+  - Strawberry_ing_done
+  - Club_Up
+  - Club_Down
+  - Club_Mayonnaise
+  - Club_Ham
+  - Mayonnaise_ing
+  - Mayonnaise_ing_done
+  - Club_Cheese
+  - Club_Lettuce
+  - Club_Tomato
+  - Club_Potato
+  - Potato_ing
+  - Potato_ing_done
+  - Plate
+  - SyrupChocolate_ing
+  - SyrupChocolate_ing_done
+  - SyrupCaramel_ing
+  - Nut_ing
+  - Nut_ing_done
+  - Peanut_ing
+  - Peanut_ing_done
+  - Crouton_ing
+  - Crouton_ing_done
+  - SyrupCaramel_ing_done
+  - Ketchup_ing
+  - Ketchup_ing_done
+  - Mustard_ing
+  - Mustard_ing_done
+  - SyrupChocolate
+  - SyrupCaramel
+  - Nut
+  - Peanut
+  - Crouton
+  - Ketchup
+  - Mustard
+  - Napkins
+  - Napkins_Orange
+  - Napkins_Purple
+  - Napkins_Green
+  - Board_orig
+  - Board_Beige
+  - Board_White
+  - Table_1
+  - Table_2
+  - Table_3
+  - Table_Dec_1
+  - Table_Dec_2
+  - Table_Dec_3
+  - Umbrella_Yellow
+  - Umbrella_Red
+  - Umbrella_Green
+  - Logo_1
+  - Logo_2
+  - Logo_3
+  - Coffee_ing
+  - Coffee_ing_done
+  - Language_El
+  - Language_Ro
+  - Language_Pt
+  - Language_Eng
+  - Language_Pl
+  - SpeechBubble_Smile
+  - SpeechBubble_Empty
+  - GreekDisabled
+  - EnglishDisabled
+  - PolishDisabled
+  - PortugueseDisabled
+  - RomanianDisabled
+  languages:
+  - Greek
+  - English
+  - Polish
+  - Portuguese
+  - Romanian
+  language_current: Portuguese
+  words_en_base:
+  - Cheese
+  - Ham
+  - Lettuce
+  - Tomato
+  - Coffee
+  - Ice
+  - Milk
+  - Let's Cook!
+  - Language
+  - Levels
+  - Play!
+  - Counter
+  - Tent
+  - Wall
+  - Cheese_lc
+  - Ham_lc
+  - Lettuce_lc
+  - Tomato_lc
+  - Coffee_lc
+  - Ice_lc
+  - Milk_lc
+  - Back
+  - Character
+  - Sound
+  - Options
+  - Choose
+  - Continue
+  - Congratulations
+  - Exit
+  - Banana
+  - Chocolate
+  - Cream
+  - Strawberry
+  - Banana_lc
+  - Chocolate_lc
+  - Cream_lc
+  - Strawberry_lc
+  - Cabbage
+  - Carrot
+  - Cucumber
+  - Onion
+  - Cabbage_lc
+  - Carrot_lc
+  - Cucumber_lc
+  - Onion_lc
+  - Mayonnaise
+  - Mayonnaise_lc
+  - Potato
+  - Potato_lc
+  - SyrupChocolate
+  - SyrupChocolate_lc
+  - SyrupCaramel
+  - SyrupCaramel_lc
+  - Peanut
+  - Peanut_lc
+  - Nut
+  - Nut_lc
+  - Crouton
+  - Crouton_lc
+  - Ketchup
+  - Ketchup_lc
+  - Mustard
+  - Mustard_lc
+  - Napkins
+  - Ingredients
+  - Board
+  - Table
+  - Table Decoration
+  - Umbrella
+  - Logo
+  - Info
+  words_gr:
+  - "\u03A4\u03A5\u03A1\u0399"
+  - "\u0396\u0391\u039C\u03A0\u039F\u039D"
+  - "\u039C\u0391\u03A1\u039F\u03A5\u039B\u0399"
+  - "\u039D\u03A4\u039F\u039C\u0391\u03A4\u0391"
+  - "\u039A\u0391\u03A6\u0395\u03A3"
+  - "\u03A0\u0391\u0393\u039F\u03A3"
+  - "\u0393\u0391\u039B\u0391"
+  - "\u0391\u03A3 \u039C\u0391\u0393\u0395\u0399\u03A1\u0395\u03A8\u039F\u03A5\u039C\u0395!"
+  - "\u0393\u039B\u03A9\u03A3\u03A3\u0391"
+  - "\u0395\u03A0\u0399\u03A0\u0395\u0394\u039F"
+  - "\u03A0\u0391\u0399\u039E\u0395!"
+  - "\u03A0\u0391\u0393\u039A\u039F\u03A5"
+  - "\u03A4\u0395\u039D\u03A4\u0391\u03A3"
+  - "\u03A4\u039F\u0399\u03A7\u039F\u03A5"
+  - "\u03A4\u03C5\u03C1\u03AF"
+  - "\u0396\u03B1\u03BC\u03C0\u03CC\u03BD"
+  - "\u039C\u03B1\u03C1\u03BF\u03CD\u03BB\u03B9"
+  - "\u039D\u03C4\u03BF\u03BC\u03AC\u03C4\u03B1"
+  - "\u039A\u03B1\u03C6\u03AD\u03C2"
+  - "\u03A0\u03AC\u03B3\u03BF\u03C2"
+  - "\u0393\u03AC\u03BB\u03B1"
+  - "\u03A0\u0399\u03A3\u03A9"
+  - "\u03A7\u0391\u03A1\u0391\u039A\u03A4\u0397\u03A1\u0391\u03A3"
+  - "\u0397\u03A7\u039F\u03A3"
+  - "\u03A1\u03A5\u0398\u039C\u0399\u03A3\u0395\u0399\u03A3"
+  - "\u0395\u03A0\u0399\u039B\u039F\u0393\u0397"
+  - "\u03A3\u03A5\u039D\u0395\u03A7\u0395\u0399\u0391"
+  - "\u03A3\u03A5\u0393\u03A7\u0391\u03A1\u0397\u03A4\u0397\u03A1\u0399\u0391!"
+  - "\u0388\u039E\u039F\u0394\u039F\u03A3"
+  - "\u039C\u03A0\u0391\u039D\u0391\u039D\u0391"
+  - "\u03A3\u039F\u039A\u039F\u039B\u0391\u03A4\u0391"
+  - "\u039A\u03A1\u0395\u039C\u0391"
+  - "\u03A6\u03A1\u0391\u039F\u03A5\u039B\u0391"
+  - "\u039C\u03C0\u03B1\u03BD\u03AC\u03BD\u03B1"
+  - "\u03A3\u03BF\u03BA\u03BF\u03BB\u03AC\u03C4\u03B1"
+  - "\u039A\u03C1\u03AD\u03BC\u03B1"
+  - "\u03A6\u03C1\u03AC\u03BF\u03C5\u03BB\u03B1"
+  - "\u039B\u0391\u03A7\u0391\u039D\u039F"
+  - "\u039A\u0391\u03A1\u039F\u03A4\u039F"
+  - "\u0391\u0393\u0393\u039F\u03A5\u03A1\u0399"
+  - "\u039A\u03A1\u0395\u039C\u039C\u03A5\u0394\u0399"
+  - "\u039B\u03AC\u03C7\u03B1\u03BD\u03BF"
+  - "\u039A\u03B1\u03C1\u03CC\u03C4\u03BF"
+  - "\u0391\u03B3\u03B3\u03BF\u03CD\u03C1\u03B9"
+  - "\u039A\u03C1\u03B5\u03BC\u03BC\u03CD\u03B4\u03B9"
+  - "\u039C\u0391\u0393\u0399\u039F\u039D\u0395\u0396\u0391"
+  - "\u039C\u03B1\u03B3\u03B9\u03BF\u03BD\u03AD\u03B6\u03B1"
+  - "\u03A0\u0391\u03A4\u0391\u03A4\u0391"
+  - "\u03A0\u03B1\u03C4\u03AC\u03C4\u03B1"
+  - "\u03A3\u0399\u03A1\u039F\u03A0\u0399 \u03A3\u039F\u039A\u039F\u039B\u0391\u03A4\u0391\u03A3"
+  - "\u03A3\u03B9\u03C1\u03CC\u03C0\u03B9 \u03A3\u03BF\u03BA\u03BF\u03BB\u03AC\u03C4\u03B1\u03C2"
+  - "\u03A3\u0399\u03A1\u039F\u03A0\u0399 \u039A\u0391\u03A1\u0391\u039C\u0395\u039B\u0391\u03A3"
+  - "\u03A3\u03B9\u03C1\u03CC\u03C0\u03B9 \u039A\u03B1\u03C1\u03B1\u03BC\u03AD\u03BB\u03B1\u03C2"
+  - "\u03A6\u03A5\u03A3\u03A4\u0399\u039A\u0399"
+  - "\u03A6\u03C5\u03C3\u03C4\u03AF\u03BA\u03B9"
+  - "\u039A\u0391\u03A1\u03A5\u0394\u0399"
+  - "\u039A\u03B1\u03C1\u03CD\u03B4\u03B9"
+  - "\u039A\u03A1\u039F\u03A5\u03A4\u039F\u039D"
+  - "\u039A\u03C1\u03BF\u03C5\u03C4\u03CC\u03BD"
+  - "\u039A\u0395\u03A4\u03A3\u0391\u03A0"
+  - "\u039A\u03AD\u03C4\u03C3\u03B1\u03C0"
+  - "\u039C\u039F\u03A5\u03A3\u03A4\u0391\u03A1\u0394\u0391"
+  - "\u039C\u03BF\u03C5\u03C3\u03C4\u03AC\u03C1\u03B4\u03B1"
+  - "\u03A7\u0391\u03A1\u03A4\u039F\u03A0\u0395\u03A4\u03A3\u0395\u03A4\u03A9\u039D"
+  - "\u03A5\u039B\u0399\u039A\u0391"
+  - "\u03A0\u0399\u039D\u0391\u039A\u0391"
+  - "\u03A4\u03A1\u0391\u03A0\u0395\u0396\u0399\u039F\u03A5"
+  - "\u0394\u0399\u0391\u039A\u039F\u03A3\u039C\u0397\u03A3\u0397\u03A3 \u03A4\u03A1\u0391\u03A0\u0395\u0396\u0399\u039F\u03A5"
+  - "\u039F\u039C\u03A0\u03A1\u0395\u039B\u039B\u0391\u03A3"
+  - "\u039B\u039F\u0393\u039F\u03A4\u03A5\u03A0\u039F\u03A5"
+  - "\u03A0\u039B\u0397\u03A1\u039F\u03A6\u039F\u03A1\u0399\u0395\u03A3"
+  words_en:
+  - CHEESE
+  - HAM
+  - LETTUCE
+  - TOMATO
+  - COFFEE
+  - ICE
+  - MILK
+  - LET'S COOK!
+  - LANGUAGE
+  - LEVEL
+  - PLAY!
+  - COUNTER
+  - TENT
+  - WALL
+  - Cheese
+  - Ham
+  - Lettuce
+  - Tomato
+  - Coffee
+  - Ice
+  - Milk
+  - BACK
+  - CHARACTER
+  - SOUND
+  - OPTIONS
+  - CHOICE
+  - CONTINUE
+  - CONGRATULATIONS!
+  - EXIT
+  - BANANA
+  - CHOCOLATE
+  - CREAM
+  - STRAWBERRY
+  - Banana
+  - Chocolate
+  - Cream
+  - Strawberry
+  - CABBAGE
+  - CARROT
+  - CUCUMBER
+  - ONION
+  - Cabbage
+  - Carrot
+  - Cucumber
+  - Onion
+  - MAYONNAISE
+  - Mayonnaise
+  - POTATO
+  - Potato
+  - CHOCOLATE SYRUP
+  - Chocolate Syrup
+  - CARAMEL SYRUP
+  - Caramel Syrup
+  - PEANUT
+  - Peanut
+  - NUT
+  - Nut
+  - CROUTON
+  - Crouton
+  - KETCHUP
+  - Ketchup
+  - MUSTARD
+  - Mustard
+  - NAPKINS
+  - INGREDIENTS
+  - BOARD
+  - TABLE
+  - TABLE DECORATION
+  - UMBRELLA
+  - LOGO
+  - INFO
+  words_pl:
+  - SER
+  - SZYNKA
+  - "SA\u0141ATA"
+  - POMIDOR
+  - KAWA
+  - "L\xD3D"
+  - MLEKO
+  - GOTUJMY!
+  - "J\u0118ZYK"
+  - POZIOM
+  - GRAJ!
+  - LADA
+  - NAMIOT
+  - "\u015ACIANA"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - COFNIJ
+  - "POSTA\u0106"
+  - "D\u0179WI\u0118K"
+  - OPCJE
+  - "WYB\xD3R"
+  - CONTYNUUJ
+  - GRATULACJE!
+  - "WYJ\u015ACIE"
+  - BANAN
+  - CZEKOLADA
+  - "\u015AMIETANA"
+  - TRUSKAWKA
+  - 
+  - 
+  - 
+  - 
+  - KAPUSTA
+  - MARCHEWKA
+  - "OG\xD3EK"
+  - CEBULA
+  - 
+  - 
+  - 
+  - 
+  - MAJONEZ
+  - 
+  - ZIEMNIAK
+  - 
+  - SYROP CZEKOLADOWY
+  - 
+  - SYROP KARMELOWY
+  - 
+  - ORZESZEK ZIEMNY
+  - 
+  - ORZECH
+  - 
+  - GRZANKA
+  - 
+  - KECZUP
+  - 
+  - MUSZTARDA
+  - 
+  - SERWETKI
+  - "SK\u0141ADNIKI"
+  - TABLICA
+  - "ST\xD3\u0141"
+  - "DEKORACJA STO\u0141U"
+  - PARASOLKA
+  - LOGO
+  - INFO
+  words_pt:
+  - QUEIJO
+  - FIAMBRE
+  - ALFACE
+  - TOMATE
+  - "CAF\xC9"
+  - GELO
+  - LEITE
+  - VAMOS COZINHAR!
+  - "L\xCDNGUA"
+  - "N\xCDVEL"
+  - JOGAR!
+  - CONTADOR
+  - TENDA
+  - PAREDE
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - VOLTAR
+  - PERSONAGEM
+  - SOM
+  - OPTIONS
+  - ESCOLHA
+  - CONTINUAR
+  - "PARAB\xC9NS!"
+  - SAIR
+  - BANANA
+  - CHOCOLATE
+  - MOLHO*
+  - MORANGO
+  - 
+  - 
+  - 
+  - 
+  - REPOLHO
+  - CENOURA
+  - PEPINO
+  - CEBOLA
+  - 
+  - 
+  - 
+  - 
+  - MAIONESE
+  - 
+  - BATATA
+  - 
+  - MOLHO DE CHOCOLATE
+  - 
+  - MOLHO DE CARAMELO
+  - 
+  - AMENDOIM
+  - 
+  - NOZ
+  - 
+  - CROUTON
+  - 
+  - KETCHUP
+  - 
+  - MOSTARDA
+  - 
+  - GUARDANAPO
+  - INGREDIENTES
+  - QUADRO
+  - MESA
+  - "DECORA\xC7\xC3O"
+  - GUARDA-CHUVA
+  - LOGO
+  - "INFORMA\xC7\xC3O"
+  words_ro:
+  - "CA\u0218CAVAL"
+  - "\u0218UNC\u0102"
+  - "SALAT\u0102 VERDE"
+  - "RO\u0218II"
+  - CAFEA
+  - "GHEA\u021A\u0102"
+  - LAPTE
+  - "HAI S\u0102 G\u0102TIM!"
+  - LIMBA
+  - NIVEL
+  - "JOAC\u0102!"
+  - TEJGHEA
+  - CORT
+  - PERETE
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "\xCENAPOI"
+  - PERSONAJ
+  - SUNET
+  - "OP\u021AIUNI"
+  - ALEGERE
+  - "CONTINU\u0102"
+  - "FELICIT\u0102RI!"
+  - "IE\u0218IRE"
+  - BANANE
+  - "CIOCOLAT\u0102"
+  - "FRI\u0218C\u0102"
+  - "C\u0102P\u0218UNI"
+  - 
+  - 
+  - 
+  - 
+  - "VARZ\u0102"
+  - MORCOV
+  - CASTRAVETE
+  - "CEAP\u0102"
+  - 
+  - 
+  - 
+  - 
+  - "MAIONEZ\u0102"
+  - 
+  - CARTOFI
+  - 
+  - "SIROP DE CIOCOLAT\u0102"
+  - 
+  - SIROP DE CARAMEL
+  - 
+  - ARAHIDE
+  - 
+  - NUCI
+  - 
+  - CRUTOANE
+  - 
+  - KETCHUP
+  - 
+  - "MU\u0218TAR"
+  - 
+  - "\u0218ERVE\u021AELE"
+  - INGREDIENTE
+  - "TOC\u0102TOR"
+  - "MAS\u0102"
+  - "DECORA\u021AIUNE PENTRU MAS\u0102"
+  - "UMBREL\u0102"
+  - LOGO
+  - INFO
+  words_current:
+  - QUEIJO
+  - FIAMBRE
+  - ALFACE
+  - TOMATE
+  - "CAF\xC9"
+  - GELO
+  - LEITE
+  - VAMOS COZINHAR!
+  - "L\xCDNGUA"
+  - "N\xCDVEL"
+  - JOGAR!
+  - CONTADOR
+  - TENDA
+  - PAREDE
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - VOLTAR
+  - PERSONAGEM
+  - SOM
+  - OPTIONS
+  - ESCOLHA
+  - CONTINUAR
+  - "PARAB\xC9NS!"
+  - SAIR
+  - BANANA
+  - CHOCOLATE
+  - MOLHO*
+  - MORANGO
+  - 
+  - 
+  - 
+  - 
+  - REPOLHO
+  - CENOURA
+  - PEPINO
+  - CEBOLA
+  - 
+  - 
+  - 
+  - 
+  - MAIONESE
+  - 
+  - BATATA
+  - 
+  - MOLHO DE CHOCOLATE
+  - 
+  - MOLHO DE CARAMELO
+  - 
+  - AMENDOIM
+  - 
+  - NOZ
+  - 
+  - CROUTON
+  - 
+  - KETCHUP
+  - 
+  - MOSTARDA
+  - 
+  - GUARDANAPO
+  - INGREDIENTES
+  - QUADRO
+  - MESA
+  - "DECORA\xC7\xC3O"
+  - GUARDA-CHUVA
+  - LOGO
+  - "INFORMA\xC7\xC3O"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  boughtablesprites:
+  - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
+  - {fileID: -1886764556333328586, guid: 5960d59b672bdbe48aba6d4fb60f767e, type: 3}
+  - {fileID: 21300000, guid: fa090ca1abb7e1c46a38b07f9197bb8b, type: 3}
+  - {fileID: 6191295521471560383, guid: 69e58d2b99c494044ae6805c5c10d691, type: 3}
+  - {fileID: 4907985705408935729, guid: c7467aea2443e4f42b9172796a3445e4, type: 3}
+  - {fileID: -7865212156404934262, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: -7837207120064668628, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 6591038416801406945, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 6690062836333500996, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  boughtablesnames:
+  - Counter
+  - Tent
+  - Wall
+  - Napkins
+  - Board
+  - Table
+  - Table Decoration
+  - Umbrella
+  - Logo
+  theFurnace: {fileID: 0}
+  money: 0
+  levelid: 1
+  levelchanged: 0
+  option_character: Character_M
+  option_sound: 1
+  option_music: 1
+  option_speech: 1
+  menuitems:
+  - {fileID: 639152917}
+  - {fileID: 1839488302}
+  - {fileID: 684143443}
+  - {fileID: 646506740}
+  - {fileID: 724872713}
+  - {fileID: 2095667507}
+  - {fileID: 1899141576}
+  - {fileID: 1047593953}
+  - {fileID: 762374970}
+  - {fileID: 193516439}
+  - {fileID: 1838218542}
+  menuSettings: {fileID: 11400000, guid: cdf29c47a91eac348a4b8f242449d951, type: 2}
+  videoPlayer: {fileID: 4966111393621023678, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
+  vc:
+  - {fileID: 32900000, guid: da511805f570f674b827b911501c6856, type: 3}
+  - {fileID: 32900000, guid: 1834ce4b59307c840b0cfb340dceecaa, type: 3}
+  videoObject: {fileID: 4966111394051592741, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
+  cheat_one_ingredient_recipe: 1
+--- !u!224 &230666772
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230666769}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -39.683285}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.1701077, y: 0.6891093}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &231121225
 GameObject:
   m_ObjectHideFlags: 0
@@ -11906,6 +12844,209 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &965886530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 965886531}
+  - component: {fileID: 965886534}
+  - component: {fileID: 965886533}
+  - component: {fileID: 965886532}
+  m_Layer: 5
+  m_Name: Speech
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &965886531
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965886530}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1528727846}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 350, y: 0}
+  m_SizeDelta: {x: 300, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &965886532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965886530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 965886533}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1528727845}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 724872713}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2095667507}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1899141576}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1492260246}
+        m_TargetAssemblyTypeName: GameMasterScript, Assembly-CSharp
+        m_MethodName: change_speech
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1047593953}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1838218542}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &965886533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965886530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6824051508847278519, guid: e28e1295f9ab8e64c99a1767816270bd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &965886534
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965886530}
+  m_CullTransparentMesh: 0
 --- !u!1 &966103152
 GameObject:
   m_ObjectHideFlags: 0
@@ -11941,8 +13082,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 0}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &966103154
 MonoBehaviour:
@@ -17975,7 +19116,7 @@ MonoBehaviour:
   - "D\u0179WI\u0118K"
   - OPCJE
   - "WYB\xD3R"
-  - KONTYNUUJ
+  - CONTYNUUJ
   - GRATULACJE!
   - "WYJ\u015ACIE"
   - BANAN
@@ -18002,7 +19143,7 @@ MonoBehaviour:
   - 
   - SYROP KARMELOWY
   - 
-  - ORZECH ZIEMNY
+  - ORZESZEK ZIEMNY
   - 
   - ORZECH
   - 
@@ -18019,7 +19160,7 @@ MonoBehaviour:
   - "DEKORACJA STO\u0141U"
   - PARASOLKA
   - LOGO
-  - INFORMACJA
+  - INFO
   words_pt:
   - QUEIJO
   - FIAMBRE
@@ -18115,7 +19256,7 @@ MonoBehaviour:
   - 
   - 
   - "\xCENAPOI"
-  - CARACTER
+  - PERSONAJ
   - SUNET
   - "OP\u021AIUNI"
   - ALEGERE
@@ -18192,6 +19333,7 @@ MonoBehaviour:
   option_character: Character_M
   option_sound: 1
   option_music: 1
+  option_speech: 1
   menuitems:
   - {fileID: 639152917}
   - {fileID: 1839488302}
@@ -18718,6 +19860,7 @@ RectTransform:
   m_Children:
   - {fileID: 1590201139}
   - {fileID: 966103153}
+  - {fileID: 965886531}
   m_Father: {fileID: 1863405602}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20025,8 +21168,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 0}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 350, y: 0}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590201140
 MonoBehaviour:
@@ -21303,7 +22446,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 100}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1678331410
 MonoBehaviour:

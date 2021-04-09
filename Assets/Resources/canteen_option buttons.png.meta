@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: e28e1295f9ab8e64c99a1767816270bd
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4363933398221193828
+    second: canteen_option buttons_0
+  - first:
+      213: 6557627630117138303
+    second: canteen_option buttons_1
+  - first:
+      213: 5986176807881363124
+    second: canteen_option buttons_2
+  - first:
+      213: -5558681767740803213
+    second: canteen_option buttons_3
+  - first:
+      213: 6824051508847278519
+    second: canteen_option buttons_4
+  - first:
+      213: 616141829852019389
+    second: canteen_option buttons_5
+  - first:
+      213: 8357398302947226281
+    second: canteen_option buttons_6
+  - first:
+      213: -6570395729078873927
+    second: canteen_option buttons_7
+  - first:
+      213: 4570596177247986060
+    second: canteen_option buttons_8
+  - first:
+      213: 6944574082120957366
+    second: canteen_option buttons_9
+  - first:
+      213: -4187046031585160876
+    second: canteen_option buttons_10
+  - first:
+      213: 8691942541138758098
+    second: canteen_option buttons_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +77,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +109,159 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: canteen_option buttons_0
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 493
+        width: 126
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4620078fd4ecf8c30800000000000000
+      internalID: 4363933398221193828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_option buttons_3
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 504
+        width: 103
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3777e5622689bd2b0800000000000000
+      internalID: -5558681767740803213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_option buttons_4
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 494
+        width: 118
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b97fc121b6e3be50800000000000000
+      internalID: 6824051508847278519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_option buttons_9
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 144
+        width: 162
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd34317555106060800000000000000
+      internalID: 6944574082120957366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_option buttons_10
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 154
+        width: 162
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451582571df94e5c0800000000000000
+      internalID: -4187046031585160876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_option buttons_11
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 152
+        width: 132
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d98ea470bbff9870800000000000000
+      internalID: 8691942541138758098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
