@@ -13,16 +13,15 @@ public class CameraScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (Application.isEditor)
-            return;
+        Debug.Log($"Camera Aspect: {Camera.main.aspect} And Camera Size {Camera.main.orthographicSize}");
 
-        return;
+        /*return;*/
 
         //call the gamemaster gameobject
         theGameMaster = GameObject.Find("GameMaster").GetComponent<GameMasterScript>();
         
         //match screen to height
-        GameObject.Find("Canvas").GetComponent<CanvasScaler>().matchWidthOrHeight = 1f;
+        //GameObject.Find("Canvas").GetComponent<CanvasScaler>().matchWidthOrHeight = 1f;
         
         //to determine whether our scene is a menu or a game scene,
         // search for the Counter object
@@ -37,7 +36,10 @@ public class CameraScript : MonoBehaviour
         {
             Debug.Log("5:4");
 
+            //Camera.main.orthographicSize = 7.1f;
             Camera.main.orthographicSize = 7.1f;
+            GameObject.Find("Canvas").GetComponent<CanvasScaler>().matchWidthOrHeight = 0f;
+            return;
             if (isgamescene)
             {
                 GameObject.Find("recipe board").GetComponent<RectTransform>().anchoredPosition = new Vector3(69f, -212f, 0f);
@@ -72,6 +74,8 @@ public class CameraScript : MonoBehaviour
         {
             Debug.Log("4:3");
             Camera.main.orthographicSize = 6.7f;
+            GameObject.Find("Canvas").GetComponent<CanvasScaler>().matchWidthOrHeight = 0f;
+            return;
 
             if (isgamescene)
             {
@@ -109,7 +113,8 @@ public class CameraScript : MonoBehaviour
         {
             Debug.Log("<1.48");
             Camera.main.orthographicSize = 6.0f;
-
+            GameObject.Find("Canvas").GetComponent<CanvasScaler>().matchWidthOrHeight = 0f;
+            return;
             if (isgamescene)
             {
                 GameObject.Find("recipe board").GetComponent<RectTransform>().anchoredPosition = new Vector3(92f, -114f, 0f);
@@ -139,6 +144,7 @@ public class CameraScript : MonoBehaviour
         else if (Camera.main.aspect < 1.67f)
         {
             Debug.Log("16:10");
+            return;
             //Debug.Log("800x480");
 
             if (isgamescene)
@@ -158,7 +164,8 @@ public class CameraScript : MonoBehaviour
             }
         }
         else if (Camera.main.aspect < 1.78f)//1920/1080
-        { 
+        {
+            return;
             Debug.Log("16:9");
 
             if (isgamescene)
@@ -169,6 +176,8 @@ public class CameraScript : MonoBehaviour
         }
         else if (Camera.main.aspect == 2f)//2160/1080
         {
+            return;
+
             Debug.Log("2:1");
             //Camera.main.orthographicSize = 4.5f;
             if (isgamescene)
@@ -200,7 +209,8 @@ public class CameraScript : MonoBehaviour
             }
         }
         else if (Camera.main.aspect < 2.06f)//2960/1440
-        { 
+        {
+            return;
             Debug.Log("<2.06f");
             Camera.main.orthographicSize = 4.4f;
             if (isgamescene)

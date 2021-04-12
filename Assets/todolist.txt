@@ -111,13 +111,11 @@ Playtest (Myrto's Feedback)
 -Τα γράμματα στο κουμπί πίσω να μικρύνουν 80%
 //-Ο τίτλος “Πληροφορίες” να σκουρύνει
 
-//add new characters
-//test levels 8-10 and syrup graphics
 update video with new bubbles and images
-//update languages
-//update transaction-scenes to fit different languages
 update buttons to better fit text
 
+640x480 looks somewhat good with viewport rect : y=0.1,h=0.78 and match width
+1920x1300: width zero, render screen space overlay,camera size 6
 
 Gameplay Issues:
 //-using money?
