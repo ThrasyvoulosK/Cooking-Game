@@ -18712,8 +18712,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f1c05edd5e7c7184bbce45eaddd28d16, type: 3}
   - {fileID: 21300000, guid: d915c17ae0c827d49a0f5739501d3d22, type: 3}
   - {fileID: 4907985705408935729, guid: c7467aea2443e4f42b9172796a3445e4, type: 3}
-  - {fileID: 6841333499150755801, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
-  - {fileID: -2231923792859303970, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 6841333499150755801, guid: 0e2ba20bfde96d04886a65ec72618752, type: 3}
+  - {fileID: -2231923792859303970, guid: 0e2ba20bfde96d04886a65ec72618752, type: 3}
   - {fileID: -7865212156404934262, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
   - {fileID: 4954574728673246695, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
   - {fileID: 3536844162800087377, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
@@ -18740,11 +18740,11 @@ MonoBehaviour:
   - {fileID: 525003313166373365, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
   - {fileID: 720643365904917066, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
   - {fileID: 2481770938291178123, guid: 9b47a3d3600db1848a174f3566a496cd, type: 3}
-  - {fileID: 4363933398221193828, guid: e28e1295f9ab8e64c99a1767816270bd, type: 3}
   - {fileID: -5558681767740803213, guid: e28e1295f9ab8e64c99a1767816270bd, type: 3}
+  - {fileID: 4363933398221193828, guid: e28e1295f9ab8e64c99a1767816270bd, type: 3}
   - {fileID: 6824051508847278519, guid: e28e1295f9ab8e64c99a1767816270bd, type: 3}
-  - {fileID: 6944574082120957366, guid: e28e1295f9ab8e64c99a1767816270bd, type: 3}
   - {fileID: -4187046031585160876, guid: e28e1295f9ab8e64c99a1767816270bd, type: 3}
+  - {fileID: 6944574082120957366, guid: e28e1295f9ab8e64c99a1767816270bd, type: 3}
   - {fileID: 8691942541138758098, guid: e28e1295f9ab8e64c99a1767816270bd, type: 3}
   spritesnames:
   - Sandwich_Tomato
@@ -18877,7 +18877,7 @@ MonoBehaviour:
   - Speech
   - SoundDisabled
   - MusicDisabled
-  - MusicDisabled
+  - SpeechDisabled
   languages:
   - Greek
   - English
@@ -21180,7 +21180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: 0}
+  m_AnchoredPosition: {x: -350, y: 0}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590201140

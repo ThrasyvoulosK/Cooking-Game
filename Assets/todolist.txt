@@ -105,17 +105,22 @@ Playtest (Myrto's Feedback)
 -στην οθόνη που γράφει συγχαρητήρια να βάλουμε το εικονίδιο του χαρακτήρα που έχει επιλεχθεί (?)
 -Μετακίνηση του logo στο επίπεδο 10
 -Στην οθόνη ρυθμίσεων τα κείμενα είναι πολύ κοντά στα εικονίδια
--το εικονίδιο του level να μικρύνει 80%
--οι ρυθμίσεις ήχου να γίνουν όπως στο template (θέσεις σύμβολα)
--οι θέσεις των γλωσσών να μπουν όπως στο template
--Τα γράμματα στο κουμπί πίσω να μικρύνουν 80%
+//-το εικονίδιο του level να μικρύνει 80%
+//-οι ρυθμίσεις ήχου να γίνουν όπως στο template (θέσεις σύμβολα)
+//-οι θέσεις των γλωσσών να μπουν όπως στο template
+//-Τα γράμματα στο κουμπί πίσω να μικρύνουν 80%
 //-Ο τίτλος “Πληροφορίες” να σκουρύνει
 
-update video with new bubbles and images
+update video with new graphics?
+
 update buttons to better fit text
 
-640x480 looks somewhat good with viewport rect : y=0.1,h=0.78 and match width
-1920x1300: width zero, render screen space overlay,camera size 6
+test needed graphics:
+-tomato toast
+-peanut ice creams
+-high-res beach decorations?
+-syrup board graphics
+-sound menu template?
 
 Gameplay Issues:
 //-using money?

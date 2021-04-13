@@ -403,11 +403,13 @@ public class GameMasterScript : MonoBehaviour
         {
             option_sound = false;
             //change sprite accordingly
+            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").gameObject.GetComponent<Image>().sprite = spriteslayers["SoundDisabled"];
         }
         else
         {
             option_sound = true;
             //change sprite again
+            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").GetComponent<Image>().sprite = spriteslayers["Sound"];
         }
     }
     public void change_music()
@@ -416,11 +418,13 @@ public class GameMasterScript : MonoBehaviour
         {
             option_music = false;
             //change sprite accordingly
+            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().sprite = spriteslayers["MusicDisabled"];
         }
         else
         {
             option_music = true;
             //change sprite again
+            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().sprite = spriteslayers["Music"];
         }
     }
 
@@ -430,11 +434,13 @@ public class GameMasterScript : MonoBehaviour
         {
             option_speech = false;
             //change sprite accordingly
+            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetComponent<Image>().sprite = spriteslayers["SpeechDisabled"];
         }
         else
         {
             option_speech = true;
             //change sprite again
+            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetComponent<Image>().sprite = spriteslayers["Speech"];
         }
     }
 
