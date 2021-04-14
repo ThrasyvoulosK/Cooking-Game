@@ -229,6 +229,7 @@ MonoBehaviour:
   option_character: m
   option_sound: 1
   option_music: 1
+  option_speech: 1
   menuitems: []
   menuSettings: {fileID: 0}
   videoPlayer: {fileID: 0}
@@ -590,7 +591,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 6841333499150755801, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  m_Sprite: {fileID: 6841333499150755801, guid: 0e2ba20bfde96d04886a65ec72618752, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -618,7 +619,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.9813526, y: 6.11}
+    oldSize: {x: 3.9813526, y: 6.14}
     newSize: {x: 9.49, y: 5.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1679,7 +1680,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2231923792859303970, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  m_Sprite: {fileID: -2231923792859303970, guid: 0e2ba20bfde96d04886a65ec72618752, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1707,7 +1708,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.9813526, y: 6.1200004}
+    oldSize: {x: 3.9813526, y: 6.16}
     newSize: {x: 9.49, y: 5.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2208,8 +2209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objecttobebought: Board
   spritetobebought:
-  - {fileID: 6841333499150755801, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
-  - {fileID: -2231923792859303970, guid: 2f638ad3947cd2641954d271fb0b3b44, type: 3}
+  - {fileID: 6841333499150755801, guid: 0e2ba20bfde96d04886a65ec72618752, type: 3}
+  - {fileID: -2231923792859303970, guid: 0e2ba20bfde96d04886a65ec72618752, type: 3}
   theGameMaster: {fileID: 0}
   theChangeScene: {fileID: 0}
   screenGameObjects:

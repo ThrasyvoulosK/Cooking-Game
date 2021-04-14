@@ -213,10 +213,10 @@ public class GameMasterScript : MonoBehaviour
 
         if (Application.isEditor)
         {
-            //Debug.Log("dev cheats allowed");
+            Debug.Log("dev cheats allowed");
 
             //cheat mode!
-            //cheat_one_recipe_only();
+            cheat_one_recipe_only();
             //cheat_only_ingredient_recipes("Tomato");
             cheat_one_ingredient_recipe = true;
 
