@@ -216,9 +216,9 @@ public class GameMasterScript : MonoBehaviour
             Debug.Log("dev cheats allowed");
 
             //cheat mode!
-            cheat_one_recipe_only();
+            //cheat_one_recipe_only();
             //cheat_only_ingredient_recipes("Tomato");
-            cheat_one_ingredient_recipe = true;
+            //cheat_one_ingredient_recipe = true;
 
             //keyboard commands
             SaveOrLoadKeys();
