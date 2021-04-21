@@ -18,14 +18,7 @@ initialise images on menus properly, with current data with loadmenuxml and save
 --keep: level?,character,language,sound?,music?
 //check gamemaster dictionary for assignment to images
 
-check if player has already played
--application.iseditor
-
-//graphics that might need change
-//-first screen
-//--'x' button remove
-//--subsequent menu screen 
-//---background graphic changes position (height?)
+//options menu screen graphic, different than initial?
 
 //club sandwiches distances between ingredients should be 0.05
 //-similar to set_ing_dist(...) function, but be careful about plate, potatoes and base starting from zero
@@ -40,11 +33,6 @@ intro-tutorial
 --with audio?
 //-play before first level
 
-gameobject positions issues
-1920x1300
--"ingredients" goes above black space
--'exit' button too
-
 languages excel
 -new words needed?
 
@@ -55,39 +43,15 @@ write some code to help testing
 
 new feedback issues:
 -art issues
---pink strawberry?
---big tomatoes on toasts
-//-menu behaviour
 -gameplay
 --board
-//--board transaction
 --pots?
-//--spawning objects repeats itself a lot?
-//--add a progress bar that works also as a game menu, to replace the 'x'?
-//---unity has a premade 'progress bar'. check it out
 
-savemenu should keep level information
+//savemenu should keep level information
 
-progress bar:
-//-remove 'x'
--add a submenu that asks
---quit to menu
---quit to windows/android
---(continue?)
--the bar should show the level's number inside it
---inside a star graphic?
-
-//some treadmill ingredients have bigger labels, while others have tiny ones
-//-check all similar prefabs, to 'fit' words the same way
-
-progress bar on different resolutions
--change canvas options like tour-friend on all scenes
-
-after loading the game, the progress bar should load properly, too
-
-integrate progress bar in other scenes
-
-//fix 'levelid' on progressBar to current level
+progress bar buttons
+-translate
+-change graphic and position?
 
 fix progress bar load on level 1
 remove progress bar from level 10
@@ -98,20 +62,13 @@ Feedback:
 
 Playtest (Myrto's Feedback)
 -Κόβεται η ταμειακή στα δεξιά λίγο
--πρεπει να μικρύνει η ντομάτα στα τοστ
-//-Μετακίνηση του logo στο επίπεδο 10
-//-Στην οθόνη ρυθμίσεων τα κείμενα είναι πολύ κοντά στα εικονίδια
 
-update video with new graphics?
+//update video with new graphics?
 
 update buttons to better fit text
 
 test needed graphics:
--tomato toast
--peanut ice creams
 -χ-high-res beach decorations?
--syrup board graphics
--sound menu template?
 
 Gameplay Issues:
 //-using money?

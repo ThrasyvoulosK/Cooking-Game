@@ -404,16 +404,16 @@ public class GameMasterScript : MonoBehaviour
             option_sound = false;
             //change sprite accordingly
             //GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").gameObject.GetComponent<Image>().sprite = spriteslayers["SoundDisabled"];
-            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
-            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SoundOff").gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            /*GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SoundOff").gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 255);*/
         }
         else
         {
             option_sound = true;
             //change sprite again
             //GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").GetComponent<Image>().sprite = spriteslayers["Sound"];
-            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
-            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SoundOff").gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+            /*GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SoundOff").gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 128);*/
         }
     }
     public void change_music()
@@ -423,16 +423,16 @@ public class GameMasterScript : MonoBehaviour
             option_music = false;
             //change sprite accordingly
             //GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().sprite = spriteslayers["MusicDisabled"];
-            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().color = new Color32(255, 255, 255, 128);
-            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            /*GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().color = new Color32(255, 255, 255, 255);*/
         }
         else
         {
             option_music = true;
             //change sprite again
             //GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().sprite = spriteslayers["Music"];
-            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
-            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+            /*GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().color = new Color32(255, 255, 255, 128);*/
         }
     }
 
@@ -443,16 +443,16 @@ public class GameMasterScript : MonoBehaviour
             option_speech = false;
             //change sprite accordingly
             //GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetComponent<Image>().sprite = spriteslayers["SpeechDisabled"];
-            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetComponent<Image>().color = new Color32(255, 255, 255, 128);
-            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SpeechOff").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            /*GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SpeechOff").GetComponent<Image>().color = new Color32(255, 255, 255, 255);*/
         }
         else
         {
             option_speech = true;
             //change sprite again
             //GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetComponent<Image>().sprite = spriteslayers["Speech"];
-            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
-            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SpeechOff").GetComponent<Image>().color = new Color32(255, 255, 255, 128);
+            /*GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SpeechOff").GetComponent<Image>().color = new Color32(255, 255, 255, 128);*/
         }
     }
 
