@@ -81,6 +81,10 @@ public class GameMasterScript : MonoBehaviour
     public UnityEngine.Video.VideoClip[] vc; //= Resources.Load<UnityEngine.Video.VideoClip>("Canteen Intro Shotcut English");
     public GameObject videoObject;
 
+    //keep the number of correct and false answers
+    public int numberCorrectClicks = 0;
+    public int numberFalseClicks = 0;
+
     void Awake()
     {
         //Debug.Log("current language is: " + language_current);
@@ -213,7 +217,7 @@ public class GameMasterScript : MonoBehaviour
 
         if (Application.isEditor)
         {
-            Debug.Log("dev cheats allowed");
+            //Debug.Log("dev cheats allowed");
 
             //cheat mode!
             //cheat_one_recipe_only();

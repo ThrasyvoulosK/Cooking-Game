@@ -133,10 +133,17 @@ public class IngredientScript : MonoBehaviour
                 {
                     //Debug.Log("filled ingreadient");
                     ingredientisonthelist = false;
+
+                    //add to the false
+                    theGameMaster.numberFalseClicks++;
+
                     break;
                 }
 
                 // otherwise, we are going to use it in our recipe:
+
+                //add to the number of correct clicks
+                theGameMaster.numberCorrectClicks++;
 
                 //assign to the correct number
                 theFurnace.usable_number_of_ingredients[i]--;
@@ -168,8 +175,12 @@ public class IngredientScript : MonoBehaviour
             Debug.Log("object not on list");
             //rename it back to its original name
             //(this is a workaround for allowing only "(clones)" to move!
-            gameObject.name += "(Clone)";            
+            gameObject.name += "(Clone)";
+
+            //add to the number of false clicks
+            theGameMaster.numberFalseClicks++;
         }
+        
 
         //when we destroy an object, we can instantiate the next one
         theSpawning.spawnallowed = true;
