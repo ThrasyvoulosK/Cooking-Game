@@ -93,7 +93,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 693350108521991773, guid: b413d4cd68d423442b54f85f6edb2c40, type: 3}
       propertyPath: m_Name
-      value: IntroScreen4
+      value: IntroScreen7
       objectReference: {fileID: 0}
+    - target: {fileID: 693350109787015375, guid: b413d4cd68d423442b54f85f6edb2c40, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4d410b9ccbc355b4da351189c5ca54cb, type: 3}
+    - target: {fileID: 693350109982467211, guid: b413d4cd68d423442b54f85f6edb2c40, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -21
+      objectReference: {fileID: 0}
+    - target: {fileID: 693350109982467211, guid: b413d4cd68d423442b54f85f6edb2c40, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223275773395926396, guid: b413d4cd68d423442b54f85f6edb2c40, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 115322205869211727, guid: 607a4eff9ad4a4f4b99723217a00f67c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b413d4cd68d423442b54f85f6edb2c40, type: 3}

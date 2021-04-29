@@ -4106,6 +4106,8 @@ MonoBehaviour:
   - {fileID: 32900000, guid: da511805f570f674b827b911501c6856, type: 3}
   - {fileID: 32900000, guid: 1834ce4b59307c840b0cfb340dceecaa, type: 3}
   videoObject: {fileID: 4966111394051592741, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
+  numberCorrectClicks: 0
+  numberFalseClicks: 0
   cheat_one_ingredient_recipe: 1
 --- !u!224 &230666772
 RectTransform:
@@ -19845,6 +19847,16 @@ MonoBehaviour:
   - Umbrella
   - Logo
   - Info
+  - IntroScreen1
+  - IntroScreen2
+  - IntroScreen3
+  - IntroScreen4
+  - IntroScreen5
+  - IntroScreen6
+  - IntroScreen7
+  - IntroScreen8
+  - IntroScreen9
+  - IntroScreen10
   words_gr:
   - "\u03A4\u03A5\u03A1\u0399"
   - "\u0396\u0391\u039C\u03A0\u039F\u039D"
@@ -19917,6 +19929,30 @@ MonoBehaviour:
   - "\u039F\u039C\u03A0\u03A1\u0395\u039B\u039B\u0391\u03A3"
   - "\u039B\u039F\u0393\u039F\u03A4\u03A5\u03A0\u039F\u03A5"
   - "\u03A0\u039B\u0397\u03A1\u039F\u03A6\u039F\u03A1\u0399\u0395\u03A3"
+  - "\u039A\u0391\u039B\u03A9\u03A3 \u0389\u03A1\u0398\u0395\u03A3 \u03A3\u03A4\u0397\u039D
+    \u039A\u0391\u039D\u03A4\u0399\u039D\u0391 \u039C\u0391\u03A3!"
+  - "\u0395\u0399\u039D\u0391\u0399 \u0397 \u03A0\u03A1\u03A9\u03A4\u0397 \u03A3\u039F\u03A5
+    \u039C\u0395\u03A1\u0391 \u03A3\u03A4\u0397\u039D \u0394\u039F\u03A5\u039B\u0395\u0399\u0391!"
+  - "\u0391\u03A3 \u0394\u039F\u03A5\u039C\u0395 \u03A4\u0399 \u03A0\u03A1\u0395\u03A0\u0395\u0399
+    \u039D\u0391 \u039A\u0391\u039D\u0395\u0399\u03A3"
+  - "\u039C\u039F\u039B\u0399\u03A3 \u0389\u03A1\u0398\u0395 \u039F \u03A0\u03A1\u03A9\u03A4\u039F\u03A3
+    \u03A0\u0395\u039B\u0391\u03A4\u0397\u03A3 \u03A4\u0397\u03A3 \u039A\u0391\u039D\u03A4\u0399\u039D\u0391\u03A3
+    \u03A3\u039F \u03A5"
+  - "\u0394\u0395\u03A3 \u03A4\u0399 \u03A0\u0391\u03A1\u0391\u0393\u0393\u0395\u039B\u0399\u0391
+    \u0395\u03A7\u0395\u0399 \u039A\u0391\u039D\u0395\u0399"
+  - "\u03A3\u03A4\u039F\u039D \u03A0\u0399\u039D\u0391\u039A\u0391 \u039C\u03A0\u039F\u03A1\u0395\u0399\u03A3
+    \u039D\u0391 \u0394\u0395\u0399\u03A3 \u03A4\u0391 \u03A5\u039B\u0399\u039A\u0391
+    \u03A4\u0397\u03A3 \u03A0\u0391\u03A1\u0391\u0393\u0393\u0395\u039B\u0399\u0391\u03A3"
+  - "\u03A9\u03A1\u0391 \u039D\u0391 \u03A6\u03A4\u0391\u039E\u0395\u0399\u03A3 \u03A4\u0397\u039D
+    \u03A0\u0391\u03A1\u0391\u0393\u0393\u0395\u039B\u0399\u0391"
+  - "\u0394\u0399\u0391\u039B\u0395\u039E\u0395 \u03A4\u0391 \u03A3\u03A9\u03A3\u03A4\u0391
+    \u03A5\u039B\u0399\u039A\u0391 \u0393\u0399\u0391 \u03A4\u0397\u039D \u03A0\u0391\u03A1\u0391\u0393\u0393\u0395\u039B\u0399\u0391"
+  - "\u0397 \u039C\u03A0\u0391\u03A1\u0391 \u0394\u0395\u0399\u03A7\u039D\u0395\u0399
+    \u03A0\u039F\u03A3\u039F\u0399 \u03A0\u0395\u039B\u0391\u03A4\u0395\u03A3 \u0391\u039A\u039F\u039C\u0391
+    \u0398\u0391 \u0395\u03A1\u0398\u039F\u03A5\u039D \u03A3\u03A4\u0397\u039D \u039A\u0391\u039D\u03A4\u0399\u039D\u0391"
+  - "\u0397 \u03A4\u0391\u039C\u0395\u0399\u0391\u039A\u0397 \u0394\u0395\u0399\u03A7\u039D\u0395\u0399
+    \u03A0\u039F\u03A3\u0391 \u03A7\u03A1\u0397\u039C\u0391\u03A4\u0391 \u0395\u03A7\u0395\u0399\u03A3
+    \u039C\u0391\u0396\u0395\u03A8\u0395\u0399"
   words_en:
   - CHEESE
   - HAM
@@ -19988,6 +20024,16 @@ MonoBehaviour:
   - TABLE DECORATION
   - UMBRELLA
   - LOGO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
   - INFO
   words_pl:
   - SER
@@ -20061,6 +20107,16 @@ MonoBehaviour:
   - PARASOLKA
   - LOGO
   - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
   words_pt:
   - QUEIJO
   - FIAMBRE
@@ -20132,6 +20188,16 @@ MonoBehaviour:
   - "DECORA\xC7\xC3O"
   - GUARDA-CHUVA
   - LOGO
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
   - "INFORMA\xC7\xC3O"
   words_ro:
   - "CA\u0218CAVAL"
@@ -20205,6 +20271,16 @@ MonoBehaviour:
   - "UMBREL\u0102"
   - LOGO
   - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
   words_current: []
   boughtablesprites:
   - {fileID: 21300000, guid: 9371ed1b1c2cc80418dda57fed764b46, type: 3}
@@ -20252,6 +20328,8 @@ MonoBehaviour:
   - {fileID: 32900000, guid: da511805f570f674b827b911501c6856, type: 3}
   - {fileID: 32900000, guid: 1834ce4b59307c840b0cfb340dceecaa, type: 3}
   videoObject: {fileID: 4966111394051592741, guid: 62b61604dc8f12347a0d341cde13335f, type: 3}
+  numberCorrectClicks: 0
+  numberFalseClicks: 0
   cheat_one_ingredient_recipe: 0
 --- !u!222 &1492260247
 CanvasRenderer:

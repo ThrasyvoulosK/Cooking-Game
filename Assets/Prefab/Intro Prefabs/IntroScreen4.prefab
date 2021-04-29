@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 236490218538008738, guid: faba5fe08bee4084cb12ce5374f1e603, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 6083865757652081705, guid: e721645580a96dc4799b4f32758992cc, type: 3}
     - target: {fileID: 2768597651537294211, guid: faba5fe08bee4084cb12ce5374f1e603, type: 3}
       propertyPath: m_Name
       value: IntroScreen4
