@@ -15419,6 +15419,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1492260246}
+        m_TargetAssemblyTypeName: GameMasterScript, Assembly-CSharp
+        m_MethodName: setSoundTexts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1047593956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19857,6 +19869,14 @@ MonoBehaviour:
   - IntroScreen8
   - IntroScreen9
   - IntroScreen10
+  - Menu
+  - Quit
+  - SoundOn
+  - MusicOn
+  - SpeechOn
+  - SoundOff
+  - MusicOff
+  - SpeechOff
   words_gr:
   - "\u03A4\u03A5\u03A1\u0399"
   - "\u0396\u0391\u039C\u03A0\u039F\u039D"
@@ -19953,6 +19973,16 @@ MonoBehaviour:
   - "\u0397 \u03A4\u0391\u039C\u0395\u0399\u0391\u039A\u0397 \u0394\u0395\u0399\u03A7\u039D\u0395\u0399
     \u03A0\u039F\u03A3\u0391 \u03A7\u03A1\u0397\u039C\u0391\u03A4\u0391 \u0395\u03A7\u0395\u0399\u03A3
     \u039C\u0391\u0396\u0395\u03A8\u0395\u0399"
+  - "\u039C\u0395\u039D\u039F\u03A5"
+  - "\u0388\u039E\u039F\u0394\u039F\u03A3"
+  - "\u0389\u03A7\u039F\u03A3 \u0395\u039D\u0395\u03A1\u0393\u039F\u03A3"
+  - "\u039C\u039F\u03A5\u03A3\u0399\u039A\u0397 \u0395\u039D\u0395\u03A1\u0393\u0397"
+  - "\u0395\u039D\u0395\u03A1\u0393\u0395\u03A3 \u039F\u0394\u0397\u0393\u0399\u0395\u03A3
+    \u039C\u0395 \u0391\u03A6\u0397\u0393\u0397\u03A3\u0397"
+  - "\u0389\u03A7\u039F\u03A3 \u0391\u039D\u0395\u039D\u0395\u03A1\u0393\u039F\u03A3"
+  - "\u039C\u039F\u03A5\u03A3\u0399\u039A\u0397 \u0391\u039D\u0395\u039D\u0395\u03A1\u0393\u0397"
+  - "\u039C\u0397 \u0395\u039D\u0395\u03A1\u0393\u0395\u03A3 \u039F\u0394\u0397\u0393\u0399\u0395\u03A3
+    \u039C\u0395 \u0391\u03A6\u0397\u0393\u0397\u03A3\u0397"
   words_en:
   - CHEESE
   - HAM
@@ -20025,16 +20055,24 @@ MonoBehaviour:
   - UMBRELLA
   - LOGO
   - INFO
-  - INFO
-  - INFO
-  - INFO
-  - INFO
-  - INFO
-  - INFO
-  - INFO
-  - INFO
-  - INFO
-  - INFO
+  - WELCOME TO OUR CANTEEN!
+  - IT'S YOUR FIRST DAY AT WORK!
+  - LET'S SEE YOUR RESPONSIBILITIES
+  - THE FIRST CUSTOMER OF YOUR CANTEEN HAS JUST ARRIVED!
+  - YOU CAN SEE HIS ORDER WITHIN THE SPEECH BUBBLE
+  - THE BOARD SHOWS THE INGREDIENTS OF THE RECIPE
+  - IT'S TIME TO PREPARE THE RECIPE
+  - CHOOSE THE CORRECT INGREDIENTS BY PRESSING THEM
+  - YOU CAN SEE HOW MANY CUSTOMERS TO EXPECT IN THE PROGRESS BAR
+  - THE CASH REGISTER SHOWS THE AMOUNT OF MONEY YOU'VE ACCUMULATED SO FAR
+  - MENU
+  - QUIT
+  - SOUND ON
+  - MUSIC ON
+  - SPEECH GUIDANCE ON
+  - SOUND OFF
+  - MUSIC OFF
+  - SPEECH GUIDANCE OFF
   words_pl:
   - SER
   - SZYNKA
@@ -20106,6 +20144,14 @@ MonoBehaviour:
   - "DEKORACJA STO\u0141U"
   - PARASOLKA
   - LOGO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
   - INFO
   - INFO
   - INFO
@@ -20199,6 +20245,14 @@ MonoBehaviour:
   - "INFORMA\xC7\xC3O"
   - "INFORMA\xC7\xC3O"
   - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
+  - "INFORMA\xC7\xC3O"
   words_ro:
   - "CA\u0218CAVAL"
   - "\u0218UNC\u0102"
@@ -20270,6 +20324,14 @@ MonoBehaviour:
   - "DECORA\u021AIUNE PENTRU MAS\u0102"
   - "UMBREL\u0102"
   - LOGO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
+  - INFO
   - INFO
   - INFO
   - INFO

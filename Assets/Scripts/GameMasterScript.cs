@@ -410,12 +410,14 @@ public class GameMasterScript : MonoBehaviour
             //GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").gameObject.GetComponent<Image>().sprite = spriteslayers["SoundDisabled"];
             /*GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 128);
             GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SoundOff").gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 255);*/
+            
         }
         else
         {
             option_sound = true;
             //change sprite again
             //GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").GetComponent<Image>().sprite = spriteslayers["Sound"];
+            
             /*GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
             GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SoundOff").gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 128);*/
         }
@@ -429,6 +431,7 @@ public class GameMasterScript : MonoBehaviour
             //GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().sprite = spriteslayers["MusicDisabled"];
             /*GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().color = new Color32(255, 255, 255, 128);
             GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().color = new Color32(255, 255, 255, 255);*/
+            
         }
         else
         {
@@ -437,7 +440,20 @@ public class GameMasterScript : MonoBehaviour
             //GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().sprite = spriteslayers["Music"];
             /*GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
             GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetComponent<Image>().color = new Color32(255, 255, 255, 128);*/
+            
         }
+    }
+
+    //set the sound menu texts here
+    public void setSoundTexts()
+    {
+        GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Music").GetChild(1).GetComponent<TextMeshProUGUI>().text = languagehandler["MusicOn"];
+        GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("MusicOff").GetChild(1).GetComponent<TextMeshProUGUI>().text = languagehandler["MusicOff"];
+        GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Sound").GetChild(1).GetComponent<TextMeshProUGUI>().text = languagehandler["SoundOn"];
+        GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SoundOff").GetChild(1).GetComponent<TextMeshProUGUI>().text = languagehandler["SoundOff"];
+        GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SpeechOff").GetChild(1).GetComponent<TextMeshProUGUI>().text = languagehandler["SpeechOff"];
+        GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetChild(1).GetComponent<TextMeshProUGUI>().text = languagehandler["SpeechOn"];
+
     }
 
     public void change_speech()
@@ -449,6 +465,7 @@ public class GameMasterScript : MonoBehaviour
             //GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetComponent<Image>().sprite = spriteslayers["SpeechDisabled"];
             /*GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetComponent<Image>().color = new Color32(255, 255, 255, 128);
             GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SpeechOff").GetComponent<Image>().color = new Color32(255, 255, 255, 255);*/
+            
         }
         else
         {
@@ -457,6 +474,7 @@ public class GameMasterScript : MonoBehaviour
             //GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetComponent<Image>().sprite = spriteslayers["Speech"];
             /*GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("Speech").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
             GameObject.Find("Canvas").transform.Find("AllSubMenus").transform.Find("SoundSelect").transform.Find("SpeechOff").GetComponent<Image>().color = new Color32(255, 255, 255, 128);*/
+            
         }
     }
 

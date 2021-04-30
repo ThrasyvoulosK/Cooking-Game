@@ -48,8 +48,11 @@ public class ProgressBarScript : MonoBehaviour
         }
         else
         {
-            gameObject.transform.Find("Button1").gameObject.SetActive(true);
+            gameObject.transform.Find("Button1").gameObject.SetActive(true);            
             gameObject.transform.Find("Button2").gameObject.SetActive(true);
+
+            gameObject.transform.Find("Button1").GetChild(0).GetComponent<TextMeshProUGUI>().text = GameObject.Find("GameMaster").GetComponent<GameMasterScript>().languagehandler["Quit"];
+            gameObject.transform.Find("Button2").GetChild(0).GetComponent<TextMeshProUGUI>().text = GameObject.Find("GameMaster").GetComponent<GameMasterScript>().languagehandler["Menu"];
         }
 
     }
