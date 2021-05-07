@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Toast_Cheese_Tomato
   m_EditorClassIdentifier: 
   nameofrecipe: a Cheese and Tomato Toast
-  recipeSprite: {fileID: 2348259381674886770, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  recipeSprite: {fileID: -6617692697313749793, guid: dfcdd77a97ccaa64baca78e39f16f945, type: 3}
   neededIngr:
   - Cheese
   - Tomato

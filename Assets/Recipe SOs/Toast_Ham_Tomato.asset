@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Toast_Ham_Tomato
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: -6402238198967412445, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  recipeSprite: {fileID: 7363226463812114757, guid: dfcdd77a97ccaa64baca78e39f16f945, type: 3}
   neededIngr:
   - Ham
   - Tomato

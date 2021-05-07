@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sandwich_Ham
   m_EditorClassIdentifier: 
   nameofrecipe: a Ham Sandwich
-  recipeSprite: {fileID: 7301452368598144576, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  recipeSprite: {fileID: 8186656611245079372, guid: d725ea3676ef55e4db15f1384992a0e8, type: 3}
   neededIngr:
   - Ham
   numbOfIng: 01000000

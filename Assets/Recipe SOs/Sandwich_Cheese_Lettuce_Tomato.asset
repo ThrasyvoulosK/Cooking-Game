@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sandwich_Cheese_Lettuce_Tomato
   m_EditorClassIdentifier: 
   nameofrecipe: a Cheese, Lettuce and Tomato Sandwich
-  recipeSprite: {fileID: -6879971837445779024, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  recipeSprite: {fileID: -7178713963577990323, guid: d725ea3676ef55e4db15f1384992a0e8, type: 3}
   neededIngr:
   - Cheese
   - Tomato

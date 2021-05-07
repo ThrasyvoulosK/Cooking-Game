@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sandwich_Cheese_Ham_Lettuce
   m_EditorClassIdentifier: 
   nameofrecipe: a Cheese, Ham and Lettuce Sandwich
-  recipeSprite: {fileID: -6328149276367635194, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  recipeSprite: {fileID: -3467809776027854713, guid: 90aa1b46361cd294ead9cb91d72caa07, type: 3}
   neededIngr:
   - Cheese
   - Ham

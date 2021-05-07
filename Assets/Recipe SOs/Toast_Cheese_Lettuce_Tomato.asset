@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Toast_Cheese_Lettuce_Tomato
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: 4202706663534800243, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  recipeSprite: {fileID: 3390952434122733498, guid: dfcdd77a97ccaa64baca78e39f16f945, type: 3}
   neededIngr:
   - Cheese
   - Lettuce

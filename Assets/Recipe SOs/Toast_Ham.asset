@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Toast_Ham
   m_EditorClassIdentifier: 
   nameofrecipe: a Ham Toast
-  recipeSprite: {fileID: -4405964383140785596, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  recipeSprite: {fileID: -2264061055369578189, guid: dfcdd77a97ccaa64baca78e39f16f945, type: 3}
   neededIngr:
   - Ham
   numbOfIng: 01000000

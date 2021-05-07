@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sandwich_Lettuce_Tomato
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: -3694116572737732397, guid: 0890f746e8d534445ab39d6d52743261, type: 3}
+  recipeSprite: {fileID: 5859177517688976937, guid: d725ea3676ef55e4db15f1384992a0e8, type: 3}
   neededIngr:
   - Tomato
   - Lettuce

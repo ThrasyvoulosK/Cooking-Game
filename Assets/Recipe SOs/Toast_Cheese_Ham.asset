@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Toast_Cheese_Ham
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: -1227228861717700092, guid: bef5d5b047393754dac72319747544d6, type: 3}
+  recipeSprite: {fileID: 2209810544846629441, guid: dfcdd77a97ccaa64baca78e39f16f945, type: 3}
   neededIngr:
   - Cheese
   - Ham
