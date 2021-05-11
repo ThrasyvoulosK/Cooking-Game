@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IceCream_Chocolate_Cream_Peanut_Strawberry
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: 5663996496632779785, guid: 8995148599dcba94c8309dfd3ffa3a20, type: 3}
+  recipeSprite: {fileID: -3109995558117572366, guid: 3e28fa382046e8642a62546e8543a70b, type: 3}
   neededIngr:
   - Strawberry
   - Chocolate

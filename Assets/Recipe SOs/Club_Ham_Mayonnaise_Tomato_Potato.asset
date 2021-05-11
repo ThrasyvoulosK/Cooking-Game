@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Club_Ham_Mayonnaise_Tomato_Potato
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: -5844944515206617203, guid: bcd9d652ae41e94448d5ade5094fd3be, type: 3}
+  recipeSprite: {fileID: -5844944515206617203, guid: af47a0c178b0ed9409a549fdc9ec1e27, type: 3}
   neededIngr:
   - Ham
   - Mayonnaise

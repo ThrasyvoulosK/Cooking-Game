@@ -1,7 +1,172 @@
 fileFormatVersion: 2
 guid: af47a0c178b0ed9409a549fdc9ec1e27
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 356421540873416187
+    second: canteen_club sandwich_0
+  - first:
+      213: 1847895918127482809
+    second: canteen_club sandwich_1
+  - first:
+      213: -8495575769789517832
+    second: canteen_club sandwich_2
+  - first:
+      213: 4100332455969593246
+    second: canteen_club sandwich_3
+  - first:
+      213: 6222485972715679707
+    second: canteen_club sandwich_4
+  - first:
+      213: 5574034958771712494
+    second: canteen_club sandwich_5
+  - first:
+      213: 8779068349328335047
+    second: canteen_club sandwich_6
+  - first:
+      213: 5408790377612774356
+    second: canteen_club sandwich_7
+  - first:
+      213: 4484714522270544219
+    second: canteen_club sandwich_8
+  - first:
+      213: -6473114678902621689
+    second: canteen_club sandwich_9
+  - first:
+      213: -5844944515206617203
+    second: canteen_club sandwich_10
+  - first:
+      213: -4788053266716924802
+    second: canteen_club sandwich_11
+  - first:
+      213: -4063759205411852264
+    second: canteen_club sandwich_12
+  - first:
+      213: -5132201623981281295
+    second: canteen_club sandwich_13
+  - first:
+      213: 3572334206537433367
+    second: canteen_club sandwich_14
+  - first:
+      213: -8707964516257094885
+    second: canteen_club sandwich_15
+  - first:
+      213: 957659166648572062
+    second: canteen_club sandwich_16
+  - first:
+      213: 7142100675973097768
+    second: canteen_club sandwich_17
+  - first:
+      213: -7728625756190637890
+    second: canteen_club sandwich_18
+  - first:
+      213: 5262708124514076835
+    second: canteen_club sandwich_19
+  - first:
+      213: 6939713564027227547
+    second: canteen_club sandwich_20
+  - first:
+      213: 8565445833887876973
+    second: canteen_club sandwich_21
+  - first:
+      213: -1484495357265428725
+    second: canteen_club sandwich_22
+  - first:
+      213: 8413106941269730798
+    second: canteen_club sandwich_23
+  - first:
+      213: 3459194516843976906
+    second: canteen_club sandwich_24
+  - first:
+      213: 6203940609836875679
+    second: canteen_club sandwich_25
+  - first:
+      213: 587663554144834908
+    second: canteen_club sandwich_26
+  - first:
+      213: 2397463220351689086
+    second: canteen_club sandwich_27
+  - first:
+      213: -4182692855451734809
+    second: canteen_club sandwich_28
+  - first:
+      213: 1647937710360437484
+    second: canteen_club sandwich_29
+  - first:
+      213: -2032687400475596341
+    second: canteen_club sandwich_30
+  - first:
+      213: -5637552033943677094
+    second: canteen_club sandwich_31
+  - first:
+      213: 5740077153621894593
+    second: canteen_club sandwich_32
+  - first:
+      213: -8533197017614365404
+    second: canteen_club sandwich_33
+  - first:
+      213: 8598263942486512997
+    second: canteen_club sandwich_34
+  - first:
+      213: -8758952519177684944
+    second: canteen_club sandwich_35
+  - first:
+      213: 2969410636326279808
+    second: canteen_club sandwich_36
+  - first:
+      213: -6038098681393156406
+    second: canteen_club sandwich_37
+  - first:
+      213: 4793436605683458865
+    second: canteen_club sandwich_38
+  - first:
+      213: 3673560562949779454
+    second: canteen_club sandwich_39
+  - first:
+      213: 1720573860863271246
+    second: canteen_club sandwich_40
+  - first:
+      213: 8926415634167678512
+    second: canteen_club sandwich_41
+  - first:
+      213: -5387098412500424005
+    second: canteen_club sandwich_42
+  - first:
+      213: 2686038161632406131
+    second: canteen_club sandwich_43
+  - first:
+      213: -91717742165320787
+    second: canteen_club sandwich_44
+  - first:
+      213: -329793962385619129
+    second: canteen_club sandwich_45
+  - first:
+      213: -4093691748369007177
+    second: canteen_club sandwich_46
+  - first:
+      213: 8494192958823112843
+    second: canteen_club sandwich_47
+  - first:
+      213: 3059648302798697816
+    second: canteen_club sandwich_48
+  - first:
+      213: -4916352671927333053
+    second: canteen_club sandwich_49
+  - first:
+      213: 5694197708031457124
+    second: canteen_club sandwich_50
+  - first:
+      213: 8060618294608096300
+    second: canteen_club sandwich_51
+  - first:
+      213: 2040216064446325051
+    second: canteen_club sandwich_52
+  - first:
+      213: -5083332037780642100
+    second: canteen_club sandwich_53
+  - first:
+      213: 2740570801090806501
+    second: canteen_club sandwich_54
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +197,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,7 +206,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -63,7 +228,31 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -75,7 +264,427 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: canteen_club sandwich_0
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 3621
+        width: 1273
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfdae06c08342f400800000000000000
+      internalID: 356421540873416187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_1
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 3622
+        width: 1278
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b702e50c8b05a910800000000000000
+      internalID: 1847895918127482809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_2
+      rect:
+        serializedVersion: 2
+        x: 3158
+        y: 3594
+        width: 1272
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffa74f49d6a91a80800000000000000
+      internalID: -8495575769789517832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_3
+      rect:
+        serializedVersion: 2
+        x: 4581
+        y: 3594
+        width: 1273
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97921be4ae47e830800000000000000
+      internalID: 4100332455969593246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_4
+      rect:
+        serializedVersion: 2
+        x: 5971
+        y: 3580
+        width: 1278
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdfa1972606ba5650800000000000000
+      internalID: 6222485972715679707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_5
+      rect:
+        serializedVersion: 2
+        x: 7270
+        y: 3580
+        width: 1273
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee172333343fa5d40800000000000000
+      internalID: 5574034958771712494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_6
+      rect:
+        serializedVersion: 2
+        x: 8618
+        y: 3580
+        width: 1273
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c02794762485d970800000000000000
+      internalID: 8779068349328335047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_7
+      rect:
+        serializedVersion: 2
+        x: 9938
+        y: 3573
+        width: 1273
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db09220132ef0b40800000000000000
+      internalID: 5408790377612774356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_8
+      rect:
+        serializedVersion: 2
+        x: 11321
+        y: 3560
+        width: 1272
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51b8f2d818ec3e30800000000000000
+      internalID: 4484714522270544219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_9
+      rect:
+        serializedVersion: 2
+        x: 12710
+        y: 3549
+        width: 1275
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a74adde70ea26a0800000000000000
+      internalID: -6473114678902621689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_10
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 2993
+        width: 1279
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87ed376ee592eea0800000000000000
+      internalID: -5844944515206617203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_11
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 2992
+        width: 1273
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7460bf0cea6d8db0800000000000000
+      internalID: -4788053266716924802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_12
+      rect:
+        serializedVersion: 2
+        x: 3130
+        y: 2965
+        width: 1273
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810f3bc8880aa97c0800000000000000
+      internalID: -4063759205411852264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_13
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 2965
+        width: 1272
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ffa9e680d1c6c8b0800000000000000
+      internalID: -5132201623981281295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_14
+      rect:
+        serializedVersion: 2
+        x: 5949
+        y: 2952
+        width: 1273
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71104a7a80b739130800000000000000
+      internalID: 3572334206537433367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_15
+      rect:
+        serializedVersion: 2
+        x: 7243
+        y: 2952
+        width: 1277
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b132ac3c868172780800000000000000
+      internalID: -8707964516257094885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_16
+      rect:
+        serializedVersion: 2
+        x: 8591
+        y: 2952
+        width: 1279
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e981cfb20f94a4d00800000000000000
+      internalID: 957659166648572062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_17
+      rect:
+        serializedVersion: 2
+        x: 9911
+        y: 2951
+        width: 1273
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829247d69b6dd1360800000000000000
+      internalID: 7142100675973097768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_18
+      rect:
+        serializedVersion: 2
+        x: 11293
+        y: 2937
+        width: 1273
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb08250a2d76eb490800000000000000
+      internalID: -7728625756190637890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canteen_club sandwich_19
+      rect:
+        serializedVersion: 2
+        x: 12683
+        y: 2924
+        width: 1279
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8493ef725e80940800000000000000
+      internalID: 5262708124514076835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

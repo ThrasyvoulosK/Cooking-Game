@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: 7b00c2eb94ab80b40afe8724aa19fbdb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3401234329741817091
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_0"
+  - first:
+      213: 4414738522823150373
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_1"
+  - first:
+      213: 1119312503561758378
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_2"
+  - first:
+      213: 5552533256892023575
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_3"
+  - first:
+      213: 1595819745827732073
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_4"
+  - first:
+      213: -6493969694834365164
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_5"
+  - first:
+      213: 5268587504973751311
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_6"
+  - first:
+      213: 1177271014469338711
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_7"
+  - first:
+      213: -4827407909652841307
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_8"
+  - first:
+      213: 7733017261767719540
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_9"
+  - first:
+      213: -575337046320641332
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_10"
+  - first:
+      213: 7279567733922663083
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_11"
+  - first:
+      213: -1236113008112215212
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_12"
+  - first:
+      213: -793646735279974462
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_13"
+  - first:
+      213: -3300345928255170049
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_14"
+  - first:
+      213: -5781731719956708319
+    second: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_15"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +80,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,7 +89,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -63,7 +111,31 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -75,7 +147,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_0"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 3512
+        width: 453
+        height: 780
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305ff163a9c933f20800000000000000
+      internalID: 3401234329741817091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_1"
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 3517
+        width: 455
+        height: 780
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b4b15db4d444d30800000000000000
+      internalID: 4414738522823150373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_2"
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 3499
+        width: 455
+        height: 780
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6a377aac8988f00800000000000000
+      internalID: 1119312503561758378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_3"
+      rect:
+        serializedVersion: 2
+        x: 2359
+        y: 3495
+        width: 459
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713879c149f8e0d40800000000000000
+      internalID: 5552533256892023575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_4"
+      rect:
+        serializedVersion: 2
+        x: 3030
+        y: 3479
+        width: 455
+        height: 776
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96abd939a9d752610800000000000000
+      internalID: 1595819745827732073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_5"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 2609
+        width: 453
+        height: 778
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41dee3518f8c0e5a0800000000000000
+      internalID: -6493969694834365164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_6"
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 2612
+        width: 455
+        height: 779
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04a50eeb68cd1940800000000000000
+      internalID: 5268587504973751311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_7"
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 2596
+        width: 455
+        height: 780
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7560fcd00c1865010800000000000000
+      internalID: 1177271014469338711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_8"
+      rect:
+        serializedVersion: 2
+        x: 2359
+        y: 2592
+        width: 459
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac3b37351a910db0800000000000000
+      internalID: -4827407909652841307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "canteen_coffee \u03C3\u03B9\u03C1\u03BF\u03C0\u03B9\u03B1_9"
+      rect:
+        serializedVersion: 2
+        x: 3030
+        y: 2574
+        width: 455
+        height: 776
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47af0a17a32315b60800000000000000
+      internalID: 7733017261767719540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

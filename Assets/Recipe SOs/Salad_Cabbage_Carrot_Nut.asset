@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Salad_Cabbage_Carrot_Nut
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: -2850579785603085571, guid: 8995148599dcba94c8309dfd3ffa3a20, type: 3}
+  recipeSprite: {fileID: -8672922291994751449, guid: 3e28fa382046e8642a62546e8543a70b, type: 3}
   neededIngr:
   - Carrot
   - Cabbage

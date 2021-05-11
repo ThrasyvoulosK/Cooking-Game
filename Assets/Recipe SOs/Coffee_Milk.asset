@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coffee_Milk
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: -493642381568467875, guid: 1795ad52f7e262347b9aaba93763011b, type: 3}
+  recipeSprite: {fileID: -6247662096163486558, guid: 1e84da5643891a5499309cc1f994ee9d, type: 3}
   neededIngr:
   - Coffee
   - Milk

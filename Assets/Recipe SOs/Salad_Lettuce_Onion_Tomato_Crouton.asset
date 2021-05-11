@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Salad_Lettuce_Onion_Tomato_Crouton
   m_EditorClassIdentifier: 
   nameofrecipe: 
-  recipeSprite: {fileID: 4220576048749848785, guid: 8995148599dcba94c8309dfd3ffa3a20, type: 3}
+  recipeSprite: {fileID: 9036597125546369082, guid: 3e28fa382046e8642a62546e8543a70b, type: 3}
   neededIngr:
   - Lettuce
   - Onion
