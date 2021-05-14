@@ -5485,6 +5485,7 @@ MonoBehaviour:
   option_character: Character_M
   option_sound: 1
   option_music: 1
+  option_speech: 1
   menuitems:
   - {fileID: 0}
   - {fileID: 0}
@@ -5498,6 +5499,8 @@ MonoBehaviour:
   videoPlayer: {fileID: 0}
   vc: []
   videoObject: {fileID: 0}
+  numberCorrectClicks: 0
+  numberFalseClicks: 0
   cheat_one_ingredient_recipe: 0
 --- !u!4 &1710143554
 Transform:
